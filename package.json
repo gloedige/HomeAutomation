@@ -1,0 +1,12 @@
+{
+    "name": "Smarthome_V01",
+    "description": "Eimautomatisierung",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "200121_flows.json",
+            "credentialsFile": "200121_flows_cred.json"
+        }
+    }
+}
