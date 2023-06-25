@@ -1,6 +1,6 @@
 {
     "name": "Smarthome_V01",
-    "description": "Eimautomatisierung",
+    "description": "Heimautomatisierung",
     "version": "0.0.1",
     "dependencies": {},
     "node-red": {
