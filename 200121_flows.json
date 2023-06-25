@@ -543,7 +543,7 @@
         "params": "[]",
         "topic": "${CCU}/${Interface}/${Method}",
         "x": 290,
-        "y": 240,
+        "y": 200,
         "wires": [
             [
                 "f1401630.4984a8"
@@ -563,7 +563,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "cb73e4c8.3727f8"
@@ -579,7 +579,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 450,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "b1f9846d.fff208",
@@ -624,7 +624,7 @@
         ],
         "outputs": 1,
         "x": 630,
-        "y": 280,
+        "y": 240,
         "wires": [
             []
         ]
@@ -652,7 +652,7 @@
         "seg1": "30",
         "seg2": "70",
         "x": 630,
-        "y": 320,
+        "y": 280,
         "wires": []
     },
     {
@@ -662,7 +662,7 @@
         "name": "Duty Cycle abfragen und im Dashboard anzeigen",
         "info": "Dieser Flow fragt in Intervallen \nvon 30 sekunden den Duty Cycle des \nersten Funk-Interfaces des BidCos-RF\nSchnittstellenprozess (\"rfd\") per RPC ab \nund visualisiert ihn in Node-RED Dashboard.",
         "x": 260,
-        "y": 120,
+        "y": 80,
         "wires": []
     },
     {
@@ -3951,80 +3951,6 @@
         "x": 1230,
         "y": 320,
         "wires": []
-    },
-    {
-        "id": "cb71750c.e9095",
-        "type": "debug",
-        "z": "427fc89b.e34038",
-        "name": "switch_test",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1010,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "a9b7328.dab7bd",
-        "type": "switch",
-        "z": "427fc89b.e34038",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 710,
-        "y": 720,
-        "wires": [
-            [
-                "cb71750c.e9095"
-            ]
-        ]
-    },
-    {
-        "id": "fc283508.41aeb",
-        "type": "inject",
-        "z": "427fc89b.e34038",
-        "name": "all 1 min",
-        "props": [
-            {
-                "p": "payload",
-                "v": "",
-                "vt": "date"
-            },
-            {
-                "p": "topic",
-                "v": "blind",
-                "vt": "string"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "blind",
-        "payload": "",
-        "payloadType": "date",
-        "x": 540,
-        "y": 680,
-        "wires": [
-            [
-                "cb71750c.e9095"
-            ]
-        ]
     },
     {
         "id": "3346db5e.19acdc",
@@ -16013,7 +15939,7 @@
         "type": "debug",
         "z": "db6aac1c.cd43b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
