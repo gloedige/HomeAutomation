@@ -1,8 +1,24 @@
 {
     "name": "Smarthome_V01",
     "description": "Heimautomatisierung",
-    "version": "0.0.1",
-    "dependencies": {},
+    "version": "2.0.1",
+    "dependencies": {
+        "node-red-contrib-boolean-logic-ultimate": "1.0.25",
+        "node-red-contrib-sun-position": "1.1.7",
+        "node-red-dashboard": "2.24.1",
+        "node-red-node-email": "1.8.2",
+        "node-red-contrib-ccu": "3.2.1",
+        "node-red-contrib-combine": "1.8.1",
+        "node-red-contrib-google-tts": "1.1.1",
+        "node-red-contrib-huemagic": "3.0.0",
+        "node-red-contrib-moment": "4.0.0",
+        "node-red-contrib-sma-webconnect": "0.3.0",
+        "node-red-contrib-twc-weather": "0.4.1",
+        "node-red-contrib-ui-level": "0.1.45",
+        "node-red-node-openweathermap": "0.2.2",
+        "node-red-node-smooth": "0.1.2",
+        "redmatic-webapp": "0.3.1"
+    },
     "node-red": {
         "settings": {
             "flowFile": "200121_flows.json",
