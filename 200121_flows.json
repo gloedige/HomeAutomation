@@ -16341,8 +16341,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1320,
-        "y": 1340,
+        "x": 1360,
+        "y": 580,
         "wires": [
             [
                 "a16b506a.769ca"
@@ -16701,8 +16701,8 @@
         "payloadDefaultOffset": 0,
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
-        "x": 1540,
-        "y": 1340,
+        "x": 1580,
+        "y": 580,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -16713,7 +16713,6 @@
         "id": "5d90d03.ab8c03",
         "type": "ccu-value",
         "z": "4e67676c.de2018",
-        "d": true,
         "name": "Steckdosenaufsatz Bad",
         "iface": "HmIP-RF",
         "channel": "00021D89A1BE2B:3 HMIP-PS 00021D89A1BE2B:3",
@@ -16744,8 +16743,8 @@
         "z": "4e67676c.de2018",
         "name": "Zeitschaltung Handtuchheizkörper",
         "info": "",
-        "x": 1540,
-        "y": 1300,
+        "x": 1580,
+        "y": 540,
         "wires": []
     },
     {
@@ -17401,7 +17400,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1800,
+        "x": 1874,
         "y": 1120,
         "wires": [
             [
@@ -17860,7 +17859,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1800,
+        "x": 1880,
         "y": 1240,
         "wires": [
             [
@@ -18720,9 +18719,9 @@
         "topic": "condition",
         "name": "",
         "invert": false,
-        "timeout": "600",
-        "timeoutType": "num",
-        "x": 1590,
+        "timeout": "DelayEnableHeater",
+        "timeoutType": "flow",
+        "x": 1625,
         "y": 1120,
         "wires": [
             [
@@ -18737,9 +18736,9 @@
         "topic": "condition",
         "name": "",
         "invert": false,
-        "timeout": "600",
-        "timeoutType": "num",
-        "x": 1590,
+        "timeout": "DelayEnableHeater",
+        "timeoutType": "flow",
+        "x": 1628,
         "y": 1240,
         "wires": [
             [
@@ -18945,7 +18944,9 @@
         "wires": [
             [
                 "b57bddc8.2876a",
-                "c8effe1c.66349"
+                "c8effe1c.66349",
+                "97a2036b.0979b",
+                "6417ec08.3003c4"
             ]
         ]
     },
@@ -19514,12 +19515,13 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 270,
-        "y": 520,
+        "x": 248,
+        "y": 505,
         "wires": [
             [
                 "509699e0.d098f8",
-                "2e6623e2.55723c"
+                "2e6623e2.55723c",
+                "87c02e2b.9a1ea"
             ]
         ]
     },
@@ -19543,8 +19545,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1170,
-        "y": 420,
+        "x": 1148,
+        "y": 405,
         "wires": [
             [
                 "6041da92.8ec924"
@@ -19570,8 +19572,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 620,
+        "x": 538,
+        "y": 605,
         "wires": [
             [
                 "4325f332.e8117c"
@@ -19587,30 +19589,13 @@
         "invert": true,
         "timeout": "DelayMotionDetection",
         "timeoutType": "flow",
-        "x": 1040,
-        "y": 620,
+        "x": 1018,
+        "y": 605,
         "wires": [
             [
                 "8f393613.fc8be8"
             ]
         ]
-    },
-    {
-        "id": "3f6e7a9f.276656",
-        "type": "debug",
-        "z": "33898250.03adbe",
-        "name": "Out 3 Example",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 960,
-        "wires": []
     },
     {
         "id": "49ff992e.3d3078",
@@ -19633,7 +19618,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 660,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "3bd3e0b8.15cd8",
@@ -19774,7 +19759,7 @@
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
         "x": 410,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -19803,7 +19788,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "8ccc23f5.2f2a1"
@@ -19821,11 +19806,9 @@
         "skipevents": false,
         "universalevents": false,
         "x": 1090,
-        "y": 880,
+        "y": 900,
         "wires": [
-            [
-                "3f6e7a9f.276656"
-            ]
+            []
         ]
     },
     {
@@ -19855,7 +19838,7 @@
         "to": "",
         "reg": false,
         "x": 880,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "5cfaa7da.11fd38"
@@ -19880,7 +19863,7 @@
         "payload": "0",
         "payloadType": "num",
         "x": 410,
-        "y": 1000,
+        "y": 1020,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -19905,7 +19888,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 410,
-        "y": 960,
+        "y": 980,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -19919,7 +19902,7 @@
         "name": "Zeitschaltung Licht Tür außen",
         "info": "",
         "x": 240,
-        "y": 820,
+        "y": 840,
         "wires": []
     },
     {
@@ -19944,7 +19927,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "40467110.96d8e"
@@ -19968,12 +19951,8 @@
             {
                 "index": 0,
                 "name": "Sterne ein morgens",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validPayload": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "6:30",
                 "timeType": "entered",
                 "timeOp": 1,
@@ -20002,7 +19981,7 @@
                 "payloadOffsetValue": "",
                 "payloadOffsetType": "none",
                 "payloadOffsetMultiplier": 60000,
-                "payloadFormat": "",
+                "payloadFormat": 99,
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
@@ -20020,7 +19999,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>6:30</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>6:30</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
@@ -20195,7 +20176,7 @@
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
         "x": 450,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "c9ee7bec.6cfc58"
@@ -20209,7 +20190,7 @@
         "name": "Zeitschaltung Weihnachtssterne",
         "info": "",
         "x": 230,
-        "y": 1080,
+        "y": 1100,
         "wires": []
     },
     {
@@ -20225,13 +20206,14 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 1270,
-        "y": 1140,
+        "y": 1160,
         "wires": []
     },
     {
         "id": "c9ee7bec.6cfc58",
         "type": "ccu-value",
         "z": "33898250.03adbe",
+        "d": true,
         "name": "Steckdosenaufsatz Bad",
         "iface": "HmIP-RF",
         "channel": "00021D89A1BE2B:3 HMIP-PS 00021D89A1BE2B:3",
@@ -20249,7 +20231,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 790,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "6ef47f45.b604b"
@@ -20278,8 +20260,8 @@
         "label": "State Light Terrace",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1570,
-        "y": 420,
+        "x": 1548,
+        "y": 405,
         "wires": []
     },
     {
@@ -20312,8 +20294,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1360,
-        "y": 420,
+        "x": 1338,
+        "y": 405,
         "wires": [
             [
                 "17f71eb6.3a66d1"
@@ -20341,8 +20323,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1300,
-        "y": 620,
+        "x": 1278,
+        "y": 605,
         "wires": [
             [
                 "dcef5ab2.468fe8"
@@ -20362,7 +20344,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 1100,
-        "y": 800,
+        "y": 820,
         "wires": []
     },
     {
@@ -20396,7 +20378,7 @@
         "to": "",
         "reg": false,
         "x": 880,
-        "y": 800,
+        "y": 820,
         "wires": [
             [
                 "f7c020de.a2e2f"
@@ -20434,7 +20416,7 @@
         "to": "",
         "reg": false,
         "x": 1040,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "d57fc8ff.90ea68"
@@ -20458,8 +20440,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 810,
-        "y": 560,
+        "x": 788,
+        "y": 545,
         "wires": [
             [
                 "4325f332.e8117c"
@@ -20483,8 +20465,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 810,
-        "y": 520,
+        "x": 788,
+        "y": 505,
         "wires": [
             [
                 "4325f332.e8117c"
@@ -20510,8 +20492,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1190,
-        "y": 340,
+        "x": 1168,
+        "y": 325,
         "wires": [
             [
                 "360c5de4.921842"
@@ -20530,8 +20512,8 @@
         "outputtriggeredby": "all",
         "inputCount": "3",
         "topic": "ManuelMode",
-        "x": 770,
-        "y": 433,
+        "x": 748,
+        "y": 418,
         "wires": [
             [
                 "dcef5ab2.468fe8"
@@ -20545,8 +20527,8 @@
         "type": "InvertUltimate",
         "z": "33898250.03adbe",
         "name": "Invert",
-        "x": 1390,
-        "y": 340,
+        "x": 1368,
+        "y": 325,
         "wires": [
             [
                 "e6844fd6.c1d25"
@@ -20561,8 +20543,8 @@
         "links": [
             "5d3d89cc.209d28"
         ],
-        "x": 1495,
-        "y": 340,
+        "x": 1473,
+        "y": 325,
         "wires": []
     },
     {
@@ -20588,8 +20570,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 820,
-        "y": 340,
+        "x": 798,
+        "y": 325,
         "wires": [
             [
                 "dcef5ab2.468fe8",
@@ -20605,8 +20587,8 @@
         "links": [
             "e6844fd6.c1d25"
         ],
-        "x": 555,
-        "y": 420,
+        "x": 533,
+        "y": 405,
         "wires": [
             [
                 "3bdc3f86.d6c9"
@@ -20632,11 +20614,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 280,
+        "x": 308,
+        "y": 300,
         "wires": [
             [
-                "3bdc3f86.d6c9"
+                "23e5e2be.c7ba3e"
             ]
         ]
     },
@@ -20659,8 +20641,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 480,
+        "x": 538,
+        "y": 465,
         "wires": [
             [
                 "3bdc3f86.d6c9"
@@ -20685,8 +20667,8 @@
         "min": "10",
         "max": "600",
         "step": "10",
-        "x": 250,
-        "y": 700,
+        "x": 228,
+        "y": 685,
         "wires": [
             [
                 "c586bf40.4a6a7"
@@ -20712,12 +20694,161 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
-        "y": 700,
+        "x": 568,
+        "y": 685,
         "wires": [
             [
                 "4325f332.e8117c"
             ]
+        ]
+    },
+    {
+        "id": "87c02e2b.9a1ea",
+        "type": "debug",
+        "z": "33898250.03adbe",
+        "name": "motion detection",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 408,
+        "y": 385,
+        "wires": []
+    },
+    {
+        "id": "2940646d.99f3fc",
+        "type": "ui_numeric",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "label": "Delay Enable Heater",
+        "tooltip": "",
+        "group": "f96632f0.e2eae",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "600",
+        "step": "10",
+        "x": 1073,
+        "y": 1340,
+        "wires": [
+            [
+                "623cc655.63c758"
+            ]
+        ]
+    },
+    {
+        "id": "623cc655.63c758",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "def DelayEnableHeater",
+        "rules": [
+            {
+                "t": "set",
+                "p": "DelayEnableHeater",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1350,
+        "y": 1340,
+        "wires": [
+            [
+                "97a2036b.0979b",
+                "6417ec08.3003c4"
+            ]
+        ]
+    },
+    {
+        "id": "3446edfe.ca0d82",
+        "type": "ccu-value",
+        "z": "33898250.03adbe",
+        "name": "Illumination Motiondetector Terrace",
+        "iface": "HmIP-RF",
+        "channel": "00321F29971B60:1 Bewegungsmelder Terrasse",
+        "datapoint": "CURRENT_ILLUMINATION",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": true,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 920,
+        "y": 180,
+        "wires": [
+            [
+                "9421ef6c.90224"
+            ]
+        ]
+    },
+    {
+        "id": "23e5e2be.c7ba3e",
+        "type": "switch",
+        "z": "33898250.03adbe",
+        "name": "",
+        "property": "IlluminationThreshold",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "5",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 548,
+        "y": 300,
+        "wires": [
+            [
+                "3bdc3f86.d6c9"
+            ]
+        ]
+    },
+    {
+        "id": "9421ef6c.90224",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "def DelayMotionDetection",
+        "rules": [
+            {
+                "t": "set",
+                "p": "IlluminationThreshold",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 180,
+        "wires": [
+            []
         ]
     }
 ]
