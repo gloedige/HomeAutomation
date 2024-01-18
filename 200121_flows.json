@@ -16200,7 +16200,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 960,
+        "y": 980,
         "wires": [
             [
                 "104efa78.291536"
@@ -16861,7 +16861,7 @@
         "height": "0",
         "passthru": true,
         "decouple": "false",
-        "topic": "condition",
+        "topic": "condition_2",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
@@ -16871,12 +16871,13 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 130,
+        "x": 350,
         "y": 880,
         "wires": [
             [
                 "a7e8b14.06f8b5",
-                "42ee4c8f.552404"
+                "42ee4c8f.552404",
+                "2017347b.68a9ac"
             ]
         ]
     },
@@ -17598,8 +17599,7 @@
         "wires": [
             [
                 "4a25e9cf.8bb438",
-                "ae1cc341.61f97",
-                "a7227470.fd70f8"
+                "ae1cc341.61f97"
             ],
             [],
             []
@@ -17615,7 +17615,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "condition_2",
+                "to": "condition",
                 "tot": "str"
             }
         ],
@@ -17624,8 +17624,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 960,
+        "x": 300,
+        "y": 980,
         "wires": [
             [
                 "7e2231a8.fdb74"
@@ -17636,7 +17636,7 @@
         "id": "7e2231a8.fdb74",
         "type": "change",
         "z": "4e67676c.de2018",
-        "name": "BestätigungAnwesenheit",
+        "name": "Status Anwesenheit",
         "rules": [
             {
                 "t": "set",
@@ -17651,12 +17651,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
-        "y": 960,
+        "x": 510,
+        "y": 980,
         "wires": [
             [
                 "42ee4c8f.552404",
-                "f13fed81.e5ff9"
+                "9887df71.2556c"
             ]
         ]
     },
@@ -18925,32 +18925,6 @@
         ]
     },
     {
-        "id": "f13fed81.e5ff9",
-        "type": "switch",
-        "z": "4e67676c.de2018",
-        "name": "SwitchOffWhenAbsent",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1340,
-        "y": 960,
-        "wires": [
-            [
-                "b57bddc8.2876a",
-                "c8effe1c.66349",
-                "97a2036b.0979b",
-                "6417ec08.3003c4"
-            ]
-        ]
-    },
-    {
         "id": "1516c4be.911f3b",
         "type": "inject",
         "z": "4e67676c.de2018",
@@ -19365,23 +19339,6 @@
         "wires": []
     },
     {
-        "id": "a7227470.fd70f8",
-        "type": "debug",
-        "z": "4e67676c.de2018",
-        "name": "Controller boolean",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1010,
-        "y": 680,
-        "wires": []
-    },
-    {
         "id": "f87f2b9a.920568",
         "type": "ccu-value",
         "z": "33898250.03adbe",
@@ -19417,7 +19374,7 @@
         "label": "set Motiondetection Terrasse",
         "tooltip": "set Motiondetection",
         "group": "d8ed037.4a1b3",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -19445,6 +19402,7 @@
         "id": "b52aca6e.a2db78",
         "type": "change",
         "z": "33898250.03adbe",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -19483,8 +19441,9 @@
         "id": "46b68dc3.037654",
         "type": "ui_text",
         "z": "33898250.03adbe",
+        "d": true,
         "group": "d8ed037.4a1b3",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -19515,8 +19474,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 248,
-        "y": 505,
+        "x": 170,
+        "y": 500,
         "wires": [
             [
                 "509699e0.d098f8",
@@ -20555,7 +20514,7 @@
         "label": "Light Terrace manual",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 5,
+        "order": 3,
         "width": "6",
         "height": "1",
         "passthru": true,
@@ -20587,8 +20546,8 @@
         "links": [
             "e6844fd6.c1d25"
         ],
-        "x": 533,
-        "y": 405,
+        "x": 555,
+        "y": 280,
         "wires": [
             [
                 "3bdc3f86.d6c9"
@@ -20618,7 +20577,7 @@
         "y": 300,
         "wires": [
             [
-                "23e5e2be.c7ba3e"
+                "3bdc3f86.d6c9"
             ]
         ]
     },
@@ -20641,11 +20600,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 538,
-        "y": 465,
+        "x": 480,
+        "y": 500,
         "wires": [
             [
-                "3bdc3f86.d6c9"
+                "23e5e2be.c7ba3e"
             ]
         ]
     },
@@ -20654,10 +20613,10 @@
         "type": "ui_numeric",
         "z": "33898250.03adbe",
         "name": "",
-        "label": "Delay Motion Detection",
+        "label": "Time Light Terrace On [s]",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "wrap": false,
@@ -20715,8 +20674,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 408,
-        "y": 385,
+        "x": 240,
+        "y": 580,
         "wires": []
     },
     {
@@ -20724,7 +20683,7 @@
         "type": "ui_numeric",
         "z": "4e67676c.de2018",
         "name": "",
-        "label": "Delay Enable Heater",
+        "label": "Delay Enable Heater [s]",
         "tooltip": "",
         "group": "f96632f0.e2eae",
         "order": 3,
@@ -20737,7 +20696,7 @@
         "min": "10",
         "max": "600",
         "step": "10",
-        "x": 1073,
+        "x": 1083,
         "y": 1340,
         "wires": [
             [
@@ -20767,10 +20726,7 @@
         "x": 1350,
         "y": 1340,
         "wires": [
-            [
-                "97a2036b.0979b",
-                "6417ec08.3003c4"
-            ]
+            []
         ]
     },
     {
@@ -20780,7 +20736,7 @@
         "name": "Illumination Motiondetector Terrace",
         "iface": "HmIP-RF",
         "channel": "00321F29971B60:1 Bewegungsmelder Terrasse",
-        "datapoint": "CURRENT_ILLUMINATION",
+        "datapoint": "ILLUMINATION",
         "mode": "",
         "start": true,
         "change": true,
@@ -20818,8 +20774,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 548,
-        "y": 300,
+        "x": 490,
+        "y": 400,
         "wires": [
             [
                 "3bdc3f86.d6c9"
@@ -20849,6 +20805,145 @@
         "y": 180,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "86508463.a60a78",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 270,
+        "y": 1080,
+        "wires": [
+            [
+                "91bbed8b.15d41"
+            ]
+        ]
+    },
+    {
+        "id": "d2b88bad.ba7658",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 270,
+        "y": 1040,
+        "wires": [
+            [
+                "91bbed8b.15d41"
+            ]
+        ]
+    },
+    {
+        "id": "91bbed8b.15d41",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "condition_2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e38303d.bf4fb",
+        "type": "BooleanLogicUltimate",
+        "z": "4e67676c.de2018",
+        "name": "SwitchOffWhenAbsentOrControllerOff",
+        "filtertrue": "onlytrue",
+        "persist": true,
+        "sInitializeWith": "false",
+        "triggertopic": "condition",
+        "outputtriggeredby": "all",
+        "inputCount": "2",
+        "topic": "condition",
+        "x": 960,
+        "y": 1040,
+        "wires": [
+            [],
+            [
+                "138f1f20.3e4851"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2017347b.68a9ac",
+        "type": "InvertUltimate",
+        "z": "4e67676c.de2018",
+        "name": "Invert",
+        "x": 690,
+        "y": 940,
+        "wires": [
+            [
+                "6e38303d.bf4fb"
+            ]
+        ]
+    },
+    {
+        "id": "9887df71.2556c",
+        "type": "InvertUltimate",
+        "z": "4e67676c.de2018",
+        "name": "Invert",
+        "x": 690,
+        "y": 1040,
+        "wires": [
+            [
+                "6e38303d.bf4fb"
+            ]
+        ]
+    },
+    {
+        "id": "138f1f20.3e4851",
+        "type": "InvertUltimate",
+        "z": "4e67676c.de2018",
+        "name": "Invert",
+        "x": 1270,
+        "y": 940,
+        "wires": [
+            [
+                "b57bddc8.2876a",
+                "c8effe1c.66349",
+                "97a2036b.0979b",
+                "6417ec08.3003c4"
+            ]
         ]
     }
 ]
