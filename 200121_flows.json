@@ -112,8 +112,9 @@
         "tab": "8153eb0.fe96118",
         "order": 1,
         "disp": true,
-        "width": 8,
-        "collapse": false
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "8153eb0.fe96118",
@@ -198,14 +199,15 @@
                 "primary": "indigo",
                 "accents": "blue",
                 "warn": "red",
-                "background": "grey"
+                "background": "grey",
+                "palette": "light"
             }
         },
         "site": {
             "name": "Node-RED Dashboard",
             "hideToolbar": "false",
             "allowSwipe": "false",
-            "allowTempTheme": "true",
+            "allowTempTheme": "none",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
                 "sx": 48,
@@ -216,7 +218,8 @@
                 "cy": 6,
                 "px": 0,
                 "py": 0
-            }
+            },
+            "lockMenu": "false"
         }
     },
     {
@@ -240,15 +243,6 @@
         "queueTimeout": "5000",
         "queuePause": "250",
         "contextStore": "default"
-    },
-    {
-        "id": "36fb2145.947dee",
-        "type": "ui_tab",
-        "name": "GlobalLabel",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "46fbe67a.90cd18",
@@ -276,13 +270,6 @@
         "disp": true,
         "width": "6",
         "collapse": false
-    },
-    {
-        "id": "fe205248.f04ed",
-        "type": "ui_tab",
-        "name": "Geräte",
-        "icon": "dashboard",
-        "order": 1
     },
     {
         "id": "65a72644.483318",
@@ -548,8 +535,9 @@
         "tab": "4be192bf.76117c",
         "order": 2,
         "disp": true,
-        "width": "8",
-        "collapse": false
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "ca79f64c.8975d8",
@@ -597,6 +585,40 @@
         "disp": true,
         "width": "6",
         "collapse": false
+    },
+    {
+        "id": "5cef20a2.d8cbc",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "/addons/red/ui",
+        "instancehash": "nj6274p7tyhwsdggepoccph2y19kof4nyceje267gnvehlqr5swau16gq8tcxmug",
+        "server": "nodered04.remote-red.com",
+        "region": "de"
+    },
+    {
+        "id": "abbe899a.38e7f8",
+        "type": "ui_group",
+        "name": "Group",
+        "tab": "",
+        "order": null,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "e7b91b38.1d5708",
+        "type": "noraf-config",
+        "name": "nora config",
+        "group": "Licht",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "localexecution": true,
+        "structure": "HDL Wohnen",
+        "storeStateInContext": true,
+        "disableValidationErrors": false,
+        "sendDeviceNameAndLocation": false
     },
     {
         "id": "cb73e4c8.3727f8",
@@ -707,7 +729,7 @@
         "id": "e086ebe0.bcd118",
         "type": "ui_template",
         "z": "d2aa9e3f.51894",
-        "group": "",
+        "group": "937d90ca.8d8b",
         "name": "Liste unerreichbarer Geräte",
         "order": 2,
         "width": "6",
@@ -715,7 +737,9 @@
         "format": "<div ng-bind-html=\"msg.payload\"></div>",
         "storeOutMessages": false,
         "fwdInMessages": false,
+        "resendOnRefresh": false,
         "templateScope": "local",
+        "className": "",
         "x": 640,
         "y": 240,
         "wires": [
@@ -5602,12 +5626,13 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 840,
-        "y": 200,
+        "x": 820,
+        "y": 380,
         "wires": [
             [
                 "419c42cd.09684c",
-                "69a2326c.1ec8b4"
+                "37c63be4.9cc4f4",
+                "bbd2d2d8.7c38c"
             ]
         ]
     },
@@ -5615,28 +5640,30 @@
         "id": "da4a265b.d8f7a8",
         "type": "e-mail",
         "z": "c1790f94.1fa788",
+        "d": true,
         "server": "posteo.de",
         "port": "465",
         "secure": true,
         "tls": true,
         "name": "gerd.loedige@posteo.de",
         "dname": "Gerds Mail",
-        "x": 1290,
-        "y": 280,
+        "x": 1330,
+        "y": 200,
         "wires": []
     },
     {
         "id": "419c42cd.09684c",
         "type": "function",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "message_to_mail",
-        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Wasser im Waschraum\";\n    message=\" Wassersensor hat Wasser im Keller detektiert!\";\n}\nelse\n{\n    msg.topic=\"Info Wassersensor Keller\";\n    message=\" Wassersensor meldet i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\nreturn msg;",
+        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Wasser im Waschraum\";\n    message=\" Wassersensor hat Wasser im Keller detektiert!\";\n}\nelse\n{\n    msg.topic=\"Info Wassersensor Keller\";\n    message=\" Wassersensor meldet i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1070,
-        "y": 280,
+        "x": 1110,
+        "y": 200,
         "wires": [
             [
                 "da4a265b.d8f7a8",
@@ -5648,16 +5675,17 @@
         "id": "69a2326c.1ec8b4",
         "type": "debug",
         "z": "c1790f94.1fa788",
-        "name": "",
+        "name": "Alarm_Trigger",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 140,
+        "x": 1180,
+        "y": 100,
         "wires": []
     },
     {
@@ -5677,8 +5705,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 350,
-        "y": 260,
+        "x": 590,
+        "y": 220,
         "wires": [
             [
                 "912f2f7b.8659d8"
@@ -5702,8 +5730,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 300,
-        "y": 340,
+        "x": 600,
+        "y": 300,
         "wires": [
             [
                 "912f2f7b.8659d8"
@@ -5830,7 +5858,7 @@
         "id": "3799839b.ea84bc",
         "type": "change",
         "z": "c1790f94.1fa788",
-        "name": "Status Wasser Waschraum",
+        "name": "Status Wasser",
         "rules": [
             {
                 "t": "change",
@@ -5856,8 +5884,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 530,
-        "y": 180,
+        "x": 560,
+        "y": 380,
         "wires": [
             [
                 "912f2f7b.8659d8"
@@ -7351,31 +7379,6 @@
         ]
     },
     {
-        "id": "fb5e3531.484798",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 90,
-        "y": 260,
-        "wires": [
-            [
-                "377a238e.1736ec"
-            ]
-        ]
-    },
-    {
         "id": "377a238e.1736ec",
         "type": "ccu-sysvar",
         "z": "c1790f94.1fa788",
@@ -7384,8 +7387,8 @@
         "topic": "ReGaHSS/${Name}",
         "change": true,
         "cache": true,
-        "x": 200,
-        "y": 180,
+        "x": 220,
+        "y": 300,
         "wires": [
             [
                 "3799839b.ea84bc"
@@ -7401,67 +7404,11 @@
         "topic": "ReGaHSS/${Name}",
         "change": true,
         "cache": true,
-        "x": 180,
-        "y": 460,
+        "x": 200,
+        "y": 440,
         "wires": [
             [
-                "60287638.96e778"
-            ]
-        ]
-    },
-    {
-        "id": "60287638.96e778",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Status Wasser HWR",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 510,
-        "y": 460,
-        "wires": [
-            [
-                "9501d308.5d96d"
-            ]
-        ]
-    },
-    {
-        "id": "9501d308.5d96d",
-        "type": "function",
-        "z": "c1790f94.1fa788",
-        "name": "Trigger_Alarm",
-        "func": "var payload=msg.payload;\nvar alarm_flag=context.get(\"alarm_flag\");\nif(typeof alarm_flag==\"undefined\")\n    alarm_flag=false;\n\nif (payload>0 && !alarm_flag)\n{\n    alarm_flag=true;\n    msg.alarm=1;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;\n}\nif (payload<=1 && alarm_flag)\n{\n    alarm_flag=false;\n    msg.alarm=0;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;    \n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 820,
-        "y": 460,
-        "wires": [
-            [
-                "e6b70e27.56ec3"
+                "3799839b.ea84bc"
             ]
         ]
     },
@@ -7469,6 +7416,7 @@
         "id": "e6b70e27.56ec3",
         "type": "function",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "message_to_mail",
         "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Wasser im HWR\";\n    message=\" Wassersensor hat Wasser im Keller detektiert!\";\n}\nelse\n{\n    msg.topic=\"Info Wassersensor Keller\";\n    message=\" Wassersensor meldet i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\nreturn msg;",
         "outputs": 1,
@@ -7476,7 +7424,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1070,
-        "y": 460,
+        "y": 500,
         "wires": [
             [
                 "4846a878.9852b8"
@@ -7487,6 +7435,7 @@
         "id": "4846a878.9852b8",
         "type": "e-mail",
         "z": "c1790f94.1fa788",
+        "d": true,
         "server": "posteo.de",
         "port": "465",
         "secure": true,
@@ -7494,7 +7443,7 @@
         "name": "gerd.loedige@posteo.de",
         "dname": "Gerds Mail",
         "x": 1290,
-        "y": 460,
+        "y": 500,
         "wires": []
     },
     {
@@ -8740,7 +8689,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 495,
+        "x": 840,
         "y": 180,
         "wires": [
             []
@@ -8917,8 +8866,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 485,
-        "y": 245,
+        "x": 830,
+        "y": 260,
         "wires": [
             []
         ]
@@ -8943,8 +8892,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 485,
-        "y": 317,
+        "x": 830,
+        "y": 340,
         "wires": [
             []
         ]
@@ -15927,7 +15876,7 @@
         "id": "cfb96521.b7a758",
         "type": "blind-control",
         "z": "db6aac1c.cd43b",
-        "name": "WZ Ost",
+        "name": "Küche Ost",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
         "outputs": "1",
@@ -16139,7 +16088,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 560,
+        "x": 570,
         "y": 860,
         "wires": [
             [
@@ -16172,12 +16121,17 @@
         "z": "4e67676c.de2018",
         "group": "f96632f0.e2eae",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": "0",
+        "height": "0",
         "name": "",
         "label": "Status Steuerung",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 570,
         "y": 760,
         "wires": []
@@ -16200,7 +16154,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 960,
+        "y": 980,
         "wires": [
             [
                 "104efa78.291536"
@@ -16227,7 +16181,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2110,
+        "x": 2250,
         "y": 920,
         "wires": [
             [
@@ -16256,7 +16210,8 @@
         "y": 1120,
         "wires": [
             [
-                "97a2036b.0979b"
+                "97a2036b.0979b",
+                "879bc6d.ff28e38"
             ]
         ]
     },
@@ -16341,8 +16296,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1320,
-        "y": 1340,
+        "x": 1360,
+        "y": 580,
         "wires": [
             [
                 "a16b506a.769ca"
@@ -16701,8 +16656,8 @@
         "payloadDefaultOffset": 0,
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
-        "x": 1540,
-        "y": 1340,
+        "x": 1580,
+        "y": 580,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -16713,7 +16668,6 @@
         "id": "5d90d03.ab8c03",
         "type": "ccu-value",
         "z": "4e67676c.de2018",
-        "d": true,
         "name": "Steckdosenaufsatz Bad",
         "iface": "HmIP-RF",
         "channel": "00021D89A1BE2B:3 HMIP-PS 00021D89A1BE2B:3",
@@ -16730,7 +16684,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2150,
+        "x": 2290,
         "y": 1000,
         "wires": [
             [
@@ -16744,8 +16698,8 @@
         "z": "4e67676c.de2018",
         "name": "Zeitschaltung Handtuchheizkörper",
         "info": "",
-        "x": 1540,
-        "y": 1300,
+        "x": 1580,
+        "y": 540,
         "wires": []
     },
     {
@@ -16760,7 +16714,7 @@
         "label": "Status Heizung Bad",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2660,
+        "x": 2800,
         "y": 1000,
         "wires": []
     },
@@ -16841,7 +16795,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2400,
+        "x": 2540,
         "y": 920,
         "wires": [
             [
@@ -16862,7 +16816,8 @@
         "height": "0",
         "passthru": true,
         "decouple": "false",
-        "topic": "condition",
+        "topic": "condition_2",
+        "topicType": "str",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
@@ -16872,12 +16827,15 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 130,
+        "animate": true,
+        "className": "",
+        "x": 350,
         "y": 880,
         "wires": [
             [
                 "a7e8b14.06f8b5",
-                "42ee4c8f.552404"
+                "42ee4c8f.552404",
+                "2017347b.68a9ac"
             ]
         ]
     },
@@ -16931,7 +16889,7 @@
         "label": "Status Heizung EG",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2650,
+        "x": 2790,
         "y": 920,
         "wires": []
     },
@@ -17032,10 +16990,12 @@
         "wrap": false,
         "passthru": true,
         "topic": "",
+        "topicType": "str",
         "format": "{{value}}",
         "min": 0,
         "max": "8000",
         "step": "500",
+        "className": "",
         "x": 120,
         "y": 140,
         "wires": [
@@ -17127,10 +17087,12 @@
         "wrap": false,
         "passthru": true,
         "topic": "",
+        "topicType": "str",
         "format": "{{value}}",
         "min": 0,
         "max": "2000",
         "step": "100",
+        "className": "",
         "x": 120,
         "y": 430,
         "wires": [
@@ -17286,7 +17248,8 @@
         "y": 1240,
         "wires": [
             [
-                "6417ec08.3003c4"
+                "6417ec08.3003c4",
+                "e0c0b810.4401a8"
             ]
         ]
     },
@@ -17320,7 +17283,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2400,
+        "x": 2540,
         "y": 1000,
         "wires": [
             [
@@ -17401,7 +17364,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1800,
+        "x": 2000,
         "y": 1120,
         "wires": [
             [
@@ -17423,8 +17386,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 550,
-        "y": 1533,
+        "x": 570,
+        "y": 1960,
         "wires": [
             [
                 "4506f047.22e95"
@@ -17448,8 +17411,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 1553,
+        "x": 120,
+        "y": 1980,
         "wires": [
             [
                 "b1955526.818b68",
@@ -17469,8 +17432,8 @@
         "outputtriggeredby": "all",
         "inputCount": "2",
         "topic": "result",
-        "x": 820,
-        "y": 1560,
+        "x": 840,
+        "y": 1987,
         "wires": [
             [],
             [
@@ -17493,8 +17456,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 550,
-        "y": 1593,
+        "x": 570,
+        "y": 2020,
         "wires": [
             [
                 "4506f047.22e95"
@@ -17520,8 +17483,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
-        "y": 1533,
+        "x": 340,
+        "y": 1960,
         "wires": [
             [
                 "f37f96c.c0cef68"
@@ -17547,8 +17510,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
-        "y": 1593,
+        "x": 340,
+        "y": 2020,
         "wires": [
             [
                 "bfa8863e.921868"
@@ -17574,8 +17537,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1130,
-        "y": 1560,
+        "x": 1150,
+        "y": 1987,
         "wires": [
             [
                 "fb7fc487.52eca8"
@@ -17599,8 +17562,7 @@
         "wires": [
             [
                 "4a25e9cf.8bb438",
-                "ae1cc341.61f97",
-                "a7227470.fd70f8"
+                "ae1cc341.61f97"
             ],
             [],
             []
@@ -17616,7 +17578,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "condition_2",
+                "to": "condition",
                 "tot": "str"
             }
         ],
@@ -17625,8 +17587,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 960,
+        "x": 300,
+        "y": 980,
         "wires": [
             [
                 "7e2231a8.fdb74"
@@ -17637,7 +17599,7 @@
         "id": "7e2231a8.fdb74",
         "type": "change",
         "z": "4e67676c.de2018",
-        "name": "BestätigungAnwesenheit",
+        "name": "Status Anwesenheit",
         "rules": [
             {
                 "t": "set",
@@ -17652,12 +17614,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
-        "y": 960,
+        "x": 510,
+        "y": 980,
         "wires": [
             [
                 "42ee4c8f.552404",
-                "f13fed81.e5ff9"
+                "9887df71.2556c"
             ]
         ]
     },
@@ -17667,8 +17629,8 @@
         "z": "4e67676c.de2018",
         "name": "Get Anwesenheit from WIFI Status",
         "info": "",
-        "x": 380,
-        "y": 1453,
+        "x": 400,
+        "y": 1880,
         "wires": []
     },
     {
@@ -17677,14 +17639,19 @@
         "z": "4e67676c.de2018",
         "group": "f96632f0.e2eae",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": "0",
+        "height": "0",
         "name": "",
         "label": "Status Anwesenheit",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1630,
-        "y": 1560,
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1650,
+        "y": 1987,
         "wires": []
     },
     {
@@ -17717,8 +17684,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1400,
-        "y": 1560,
+        "x": 1420,
+        "y": 1987,
         "wires": [
             [
                 "1ee94e9d.293fc1"
@@ -17739,11 +17706,12 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 390,
-        "y": 1280,
+        "x": 410,
+        "y": 1700,
         "wires": [
             [
-                "3c339596.ca663a"
+                "3c339596.ca663a",
+                "bab48843.7408a8"
             ]
         ]
     },
@@ -17751,21 +17719,21 @@
         "id": "d5551270.e6167",
         "type": "inject",
         "z": "4e67676c.de2018",
-        "name": "all 1 min",
+        "name": "every 30s",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "60",
+        "repeat": "30",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 1280,
+        "x": 130,
+        "y": 1700,
         "wires": [
             [
                 "53275aa9.d68424",
@@ -17792,8 +17760,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 710,
-        "y": 1280,
+        "x": 730,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -17812,8 +17780,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 390,
-        "y": 1340,
+        "x": 410,
+        "y": 1760,
         "wires": [
             [
                 "4b9c267e.bfbaa8"
@@ -17839,8 +17807,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 1340,
+        "x": 740,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -17860,7 +17828,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1800,
+        "x": 2006,
         "y": 1240,
         "wires": [
             [
@@ -17887,7 +17855,8 @@
         "y": 720,
         "wires": [
             [
-                "d49e3fea.44d87"
+                "d49e3fea.44d87",
+                "a35bf6df.e74278"
             ]
         ]
     },
@@ -17920,8 +17889,8 @@
         "z": "4e67676c.de2018",
         "name": "Get Status Schalter Steckdose",
         "info": "",
-        "x": 370,
-        "y": 1200,
+        "x": 390,
+        "y": 1620,
         "wires": []
     },
     {
@@ -18720,10 +18689,10 @@
         "topic": "condition",
         "name": "",
         "invert": false,
-        "timeout": "600",
-        "timeoutType": "num",
-        "x": 1590,
-        "y": 1120,
+        "timeout": "DelayEnableHeater",
+        "timeoutType": "flow",
+        "x": 1680,
+        "y": 1080,
         "wires": [
             [
                 "71594325.134dec"
@@ -18737,10 +18706,10 @@
         "topic": "condition",
         "name": "",
         "invert": false,
-        "timeout": "600",
-        "timeoutType": "num",
-        "x": 1590,
-        "y": 1240,
+        "timeout": "DelayEnableHeater",
+        "timeoutType": "flow",
+        "x": 1680,
+        "y": 1200,
         "wires": [
             [
                 "3e1d0e64.ea6d52"
@@ -18926,30 +18895,6 @@
         ]
     },
     {
-        "id": "f13fed81.e5ff9",
-        "type": "switch",
-        "z": "4e67676c.de2018",
-        "name": "SwitchOffWhenAbsent",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1340,
-        "y": 960,
-        "wires": [
-            [
-                "b57bddc8.2876a",
-                "c8effe1c.66349"
-            ]
-        ]
-    },
-    {
         "id": "1516c4be.911f3b",
         "type": "inject",
         "z": "4e67676c.de2018",
@@ -19068,7 +19013,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2140,
+        "x": 2280,
         "y": 780,
         "wires": [
             [
@@ -19095,7 +19040,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2150,
+        "x": 2290,
         "y": 840,
         "wires": [
             [
@@ -19108,7 +19053,7 @@
         "type": "InvertUltimate",
         "z": "4e67676c.de2018",
         "name": "Invert",
-        "x": 2590,
+        "x": 2730,
         "y": 800,
         "wires": [
             [
@@ -19128,7 +19073,7 @@
         "outputtriggeredby": "all",
         "inputCount": "2",
         "topic": "ManuelMode",
-        "x": 2380,
+        "x": 2520,
         "y": 800,
         "wires": [
             [],
@@ -19146,7 +19091,7 @@
         "links": [
             "b23d643c.a6b948"
         ],
-        "x": 2695,
+        "x": 2835,
         "y": 800,
         "wires": []
     },
@@ -19364,23 +19309,6 @@
         "wires": []
     },
     {
-        "id": "a7227470.fd70f8",
-        "type": "debug",
-        "z": "4e67676c.de2018",
-        "name": "Controller boolean",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1010,
-        "y": 680,
-        "wires": []
-    },
-    {
         "id": "f87f2b9a.920568",
         "type": "ccu-value",
         "z": "33898250.03adbe",
@@ -19416,7 +19344,7 @@
         "label": "set Motiondetection Terrasse",
         "tooltip": "set Motiondetection",
         "group": "d8ed037.4a1b3",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -19444,6 +19372,7 @@
         "id": "b52aca6e.a2db78",
         "type": "change",
         "z": "33898250.03adbe",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -19482,8 +19411,9 @@
         "id": "46b68dc3.037654",
         "type": "ui_text",
         "z": "33898250.03adbe",
+        "d": true,
         "group": "d8ed037.4a1b3",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -19514,12 +19444,13 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 270,
-        "y": 520,
+        "x": 170,
+        "y": 500,
         "wires": [
             [
                 "509699e0.d098f8",
-                "2e6623e2.55723c"
+                "2e6623e2.55723c",
+                "87c02e2b.9a1ea"
             ]
         ]
     },
@@ -19543,8 +19474,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1170,
-        "y": 420,
+        "x": 1148,
+        "y": 405,
         "wires": [
             [
                 "6041da92.8ec924"
@@ -19570,8 +19501,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 620,
+        "x": 538,
+        "y": 605,
         "wires": [
             [
                 "4325f332.e8117c"
@@ -19587,30 +19518,13 @@
         "invert": true,
         "timeout": "DelayMotionDetection",
         "timeoutType": "flow",
-        "x": 1040,
-        "y": 620,
+        "x": 1018,
+        "y": 605,
         "wires": [
             [
                 "8f393613.fc8be8"
             ]
         ]
-    },
-    {
-        "id": "3f6e7a9f.276656",
-        "type": "debug",
-        "z": "33898250.03adbe",
-        "name": "Out 3 Example",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 960,
-        "wires": []
     },
     {
         "id": "49ff992e.3d3078",
@@ -19633,7 +19547,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 660,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "3bd3e0b8.15cd8",
@@ -19774,7 +19688,7 @@
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
         "x": 410,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -19803,7 +19717,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "8ccc23f5.2f2a1"
@@ -19821,11 +19735,9 @@
         "skipevents": false,
         "universalevents": false,
         "x": 1090,
-        "y": 880,
+        "y": 900,
         "wires": [
-            [
-                "3f6e7a9f.276656"
-            ]
+            []
         ]
     },
     {
@@ -19855,7 +19767,7 @@
         "to": "",
         "reg": false,
         "x": 880,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "5cfaa7da.11fd38"
@@ -19880,7 +19792,7 @@
         "payload": "0",
         "payloadType": "num",
         "x": 410,
-        "y": 1000,
+        "y": 1020,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -19905,7 +19817,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 410,
-        "y": 960,
+        "y": 980,
         "wires": [
             [
                 "49ff992e.3d3078"
@@ -19919,7 +19831,7 @@
         "name": "Zeitschaltung Licht Tür außen",
         "info": "",
         "x": 240,
-        "y": 820,
+        "y": 840,
         "wires": []
     },
     {
@@ -19944,7 +19856,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 200,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "40467110.96d8e"
@@ -19968,12 +19880,8 @@
             {
                 "index": 0,
                 "name": "Sterne ein morgens",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validPayload": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "6:30",
                 "timeType": "entered",
                 "timeOp": 1,
@@ -20002,7 +19910,7 @@
                 "payloadOffsetValue": "",
                 "payloadOffsetType": "none",
                 "payloadOffsetMultiplier": 60000,
-                "payloadFormat": "",
+                "payloadFormat": 99,
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
@@ -20020,7 +19928,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>6:30</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>6:30</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on day</span> <var>Mon-Fri</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
@@ -20195,7 +20105,7 @@
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
         "x": 450,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "c9ee7bec.6cfc58"
@@ -20209,7 +20119,7 @@
         "name": "Zeitschaltung Weihnachtssterne",
         "info": "",
         "x": 230,
-        "y": 1080,
+        "y": 1100,
         "wires": []
     },
     {
@@ -20225,13 +20135,14 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 1270,
-        "y": 1140,
+        "y": 1160,
         "wires": []
     },
     {
         "id": "c9ee7bec.6cfc58",
         "type": "ccu-value",
         "z": "33898250.03adbe",
+        "d": true,
         "name": "Steckdosenaufsatz Bad",
         "iface": "HmIP-RF",
         "channel": "00021D89A1BE2B:3 HMIP-PS 00021D89A1BE2B:3",
@@ -20249,7 +20160,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 790,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "6ef47f45.b604b"
@@ -20278,8 +20189,8 @@
         "label": "State Light Terrace",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1570,
-        "y": 420,
+        "x": 1548,
+        "y": 405,
         "wires": []
     },
     {
@@ -20312,8 +20223,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1360,
-        "y": 420,
+        "x": 1338,
+        "y": 405,
         "wires": [
             [
                 "17f71eb6.3a66d1"
@@ -20341,8 +20252,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1300,
-        "y": 620,
+        "x": 1278,
+        "y": 605,
         "wires": [
             [
                 "dcef5ab2.468fe8"
@@ -20362,7 +20273,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 1100,
-        "y": 800,
+        "y": 820,
         "wires": []
     },
     {
@@ -20396,7 +20307,7 @@
         "to": "",
         "reg": false,
         "x": 880,
-        "y": 800,
+        "y": 820,
         "wires": [
             [
                 "f7c020de.a2e2f"
@@ -20434,7 +20345,7 @@
         "to": "",
         "reg": false,
         "x": 1040,
-        "y": 1140,
+        "y": 1160,
         "wires": [
             [
                 "d57fc8ff.90ea68"
@@ -20458,8 +20369,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 810,
-        "y": 560,
+        "x": 788,
+        "y": 545,
         "wires": [
             [
                 "4325f332.e8117c"
@@ -20483,8 +20394,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 810,
-        "y": 520,
+        "x": 788,
+        "y": 505,
         "wires": [
             [
                 "4325f332.e8117c"
@@ -20510,8 +20421,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1190,
-        "y": 340,
+        "x": 1168,
+        "y": 325,
         "wires": [
             [
                 "360c5de4.921842"
@@ -20530,8 +20441,8 @@
         "outputtriggeredby": "all",
         "inputCount": "3",
         "topic": "ManuelMode",
-        "x": 770,
-        "y": 433,
+        "x": 748,
+        "y": 418,
         "wires": [
             [
                 "dcef5ab2.468fe8"
@@ -20545,8 +20456,8 @@
         "type": "InvertUltimate",
         "z": "33898250.03adbe",
         "name": "Invert",
-        "x": 1390,
-        "y": 340,
+        "x": 1368,
+        "y": 325,
         "wires": [
             [
                 "e6844fd6.c1d25"
@@ -20561,8 +20472,8 @@
         "links": [
             "5d3d89cc.209d28"
         ],
-        "x": 1495,
-        "y": 340,
+        "x": 1473,
+        "y": 325,
         "wires": []
     },
     {
@@ -20573,7 +20484,7 @@
         "label": "Light Terrace manual",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 5,
+        "order": 3,
         "width": "6",
         "height": "1",
         "passthru": true,
@@ -20588,8 +20499,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 820,
-        "y": 340,
+        "x": 798,
+        "y": 325,
         "wires": [
             [
                 "dcef5ab2.468fe8",
@@ -20606,7 +20517,7 @@
             "e6844fd6.c1d25"
         ],
         "x": 555,
-        "y": 420,
+        "y": 280,
         "wires": [
             [
                 "3bdc3f86.d6c9"
@@ -20632,8 +20543,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 280,
+        "x": 308,
+        "y": 300,
         "wires": [
             [
                 "3bdc3f86.d6c9"
@@ -20659,11 +20570,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 480,
+        "x": 480,
+        "y": 500,
         "wires": [
             [
-                "3bdc3f86.d6c9"
+                "23e5e2be.c7ba3e"
             ]
         ]
     },
@@ -20672,10 +20583,10 @@
         "type": "ui_numeric",
         "z": "33898250.03adbe",
         "name": "",
-        "label": "Delay Motion Detection",
+        "label": "Time Light Terrace On [s]",
         "tooltip": "",
         "group": "d8ed037.4a1b3",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "wrap": false,
@@ -20685,8 +20596,8 @@
         "min": "10",
         "max": "600",
         "step": "10",
-        "x": 250,
-        "y": 700,
+        "x": 228,
+        "y": 685,
         "wires": [
             [
                 "c586bf40.4a6a7"
@@ -20712,12 +20623,1535 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
-        "y": 700,
+        "x": 568,
+        "y": 685,
         "wires": [
             [
                 "4325f332.e8117c"
             ]
         ]
+    },
+    {
+        "id": "87c02e2b.9a1ea",
+        "type": "debug",
+        "z": "33898250.03adbe",
+        "name": "motion detection",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "2940646d.99f3fc",
+        "type": "ui_numeric",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "label": "Delay Enable Heater [s]",
+        "tooltip": "",
+        "group": "f96632f0.e2eae",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "600",
+        "step": "10",
+        "className": "",
+        "x": 170,
+        "y": 1380,
+        "wires": [
+            [
+                "623cc655.63c758",
+                "5fcb899a.add8d8"
+            ]
+        ]
+    },
+    {
+        "id": "623cc655.63c758",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "def DelayEnableHeater",
+        "rules": [
+            {
+                "t": "set",
+                "p": "DelayEnableHeater",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 657,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3446edfe.ca0d82",
+        "type": "ccu-value",
+        "z": "33898250.03adbe",
+        "name": "Illumination Motiondetector Terrace",
+        "iface": "HmIP-RF",
+        "channel": "00321F29971B60:1 Bewegungsmelder Terrasse",
+        "datapoint": "ILLUMINATION",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": true,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 920,
+        "y": 180,
+        "wires": [
+            [
+                "9421ef6c.90224"
+            ]
+        ]
+    },
+    {
+        "id": "23e5e2be.c7ba3e",
+        "type": "switch",
+        "z": "33898250.03adbe",
+        "name": "",
+        "property": "IlluminationThreshold",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "5",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 400,
+        "wires": [
+            [
+                "3bdc3f86.d6c9"
+            ]
+        ]
+    },
+    {
+        "id": "9421ef6c.90224",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "def DelayMotionDetection",
+        "rules": [
+            {
+                "t": "set",
+                "p": "IlluminationThreshold",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86508463.a60a78",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 270,
+        "y": 1080,
+        "wires": [
+            [
+                "91bbed8b.15d41"
+            ]
+        ]
+    },
+    {
+        "id": "d2b88bad.ba7658",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 270,
+        "y": 1040,
+        "wires": [
+            [
+                "91bbed8b.15d41"
+            ]
+        ]
+    },
+    {
+        "id": "91bbed8b.15d41",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "condition_2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e38303d.bf4fb",
+        "type": "BooleanLogicUltimate",
+        "z": "4e67676c.de2018",
+        "name": "SwitchOffWhenAbsentOrControllerOff",
+        "filtertrue": "onlytrue",
+        "persist": true,
+        "sInitializeWith": "false",
+        "triggertopic": "condition",
+        "outputtriggeredby": "all",
+        "inputCount": "2",
+        "topic": "condition",
+        "x": 960,
+        "y": 1040,
+        "wires": [
+            [],
+            [
+                "138f1f20.3e4851"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2017347b.68a9ac",
+        "type": "InvertUltimate",
+        "z": "4e67676c.de2018",
+        "name": "Invert",
+        "x": 690,
+        "y": 940,
+        "wires": [
+            [
+                "6e38303d.bf4fb"
+            ]
+        ]
+    },
+    {
+        "id": "9887df71.2556c",
+        "type": "InvertUltimate",
+        "z": "4e67676c.de2018",
+        "name": "Invert",
+        "x": 690,
+        "y": 1040,
+        "wires": [
+            [
+                "6e38303d.bf4fb"
+            ]
+        ]
+    },
+    {
+        "id": "138f1f20.3e4851",
+        "type": "InvertUltimate",
+        "z": "4e67676c.de2018",
+        "name": "Invert",
+        "x": 1270,
+        "y": 940,
+        "wires": [
+            [
+                "b57bddc8.2876a",
+                "c8effe1c.66349",
+                "97a2036b.0979b",
+                "6417ec08.3003c4",
+                "5d2d17a.d29fbe8"
+            ]
+        ]
+    },
+    {
+        "id": "91c8764c.199b28",
+        "type": "remote-access",
+        "z": "d2aa9e3f.51894",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "verbose": 0,
+        "x": 180,
+        "y": 420,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fc4c01b6.5239e",
+        "type": "remote-notification",
+        "z": "c1790f94.1fa788",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 1570,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e36c9096.a6bfe",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "property": "alarm",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1350,
+        "y": 380,
+        "wires": [
+            [
+                "fc4c01b6.5239e"
+            ]
+        ]
+    },
+    {
+        "id": "37c63be4.9cc4f4",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Message Fitness-Keller",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"ALARM\",\"body\":\"Wasser im Fitness-Keller!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 340,
+        "wires": [
+            [
+                "e36c9096.a6bfe"
+            ]
+        ]
+    },
+    {
+        "id": "bbd2d2d8.7c38c",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Message HWR Keller",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"ALARM\",\"body\":\"Wasser im HWR-Keller!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 420,
+        "wires": [
+            [
+                "e36c9096.a6bfe"
+            ]
+        ]
+    },
+    {
+        "id": "2c63c858.b3be78",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "condition",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1860,
+        "y": 540,
+        "wires": [
+            [
+                "a35bf6df.e74278"
+            ]
+        ]
+    },
+    {
+        "id": "a35bf6df.e74278",
+        "type": "link out",
+        "z": "4e67676c.de2018",
+        "name": "Start timer Out",
+        "links": [
+            "fe4ed8f8.2788b8",
+            "33e4b66a.1cd69a"
+        ],
+        "x": 1955,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a640c0f0.65376",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "def DelayEnableHeaterMillis",
+        "rules": [
+            {
+                "t": "set",
+                "p": "DelayEnableHeaterMillis",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 667,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5fcb899a.add8d8",
+        "type": "calculator",
+        "z": "4e67676c.de2018",
+        "name": "s to millis",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "mult",
+        "constant": "1000",
+        "round": false,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 407,
+        "y": 1440,
+        "wires": [
+            [
+                "a640c0f0.65376"
+            ]
+        ]
+    },
+    {
+        "id": "17dfd6f3.389899",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "reset StateMinTimeHeaterOFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "StateMinTimeHeaterOFF",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bab48843.7408a8",
+        "type": "switch",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 1640,
+        "wires": [
+            [
+                "17dfd6f3.389899"
+            ]
+        ]
+    },
+    {
+        "id": "1d531a33.579f76",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 590,
+        "y": 1560,
+        "wires": [
+            [
+                "bab48843.7408a8"
+            ]
+        ]
+    },
+    {
+        "id": "e1e99a92.0587e8",
+        "type": "hourglass",
+        "z": "4e67676c.de2018",
+        "name": "Time heater inaktive",
+        "persistId": "",
+        "humanizeLocale": "de",
+        "x": 840,
+        "y": 2360,
+        "wires": [
+            [
+                "1955fb8c.8e34f4",
+                "a9bb12cb.55132"
+            ]
+        ]
+    },
+    {
+        "id": "1955fb8c.8e34f4",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "name": "timer",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 2420,
+        "wires": []
+    },
+    {
+        "id": "7c3dcf09.8766c",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "start timer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "start",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 2380,
+        "wires": [
+            [
+                "e1e99a92.0587e8"
+            ]
+        ]
+    },
+    {
+        "id": "2fb7a296.8f91ce",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "stop timer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 2500,
+        "wires": [
+            [
+                "e1e99a92.0587e8"
+            ]
+        ]
+    },
+    {
+        "id": "660a526b.9a221c",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "reset timer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "reset",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 2320,
+        "wires": [
+            [
+                "e1e99a92.0587e8"
+            ]
+        ]
+    },
+    {
+        "id": "ba9a285.1d43cd8",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "status timer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "command",
+                "pt": "msg",
+                "to": "status",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 2600,
+        "wires": [
+            [
+                "e1e99a92.0587e8"
+            ]
+        ]
+    },
+    {
+        "id": "9d815de0.a7b65",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 350,
+        "y": 2500,
+        "wires": [
+            [
+                "2fb7a296.8f91ce"
+            ]
+        ]
+    },
+    {
+        "id": "39be275f.f367e8",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "condition",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 200,
+        "y": 2440,
+        "wires": [
+            [
+                "ff20a5e4.6e93c8"
+            ]
+        ]
+    },
+    {
+        "id": "3ef2cf36.5cdc6",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "def StateMinTimeHeaterOFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "StateMinTimeHeaterOFF",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "timerOff",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33e4b66a.1cd69a",
+        "type": "link in",
+        "z": "4e67676c.de2018",
+        "name": "Start timer In",
+        "links": [
+            "a35bf6df.e74278"
+        ],
+        "x": 275,
+        "y": 2320,
+        "wires": [
+            [
+                "660a526b.9a221c",
+                "ff20a5e4.6e93c8",
+                "a44b52d1.86666"
+            ]
+        ]
+    },
+    {
+        "id": "ff20a5e4.6e93c8",
+        "type": "combine-defer",
+        "z": "4e67676c.de2018",
+        "topic": "condition",
+        "name": "",
+        "invert": false,
+        "timeout": "3",
+        "timeoutType": "num",
+        "x": 440,
+        "y": 2380,
+        "wires": [
+            [
+                "7c3dcf09.8766c"
+            ]
+        ]
+    },
+    {
+        "id": "a9bb12cb.55132",
+        "type": "switch",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "property": "elapsed.millis",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "DelayEnableHeaterMillis",
+                "vt": "flow"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 2360,
+        "wires": [
+            [
+                "3ef2cf36.5cdc6"
+            ]
+        ]
+    },
+    {
+        "id": "ea765179.f1241",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "check state timer every 1 min",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 2600,
+        "wires": [
+            [
+                "ba9a285.1d43cd8"
+            ]
+        ]
+    },
+    {
+        "id": "978659a8.fef128",
+        "type": "combine-defer",
+        "z": "4e67676c.de2018",
+        "topic": "timerOff",
+        "name": "",
+        "invert": false,
+        "timeout": 1,
+        "timeoutType": "num",
+        "x": 340,
+        "y": 2540,
+        "wires": [
+            [
+                "2fb7a296.8f91ce"
+            ]
+        ]
+    },
+    {
+        "id": "c0a8e4b6.f04718",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 450,
+        "y": 2440,
+        "wires": [
+            [
+                "7c3dcf09.8766c"
+            ]
+        ]
+    },
+    {
+        "id": "a44b52d1.86666",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "Reset StateMinTimeHeaterOFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "StateMinTimeHeaterOFF",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 2260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1e5016a.3b25a",
+        "type": "comment",
+        "z": "4e67676c.de2018",
+        "name": "Timer to last heater activation",
+        "info": "",
+        "x": 380,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "5d2d17a.d29fbe8",
+        "type": "link out",
+        "z": "4e67676c.de2018",
+        "name": "Rest Timer",
+        "links": [
+            "9eda0c45.68db5"
+        ],
+        "x": 1515,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "9eda0c45.68db5",
+        "type": "link in",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "links": [
+            "5d2d17a.d29fbe8"
+        ],
+        "x": 235,
+        "y": 2380,
+        "wires": [
+            [
+                "ff20a5e4.6e93c8"
+            ]
+        ]
+    },
+    {
+        "id": "e0c0b810.4401a8",
+        "type": "switch",
+        "z": "4e67676c.de2018",
+        "name": "Enable while StateMinTimeHeaterOFF true",
+        "property": "StateMinTimeHeaterOFF",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1690,
+        "y": 1260,
+        "wires": [
+            [
+                "3e1d0e64.ea6d52"
+            ]
+        ]
+    },
+    {
+        "id": "879bc6d.ff28e38",
+        "type": "switch",
+        "z": "4e67676c.de2018",
+        "name": "Enable while StateMinTimeHeaterOFF true",
+        "property": "StateMinTimeHeaterOFF",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1690,
+        "y": 1140,
+        "wires": [
+            [
+                "71594325.134dec"
+            ]
+        ]
+    },
+    {
+        "id": "6474fda8.63fbe4",
+        "type": "noraf-light",
+        "z": "28a65c2.2e2eba4",
+        "devicename": "Licht Keller",
+        "lightcolor": false,
+        "brightnesscontrol": true,
+        "commandonlycolor": false,
+        "turnonwhenbrightnesschanges": false,
+        "passthru": false,
+        "errorifstateunchaged": true,
+        "statepayload": true,
+        "brightnessoverride": "",
+        "roomhint": "Keller",
+        "name": "",
+        "colortype": "hsv",
+        "nora": "e7b91b38.1d5708",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "temperaturemin": "2700",
+        "temperaturemax": "5500",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "65095362.fa4e6c"
+            ]
+        ]
+    },
+    {
+        "id": "c4663438.9b19a8",
+        "type": "noraf-light",
+        "z": "28a65c2.2e2eba4",
+        "devicename": "Licht Obergeschoss",
+        "lightcolor": false,
+        "brightnesscontrol": true,
+        "commandonlycolor": false,
+        "turnonwhenbrightnesschanges": false,
+        "passthru": false,
+        "errorifstateunchaged": true,
+        "statepayload": true,
+        "brightnessoverride": "",
+        "roomhint": "Diele",
+        "name": "",
+        "colortype": "hsv",
+        "nora": "e7b91b38.1d5708",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "temperaturemin": "2700",
+        "temperaturemax": "5500",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "x": 260,
+        "y": 260,
+        "wires": [
+            [
+                "37b1605d.22061"
+            ]
+        ]
+    },
+    {
+        "id": "65095362.fa4e6c",
+        "type": "change",
+        "z": "28a65c2.2e2eba4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.on",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [
+                "70d4ff52.e5cf68"
+            ]
+        ]
+    },
+    {
+        "id": "37b1605d.22061",
+        "type": "change",
+        "z": "28a65c2.2e2eba4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.on",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "2cfeaa6f.ae474e"
+            ]
+        ]
+    },
+    {
+        "id": "74ac1640.f64b38",
+        "type": "ccu-value",
+        "z": "33898250.03adbe",
+        "name": "",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2309474:1 Licht Flur Keller",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 500,
+        "y": 1400,
+        "wires": [
+            [
+                "abfbc502.a97108"
+            ]
+        ]
+    },
+    {
+        "id": "376422a.e17a5de",
+        "type": "ccu-value",
+        "z": "33898250.03adbe",
+        "name": "",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2309458:1 Licht Flur EG",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 490,
+        "y": 1480,
+        "wires": [
+            [
+                "227d665c.efa68a"
+            ]
+        ]
+    },
+    {
+        "id": "e4874526.d5cdf8",
+        "type": "ccu-value",
+        "z": "33898250.03adbe",
+        "name": "",
+        "iface": "BidCos-RF",
+        "channel": "OEQ1263524:1 Licht Flur OG",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 490,
+        "y": 1560,
+        "wires": [
+            [
+                "59f5c9a1.8c6698"
+            ]
+        ]
+    },
+    {
+        "id": "abfbc502.a97108",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1400,
+        "wires": [
+            [
+                "c9829f64.4a97f"
+            ]
+        ]
+    },
+    {
+        "id": "227d665c.efa68a",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1480,
+        "wires": [
+            [
+                "1cc49d1a.4a4303"
+            ]
+        ]
+    },
+    {
+        "id": "59f5c9a1.8c6698",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1560,
+        "wires": [
+            [
+                "9f683ba.57e03c8"
+            ]
+        ]
+    },
+    {
+        "id": "c9829f64.4a97f",
+        "type": "ui_text",
+        "z": "33898250.03adbe",
+        "group": "afd7242e.e4d3e8",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "State Light basement",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1000,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "1cc49d1a.4a4303",
+        "type": "ui_text",
+        "z": "33898250.03adbe",
+        "group": "afd7242e.e4d3e8",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "State Light ground floor",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1010,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "9f683ba.57e03c8",
+        "type": "ui_text",
+        "z": "33898250.03adbe",
+        "group": "afd7242e.e4d3e8",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "State Light hallway",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 990,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "eed66d85.6839c",
+        "type": "ui_switch",
+        "z": "33898250.03adbe",
+        "name": "Light basement",
+        "label": "Light basement",
+        "tooltip": "",
+        "group": "d8ed037.4a1b3",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 200,
+        "y": 1400,
+        "wires": [
+            [
+                "74ac1640.f64b38"
+            ]
+        ]
+    },
+    {
+        "id": "c8d275a5.aeb498",
+        "type": "ui_switch",
+        "z": "33898250.03adbe",
+        "name": "Light ground floor",
+        "label": "Light ground floor",
+        "tooltip": "",
+        "group": "d8ed037.4a1b3",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 210,
+        "y": 1480,
+        "wires": [
+            [
+                "376422a.e17a5de"
+            ]
+        ]
+    },
+    {
+        "id": "3f52ca33.6e2f76",
+        "type": "ui_switch",
+        "z": "33898250.03adbe",
+        "name": "Light hallway",
+        "label": "Light hallway",
+        "tooltip": "",
+        "group": "d8ed037.4a1b3",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 190,
+        "y": 1560,
+        "wires": [
+            [
+                "e4874526.d5cdf8"
+            ]
+        ]
+    },
+    {
+        "id": "f2cd6e12.e00df",
+        "type": "comment",
+        "z": "33898250.03adbe",
+        "name": "Licht im Flur",
+        "info": "",
+        "x": 170,
+        "y": 1320,
+        "wires": []
     }
 ]
