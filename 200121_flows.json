@@ -621,6 +621,17 @@
         "sendDeviceNameAndLocation": false
     },
     {
+        "id": "e30a65b8.cef328",
+        "type": "ui_group",
+        "name": "Plots",
+        "tab": "4be192bf.76117c",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "cb73e4c8.3727f8",
         "type": "ccu-rpc",
         "z": "4f28065f.6e1fb8",
@@ -15942,7 +15953,7 @@
         "initialize": "",
         "finalize": "",
         "x": 540,
-        "y": 430,
+        "y": 480,
         "wires": [
             []
         ]
@@ -15968,7 +15979,7 @@
         "step": "100",
         "className": "",
         "x": 120,
-        "y": 430,
+        "y": 480,
         "wires": [
             [
                 "bc52b66f.0e5818"
@@ -15985,7 +15996,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "1",
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -16028,7 +16039,7 @@
         "initialize": "",
         "finalize": "",
         "x": 580,
-        "y": 490,
+        "y": 540,
         "wires": [
             []
         ]
@@ -16052,7 +16063,7 @@
         "max": "2000",
         "step": "250",
         "x": 150,
-        "y": 490,
+        "y": 540,
         "wires": [
             [
                 "2909b7eb.3c8c28"
@@ -16070,7 +16081,7 @@
         "initialize": "",
         "finalize": "",
         "x": 580,
-        "y": 560,
+        "y": 610,
         "wires": [
             []
         ]
@@ -16094,7 +16105,7 @@
         "max": "1000",
         "step": "100",
         "x": 150,
-        "y": 560,
+        "y": 610,
         "wires": [
             [
                 "438a69df.3b4648"
@@ -21300,6 +21311,245 @@
         "wires": [
             [
                 "a6414d68.115b"
+            ]
+        ]
+    },
+    {
+        "id": "385ab6d7.54d37a",
+        "type": "ccu-value",
+        "z": "4e67676c.de2018",
+        "name": "total_output",
+        "iface": "HmIP-RF",
+        "channel": "003FA0C9AD7613:1 Zähler IEC - Power",
+        "datapoint": "POWER",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "9f55c711.52f068",
+                "1b286a9f.df5ec5"
+            ]
+        ]
+    },
+    {
+        "id": "9f55c711.52f068",
+        "type": "ui_chart",
+        "z": "4e67676c.de2018",
+        "name": "power output",
+        "group": "ca79f64c.8975d8",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "label": "power output",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-6000",
+        "ymax": "2000",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 810,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b286a9f.df5ec5",
+        "type": "ui_text",
+        "z": "4e67676c.de2018",
+        "group": "ca79f64c.8975d8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "power output [W]",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 840,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "dcfb61ae.91484",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "all 1 min",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 2780,
+        "wires": [
+            [
+                "c21102ae.a4af1",
+                "805ceab.bd06418"
+            ]
+        ]
+    },
+    {
+        "id": "c21102ae.a4af1",
+        "type": "ccu-value",
+        "z": "4e67676c.de2018",
+        "d": true,
+        "name": "Power Ch2",
+        "iface": "HmIP-RF",
+        "channel": "003FA0C9AD7613:2 Zähler IEC : 2",
+        "datapoint": "POWER",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 530,
+        "y": 2780,
+        "wires": [
+            [
+                "b6c191d7.7f2c3"
+            ]
+        ]
+    },
+    {
+        "id": "805ceab.bd06418",
+        "type": "ccu-value",
+        "z": "4e67676c.de2018",
+        "d": true,
+        "name": "Power Ch4",
+        "iface": "HmIP-RF",
+        "channel": "003FA0C9AD7613:4 Zähler IEC : 4",
+        "datapoint": "POWER",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 530,
+        "y": 2840,
+        "wires": [
+            [
+                "1bf24f82.d66"
+            ]
+        ]
+    },
+    {
+        "id": "b6c191d7.7f2c3",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "d": true,
+        "name": "Power Ch2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "1bf24f82.d66",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "d": true,
+        "name": "Power Ch4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 2840,
+        "wires": []
+    },
+    {
+        "id": "a32bd2c0.db1ef",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "all 5 min",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "385ab6d7.54d37a"
             ]
         ]
     }
