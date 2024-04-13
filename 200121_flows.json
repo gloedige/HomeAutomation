@@ -628,6 +628,12 @@
         "sendDeviceNameAndLocation": false
     },
     {
+        "id": "c66039fc.9f9668",
+        "type": "hydrawise-controller",
+        "name": "Hunter Rain Controller",
+        "key": "C96E-FFB0-B97B-BBF2"
+    },
+    {
         "id": "cb73e4c8.3727f8",
         "type": "ccu-rpc",
         "z": "4f28065f.6e1fb8",
@@ -22160,5 +22166,67 @@
         "x": 1120,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "32e254fd.4e37ac",
+        "type": "hydrawise-command",
+        "z": "e20ea6d6.476028",
+        "name": "Hunter Rain Controller",
+        "controller": "c66039fc.9f9668",
+        "zone": "Rasen Terrasse",
+        "command": "info",
+        "duration": "10",
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "5062dd02.3c7054"
+            ]
+        ]
+    },
+    {
+        "id": "5062dd02.3c7054",
+        "type": "debug",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b8100795.e3e8b8",
+        "type": "inject",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "32e254fd.4e37ac"
+            ]
+        ]
     }
 ]
