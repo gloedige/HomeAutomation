@@ -22082,7 +22082,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2080,
+        "x": 2360,
         "y": 1160,
         "wires": [
             [
@@ -22118,8 +22118,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "",
-        "x": 1710,
-        "y": 960,
+        "x": 2070,
+        "y": 900,
         "wires": [
             [
                 "f8b772df.b8fbb"
@@ -22144,8 +22144,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "",
-        "x": 1710,
-        "y": 1000,
+        "x": 2070,
+        "y": 940,
         "wires": [
             [
                 "f8b772df.b8fbb"
@@ -22164,7 +22164,7 @@
         "label": "Status Gartenpumpe",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 2060,
+        "x": 2340,
         "y": 1260,
         "wires": []
     },
@@ -22277,7 +22277,7 @@
         "y": 1120,
         "wires": [
             [
-                "f8b772df.b8fbb"
+                "70ece647.7e0d98"
             ]
         ]
     },
@@ -22323,7 +22323,7 @@
         "y": 1220,
         "wires": [
             [
-                "f8b772df.b8fbb"
+                "df25a333.8a4af"
             ]
         ]
     },
@@ -22774,5 +22774,51 @@
         "x": 410,
         "y": 1420,
         "wires": []
+    },
+    {
+        "id": "df25a333.8a4af",
+        "type": "switch",
+        "z": "e20ea6d6.476028",
+        "name": "Condition power supply is on",
+        "property": "stateOfGardenPump",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2040,
+        "y": 1220,
+        "wires": [
+            [
+                "f8b772df.b8fbb"
+            ]
+        ]
+    },
+    {
+        "id": "70ece647.7e0d98",
+        "type": "switch",
+        "z": "e20ea6d6.476028",
+        "name": "Condition power supply is off",
+        "property": "stateOfGardenPump",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2040,
+        "y": 1120,
+        "wires": [
+            [
+                "f8b772df.b8fbb"
+            ]
+        ]
     }
 ]
