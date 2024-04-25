@@ -22692,5 +22692,87 @@
                 "5d561a04.486744"
             ]
         ]
+    },
+    {
+        "id": "2ffe6725.d625a8",
+        "type": "ccu-get-value",
+        "z": "e20ea6d6.476028",
+        "name": "state power Garden pump",
+        "ccuConfig": "38263145.35ea0e",
+        "iface": "HmIP-RF",
+        "channel": "00255D89B02D64:3 Gartenpumpe Schaltaktor",
+        "sysvar": "Alarmmeldungen",
+        "sysvarProperty": "value",
+        "datapoint": "STATE",
+        "datapointProperty": "value",
+        "setProp": "payload",
+        "setPropType": "msg",
+        "x": 410,
+        "y": 1500,
+        "wires": [
+            [
+                "a6d5079c.46b308"
+            ]
+        ]
+    },
+    {
+        "id": "44dd9135.cfa29",
+        "type": "inject",
+        "z": "e20ea6d6.476028",
+        "name": "every 30s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1500,
+        "wires": [
+            [
+                "2ffe6725.d625a8"
+            ]
+        ]
+    },
+    {
+        "id": "a6d5079c.46b308",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "state of garden pump",
+        "rules": [
+            {
+                "t": "set",
+                "p": "stateOfGardenPump",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "311d23a6.fa6b1c",
+        "type": "comment",
+        "z": "e20ea6d6.476028",
+        "name": "Get Status Schalter Steckdose",
+        "info": "",
+        "x": 410,
+        "y": 1420,
+        "wires": []
     }
 ]
