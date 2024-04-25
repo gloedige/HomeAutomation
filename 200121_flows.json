@@ -22172,6 +22172,7 @@
         "id": "32e254fd.4e37ac",
         "type": "hydrawise-command",
         "z": "e20ea6d6.476028",
+        "d": true,
         "name": "Hunter Rain Controller",
         "controller": "c66039fc.9f9668",
         "zone": "Rasen Terrasse",
