@@ -22182,7 +22182,11 @@
         "wires": [
             [
                 "7a49fc82.b9bae4",
-                "459a2029.8904a"
+                "459a2029.8904a",
+                "59c3979e.a9ea18",
+                "a91dc393.9b7a9",
+                "bd0e48b4.becbd8",
+                "64cf2d10.8ef9b4"
             ]
         ]
     },
@@ -22241,7 +22245,7 @@
         "sInitializeWith": "WaitForPayload",
         "triggertopic": "trigger",
         "outputtriggeredby": "all",
-        "inputCount": "2",
+        "inputCount": "6",
         "topic": "isOneZoneRunning",
         "x": 1190,
         "y": 1160,
@@ -22251,298 +22255,6 @@
                 "5ded76b0.ddcca8",
                 "43bd7a1d.7b18e4"
             ],
-            []
-        ]
-    },
-    {
-        "id": "ba9f93d2.1cd75",
-        "type": "switch",
-        "z": "e20ea6d6.476028",
-        "name": "forewardWhenRasenOstseiteIsRunning",
-        "property": "StateRasenOstseite",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 680,
-        "y": 880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b2a8d248.3964f",
-        "type": "switch",
-        "z": "e20ea6d6.476028",
-        "name": "forewardWhenRasenTerrasseIsRunning",
-        "property": "StateRasenTerrasse",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 680,
-        "y": 940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "818db323.ec11c",
-        "type": "switch",
-        "z": "e20ea6d6.476028",
-        "name": "forewardWhenRasenWestseiteIsRunning",
-        "property": "payload.controller.zones[2].isRunning",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 660,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "533d721d.48ee1c",
-        "type": "switch",
-        "z": "e20ea6d6.476028",
-        "name": "forewardWhenRasenSüdseiteIsRunning",
-        "property": "payload.controller.zones[3].isRunning",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 660,
-        "y": 1160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "11349ef8.ca71a1",
-        "type": "switch",
-        "z": "e20ea6d6.476028",
-        "name": "forewardWhenTropfVorgartenIsRunning",
-        "property": "payload.controller.zones[4].isRunning",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 660,
-        "y": 1220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "83ff8307.6d5ed",
-        "type": "switch",
-        "z": "e20ea6d6.476028",
-        "name": "forewardWhenTropfHochbeetIsRunning",
-        "property": "payload.controller.zones[1].isRunning",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 660,
-        "y": 1280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1fd3bdcf.076cc2",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "defStateAndTopicRasenOstseite",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "RasenOstseite",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "StateRasenOstseite",
-                "pt": "flow",
-                "to": "payload.controller.zones[0].isRunning",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 870,
-        "y": 480,
-        "wires": [
-            [
-                "5062dd02.3c7054"
-            ]
-        ]
-    },
-    {
-        "id": "12b6581d.d99d28",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "defStateAndTopicRasenTerrasse",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "RasenTerrasse",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "StateRasenTerrasse",
-                "pt": "flow",
-                "to": "payload.controller.zones[0].isRunning",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 880,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c75a5c1f.12ced",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "defTopicRasenWestseite",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "RasenWest",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 850,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b16a01e2.b7b5e",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "defTopicRasenSüdseite",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "RasenSüdseite",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 850,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4294bda2.972df4",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "defTopicTropfVorgarten",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "RasenTropfVorgarten",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 850,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f42d839b.76f23",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "defTopicTropfHochbeet",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "RasenTropfHochbeet",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 850,
-        "y": 780,
-        "wires": [
             []
         ]
     },
@@ -22599,7 +22311,7 @@
         "name": "5min delay",
         "pauseType": "delay",
         "timeout": "5",
-        "timeoutUnits": "seconds",
+        "timeoutUnits": "minutes",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -22731,6 +22443,250 @@
         "reg": false,
         "x": 660,
         "y": 1040,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "59c3979e.a9ea18",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicRasenWestseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RasenWestseite",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateRasenWestseite",
+                "pt": "flow",
+                "to": "payload.controller.zones[2].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 1100,
+        "wires": [
+            [
+                "397c2872.a0e4a8"
+            ]
+        ]
+    },
+    {
+        "id": "397c2872.a0e4a8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateRasenWestseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateRasenWestseite",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1100,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "a91dc393.9b7a9",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicRasenSüdseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RasenSüdseite",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateRasenSüdseite",
+                "pt": "flow",
+                "to": "payload.controller.zones[3].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 1160,
+        "wires": [
+            [
+                "764599cc.d22ec8"
+            ]
+        ]
+    },
+    {
+        "id": "764599cc.d22ec8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateRasenSüdseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateRasenSüdseite",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1160,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "bd0e48b4.becbd8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicTropfVorgarten",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TropfVorgarten",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateTropfVorgarten",
+                "pt": "flow",
+                "to": "payload.controller.zones[4].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 1220,
+        "wires": [
+            [
+                "86263671.533fa8"
+            ]
+        ]
+    },
+    {
+        "id": "86263671.533fa8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateTropfVorgarten",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateTropfVorgarten",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1220,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "64cf2d10.8ef9b4",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicTropfHochbeet",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TropfHochbeet",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateTropfHochbeet",
+                "pt": "flow",
+                "to": "payload.controller.zones[5].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 1280,
+        "wires": [
+            [
+                "65dd8f25.28832"
+            ]
+        ]
+    },
+    {
+        "id": "65dd8f25.28832",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateTropfHochbeet",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateTropfHochbeet",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1280,
         "wires": [
             [
                 "5d561a04.486744"
