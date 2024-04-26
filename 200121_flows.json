@@ -634,6 +634,25 @@
         "key": "E38C-5211-E514-6A0F"
     },
     {
+        "id": "658c4062.c5cba",
+        "type": "ui_tab",
+        "name": "Garden",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "910e02bb.bf327",
+        "type": "ui_group",
+        "name": "Gardenpump",
+        "tab": "658c4062.c5cba",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "cb73e4c8.3727f8",
         "type": "ccu-rpc",
         "z": "4f28065f.6e1fb8",
@@ -22086,7 +22105,7 @@
         "y": 1160,
         "wires": [
             [
-                "a46a8771.e5de18"
+                "53f50818.cbb0d8"
             ]
         ]
     },
@@ -22105,7 +22124,7 @@
         "type": "ui_button",
         "z": "e20ea6d6.476028",
         "name": "Gartenpumpe ein",
-        "group": "937d90ca.8d8b",
+        "group": "910e02bb.bf327",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -22114,10 +22133,12 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "true",
         "payloadType": "bool",
         "topic": "",
+        "topicType": "str",
         "x": 2070,
         "y": 900,
         "wires": [
@@ -22131,7 +22152,7 @@
         "type": "ui_button",
         "z": "e20ea6d6.476028",
         "name": "Gartenpumpe aus",
-        "group": "937d90ca.8d8b",
+        "group": "910e02bb.bf327",
         "order": 6,
         "width": 0,
         "height": 0,
@@ -22140,10 +22161,12 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
         "topic": "",
+        "topicType": "str",
         "x": 2070,
         "y": 940,
         "wires": [
@@ -22156,7 +22179,7 @@
         "id": "a46a8771.e5de18",
         "type": "ui_text",
         "z": "e20ea6d6.476028",
-        "group": "937d90ca.8d8b",
+        "group": "910e02bb.bf327",
         "order": 7,
         "width": 0,
         "height": 0,
@@ -22164,8 +22187,13 @@
         "label": "Status Gartenpumpe",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 2340,
-        "y": 1260,
+        "y": 1340,
         "wires": []
     },
     {
@@ -22186,7 +22214,8 @@
                 "59c3979e.a9ea18",
                 "a91dc393.9b7a9",
                 "bd0e48b4.becbd8",
-                "64cf2d10.8ef9b4"
+                "64cf2d10.8ef9b4",
+                "4cede9f.9ce5518"
             ]
         ]
     },
@@ -22239,14 +22268,13 @@
         "id": "5d561a04.486744",
         "type": "BooleanLogicUltimate",
         "z": "e20ea6d6.476028",
-        "d": true,
         "name": "passWhenOneOfSixZonesIsTrue",
         "filtertrue": "both",
         "persist": true,
         "sInitializeWith": "WaitForPayload",
         "triggertopic": "trigger",
         "outputtriggeredby": "all",
-        "inputCount": "6",
+        "inputCount": "7",
         "topic": "isOneZoneRunning",
         "x": 1190,
         "y": 1160,
@@ -22850,7 +22878,8 @@
         "y": 1680,
         "wires": [
             [
-                "5a202427.0198dc"
+                "5a202427.0198dc",
+                "c8e3ace9.40686"
             ]
         ]
     },
@@ -22902,6 +22931,157 @@
         "y": 1680,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "4cede9f.9ce5518",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defTopicGardenPumpPowerSupply",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "GardenPumpPowerSupply",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 1340,
+        "wires": [
+            [
+                "f40d58b1.049698"
+            ]
+        ]
+    },
+    {
+        "id": "f40d58b1.049698",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateOfSwitchOfGardenPumpPowerSupply",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stateOfSwitchOfGardenPumpPowerSupply",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 1340,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "603c914f.53625",
+        "type": "ui_text",
+        "z": "e20ea6d6.476028",
+        "group": "910e02bb.bf327",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Status Schalter Steckdose Gartenpumpe",
+        "label": "Status Schalter Steckdose Gartenpumpe",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1080,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "c8e3ace9.40686",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1740,
+        "wires": [
+            [
+                "603c914f.53625"
+            ]
+        ]
+    },
+    {
+        "id": "53f50818.cbb0d8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2360,
+        "y": 1240,
+        "wires": [
+            [
+                "a46a8771.e5de18"
+            ]
         ]
     }
 ]
