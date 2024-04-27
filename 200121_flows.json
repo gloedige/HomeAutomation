@@ -22274,7 +22274,7 @@
         "sInitializeWith": "WaitForPayload",
         "triggertopic": "trigger",
         "outputtriggeredby": "all",
-        "inputCount": "7",
+        "inputCount": "6",
         "topic": "isOneZoneRunning",
         "x": 1190,
         "y": 1160,
@@ -22937,6 +22937,7 @@
         "id": "4cede9f.9ce5518",
         "type": "change",
         "z": "e20ea6d6.476028",
+        "d": true,
         "name": "defTopicGardenPumpPowerSupply",
         "rules": [
             {
@@ -22964,6 +22965,7 @@
         "id": "f40d58b1.049698",
         "type": "change",
         "z": "e20ea6d6.476028",
+        "d": true,
         "name": "SetPayloadToStateOfSwitchOfGardenPumpPowerSupply",
         "rules": [
             {
@@ -23081,6 +23083,90 @@
         "wires": [
             [
                 "a46a8771.e5de18"
+            ]
+        ]
+    },
+    {
+        "id": "8e4c46b7.87c038",
+        "type": "ccu-value",
+        "z": "e20ea6d6.476028",
+        "name": "Switch Garden Pump Power Supply",
+        "iface": "HmIP-RF",
+        "channel": "00255D89B02D64:3 Gartenpumpe Schaltaktor",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 560,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7760ae2c.b12f6",
+        "type": "inject",
+        "z": "e20ea6d6.476028",
+        "name": "True",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 1800,
+        "wires": [
+            [
+                "8e4c46b7.87c038"
+            ]
+        ]
+    },
+    {
+        "id": "2a8ade93.4fbc72",
+        "type": "inject",
+        "z": "e20ea6d6.476028",
+        "name": "False",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 1880,
+        "wires": [
+            [
+                "8e4c46b7.87c038"
             ]
         ]
     }
