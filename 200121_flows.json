@@ -22864,17 +22864,17 @@
         "id": "e00a4a33.854058",
         "type": "ccu-get-value",
         "z": "e20ea6d6.476028",
-        "name": "State Switch Garden Pump",
+        "name": "Switch Garden Pump ON ",
         "ccuConfig": "38263145.35ea0e",
         "iface": "HmIP-RF",
-        "channel": "00255D89B02D64:3 Gartenpumpe Schaltaktor",
+        "channel": "002C1F29972940:1 Schalter Gartenpumpe Ein",
         "sysvar": "Alarmmeldungen",
         "sysvarProperty": "value",
-        "datapoint": "STATE",
+        "datapoint": "PRESS_SHORT",
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 420,
+        "x": 410,
         "y": 1680,
         "wires": [
             [
@@ -22887,6 +22887,7 @@
         "id": "a9079639.b43dc8",
         "type": "inject",
         "z": "e20ea6d6.476028",
+        "d": true,
         "name": "every 30s",
         "props": [
             {
@@ -22912,11 +22913,11 @@
         "id": "5a202427.0198dc",
         "type": "change",
         "z": "e20ea6d6.476028",
-        "name": "stateOfSwitchOfGardenPumpPowerSupply",
+        "name": "SwitchONGardenPumpPowerSupply",
         "rules": [
             {
                 "t": "set",
-                "p": "stateOfSwitchOfGardenPumpPowerSupply",
+                "p": "SwitchONGardenPumpPowerSupply",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -22927,7 +22928,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 810,
         "y": 1680,
         "wires": [
             []
@@ -22966,13 +22967,13 @@
         "type": "change",
         "z": "e20ea6d6.476028",
         "d": true,
-        "name": "SetPayloadToStateOfSwitchOfGardenPumpPowerSupply",
+        "name": "SetPayloadToSwitchONOfGardenPumpPowerSupply",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "stateOfSwitchOfGardenPumpPowerSupply",
+                "to": "SwitchONGardenPumpPowerSupply",
                 "tot": "flow"
             }
         ],
@@ -22981,7 +22982,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 720,
         "y": 1340,
         "wires": [
             [
@@ -22997,8 +22998,8 @@
         "order": 7,
         "width": 0,
         "height": 0,
-        "name": "Status Schalter Steckdose Gartenpumpe",
-        "label": "Status Schalter Steckdose Gartenpumpe",
+        "name": "Switch ON Garden Power Supply",
+        "label": "Switch ON Garden Power Supply",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -23006,7 +23007,7 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1080,
+        "x": 1060,
         "y": 1740,
         "wires": []
     },
@@ -23083,90 +23084,6 @@
         "wires": [
             [
                 "a46a8771.e5de18"
-            ]
-        ]
-    },
-    {
-        "id": "8e4c46b7.87c038",
-        "type": "ccu-value",
-        "z": "e20ea6d6.476028",
-        "name": "Switch Garden Pump Power Supply",
-        "iface": "HmIP-RF",
-        "channel": "00255D89B02D64:3 Gartenpumpe Schaltaktor",
-        "datapoint": "STATE",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 560,
-        "y": 1860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7760ae2c.b12f6",
-        "type": "inject",
-        "z": "e20ea6d6.476028",
-        "name": "True",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 250,
-        "y": 1800,
-        "wires": [
-            [
-                "8e4c46b7.87c038"
-            ]
-        ]
-    },
-    {
-        "id": "2a8ade93.4fbc72",
-        "type": "inject",
-        "z": "e20ea6d6.476028",
-        "name": "False",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 250,
-        "y": 1880,
-        "wires": [
-            [
-                "8e4c46b7.87c038"
             ]
         ]
     }
