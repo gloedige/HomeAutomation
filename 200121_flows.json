@@ -21946,6 +21946,7 @@
         "id": "921ff53f.01e208",
         "type": "clock-timer",
         "z": "e20ea6d6.476028",
+        "d": true,
         "name": "Zeiten Gartenpumpe",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
@@ -22268,21 +22269,22 @@
         "id": "5d561a04.486744",
         "type": "BooleanLogicUltimate",
         "z": "e20ea6d6.476028",
-        "name": "passWhenOneOfSixZonesIsTrue",
+        "name": "passWhenIrrigationORManualWaterUseIsTrue",
         "filtertrue": "both",
         "persist": true,
         "sInitializeWith": "WaitForPayload",
         "triggertopic": "trigger",
         "outputtriggeredby": "all",
-        "inputCount": "6",
+        "inputCount": "7",
         "topic": "isOneZoneRunning",
-        "x": 1190,
+        "x": 1230,
         "y": 1160,
         "wires": [
             [],
             [
                 "5ded76b0.ddcca8",
-                "43bd7a1d.7b18e4"
+                "43bd7a1d.7b18e4",
+                "ae66b65a.49c378"
             ],
             []
         ]
@@ -22861,29 +22863,6 @@
         "wires": []
     },
     {
-        "id": "e00a4a33.854058",
-        "type": "ccu-get-value",
-        "z": "e20ea6d6.476028",
-        "name": "Switch Garden Pump ON ",
-        "ccuConfig": "38263145.35ea0e",
-        "iface": "HmIP-RF",
-        "channel": "002C1F29972940:1 Schalter Gartenpumpe Ein",
-        "sysvar": "Alarmmeldungen",
-        "sysvarProperty": "value",
-        "datapoint": "PRESS_SHORT",
-        "datapointProperty": "value",
-        "setProp": "payload",
-        "setPropType": "msg",
-        "x": 410,
-        "y": 1680,
-        "wires": [
-            [
-                "5a202427.0198dc",
-                "c8e3ace9.40686"
-            ]
-        ]
-    },
-    {
         "id": "a9079639.b43dc8",
         "type": "inject",
         "z": "e20ea6d6.476028",
@@ -22904,9 +22883,7 @@
         "x": 150,
         "y": 1680,
         "wires": [
-            [
-                "e00a4a33.854058"
-            ]
+            []
         ]
     },
     {
@@ -22938,7 +22915,6 @@
         "id": "4cede9f.9ce5518",
         "type": "change",
         "z": "e20ea6d6.476028",
-        "d": true,
         "name": "defTopicGardenPumpPowerSupply",
         "rules": [
             {
@@ -22966,7 +22942,6 @@
         "id": "f40d58b1.049698",
         "type": "change",
         "z": "e20ea6d6.476028",
-        "d": true,
         "name": "SetPayloadToSwitchONOfGardenPumpPowerSupply",
         "rules": [
             {
@@ -23007,47 +22982,9 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1060,
-        "y": 1740,
+        "x": 800,
+        "y": 1760,
         "wires": []
-    },
-    {
-        "id": "c8e3ace9.40686",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "ON",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "OFF",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 1740,
-        "wires": [
-            [
-                "603c914f.53625"
-            ]
-        ]
     },
     {
         "id": "53f50818.cbb0d8",
@@ -23086,5 +23023,40 @@
                 "a46a8771.e5de18"
             ]
         ]
+    },
+    {
+        "id": "7d93bc14.f93f04",
+        "type": "ccu-sysvar",
+        "z": "e20ea6d6.476028",
+        "name": "SysVar_Switch_Garden_Pump",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "ReGaHSS/${Name}",
+        "change": true,
+        "cache": true,
+        "x": 250,
+        "y": 1760,
+        "wires": [
+            [
+                "603c914f.53625",
+                "5a202427.0198dc"
+            ]
+        ]
+    },
+    {
+        "id": "ae66b65a.49c378",
+        "type": "debug",
+        "z": "e20ea6d6.476028",
+        "name": "logicOROutput",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 960,
+        "wires": []
     }
 ]
