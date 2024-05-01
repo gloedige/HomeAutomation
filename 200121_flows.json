@@ -21946,7 +21946,6 @@
         "id": "921ff53f.01e208",
         "type": "clock-timer",
         "z": "e20ea6d6.476028",
-        "d": true,
         "name": "Zeiten Gartenpumpe",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
@@ -22750,13 +22749,13 @@
         "id": "44dd9135.cfa29",
         "type": "inject",
         "z": "e20ea6d6.476028",
-        "name": "every 30s",
+        "name": "every 1min",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "30",
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -22858,33 +22857,9 @@
         "z": "e20ea6d6.476028",
         "name": "Get Status Switch Garden Pump",
         "info": "",
-        "x": 430,
-        "y": 1600,
+        "x": 530,
+        "y": 1660,
         "wires": []
-    },
-    {
-        "id": "a9079639.b43dc8",
-        "type": "inject",
-        "z": "e20ea6d6.476028",
-        "d": true,
-        "name": "every 30s",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "30",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 1680,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "5a202427.0198dc",
@@ -22906,7 +22881,7 @@
         "to": "",
         "reg": false,
         "x": 810,
-        "y": 1680,
+        "y": 1720,
         "wires": [
             []
         ]
@@ -22983,7 +22958,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 800,
-        "y": 1760,
+        "y": 1800,
         "wires": []
     },
     {
@@ -23034,11 +23009,11 @@
         "change": true,
         "cache": true,
         "x": 250,
-        "y": 1760,
+        "y": 1800,
         "wires": [
             [
-                "603c914f.53625",
-                "5a202427.0198dc"
+                "5a202427.0198dc",
+                "f7df1de1.f437e"
             ]
         ]
     },
@@ -23058,5 +23033,43 @@
         "x": 1490,
         "y": 960,
         "wires": []
+    },
+    {
+        "id": "f7df1de1.f437e",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 1800,
+        "wires": [
+            [
+                "603c914f.53625"
+            ]
+        ]
     }
 ]
