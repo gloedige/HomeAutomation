@@ -15146,101 +15146,6 @@
         ]
     },
     {
-        "id": "691ce48.31c621c",
-        "type": "function",
-        "z": "427fc89b.e34038",
-        "name": "StartTimeIrrigation_String",
-        "func": "var payload = msg.payload;\n    global.set(\"StartTimeIrrigation_String\",payload)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 650,
-        "y": 1115,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5d6db457.b6ee9c",
-        "type": "debug",
-        "z": "427fc89b.e34038",
-        "name": "timeIrrigation",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 1075,
-        "wires": []
-    },
-    {
-        "id": "5fd315f8.643dfc",
-        "type": "ui_text_input",
-        "z": "427fc89b.e34038",
-        "name": "start time lawn irrigation",
-        "label": "start time lawn irrigation",
-        "tooltip": "HH:MM",
-        "group": "46fbe67a.90cd18",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "",
-        "x": 170,
-        "y": 1115,
-        "wires": [
-            [
-                "691ce48.31c621c"
-            ]
-        ]
-    },
-    {
-        "id": "342a79e9.697e06",
-        "type": "function",
-        "z": "427fc89b.e34038",
-        "name": "EndTimeIrrigation_String",
-        "func": "var payload = msg.payload;\n    global.set(\"EndTimeIrrigation_String\",payload)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 650,
-        "y": 1155,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f327cdc1.afd7a",
-        "type": "ui_text_input",
-        "z": "427fc89b.e34038",
-        "name": "end time lawn irrigation",
-        "label": "end time lawn irrigation",
-        "tooltip": "HH:MM",
-        "group": "46fbe67a.90cd18",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "",
-        "x": 170,
-        "y": 1155,
-        "wires": [
-            [
-                "342a79e9.697e06"
-            ]
-        ]
-    },
-    {
         "id": "fe2b1611.6488d8",
         "type": "within-time-switch",
         "z": "db6aac1c.cd43b",
@@ -15578,7 +15483,7 @@
         "label": "switch sunprotection",
         "tooltip": "",
         "group": "46fbe67a.90cd18",
-        "order": 11,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -21933,8 +21838,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 340,
+        "x": 180,
+        "y": 360,
         "wires": [
             [
                 "921ff53f.01e208",
@@ -21959,12 +21864,16 @@
             {
                 "index": 0,
                 "name": "Gartenpumpe ein",
-                "isValid": false,
-                "valid": {},
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": true,
+                    "validPayload": true,
+                    "validOperand1A": true
+                },
                 "timeValue": "StartTimeIrrigation_String",
-                "timeType": "global",
+                "timeType": "flow",
                 "timeOp": 1,
-                "timeOpText": "↧ von",
+                "timeOpText": "↧ from",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
@@ -21989,14 +21898,14 @@
                 "payloadOffsetValue": "",
                 "payloadOffsetType": "none",
                 "payloadOffsetMultiplier": 60000,
-                "payloadFormat": 99,
+                "payloadFormat": "",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
                 "validOperandAValue": "",
                 "validOperandAType": "none",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -22004,22 +21913,24 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>global.StartTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an folgenden Monaten</span> <var>Apr-Okt</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload:</span> <var>true</var></div></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.StartTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Apr-Oct</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>"
             },
             {
                 "index": 1,
                 "name": "Gartenpumpe aus",
-                "isValid": false,
-                "valid": {},
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": true,
+                    "validPayload": true,
+                    "validOperand1A": true
+                },
                 "timeValue": "EndTimeIrrigation_String",
-                "timeType": "global",
+                "timeType": "flow",
                 "timeOp": 1,
-                "timeOpText": "↧ von",
+                "timeOpText": "↧ from",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
@@ -22044,14 +21955,14 @@
                 "payloadOffsetValue": "",
                 "payloadOffsetType": "none",
                 "payloadOffsetMultiplier": 60000,
-                "payloadFormat": 99,
+                "payloadFormat": "",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
                 "validOperandAValue": "",
                 "validOperandAType": "none",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -22059,12 +21970,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>global.EndTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an folgenden Monaten</span> <var>Apr-Okt</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload:</span> <var>false</var></div></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.EndTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Apr-Oct</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>"
             }
         ],
         "payloadDefault": "",
@@ -22073,8 +21982,8 @@
         "payloadDefaultOffset": 0,
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
-        "x": 1330,
-        "y": 340,
+        "x": 1290,
+        "y": 360,
         "wires": [
             [
                 "f8b772df.b8fbb"
@@ -22101,8 +22010,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2360,
-        "y": 1160,
+        "x": 2340,
+        "y": 780,
         "wires": [
             [
                 "53f50818.cbb0d8"
@@ -22116,7 +22025,7 @@
         "name": "Zeitschaltung Gartenpumpe",
         "info": "",
         "x": 220,
-        "y": 100,
+        "y": 80,
         "wires": []
     },
     {
@@ -22125,7 +22034,7 @@
         "z": "e20ea6d6.476028",
         "name": "Gartenpumpe ein",
         "group": "910e02bb.bf327",
-        "order": 5,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -22139,8 +22048,8 @@
         "payloadType": "bool",
         "topic": "",
         "topicType": "str",
-        "x": 2070,
-        "y": 900,
+        "x": 2050,
+        "y": 520,
         "wires": [
             [
                 "f8b772df.b8fbb"
@@ -22153,7 +22062,7 @@
         "z": "e20ea6d6.476028",
         "name": "Gartenpumpe aus",
         "group": "910e02bb.bf327",
-        "order": 6,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -22167,8 +22076,8 @@
         "payloadType": "bool",
         "topic": "",
         "topicType": "str",
-        "x": 2070,
-        "y": 940,
+        "x": 2050,
+        "y": 560,
         "wires": [
             [
                 "f8b772df.b8fbb"
@@ -22180,7 +22089,7 @@
         "type": "ui_text",
         "z": "e20ea6d6.476028",
         "group": "910e02bb.bf327",
-        "order": 7,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "Status Gartenpumpe",
@@ -22192,8 +22101,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 2340,
-        "y": 1340,
+        "x": 2320,
+        "y": 960,
         "wires": []
     },
     {
@@ -22205,8 +22114,8 @@
         "zone": "Rasen Terrasse",
         "command": "info",
         "duration": "10",
-        "x": 520,
-        "y": 620,
+        "x": 500,
+        "y": 240,
         "wires": [
             [
                 "7a49fc82.b9bae4",
@@ -22218,22 +22127,6 @@
                 "4cede9f.9ce5518"
             ]
         ]
-    },
-    {
-        "id": "5062dd02.3c7054",
-        "type": "debug",
-        "z": "e20ea6d6.476028",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1130,
-        "y": 480,
-        "wires": []
     },
     {
         "id": "b8100795.e3e8b8",
@@ -22256,8 +22149,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 200,
-        "y": 620,
+        "x": 180,
+        "y": 240,
         "wires": [
             [
                 "32e254fd.4e37ac"
@@ -22276,8 +22169,8 @@
         "outputtriggeredby": "all",
         "inputCount": "7",
         "topic": "isOneZoneRunning",
-        "x": 1230,
-        "y": 1160,
+        "x": 1210,
+        "y": 780,
         "wires": [
             [],
             [
@@ -22303,8 +22196,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1600,
-        "y": 1120,
+        "x": 1580,
+        "y": 720,
         "wires": [
             [
                 "70ece647.7e0d98"
@@ -22326,8 +22219,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1600,
-        "y": 1220,
+        "x": 1580,
+        "y": 840,
         "wires": [
             [
                 "44e8c514.c9b92c"
@@ -22349,8 +22242,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1810,
-        "y": 1220,
+        "x": 1790,
+        "y": 840,
         "wires": [
             [
                 "df25a333.8a4af"
@@ -22383,8 +22276,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 1040,
+        "x": 280,
+        "y": 660,
         "wires": [
             [
                 "6f6bcefc.515e2"
@@ -22417,8 +22310,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
-        "y": 980,
+        "x": 270,
+        "y": 600,
         "wires": [
             [
                 "2f8b067.7ae07fa"
@@ -22444,8 +22337,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 980,
+        "x": 640,
+        "y": 600,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22471,8 +22364,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 1040,
+        "x": 640,
+        "y": 660,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22505,8 +22398,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 1100,
+        "x": 280,
+        "y": 720,
         "wires": [
             [
                 "397c2872.a0e4a8"
@@ -22532,8 +22425,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 1100,
+        "x": 640,
+        "y": 720,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22566,8 +22459,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 1160,
+        "x": 280,
+        "y": 780,
         "wires": [
             [
                 "764599cc.d22ec8"
@@ -22593,8 +22486,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 1160,
+        "x": 640,
+        "y": 780,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22627,8 +22520,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
-        "y": 1220,
+        "x": 270,
+        "y": 840,
         "wires": [
             [
                 "86263671.533fa8"
@@ -22654,8 +22547,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 1220,
+        "x": 640,
+        "y": 840,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22688,8 +22581,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
-        "y": 1280,
+        "x": 270,
+        "y": 900,
         "wires": [
             [
                 "65dd8f25.28832"
@@ -22715,8 +22608,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 1280,
+        "x": 640,
+        "y": 900,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22737,8 +22630,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 410,
-        "y": 1500,
+        "x": 470,
+        "y": 1140,
         "wires": [
             [
                 "a6d5079c.46b308"
@@ -22762,8 +22655,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 1500,
+        "x": 210,
+        "y": 1140,
         "wires": [
             [
                 "2ffe6725.d625a8"
@@ -22789,8 +22682,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
-        "y": 1500,
+        "x": 860,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -22801,8 +22694,8 @@
         "z": "e20ea6d6.476028",
         "name": "Get Status Power Supply",
         "info": "",
-        "x": 410,
-        "y": 1420,
+        "x": 210,
+        "y": 1080,
         "wires": []
     },
     {
@@ -22820,8 +22713,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2040,
-        "y": 1220,
+        "x": 2020,
+        "y": 840,
         "wires": [
             [
                 "f8b772df.b8fbb"
@@ -22843,8 +22736,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2040,
-        "y": 1120,
+        "x": 2020,
+        "y": 720,
         "wires": [
             [
                 "f8b772df.b8fbb"
@@ -22857,8 +22750,8 @@
         "z": "e20ea6d6.476028",
         "name": "Get Status Switch Garden Pump",
         "info": "",
-        "x": 530,
-        "y": 1660,
+        "x": 230,
+        "y": 1340,
         "wires": []
     },
     {
@@ -22880,8 +22773,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
-        "y": 1720,
+        "x": 610,
+        "y": 1460,
         "wires": [
             []
         ]
@@ -22905,8 +22798,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 1340,
+        "x": 280,
+        "y": 960,
         "wires": [
             [
                 "f40d58b1.049698"
@@ -22932,8 +22825,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 1340,
+        "x": 700,
+        "y": 960,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22945,7 +22838,7 @@
         "type": "ui_text",
         "z": "e20ea6d6.476028",
         "group": "910e02bb.bf327",
-        "order": 7,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "Switch ON Garden Power Supply",
@@ -22958,7 +22851,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 800,
-        "y": 1800,
+        "y": 1400,
         "wires": []
     },
     {
@@ -22991,8 +22884,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2360,
-        "y": 1240,
+        "x": 2340,
+        "y": 860,
         "wires": [
             [
                 "a46a8771.e5de18"
@@ -23009,7 +22902,7 @@
         "change": true,
         "cache": true,
         "x": 250,
-        "y": 1800,
+        "y": 1400,
         "wires": [
             [
                 "5a202427.0198dc",
@@ -23030,8 +22923,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
-        "y": 960,
+        "x": 1560,
+        "y": 780,
         "wires": []
     },
     {
@@ -23065,11 +22958,116 @@
         "to": "",
         "reg": false,
         "x": 540,
-        "y": 1800,
+        "y": 1400,
         "wires": [
             [
                 "603c914f.53625"
             ]
         ]
+    },
+    {
+        "id": "40092bad.9a2bb4",
+        "type": "function",
+        "z": "e20ea6d6.476028",
+        "name": "StartTimeIrrigation_String",
+        "func": "var payload = msg.payload;\n    flow.set(\"StartTimeIrrigation_String\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 710,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2713b181.8bb5be",
+        "type": "debug",
+        "z": "e20ea6d6.476028",
+        "name": "timeIrrigation",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "d3fa4b69.edcb38",
+        "type": "ui_text_input",
+        "z": "e20ea6d6.476028",
+        "name": "start time lawn irrigation",
+        "label": "start time lawn irrigation",
+        "tooltip": "HH:MM",
+        "group": "910e02bb.bf327",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 230,
+        "y": 1680,
+        "wires": [
+            [
+                "40092bad.9a2bb4"
+            ]
+        ]
+    },
+    {
+        "id": "3e925ee.fd615a2",
+        "type": "function",
+        "z": "e20ea6d6.476028",
+        "name": "EndTimeIrrigation_String",
+        "func": "var payload = msg.payload;\n    flow.set(\"EndTimeIrrigation_String\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 710,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dda5061b.8e5c18",
+        "type": "ui_text_input",
+        "z": "e20ea6d6.476028",
+        "name": "end time lawn irrigation",
+        "label": "end time lawn irrigation",
+        "tooltip": "HH:MM",
+        "group": "910e02bb.bf327",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 230,
+        "y": 1720,
+        "wires": [
+            [
+                "3e925ee.fd615a2"
+            ]
+        ]
+    },
+    {
+        "id": "a0e830fd.a81",
+        "type": "comment",
+        "z": "e20ea6d6.476028",
+        "name": "Set Starttime of Irrigation",
+        "info": "",
+        "x": 210,
+        "y": 1620,
+        "wires": []
     }
 ]
