@@ -21919,12 +21919,8 @@
             {
                 "index": 1,
                 "name": "Gartenpumpe aus",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validPayload": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "EndTimeIrrigation_String",
                 "timeType": "flow",
                 "timeOp": 1,
@@ -21953,7 +21949,7 @@
                 "payloadOffsetValue": "",
                 "payloadOffsetType": "none",
                 "payloadOffsetMultiplier": 60000,
-                "payloadFormat": "",
+                "payloadFormat": 99,
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
@@ -21971,7 +21967,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.EndTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Apr-Oct</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.EndTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Apr-Oct</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             }
         ],
         "payloadDefault": "false",
@@ -22012,7 +22010,8 @@
         "y": 780,
         "wires": [
             [
-                "53f50818.cbb0d8"
+                "53f50818.cbb0d8",
+                "4c3cc222.ac29fc"
             ]
         ]
     },
@@ -22198,7 +22197,8 @@
         "y": 720,
         "wires": [
             [
-                "70ece647.7e0d98"
+                "70ece647.7e0d98",
+                "6c0f5c0e.24cb74"
             ]
         ]
     },
@@ -22221,7 +22221,7 @@
         "y": 840,
         "wires": [
             [
-                "44e8c514.c9b92c"
+                "6c0f5c0e.24cb74"
             ]
         ]
     },
@@ -22240,12 +22240,10 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1790,
-        "y": 840,
+        "x": 1770,
+        "y": 1120,
         "wires": [
-            [
-                "df25a333.8a4af"
-            ]
+            []
         ]
     },
     {
@@ -23070,5 +23068,66 @@
         "x": 210,
         "y": 1620,
         "wires": []
+    },
+    {
+        "id": "6c0f5c0e.24cb74",
+        "type": "combine-defer",
+        "z": "e20ea6d6.476028",
+        "topic": "isOneZoneRunning",
+        "name": "",
+        "invert": true,
+        "timeout": "180",
+        "timeoutType": "num",
+        "x": 1790,
+        "y": 840,
+        "wires": [
+            [
+                "df25a333.8a4af"
+            ]
+        ]
+    },
+    {
+        "id": "4c3cc222.ac29fc",
+        "type": "ui_chart",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "group": "910e02bb.bf327",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "false",
+        "ymax": "true",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2600,
+        "y": 780,
+        "wires": [
+            []
+        ]
     }
 ]
