@@ -21821,7 +21821,7 @@
         "id": "57015e6.51f80a",
         "type": "inject",
         "z": "e20ea6d6.476028",
-        "name": "all 1min",
+        "name": "all 2min",
         "props": [
             {
                 "p": "payload"
@@ -21831,7 +21831,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "60",
+        "repeat": "120",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -21843,7 +21843,8 @@
         "wires": [
             [
                 "921ff53f.01e208",
-                "32e254fd.4e37ac"
+                "32e254fd.4e37ac",
+                "4cede9f.9ce5518"
             ]
         ]
     },
@@ -21978,7 +21979,7 @@
         "payloadDefaultOffset": 0,
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
-        "x": 670,
+        "x": 610,
         "y": 540,
         "wires": [
             [
@@ -22121,7 +22122,7 @@
                 "a91dc393.9b7a9",
                 "bd0e48b4.becbd8",
                 "64cf2d10.8ef9b4",
-                "4cede9f.9ce5518"
+                "19f168c.19e4797"
             ]
         ]
     },
@@ -22226,27 +22227,6 @@
         ]
     },
     {
-        "id": "44e8c514.c9b92c",
-        "type": "delay",
-        "z": "e20ea6d6.476028",
-        "name": "5min delay",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 1770,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "459a2029.8904a",
         "type": "change",
         "z": "e20ea6d6.476028",
@@ -22273,7 +22253,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 660,
+        "y": 720,
         "wires": [
             [
                 "6f6bcefc.515e2"
@@ -22307,7 +22287,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 600,
+        "y": 660,
         "wires": [
             [
                 "2f8b067.7ae07fa"
@@ -22334,7 +22314,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 600,
+        "y": 660,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22361,7 +22341,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 660,
+        "y": 720,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22395,7 +22375,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 720,
+        "y": 780,
         "wires": [
             [
                 "397c2872.a0e4a8"
@@ -22422,7 +22402,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 720,
+        "y": 780,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22456,7 +22436,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 780,
+        "y": 840,
         "wires": [
             [
                 "764599cc.d22ec8"
@@ -22483,7 +22463,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 780,
+        "y": 840,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22517,7 +22497,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 840,
+        "y": 900,
         "wires": [
             [
                 "86263671.533fa8"
@@ -22544,7 +22524,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 840,
+        "y": 900,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22578,7 +22558,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 900,
+        "y": 960,
         "wires": [
             [
                 "65dd8f25.28832"
@@ -22605,7 +22585,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 900,
+        "y": 960,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22795,7 +22775,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 960,
+        "y": 600,
         "wires": [
             [
                 "f40d58b1.049698"
@@ -22822,7 +22802,7 @@
         "to": "",
         "reg": false,
         "x": 700,
-        "y": 960,
+        "y": 600,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22978,23 +22958,6 @@
         ]
     },
     {
-        "id": "2713b181.8bb5be",
-        "type": "debug",
-        "z": "e20ea6d6.476028",
-        "name": "timeIrrigation",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 1640,
-        "wires": []
-    },
-    {
         "id": "d3fa4b69.edcb38",
         "type": "ui_text_input",
         "z": "e20ea6d6.476028",
@@ -23129,5 +23092,22 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "19f168c.19e4797",
+        "type": "debug",
+        "z": "e20ea6d6.476028",
+        "name": "rain controller",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 220,
+        "wires": []
     }
 ]
