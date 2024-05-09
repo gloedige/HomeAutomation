@@ -269,16 +269,6 @@
         "order": 3
     },
     {
-        "id": "159fd603.b44a6a",
-        "type": "ui_group",
-        "name": "Programme",
-        "tab": "ef72ce25.023af",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "65a72644.483318",
         "type": "ui_group",
         "name": "Rollos auf",
@@ -318,11 +308,6 @@
         "timeZoneDST": "0",
         "stateTimeFormat": "3",
         "stateDateFormat": "12"
-    },
-    {
-        "id": "11a99b54.12d7c5",
-        "type": "pwsapikey",
-        "name": ""
     },
     {
         "id": "c7cf5b30.c72208",
@@ -469,19 +454,6 @@
         "hidden": false
     },
     {
-        "id": "ce953396.7838d",
-        "type": "position-config",
-        "name": "",
-        "isValide": "false",
-        "longitude": "0",
-        "latitude": "0",
-        "angleType": "deg",
-        "timeZoneOffset": 99,
-        "timeZoneDST": 0,
-        "stateTimeFormat": "3",
-        "stateDateFormat": "12"
-    },
-    {
         "id": "c9474d61.3895d",
         "type": "hue-bridge",
         "name": "Philips hue",
@@ -604,15 +576,6 @@
         "instancehash": "nj6274p7tyhwsdggepoccph2y19kof4nyceje267gnvehlqr5swau16gq8tcxmug",
         "server": "nodered04.remote-red.com",
         "region": "de"
-    },
-    {
-        "id": "abbe899a.38e7f8",
-        "type": "ui_group",
-        "name": "Group",
-        "tab": "",
-        "order": null,
-        "disp": true,
-        "width": 6
     },
     {
         "id": "e7b91b38.1d5708",
@@ -1089,7 +1052,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 570,
+        "x": 671,
         "y": 200,
         "wires": [
             [
@@ -1118,7 +1081,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1112,
+        "x": 1213,
         "y": 681,
         "wires": [
             [
@@ -1147,8 +1110,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 80,
-        "y": 240,
+        "x": 100,
+        "y": 320,
         "wires": [
             [
                 "d29c41d6.8c89f"
@@ -1175,7 +1138,7 @@
         "endOffset": 0,
         "endOffsetType": "none",
         "endOffsetMultiplier": 60000,
-        "x": 280,
+        "x": 381,
         "y": 280,
         "wires": [
             [
@@ -1458,7 +1421,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1120,
+        "x": 1221,
         "y": 842,
         "wires": [
             [
@@ -1737,7 +1700,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 560,
+        "x": 661,
         "y": 540,
         "wires": [
             [
@@ -1766,7 +1729,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1130,
+        "x": 1231,
         "y": 63,
         "wires": [
             [
@@ -1794,7 +1757,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1140,
+        "x": 1241,
         "y": 177,
         "wires": [
             [
@@ -1822,7 +1785,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1128,
+        "x": 1229,
         "y": 234,
         "wires": [
             [
@@ -1850,7 +1813,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1130,
+        "x": 1231,
         "y": 117,
         "wires": [
             [
@@ -1878,7 +1841,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1134,
+        "x": 1235,
         "y": 293,
         "wires": [
             [
@@ -1906,7 +1869,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1114,
+        "x": 1215,
         "y": 458,
         "wires": [
             [
@@ -1920,7 +1883,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollos OG",
         "info": "",
-        "x": 1100,
+        "x": 1201,
         "y": 20,
         "wires": []
     },
@@ -1930,7 +1893,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollos EG",
         "info": "",
-        "x": 1100,
+        "x": 1201,
         "y": 645,
         "wires": []
     },
@@ -1954,7 +1917,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1130,
+        "x": 1231,
         "y": 894,
         "wires": [
             [
@@ -1982,7 +1945,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1129,
+        "x": 1230,
         "y": 1061,
         "wires": [
             [
@@ -2010,7 +1973,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1139,
+        "x": 1240,
         "y": 981,
         "wires": [
             [
@@ -2039,7 +2002,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1139,
+        "x": 1240,
         "y": 1141,
         "wires": [
             [
@@ -2067,7 +2030,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1150,
+        "x": 1251,
         "y": 733,
         "wires": [
             [
@@ -2095,7 +2058,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1150,
+        "x": 1251,
         "y": 786,
         "wires": [
             [
@@ -2117,7 +2080,7 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 279,
+        "x": 380,
         "y": 981,
         "wires": [
             [
@@ -2283,7 +2246,7 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 279,
+        "x": 380,
         "y": 1061,
         "wires": [
             [
@@ -2305,7 +2268,7 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 269,
+        "x": 370,
         "y": 1141,
         "wires": [
             [
@@ -2328,7 +2291,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 559,
+        "x": 660,
         "y": 981,
         "wires": [
             [
@@ -2552,7 +2515,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 590,
+        "x": 691,
         "y": 760,
         "wires": [
             [
@@ -2569,7 +2532,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Fensterkontaktschalter EG Süd",
         "info": "",
-        "x": 289,
+        "x": 390,
         "y": 921,
         "wires": []
     },
@@ -2589,7 +2552,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollladensteuerung Morgens & Abends",
         "info": "",
-        "x": 190,
+        "x": 170,
         "y": 40,
         "wires": []
     },
@@ -3407,7 +3370,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 570,
+        "x": 671,
         "y": 360,
         "wires": [
             [
@@ -3635,8 +3598,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 180,
-        "y": 380,
+        "x": 1840,
+        "y": 240,
         "wires": [
             []
         ]
@@ -3661,7 +3624,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1134,
+        "x": 1235,
         "y": 349,
         "wires": [
             [
@@ -3689,7 +3652,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1114,
+        "x": 1215,
         "y": 406,
         "wires": [
             [
@@ -3717,7 +3680,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1130,
+        "x": 1231,
         "y": 517,
         "wires": [
             [
@@ -3745,7 +3708,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1140,
+        "x": 1241,
         "y": 577,
         "wires": [
             [
@@ -4385,8 +4348,8 @@
         "y": 200,
         "wires": [
             [
-                "d29c41d6.8c89f",
-                "5903692c.6ea958"
+                "5903692c.6ea958",
+                "d29c41d6.8c89f"
             ]
         ]
     },
@@ -4412,8 +4375,8 @@
         "y": 160,
         "wires": [
             [
-                "d29c41d6.8c89f",
-                "5903692c.6ea958"
+                "5903692c.6ea958",
+                "d29c41d6.8c89f"
             ]
         ]
     },
@@ -4429,7 +4392,7 @@
         "label": "Status Blindcontrol",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 310,
+        "x": 411,
         "y": 100,
         "wires": []
     },
@@ -4440,8 +4403,8 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 310,
-        "y": 200,
+        "x": 370,
+        "y": 220,
         "wires": [
             [
                 "84b87802.97fed8"
@@ -4961,8 +4924,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 190,
-        "y": 500,
+        "x": 1850,
+        "y": 360,
         "wires": [
             []
         ]
@@ -5184,8 +5147,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 190,
-        "y": 440,
+        "x": 1850,
+        "y": 300,
         "wires": [
             []
         ]
@@ -5412,7 +5375,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 560,
+        "x": 661,
         "y": 120,
         "wires": [
             [
@@ -5640,7 +5603,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 560,
+        "x": 661,
         "y": 60,
         "wires": [
             [
@@ -7516,7 +7479,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1369,
+        "x": 1470,
         "y": 1141,
         "wires": []
     },
@@ -7558,7 +7521,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1359,
+        "x": 1460,
         "y": 1061,
         "wires": []
     },
@@ -7600,7 +7563,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1379,
+        "x": 1480,
         "y": 981,
         "wires": []
     },
@@ -7642,7 +7605,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1400,
+        "x": 1501,
         "y": 842,
         "wires": []
     },
@@ -7684,7 +7647,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1400,
+        "x": 1501,
         "y": 786,
         "wires": []
     },
@@ -7726,7 +7689,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1400,
+        "x": 1501,
         "y": 733,
         "wires": []
     },
@@ -7768,7 +7731,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1400,
+        "x": 1501,
         "y": 894,
         "wires": []
     },
@@ -7810,7 +7773,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1390,
+        "x": 1491,
         "y": 681,
         "wires": []
     },
@@ -7852,7 +7815,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 517,
         "wires": []
     },
@@ -7894,7 +7857,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 577,
         "wires": []
     },
@@ -7936,7 +7899,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1420,
+        "x": 1521,
         "y": 406,
         "wires": []
     },
@@ -7978,7 +7941,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 457,
         "wires": []
     },
@@ -8020,7 +7983,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 349,
         "wires": []
     },
@@ -8062,7 +8025,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 293,
         "wires": []
     },
@@ -8104,7 +8067,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1428,
+        "x": 1529,
         "y": 234,
         "wires": []
     },
@@ -8146,7 +8109,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1430,
+        "x": 1531,
         "y": 177,
         "wires": []
     },
@@ -8188,7 +8151,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 117,
         "wires": []
     },
@@ -8230,7 +8193,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 63,
         "wires": []
     },
@@ -8247,7 +8210,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1329,
+        "x": 1430,
         "y": 1201,
         "wires": []
     },
@@ -8268,7 +8231,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 949,
+        "x": 1050,
         "y": 1021,
         "wires": [
             [
@@ -8293,7 +8256,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 939,
+        "x": 1040,
         "y": 1101,
         "wires": [
             [
@@ -8318,7 +8281,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 949,
+        "x": 1050,
         "y": 1181,
         "wires": [
             [
@@ -8343,7 +8306,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 910,
+        "x": 1011,
         "y": 826,
         "wires": [
             [
@@ -8368,7 +8331,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 906,
+        "x": 1007,
         "y": 771,
         "wires": [
             [
@@ -8393,7 +8356,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 907,
+        "x": 1008,
         "y": 719,
         "wires": [
             [
@@ -8418,7 +8381,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 908,
+        "x": 1009,
         "y": 873,
         "wires": [
             [
@@ -8443,7 +8406,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 905,
+        "x": 1006,
         "y": 667,
         "wires": [
             [
@@ -8468,7 +8431,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 890,
+        "x": 991,
         "y": 497,
         "wires": [
             [
@@ -8493,7 +8456,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 890,
+        "x": 991,
         "y": 557,
         "wires": [
             [
@@ -8518,7 +8481,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 894,
+        "x": 995,
         "y": 446,
         "wires": [
             [
@@ -8543,7 +8506,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 894,
+        "x": 995,
         "y": 386,
         "wires": [
             [
@@ -8568,7 +8531,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 884,
+        "x": 985,
         "y": 273,
         "wires": [
             [
@@ -8593,7 +8556,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 884,
+        "x": 985,
         "y": 329,
         "wires": [
             [
@@ -8618,7 +8581,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 910,
+        "x": 1011,
         "y": 157,
         "wires": [
             [
@@ -8643,7 +8606,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 908,
+        "x": 1009,
         "y": 214,
         "wires": [
             [
@@ -8668,7 +8631,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 890,
+        "x": 991,
         "y": 37,
         "wires": [
             [
@@ -8693,7 +8656,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 890,
+        "x": 991,
         "y": 97,
         "wires": [
             [
@@ -8828,8 +8791,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 440,
-        "y": 520,
+        "x": 640,
+        "y": 560,
         "wires": [
             [
                 "125dc694.3a7ee9"
@@ -8864,8 +8827,8 @@
         "datapoint": "LEVEL",
         "datapointRx": "str",
         "force": false,
-        "x": 630,
-        "y": 520,
+        "x": 830,
+        "y": 560,
         "wires": []
     },
     {
@@ -11423,8 +11386,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 661,
-        "y": 620,
+        "x": 655,
+        "y": 680,
         "wires": []
     },
     {
@@ -11433,8 +11396,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Soundtouch einschalten",
         "info": "",
-        "x": 240,
-        "y": 620,
+        "x": 234,
+        "y": 680,
         "wires": []
     },
     {
@@ -11445,8 +11408,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 661,
-        "y": 680,
+        "x": 655,
+        "y": 740,
         "wires": []
     },
     {
@@ -11455,8 +11418,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio Bob einschalten",
         "info": "",
-        "x": 240,
-        "y": 680,
+        "x": 234,
+        "y": 740,
         "wires": []
     },
     {
@@ -11467,8 +11430,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 691,
-        "y": 740,
+        "x": 685,
+        "y": 800,
         "wires": []
     },
     {
@@ -11477,8 +11440,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio Sachsen Anhalt einschalten",
         "info": "",
-        "x": 280,
-        "y": 740,
+        "x": 274,
+        "y": 800,
         "wires": []
     },
     {
@@ -11489,8 +11452,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 661,
-        "y": 800,
+        "x": 655,
+        "y": 860,
         "wires": []
     },
     {
@@ -11499,8 +11462,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio NDR2 einschalten",
         "info": "",
-        "x": 250,
-        "y": 800,
+        "x": 244,
+        "y": 860,
         "wires": []
     },
     {
@@ -11578,8 +11541,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 440,
-        "y": 460,
+        "x": 640,
+        "y": 500,
         "wires": [
             [
                 "8e1e4cd0.75843"
@@ -11614,8 +11577,8 @@
         "datapoint": "LEVEL",
         "datapointRx": "str",
         "force": false,
-        "x": 630,
-        "y": 460,
+        "x": 830,
+        "y": 500,
         "wires": []
     },
     {
@@ -12520,7 +12483,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 559,
+        "x": 660,
         "y": 1061,
         "wires": [
             [
@@ -12543,7 +12506,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 559,
+        "x": 660,
         "y": 1141,
         "wires": [
             [
@@ -12877,7 +12840,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 839,
+        "x": 940,
         "y": 981,
         "wires": [
             [
@@ -13105,7 +13068,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 839,
+        "x": 940,
         "y": 1061,
         "wires": [
             [
@@ -13333,7 +13296,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 839,
+        "x": 940,
         "y": 1141,
         "wires": [
             [
@@ -13558,8 +13521,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 180,
-        "y": 560,
+        "x": 1840,
+        "y": 420,
         "wires": [
             []
         ]
@@ -15751,7 +15714,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 570,
+        "x": 671,
         "y": 860,
         "wires": [
             [
@@ -15770,7 +15733,7 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 370,
+        "x": 471,
         "y": 860,
         "wires": [
             [
@@ -18804,7 +18767,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
+        "x": 380,
         "y": 160,
         "wires": [
             [
@@ -22009,8 +21972,7 @@
         "y": 780,
         "wires": [
             [
-                "53f50818.cbb0d8",
-                "4c3cc222.ac29fc"
+                "53f50818.cbb0d8"
             ]
         ]
     },
@@ -22693,7 +22655,8 @@
         "y": 840,
         "wires": [
             [
-                "f8b772df.b8fbb"
+                "f8b772df.b8fbb",
+                "9f57a3ae.6c243"
             ]
         ]
     },
@@ -22716,7 +22679,8 @@
         "y": 720,
         "wires": [
             [
-                "f8b772df.b8fbb"
+                "f8b772df.b8fbb",
+                "9f57a3ae.6c243"
             ]
         ]
     },
@@ -23065,11 +23029,11 @@
         "interpolate": "step",
         "nodata": "",
         "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": "10",
         "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
+        "removeOlderUnit": "60",
         "cutout": 0,
         "useOneColor": false,
         "useUTC": false,
@@ -23087,8 +23051,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2640,
-        "y": 780,
+        "x": 2570,
+        "y": 620,
         "wires": [
             []
         ]
@@ -23106,8 +23070,66 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 790,
-        "y": 220,
+        "x": 780,
+        "y": 240,
         "wires": []
+    },
+    {
+        "id": "90eac71f.3470d8",
+        "type": "BooleanLogicUltimate",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "trigger",
+        "outputtriggeredby": "all",
+        "inputCount": 2,
+        "topic": "result",
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9f57a3ae.6c243",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2320,
+        "y": 620,
+        "wires": [
+            [
+                "4c3cc222.ac29fc"
+            ]
+        ]
     }
 ]
