@@ -1110,11 +1110,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
+        "x": 120,
         "y": 320,
         "wires": [
             [
-                "d29c41d6.8c89f"
+                "d7eb975d.315ba8"
             ]
         ]
     },
@@ -3599,7 +3599,7 @@
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
         "x": 1840,
-        "y": 240,
+        "y": 380,
         "wires": [
             []
         ]
@@ -4344,12 +4344,11 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 100,
-        "y": 200,
+        "x": 1820,
+        "y": 100,
         "wires": [
             [
-                "5903692c.6ea958",
-                "d29c41d6.8c89f"
+                "6f2ef1cc.ca31f"
             ]
         ]
     },
@@ -4371,12 +4370,11 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 100,
-        "y": 160,
+        "x": 1820,
+        "y": 60,
         "wires": [
             [
-                "5903692c.6ea958",
-                "d29c41d6.8c89f"
+                "6f2ef1cc.ca31f"
             ]
         ]
     },
@@ -4403,12 +4401,10 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 370,
-        "y": 220,
+        "x": 90,
+        "y": 560,
         "wires": [
-            [
-                "84b87802.97fed8"
-            ],
+            [],
             []
         ],
         "info": "var Rollosteuerung_aktiv=condition;\n\n\nif(Rollosteuerung_aktiv==1){\nmsg.payload.schalter=1;\n}\nelse {\nmsg.payload.schalter=0;\n}\nreturn msg;"
@@ -4925,7 +4921,7 @@
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
         "x": 1850,
-        "y": 360,
+        "y": 500,
         "wires": [
             []
         ]
@@ -5148,7 +5144,7 @@
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
         "x": 1850,
-        "y": 300,
+        "y": 440,
         "wires": [
             []
         ]
@@ -13522,7 +13518,7 @@
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
         "x": 1840,
-        "y": 420,
+        "y": 560,
         "wires": [
             []
         ]
@@ -23086,11 +23082,13 @@
         "outputtriggeredby": "all",
         "inputCount": 2,
         "topic": "result",
-        "x": 120,
-        "y": 580,
+        "x": 160,
+        "y": 160,
         "wires": [
             [],
-            [],
+            [
+                "5903692c.6ea958"
+            ],
             []
         ]
     },
@@ -23129,6 +23127,65 @@
         "wires": [
             [
                 "4c3cc222.ac29fc"
+            ]
+        ]
+    },
+    {
+        "id": "6f2ef1cc.ca31f",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "flagSwitchBlindControl",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "flagSwitchBlindControl",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2110,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d7eb975d.315ba8",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flagSwitchBlindControl",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "condition",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "90eac71f.3470d8"
             ]
         ]
     }
