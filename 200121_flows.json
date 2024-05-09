@@ -23188,5 +23188,58 @@
                 "90eac71f.3470d8"
             ]
         ]
+    },
+    {
+        "id": "aab1ccae.0973e",
+        "type": "noraf-switch",
+        "z": "28a65c2.2e2eba4",
+        "devicename": "SwitchToSetBlindControl",
+        "roomhint": "",
+        "name": "SwitchToSetBlindControl",
+        "passthru": false,
+        "errorifstateunchaged": false,
+        "nora": "e7b91b38.1d5708",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "asyncCmd": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 360,
+        "wires": [
+            [
+                "63156f7b.638fc"
+            ]
+        ]
+    },
+    {
+        "id": "63156f7b.638fc",
+        "type": "change",
+        "z": "28a65c2.2e2eba4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "flagToSetBlindControl",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 360,
+        "wires": [
+            []
+        ]
     }
 ]
