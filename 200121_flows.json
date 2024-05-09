@@ -70,6 +70,13 @@
         "info": ""
     },
     {
+        "id": "e20ea6d6.476028",
+        "type": "tab",
+        "label": "Garden",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "27e94ab1.a717e6",
         "type": "subflow",
         "name": "1 s clear",
@@ -262,16 +269,6 @@
         "order": 3
     },
     {
-        "id": "159fd603.b44a6a",
-        "type": "ui_group",
-        "name": "Programme",
-        "tab": "ef72ce25.023af",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "65a72644.483318",
         "type": "ui_group",
         "name": "Rollos auf",
@@ -311,11 +308,6 @@
         "timeZoneDST": "0",
         "stateTimeFormat": "3",
         "stateDateFormat": "12"
-    },
-    {
-        "id": "11a99b54.12d7c5",
-        "type": "pwsapikey",
-        "name": ""
     },
     {
         "id": "c7cf5b30.c72208",
@@ -462,19 +454,6 @@
         "hidden": false
     },
     {
-        "id": "ce953396.7838d",
-        "type": "position-config",
-        "name": "",
-        "isValide": "false",
-        "longitude": "0",
-        "latitude": "0",
-        "angleType": "deg",
-        "timeZoneOffset": 99,
-        "timeZoneDST": 0,
-        "stateTimeFormat": "3",
-        "stateDateFormat": "12"
-    },
-    {
         "id": "c9474d61.3895d",
         "type": "hue-bridge",
         "name": "Philips hue",
@@ -599,15 +578,6 @@
         "region": "de"
     },
     {
-        "id": "abbe899a.38e7f8",
-        "type": "ui_group",
-        "name": "Group",
-        "tab": "",
-        "order": null,
-        "disp": true,
-        "width": 6
-    },
-    {
         "id": "e7b91b38.1d5708",
         "type": "noraf-config",
         "name": "nora config",
@@ -619,6 +589,31 @@
         "storeStateInContext": true,
         "disableValidationErrors": false,
         "sendDeviceNameAndLocation": false
+    },
+    {
+        "id": "c66039fc.9f9668",
+        "type": "hydrawise-controller",
+        "name": "Hunter Rain Controller",
+        "key": "3852-E8BB-705E-0BDC"
+    },
+    {
+        "id": "658c4062.c5cba",
+        "type": "ui_tab",
+        "name": "Garden",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "910e02bb.bf327",
+        "type": "ui_group",
+        "name": "Gardenpump",
+        "tab": "658c4062.c5cba",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "cb73e4c8.3727f8",
@@ -1057,7 +1052,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 570,
+        "x": 671,
         "y": 200,
         "wires": [
             [
@@ -1086,7 +1081,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1112,
+        "x": 1213,
         "y": 681,
         "wires": [
             [
@@ -1115,8 +1110,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 80,
-        "y": 240,
+        "x": 100,
+        "y": 320,
         "wires": [
             [
                 "d29c41d6.8c89f"
@@ -1143,7 +1138,7 @@
         "endOffset": 0,
         "endOffsetType": "none",
         "endOffsetMultiplier": 60000,
-        "x": 280,
+        "x": 381,
         "y": 280,
         "wires": [
             [
@@ -1426,7 +1421,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1120,
+        "x": 1221,
         "y": 842,
         "wires": [
             [
@@ -1705,7 +1700,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 560,
+        "x": 661,
         "y": 540,
         "wires": [
             [
@@ -1734,7 +1729,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1130,
+        "x": 1231,
         "y": 63,
         "wires": [
             [
@@ -1762,7 +1757,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1140,
+        "x": 1241,
         "y": 177,
         "wires": [
             [
@@ -1790,7 +1785,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1128,
+        "x": 1229,
         "y": 234,
         "wires": [
             [
@@ -1818,7 +1813,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1130,
+        "x": 1231,
         "y": 117,
         "wires": [
             [
@@ -1846,7 +1841,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1134,
+        "x": 1235,
         "y": 293,
         "wires": [
             [
@@ -1874,7 +1869,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1114,
+        "x": 1215,
         "y": 458,
         "wires": [
             [
@@ -1888,7 +1883,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollos OG",
         "info": "",
-        "x": 1100,
+        "x": 1201,
         "y": 20,
         "wires": []
     },
@@ -1898,7 +1893,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollos EG",
         "info": "",
-        "x": 1100,
+        "x": 1201,
         "y": 645,
         "wires": []
     },
@@ -1922,7 +1917,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1130,
+        "x": 1231,
         "y": 894,
         "wires": [
             [
@@ -1950,7 +1945,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1129,
+        "x": 1230,
         "y": 1061,
         "wires": [
             [
@@ -1978,7 +1973,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1139,
+        "x": 1240,
         "y": 981,
         "wires": [
             [
@@ -2007,7 +2002,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1139,
+        "x": 1240,
         "y": 1141,
         "wires": [
             [
@@ -2035,7 +2030,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1150,
+        "x": 1251,
         "y": 733,
         "wires": [
             [
@@ -2063,7 +2058,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1150,
+        "x": 1251,
         "y": 786,
         "wires": [
             [
@@ -2085,7 +2080,7 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 279,
+        "x": 380,
         "y": 981,
         "wires": [
             [
@@ -2251,7 +2246,7 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 279,
+        "x": 380,
         "y": 1061,
         "wires": [
             [
@@ -2273,7 +2268,7 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 269,
+        "x": 370,
         "y": 1141,
         "wires": [
             [
@@ -2296,7 +2291,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 559,
+        "x": 660,
         "y": 981,
         "wires": [
             [
@@ -2520,7 +2515,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 590,
+        "x": 691,
         "y": 760,
         "wires": [
             [
@@ -2537,7 +2532,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Fensterkontaktschalter EG Süd",
         "info": "",
-        "x": 289,
+        "x": 390,
         "y": 921,
         "wires": []
     },
@@ -2557,7 +2552,7 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollladensteuerung Morgens & Abends",
         "info": "",
-        "x": 190,
+        "x": 170,
         "y": 40,
         "wires": []
     },
@@ -3375,7 +3370,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 570,
+        "x": 671,
         "y": 360,
         "wires": [
             [
@@ -3603,8 +3598,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 180,
-        "y": 380,
+        "x": 1840,
+        "y": 240,
         "wires": [
             []
         ]
@@ -3629,7 +3624,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1134,
+        "x": 1235,
         "y": 349,
         "wires": [
             [
@@ -3657,7 +3652,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1114,
+        "x": 1215,
         "y": 406,
         "wires": [
             [
@@ -3685,7 +3680,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1130,
+        "x": 1231,
         "y": 517,
         "wires": [
             [
@@ -3713,7 +3708,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1140,
+        "x": 1241,
         "y": 577,
         "wires": [
             [
@@ -4353,8 +4348,8 @@
         "y": 200,
         "wires": [
             [
-                "d29c41d6.8c89f",
-                "5903692c.6ea958"
+                "5903692c.6ea958",
+                "d29c41d6.8c89f"
             ]
         ]
     },
@@ -4380,8 +4375,8 @@
         "y": 160,
         "wires": [
             [
-                "d29c41d6.8c89f",
-                "5903692c.6ea958"
+                "5903692c.6ea958",
+                "d29c41d6.8c89f"
             ]
         ]
     },
@@ -4397,7 +4392,7 @@
         "label": "Status Blindcontrol",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 310,
+        "x": 411,
         "y": 100,
         "wires": []
     },
@@ -4408,8 +4403,8 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 310,
-        "y": 200,
+        "x": 370,
+        "y": 220,
         "wires": [
             [
                 "84b87802.97fed8"
@@ -4929,8 +4924,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 190,
-        "y": 500,
+        "x": 1850,
+        "y": 360,
         "wires": [
             []
         ]
@@ -5152,8 +5147,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 190,
-        "y": 440,
+        "x": 1850,
+        "y": 300,
         "wires": [
             []
         ]
@@ -5380,7 +5375,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 560,
+        "x": 661,
         "y": 120,
         "wires": [
             [
@@ -5608,7 +5603,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 560,
+        "x": 661,
         "y": 60,
         "wires": [
             [
@@ -7484,7 +7479,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1369,
+        "x": 1470,
         "y": 1141,
         "wires": []
     },
@@ -7526,7 +7521,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1359,
+        "x": 1460,
         "y": 1061,
         "wires": []
     },
@@ -7568,7 +7563,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1379,
+        "x": 1480,
         "y": 981,
         "wires": []
     },
@@ -7610,7 +7605,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1400,
+        "x": 1501,
         "y": 842,
         "wires": []
     },
@@ -7652,7 +7647,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1400,
+        "x": 1501,
         "y": 786,
         "wires": []
     },
@@ -7694,7 +7689,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1400,
+        "x": 1501,
         "y": 733,
         "wires": []
     },
@@ -7736,7 +7731,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1400,
+        "x": 1501,
         "y": 894,
         "wires": []
     },
@@ -7778,7 +7773,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1390,
+        "x": 1491,
         "y": 681,
         "wires": []
     },
@@ -7820,7 +7815,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 517,
         "wires": []
     },
@@ -7862,7 +7857,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 577,
         "wires": []
     },
@@ -7904,7 +7899,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1420,
+        "x": 1521,
         "y": 406,
         "wires": []
     },
@@ -7946,7 +7941,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 457,
         "wires": []
     },
@@ -7988,7 +7983,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 349,
         "wires": []
     },
@@ -8030,7 +8025,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 293,
         "wires": []
     },
@@ -8072,7 +8067,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1428,
+        "x": 1529,
         "y": 234,
         "wires": []
     },
@@ -8114,7 +8109,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1430,
+        "x": 1531,
         "y": 177,
         "wires": []
     },
@@ -8156,7 +8151,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 117,
         "wires": []
     },
@@ -8198,7 +8193,7 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1410,
+        "x": 1511,
         "y": 63,
         "wires": []
     },
@@ -8215,7 +8210,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1329,
+        "x": 1430,
         "y": 1201,
         "wires": []
     },
@@ -8236,7 +8231,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 949,
+        "x": 1050,
         "y": 1021,
         "wires": [
             [
@@ -8261,7 +8256,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 939,
+        "x": 1040,
         "y": 1101,
         "wires": [
             [
@@ -8286,7 +8281,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 949,
+        "x": 1050,
         "y": 1181,
         "wires": [
             [
@@ -8311,7 +8306,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 910,
+        "x": 1011,
         "y": 826,
         "wires": [
             [
@@ -8336,7 +8331,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 906,
+        "x": 1007,
         "y": 771,
         "wires": [
             [
@@ -8361,7 +8356,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 907,
+        "x": 1008,
         "y": 719,
         "wires": [
             [
@@ -8386,7 +8381,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 908,
+        "x": 1009,
         "y": 873,
         "wires": [
             [
@@ -8411,7 +8406,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 905,
+        "x": 1006,
         "y": 667,
         "wires": [
             [
@@ -8436,7 +8431,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 890,
+        "x": 991,
         "y": 497,
         "wires": [
             [
@@ -8461,7 +8456,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 890,
+        "x": 991,
         "y": 557,
         "wires": [
             [
@@ -8486,7 +8481,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 894,
+        "x": 995,
         "y": 446,
         "wires": [
             [
@@ -8511,7 +8506,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 894,
+        "x": 995,
         "y": 386,
         "wires": [
             [
@@ -8536,7 +8531,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 884,
+        "x": 985,
         "y": 273,
         "wires": [
             [
@@ -8561,7 +8556,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 884,
+        "x": 985,
         "y": 329,
         "wires": [
             [
@@ -8586,7 +8581,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 910,
+        "x": 1011,
         "y": 157,
         "wires": [
             [
@@ -8611,7 +8606,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 908,
+        "x": 1009,
         "y": 214,
         "wires": [
             [
@@ -8636,7 +8631,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 890,
+        "x": 991,
         "y": 37,
         "wires": [
             [
@@ -8661,7 +8656,7 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 890,
+        "x": 991,
         "y": 97,
         "wires": [
             [
@@ -8796,8 +8791,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 440,
-        "y": 520,
+        "x": 640,
+        "y": 560,
         "wires": [
             [
                 "125dc694.3a7ee9"
@@ -8832,8 +8827,8 @@
         "datapoint": "LEVEL",
         "datapointRx": "str",
         "force": false,
-        "x": 630,
-        "y": 520,
+        "x": 830,
+        "y": 560,
         "wires": []
     },
     {
@@ -11391,8 +11386,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 661,
-        "y": 620,
+        "x": 655,
+        "y": 680,
         "wires": []
     },
     {
@@ -11401,8 +11396,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Soundtouch einschalten",
         "info": "",
-        "x": 240,
-        "y": 620,
+        "x": 234,
+        "y": 680,
         "wires": []
     },
     {
@@ -11413,8 +11408,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 661,
-        "y": 680,
+        "x": 655,
+        "y": 740,
         "wires": []
     },
     {
@@ -11423,8 +11418,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio Bob einschalten",
         "info": "",
-        "x": 240,
-        "y": 680,
+        "x": 234,
+        "y": 740,
         "wires": []
     },
     {
@@ -11435,8 +11430,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 691,
-        "y": 740,
+        "x": 685,
+        "y": 800,
         "wires": []
     },
     {
@@ -11445,8 +11440,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio Sachsen Anhalt einschalten",
         "info": "",
-        "x": 280,
-        "y": 740,
+        "x": 274,
+        "y": 800,
         "wires": []
     },
     {
@@ -11457,8 +11452,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 661,
-        "y": 800,
+        "x": 655,
+        "y": 860,
         "wires": []
     },
     {
@@ -11467,8 +11462,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio NDR2 einschalten",
         "info": "",
-        "x": 250,
-        "y": 800,
+        "x": 244,
+        "y": 860,
         "wires": []
     },
     {
@@ -11546,8 +11541,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 440,
-        "y": 460,
+        "x": 640,
+        "y": 500,
         "wires": [
             [
                 "8e1e4cd0.75843"
@@ -11582,8 +11577,8 @@
         "datapoint": "LEVEL",
         "datapointRx": "str",
         "force": false,
-        "x": 630,
-        "y": 460,
+        "x": 830,
+        "y": 500,
         "wires": []
     },
     {
@@ -12488,7 +12483,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 559,
+        "x": 660,
         "y": 1061,
         "wires": [
             [
@@ -12511,7 +12506,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 559,
+        "x": 660,
         "y": 1141,
         "wires": [
             [
@@ -12845,7 +12840,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 839,
+        "x": 940,
         "y": 981,
         "wires": [
             [
@@ -13073,7 +13068,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 839,
+        "x": 940,
         "y": 1061,
         "wires": [
             [
@@ -13301,7 +13296,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 839,
+        "x": 940,
         "y": 1141,
         "wires": [
             [
@@ -13526,8 +13521,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 180,
-        "y": 560,
+        "x": 1840,
+        "y": 420,
         "wires": [
             []
         ]
@@ -13915,280 +13910,6 @@
                 "1bc6f6bf.9072e1"
             ]
         ]
-    },
-    {
-        "id": "cc4a2c7e.0a6bb8",
-        "type": "inject",
-        "z": "6e1d2e6.7c3ed5",
-        "name": "all 1min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 1580,
-        "wires": [
-            [
-                "a9efaa82.ca6f4"
-            ]
-        ]
-    },
-    {
-        "id": "a9efaa82.ca6f4",
-        "type": "clock-timer",
-        "z": "6e1d2e6.7c3ed5",
-        "name": "Zeiten Gartenpumpe",
-        "topic": "",
-        "positionConfig": "6ad7a531.04aedc",
-        "outputs": "1",
-        "autoTrigger": false,
-        "autoTriggerTime": 1200000,
-        "startDelayTime": 10000,
-        "storeName": "",
-        "overwriteExpire": "",
-        "rules": [
-            {
-                "index": 0,
-                "name": "Gartenpumpe ein",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "StartTimeIrrigation_String",
-                "timeType": "global",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "3,4,5,6,7,8,9",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "payloadValue": "true",
-                "payloadType": "bool",
-                "payloadOffsetValue": "",
-                "payloadOffsetType": "none",
-                "payloadOffsetMultiplier": 60000,
-                "payloadFormat": 99,
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>global.StartTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an folgenden Monaten</span> <var>Apr-Okt</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload:</span> <var>true</var></div></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 1,
-                "name": "Gartenpumpe aus",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "EndTimeIrrigation_String",
-                "timeType": "global",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "3,4,5,6,7,8,9",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "payloadValue": "false",
-                "payloadType": "bool",
-                "payloadOffsetValue": "",
-                "payloadOffsetType": "none",
-                "payloadOffsetMultiplier": 60000,
-                "payloadFormat": 99,
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>global.EndTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an folgenden Monaten</span> <var>Apr-Okt</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload:</span> <var>false</var></div></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            }
-        ],
-        "payloadDefault": "",
-        "payloadDefaultType": "none",
-        "payloadDefaultTimeFormat": 0,
-        "payloadDefaultOffset": 0,
-        "payloadDefaultOffsetType": "none",
-        "payloadDefaultOffsetMultiplier": 60000,
-        "x": 380,
-        "y": 1580,
-        "wires": [
-            [
-                "9680b542.eb89c"
-            ]
-        ]
-    },
-    {
-        "id": "9680b542.eb89c",
-        "type": "ccu-value",
-        "z": "6e1d2e6.7c3ed5",
-        "name": "Schaltsteckdose Hochbeet",
-        "iface": "HmIP-RF",
-        "channel": "00255D89B02D64:3 Gartenpumpe Schaltaktor",
-        "datapoint": "STATE",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 740,
-        "y": 1580,
-        "wires": [
-            [
-                "dfb737b1.63b088"
-            ]
-        ]
-    },
-    {
-        "id": "abfe87f0.738b8",
-        "type": "comment",
-        "z": "6e1d2e6.7c3ed5",
-        "name": "Zeitschaltung Gartenpumpe",
-        "info": "",
-        "x": 160,
-        "y": 1520,
-        "wires": []
-    },
-    {
-        "id": "f5ffe5d6.c99dd8",
-        "type": "ui_button",
-        "z": "6e1d2e6.7c3ed5",
-        "name": "Gartenpumpe ein",
-        "group": "937d90ca.8d8b",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Gartenpumpe ein",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "",
-        "x": 470,
-        "y": 1640,
-        "wires": [
-            [
-                "9680b542.eb89c"
-            ]
-        ]
-    },
-    {
-        "id": "42109030.c7bf3",
-        "type": "ui_button",
-        "z": "6e1d2e6.7c3ed5",
-        "name": "Gartenpumpe aus",
-        "group": "937d90ca.8d8b",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Gartenpumpe aus",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "topic": "",
-        "x": 470,
-        "y": 1680,
-        "wires": [
-            [
-                "9680b542.eb89c"
-            ]
-        ]
-    },
-    {
-        "id": "dfb737b1.63b088",
-        "type": "ui_text",
-        "z": "6e1d2e6.7c3ed5",
-        "group": "937d90ca.8d8b",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "Status Gartenpumpe",
-        "label": "Status Gartenpumpe",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1060,
-        "y": 1580,
-        "wires": []
     },
     {
         "id": "c02328a5.d4f348",
@@ -15388,101 +15109,6 @@
         ]
     },
     {
-        "id": "691ce48.31c621c",
-        "type": "function",
-        "z": "427fc89b.e34038",
-        "name": "StartTimeIrrigation_String",
-        "func": "var payload = msg.payload;\n    global.set(\"StartTimeIrrigation_String\",payload)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 650,
-        "y": 1115,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5d6db457.b6ee9c",
-        "type": "debug",
-        "z": "427fc89b.e34038",
-        "name": "timeIrrigation",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 1075,
-        "wires": []
-    },
-    {
-        "id": "5fd315f8.643dfc",
-        "type": "ui_text_input",
-        "z": "427fc89b.e34038",
-        "name": "start time lawn irrigation",
-        "label": "start time lawn irrigation",
-        "tooltip": "HH:MM",
-        "group": "46fbe67a.90cd18",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "",
-        "x": 170,
-        "y": 1115,
-        "wires": [
-            [
-                "691ce48.31c621c"
-            ]
-        ]
-    },
-    {
-        "id": "342a79e9.697e06",
-        "type": "function",
-        "z": "427fc89b.e34038",
-        "name": "EndTimeIrrigation_String",
-        "func": "var payload = msg.payload;\n    global.set(\"EndTimeIrrigation_String\",payload)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 650,
-        "y": 1155,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f327cdc1.afd7a",
-        "type": "ui_text_input",
-        "z": "427fc89b.e34038",
-        "name": "end time lawn irrigation",
-        "label": "end time lawn irrigation",
-        "tooltip": "HH:MM",
-        "group": "46fbe67a.90cd18",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "",
-        "x": 170,
-        "y": 1155,
-        "wires": [
-            [
-                "342a79e9.697e06"
-            ]
-        ]
-    },
-    {
         "id": "fe2b1611.6488d8",
         "type": "within-time-switch",
         "z": "db6aac1c.cd43b",
@@ -15820,7 +15446,7 @@
         "label": "switch sunprotection",
         "tooltip": "",
         "group": "46fbe67a.90cd18",
-        "order": 11,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -16088,7 +15714,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 570,
+        "x": 671,
         "y": 860,
         "wires": [
             [
@@ -16107,7 +15733,7 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 370,
+        "x": 471,
         "y": 860,
         "wires": [
             [
@@ -19141,7 +18767,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
+        "x": 380,
         "y": 160,
         "wires": [
             [
@@ -22153,5 +21779,1357 @@
         "x": 170,
         "y": 1320,
         "wires": []
+    },
+    {
+        "id": "57015e6.51f80a",
+        "type": "inject",
+        "z": "e20ea6d6.476028",
+        "name": "all 2min",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "32e254fd.4e37ac"
+            ]
+        ]
+    },
+    {
+        "id": "921ff53f.01e208",
+        "type": "clock-timer",
+        "z": "e20ea6d6.476028",
+        "name": "Start Garden Pump",
+        "topic": "Timer",
+        "positionConfig": "6ad7a531.04aedc",
+        "outputs": "1",
+        "autoTrigger": false,
+        "autoTriggerTime": 1200000,
+        "startDelayTime": "0",
+        "storeName": "",
+        "overwriteExpire": "",
+        "rules": [
+            {
+                "index": 0,
+                "name": "Gartenpumpe ein",
+                "isValid": false,
+                "valid": {},
+                "timeValue": "StartTimeIrrigation_String",
+                "timeType": "flow",
+                "timeOp": 1,
+                "timeOpText": "↧ from",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 60000,
+                "timeDays": "*",
+                "timeMonths": "3,4,5,6,7,8,9",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "",
+                "timeDateEnd": "",
+                "timeMinValue": "",
+                "timeMinType": "none",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "",
+                "timeMaxType": "none",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "payloadValue": "true",
+                "payloadType": "bool",
+                "payloadOffsetValue": "",
+                "payloadOffsetType": "none",
+                "payloadOffsetMultiplier": 60000,
+                "payloadFormat": 99,
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "",
+                "validOperandAType": "none",
+                "validOperator": "true",
+                "validOperatorText": "is true",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "is true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.StartTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Apr-Oct</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
+            },
+            {
+                "index": 1,
+                "name": "Gartenpumpe aus",
+                "isValid": false,
+                "valid": {},
+                "timeValue": "EndTimeIrrigation_String",
+                "timeType": "flow",
+                "timeOp": 1,
+                "timeOpText": "↧ from",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 60000,
+                "timeDays": "*",
+                "timeMonths": "3,4,5,6,7,8,9",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "",
+                "timeDateEnd": "",
+                "timeMinValue": "",
+                "timeMinType": "none",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "",
+                "timeMaxType": "none",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "payloadValue": "false",
+                "payloadType": "bool",
+                "payloadOffsetValue": "",
+                "payloadOffsetType": "none",
+                "payloadOffsetMultiplier": 60000,
+                "payloadFormat": 99,
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "",
+                "validOperandAType": "none",
+                "validOperator": "true",
+                "validOperatorText": "is true",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "is true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.EndTimeIrrigation_String</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Apr-Oct</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
+            }
+        ],
+        "payloadDefault": "false",
+        "payloadDefaultType": "bool",
+        "payloadDefaultTimeFormat": 0,
+        "payloadDefaultOffset": 0,
+        "payloadDefaultOffsetType": "none",
+        "payloadDefaultOffsetMultiplier": 60000,
+        "x": 250,
+        "y": 780,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "f8b772df.b8fbb",
+        "type": "ccu-value",
+        "z": "e20ea6d6.476028",
+        "name": "Schaltsteckdose Hochbeet",
+        "iface": "HmIP-RF",
+        "channel": "00255D89B02D64:3 Gartenpumpe Schaltaktor",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 2340,
+        "y": 780,
+        "wires": [
+            [
+                "53f50818.cbb0d8"
+            ]
+        ]
+    },
+    {
+        "id": "21e0e697.6ec74a",
+        "type": "comment",
+        "z": "e20ea6d6.476028",
+        "name": "Zeitschaltung Gartenpumpe",
+        "info": "",
+        "x": 260,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "54b6131c.6f21cc",
+        "type": "ui_button",
+        "z": "e20ea6d6.476028",
+        "name": "Gartenpumpe ein",
+        "group": "910e02bb.bf327",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Gartenpumpe ein",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "topicType": "str",
+        "x": 2050,
+        "y": 520,
+        "wires": [
+            [
+                "f8b772df.b8fbb"
+            ]
+        ]
+    },
+    {
+        "id": "4819be7b.56c8d",
+        "type": "ui_button",
+        "z": "e20ea6d6.476028",
+        "name": "Gartenpumpe aus",
+        "group": "910e02bb.bf327",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Gartenpumpe aus",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "",
+        "topicType": "str",
+        "x": 2050,
+        "y": 560,
+        "wires": [
+            [
+                "f8b772df.b8fbb"
+            ]
+        ]
+    },
+    {
+        "id": "a46a8771.e5de18",
+        "type": "ui_text",
+        "z": "e20ea6d6.476028",
+        "group": "910e02bb.bf327",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Status Gartenpumpe",
+        "label": "Status Gartenpumpe",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 2320,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "32e254fd.4e37ac",
+        "type": "hydrawise-command",
+        "z": "e20ea6d6.476028",
+        "name": "Hunter Rain Controller",
+        "controller": "c66039fc.9f9668",
+        "zone": "Rasen Terrasse",
+        "command": "info",
+        "duration": "10",
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "7a49fc82.b9bae4",
+                "459a2029.8904a",
+                "59c3979e.a9ea18",
+                "a91dc393.9b7a9",
+                "bd0e48b4.becbd8",
+                "64cf2d10.8ef9b4",
+                "19f168c.19e4797"
+            ]
+        ]
+    },
+    {
+        "id": "b8100795.e3e8b8",
+        "type": "inject",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "32e254fd.4e37ac"
+            ]
+        ]
+    },
+    {
+        "id": "5d561a04.486744",
+        "type": "BooleanLogicUltimate",
+        "z": "e20ea6d6.476028",
+        "name": "passWhenIrrigationORManualWaterUseIsTrue",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "trigger",
+        "outputtriggeredby": "all",
+        "inputCount": "8",
+        "topic": "isOneZoneRunning",
+        "x": 1210,
+        "y": 780,
+        "wires": [
+            [],
+            [
+                "5ded76b0.ddcca8",
+                "43bd7a1d.7b18e4",
+                "ae66b65a.49c378"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5ded76b0.ddcca8",
+        "type": "switch",
+        "z": "e20ea6d6.476028",
+        "name": "checkIsPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1580,
+        "y": 720,
+        "wires": [
+            [
+                "70ece647.7e0d98",
+                "6c0f5c0e.24cb74"
+            ]
+        ]
+    },
+    {
+        "id": "43bd7a1d.7b18e4",
+        "type": "switch",
+        "z": "e20ea6d6.476028",
+        "name": "checkIsPayloadIsFalse",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1580,
+        "y": 840,
+        "wires": [
+            [
+                "6c0f5c0e.24cb74"
+            ]
+        ]
+    },
+    {
+        "id": "459a2029.8904a",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicRasenTerrasse",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RasenTerrasse",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateRasenTerrasse",
+                "pt": "flow",
+                "to": "payload.controller.zones[1].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 439,
+        "wires": [
+            [
+                "6f6bcefc.515e2"
+            ]
+        ]
+    },
+    {
+        "id": "7a49fc82.b9bae4",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicRasenOstseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RasenOstseite",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateRasenOstseite",
+                "pt": "flow",
+                "to": "payload.controller.zones[0].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 379,
+        "wires": [
+            [
+                "2f8b067.7ae07fa"
+            ]
+        ]
+    },
+    {
+        "id": "2f8b067.7ae07fa",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateRasenOstseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateRasenOstseite",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 379,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "6f6bcefc.515e2",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateRasenTerrasse",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateRasenTerrasse",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 439,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "59c3979e.a9ea18",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicRasenWestseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RasenWestseite",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateRasenWestseite",
+                "pt": "flow",
+                "to": "payload.controller.zones[2].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 499,
+        "wires": [
+            [
+                "397c2872.a0e4a8"
+            ]
+        ]
+    },
+    {
+        "id": "397c2872.a0e4a8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateRasenWestseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateRasenWestseite",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 499,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "a91dc393.9b7a9",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicRasenSüdseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RasenSüdseite",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateRasenSüdseite",
+                "pt": "flow",
+                "to": "payload.controller.zones[3].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 559,
+        "wires": [
+            [
+                "764599cc.d22ec8"
+            ]
+        ]
+    },
+    {
+        "id": "764599cc.d22ec8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateRasenSüdseite",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateRasenSüdseite",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 559,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "bd0e48b4.becbd8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicTropfVorgarten",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TropfVorgarten",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateTropfVorgarten",
+                "pt": "flow",
+                "to": "payload.controller.zones[4].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 619,
+        "wires": [
+            [
+                "86263671.533fa8"
+            ]
+        ]
+    },
+    {
+        "id": "86263671.533fa8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateTropfVorgarten",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateTropfVorgarten",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 619,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "64cf2d10.8ef9b4",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defStateAndTopicTropfHochbeet",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TropfHochbeet",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "StateTropfHochbeet",
+                "pt": "flow",
+                "to": "payload.controller.zones[5].isRunning",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 679,
+        "wires": [
+            [
+                "65dd8f25.28832"
+            ]
+        ]
+    },
+    {
+        "id": "65dd8f25.28832",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToStateTropfHochbeet",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "StateTropfHochbeet",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 679,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "2ffe6725.d625a8",
+        "type": "ccu-get-value",
+        "z": "e20ea6d6.476028",
+        "name": "state power Garden pump",
+        "ccuConfig": "38263145.35ea0e",
+        "iface": "HmIP-RF",
+        "channel": "00255D89B02D64:3 Gartenpumpe Schaltaktor",
+        "sysvar": "Alarmmeldungen",
+        "sysvarProperty": "value",
+        "datapoint": "STATE",
+        "datapointProperty": "value",
+        "setProp": "payload",
+        "setPropType": "msg",
+        "x": 470,
+        "y": 1048,
+        "wires": [
+            [
+                "a6d5079c.46b308"
+            ]
+        ]
+    },
+    {
+        "id": "44dd9135.cfa29",
+        "type": "inject",
+        "z": "e20ea6d6.476028",
+        "name": "every 30s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1048,
+        "wires": [
+            [
+                "2ffe6725.d625a8",
+                "4cede9f.9ce5518",
+                "921ff53f.01e208"
+            ]
+        ]
+    },
+    {
+        "id": "a6d5079c.46b308",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "stateOfGardenPumpPowerSupply",
+        "rules": [
+            {
+                "t": "set",
+                "p": "stateOfGardenPumpPowerSupply",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 1048,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "311d23a6.fa6b1c",
+        "type": "comment",
+        "z": "e20ea6d6.476028",
+        "name": "Get Status Power Supply",
+        "info": "",
+        "x": 210,
+        "y": 988,
+        "wires": []
+    },
+    {
+        "id": "df25a333.8a4af",
+        "type": "switch",
+        "z": "e20ea6d6.476028",
+        "name": "Condition power supply is on",
+        "property": "stateOfGardenPumpPowerSupply",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2020,
+        "y": 840,
+        "wires": [
+            [
+                "f8b772df.b8fbb",
+                "9f57a3ae.6c243"
+            ]
+        ]
+    },
+    {
+        "id": "70ece647.7e0d98",
+        "type": "switch",
+        "z": "e20ea6d6.476028",
+        "name": "Condition power supply is off",
+        "property": "stateOfGardenPumpPowerSupply",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2020,
+        "y": 720,
+        "wires": [
+            [
+                "f8b772df.b8fbb",
+                "9f57a3ae.6c243"
+            ]
+        ]
+    },
+    {
+        "id": "55a32454.2c384c",
+        "type": "comment",
+        "z": "e20ea6d6.476028",
+        "name": "Get Status Switch Garden Pump",
+        "info": "",
+        "x": 230,
+        "y": 1174,
+        "wires": []
+    },
+    {
+        "id": "5a202427.0198dc",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SwitchONGardenPumpPowerSupply",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SwitchONGardenPumpPowerSupply",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 1294,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4cede9f.9ce5518",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "defTopicGardenPumpPowerSupply",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "GardenPumpPowerSupply",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 840,
+        "wires": [
+            [
+                "f40d58b1.049698"
+            ]
+        ]
+    },
+    {
+        "id": "f40d58b1.049698",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "SetPayloadToSwitchONOfGardenPumpPowerSupply",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "SwitchONGardenPumpPowerSupply",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 840,
+        "wires": [
+            [
+                "5d561a04.486744"
+            ]
+        ]
+    },
+    {
+        "id": "603c914f.53625",
+        "type": "ui_text",
+        "z": "e20ea6d6.476028",
+        "group": "910e02bb.bf327",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Switch ON Garden Power Supply",
+        "label": "Switch ON Garden Power Supply",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 800,
+        "y": 1234,
+        "wires": []
+    },
+    {
+        "id": "53f50818.cbb0d8",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2340,
+        "y": 860,
+        "wires": [
+            [
+                "a46a8771.e5de18"
+            ]
+        ]
+    },
+    {
+        "id": "7d93bc14.f93f04",
+        "type": "ccu-sysvar",
+        "z": "e20ea6d6.476028",
+        "name": "SysVar_Switch_Garden_Pump",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "ReGaHSS/${Name}",
+        "change": true,
+        "cache": true,
+        "x": 250,
+        "y": 1234,
+        "wires": [
+            [
+                "5a202427.0198dc",
+                "f7df1de1.f437e"
+            ]
+        ]
+    },
+    {
+        "id": "ae66b65a.49c378",
+        "type": "debug",
+        "z": "e20ea6d6.476028",
+        "name": "logicOROutput",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "f7df1de1.f437e",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 1234,
+        "wires": [
+            [
+                "603c914f.53625"
+            ]
+        ]
+    },
+    {
+        "id": "40092bad.9a2bb4",
+        "type": "function",
+        "z": "e20ea6d6.476028",
+        "name": "StartTimeIrrigation_String",
+        "func": "var payload = msg.payload;\n    flow.set(\"StartTimeIrrigation_String\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 710,
+        "y": 1464,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3fa4b69.edcb38",
+        "type": "ui_text_input",
+        "z": "e20ea6d6.476028",
+        "name": "start time lawn irrigation",
+        "label": "start time lawn irrigation",
+        "tooltip": "HH:MM",
+        "group": "910e02bb.bf327",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 230,
+        "y": 1464,
+        "wires": [
+            [
+                "40092bad.9a2bb4"
+            ]
+        ]
+    },
+    {
+        "id": "3e925ee.fd615a2",
+        "type": "function",
+        "z": "e20ea6d6.476028",
+        "name": "EndTimeIrrigation_String",
+        "func": "var payload = msg.payload;\n    flow.set(\"EndTimeIrrigation_String\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 710,
+        "y": 1504,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dda5061b.8e5c18",
+        "type": "ui_text_input",
+        "z": "e20ea6d6.476028",
+        "name": "end time lawn irrigation",
+        "label": "end time lawn irrigation",
+        "tooltip": "HH:MM",
+        "group": "910e02bb.bf327",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 230,
+        "y": 1504,
+        "wires": [
+            [
+                "3e925ee.fd615a2"
+            ]
+        ]
+    },
+    {
+        "id": "a0e830fd.a81",
+        "type": "comment",
+        "z": "e20ea6d6.476028",
+        "name": "Set Starttime of Irrigation",
+        "info": "",
+        "x": 210,
+        "y": 1404,
+        "wires": []
+    },
+    {
+        "id": "6c0f5c0e.24cb74",
+        "type": "combine-defer",
+        "z": "e20ea6d6.476028",
+        "topic": "isOneZoneRunning",
+        "name": "",
+        "invert": true,
+        "timeout": "180",
+        "timeoutType": "num",
+        "x": 1790,
+        "y": 840,
+        "wires": [
+            [
+                "df25a333.8a4af"
+            ]
+        ]
+    },
+    {
+        "id": "4c3cc222.ac29fc",
+        "type": "ui_chart",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "group": "910e02bb.bf327",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "State power plug",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2570,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19f168c.19e4797",
+        "type": "debug",
+        "z": "e20ea6d6.476028",
+        "name": "rain controller",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "90eac71f.3470d8",
+        "type": "BooleanLogicUltimate",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "trigger",
+        "outputtriggeredby": "all",
+        "inputCount": 2,
+        "topic": "result",
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9f57a3ae.6c243",
+        "type": "change",
+        "z": "e20ea6d6.476028",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2320,
+        "y": 620,
+        "wires": [
+            [
+                "4c3cc222.ac29fc"
+            ]
+        ]
     }
 ]
