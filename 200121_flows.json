@@ -1110,11 +1110,12 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 320,
+        "x": 100,
+        "y": 360,
         "wires": [
             [
-                "d7eb975d.315ba8"
+                "d7eb975d.315ba8",
+                "a5826ca6.6aba2"
             ]
         ]
     },
@@ -23138,10 +23139,10 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "flagSwitchBlindControl",
-                "tot": "flow"
+                "p": "flagSwitchBlindControl",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -23159,20 +23160,20 @@
         "id": "d7eb975d.315ba8",
         "type": "change",
         "z": "db6aac1c.cd43b",
-        "name": "",
+        "name": "ButtonControl",
         "rules": [
             {
                 "t": "set",
-                "p": "flagSwitchBlindControl",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
+                "p": "payload",
+                "pt": "msg",
+                "to": "flagSwitchBlindControl",
+                "tot": "flow"
             },
             {
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "condition",
+                "to": "ButtonControl",
                 "tot": "str"
             }
         ],
@@ -23182,7 +23183,7 @@
         "to": "",
         "reg": false,
         "x": 140,
-        "y": 240,
+        "y": 280,
         "wires": [
             [
                 "90eac71f.3470d8"
@@ -23193,7 +23194,7 @@
         "id": "aab1ccae.0973e",
         "type": "noraf-switch",
         "z": "28a65c2.2e2eba4",
-        "devicename": "SwitchToSetBlindControl",
+        "devicename": "Rollladenautomatic",
         "roomhint": "",
         "name": "SwitchToSetBlindControl",
         "passthru": false,
@@ -23213,7 +23214,8 @@
         "y": 360,
         "wires": [
             [
-                "63156f7b.638fc"
+                "63156f7b.638fc",
+                "a3ffcea.bf6e53"
             ]
         ]
     },
@@ -23225,10 +23227,10 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "flagToSetBlindControl",
-                "tot": "global"
+                "p": "flagToSetBlindControl",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -23236,10 +23238,61 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
+        "x": 570,
         "y": 360,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a5826ca6.6aba2",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "VoiceControl",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "flagToSetBlindControl",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "VoiceControl",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "90eac71f.3470d8"
+            ]
+        ]
+    },
+    {
+        "id": "a3ffcea.bf6e53",
+        "type": "debug",
+        "z": "28a65c2.2e2eba4",
+        "name": "google switch",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 460,
+        "wires": []
     }
 ]
