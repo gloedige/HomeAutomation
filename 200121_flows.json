@@ -23058,7 +23058,7 @@
         "order": 6,
         "width": 0,
         "height": 0,
-        "label": "chart",
+        "label": "State power plug",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -23087,7 +23087,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2600,
+        "x": 2640,
         "y": 780,
         "wires": [
             []
