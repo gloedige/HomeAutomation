@@ -21838,13 +21838,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 360,
+        "x": 160,
+        "y": 240,
         "wires": [
             [
-                "921ff53f.01e208",
-                "32e254fd.4e37ac",
-                "4cede9f.9ce5518"
+                "32e254fd.4e37ac"
             ]
         ]
     },
@@ -21979,8 +21977,8 @@
         "payloadDefaultOffset": 0,
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
-        "x": 610,
-        "y": 540,
+        "x": 250,
+        "y": 780,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22022,8 +22020,8 @@
         "z": "e20ea6d6.476028",
         "name": "Zeitschaltung Gartenpumpe",
         "info": "",
-        "x": 220,
-        "y": 80,
+        "x": 260,
+        "y": 740,
         "wires": []
     },
     {
@@ -22147,8 +22145,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 180,
-        "y": 240,
+        "x": 150,
+        "y": 180,
         "wires": [
             [
                 "32e254fd.4e37ac"
@@ -22253,7 +22251,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 720,
+        "y": 439,
         "wires": [
             [
                 "6f6bcefc.515e2"
@@ -22287,7 +22285,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 660,
+        "y": 379,
         "wires": [
             [
                 "2f8b067.7ae07fa"
@@ -22314,7 +22312,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 660,
+        "y": 379,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22341,7 +22339,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 720,
+        "y": 439,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22375,7 +22373,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 780,
+        "y": 499,
         "wires": [
             [
                 "397c2872.a0e4a8"
@@ -22402,7 +22400,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 780,
+        "y": 499,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22436,7 +22434,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 840,
+        "y": 559,
         "wires": [
             [
                 "764599cc.d22ec8"
@@ -22463,7 +22461,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 840,
+        "y": 559,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22497,7 +22495,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 900,
+        "y": 619,
         "wires": [
             [
                 "86263671.533fa8"
@@ -22524,7 +22522,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 900,
+        "y": 619,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22558,7 +22556,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 960,
+        "y": 679,
         "wires": [
             [
                 "65dd8f25.28832"
@@ -22585,7 +22583,7 @@
         "to": "",
         "reg": false,
         "x": 640,
-        "y": 960,
+        "y": 679,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22607,7 +22605,7 @@
         "setProp": "payload",
         "setPropType": "msg",
         "x": 470,
-        "y": 1140,
+        "y": 1048,
         "wires": [
             [
                 "a6d5079c.46b308"
@@ -22618,13 +22616,13 @@
         "id": "44dd9135.cfa29",
         "type": "inject",
         "z": "e20ea6d6.476028",
-        "name": "every 1min",
+        "name": "every 30s",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "60",
+        "repeat": "30",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -22632,10 +22630,12 @@
         "payload": "",
         "payloadType": "date",
         "x": 210,
-        "y": 1140,
+        "y": 1048,
         "wires": [
             [
-                "2ffe6725.d625a8"
+                "2ffe6725.d625a8",
+                "4cede9f.9ce5518",
+                "921ff53f.01e208"
             ]
         ]
     },
@@ -22659,7 +22659,7 @@
         "to": "",
         "reg": false,
         "x": 860,
-        "y": 1140,
+        "y": 1048,
         "wires": [
             []
         ]
@@ -22671,7 +22671,7 @@
         "name": "Get Status Power Supply",
         "info": "",
         "x": 210,
-        "y": 1080,
+        "y": 988,
         "wires": []
     },
     {
@@ -22727,7 +22727,7 @@
         "name": "Get Status Switch Garden Pump",
         "info": "",
         "x": 230,
-        "y": 1340,
+        "y": 1174,
         "wires": []
     },
     {
@@ -22750,7 +22750,7 @@
         "to": "",
         "reg": false,
         "x": 610,
-        "y": 1460,
+        "y": 1294,
         "wires": [
             []
         ]
@@ -22775,7 +22775,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 600,
+        "y": 840,
         "wires": [
             [
                 "f40d58b1.049698"
@@ -22802,7 +22802,7 @@
         "to": "",
         "reg": false,
         "x": 700,
-        "y": 600,
+        "y": 840,
         "wires": [
             [
                 "5d561a04.486744"
@@ -22827,7 +22827,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 800,
-        "y": 1400,
+        "y": 1234,
         "wires": []
     },
     {
@@ -22878,7 +22878,7 @@
         "change": true,
         "cache": true,
         "x": 250,
-        "y": 1400,
+        "y": 1234,
         "wires": [
             [
                 "5a202427.0198dc",
@@ -22934,7 +22934,7 @@
         "to": "",
         "reg": false,
         "x": 540,
-        "y": 1400,
+        "y": 1234,
         "wires": [
             [
                 "603c914f.53625"
@@ -22952,7 +22952,7 @@
         "initialize": "",
         "finalize": "",
         "x": 710,
-        "y": 1680,
+        "y": 1464,
         "wires": [
             []
         ]
@@ -22973,7 +22973,7 @@
         "delay": 300,
         "topic": "",
         "x": 230,
-        "y": 1680,
+        "y": 1464,
         "wires": [
             [
                 "40092bad.9a2bb4"
@@ -22991,7 +22991,7 @@
         "initialize": "",
         "finalize": "",
         "x": 710,
-        "y": 1720,
+        "y": 1504,
         "wires": [
             []
         ]
@@ -23015,7 +23015,7 @@
         "className": "",
         "topicType": "str",
         "x": 230,
-        "y": 1720,
+        "y": 1504,
         "wires": [
             [
                 "3e925ee.fd615a2"
@@ -23029,7 +23029,7 @@
         "name": "Set Starttime of Irrigation",
         "info": "",
         "x": 210,
-        "y": 1620,
+        "y": 1404,
         "wires": []
     },
     {
@@ -23062,11 +23062,11 @@
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
-        "interpolate": "linear",
+        "interpolate": "step",
         "nodata": "",
         "dot": false,
-        "ymin": "false",
-        "ymax": "true",
+        "ymin": "",
+        "ymax": "",
         "removeOlder": 1,
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
@@ -23098,7 +23098,7 @@
         "type": "debug",
         "z": "e20ea6d6.476028",
         "name": "rain controller",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
