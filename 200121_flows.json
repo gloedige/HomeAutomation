@@ -23292,15 +23292,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 540,
+        "x": 520,
+        "y": 380,
         "wires": []
     },
     {
         "id": "9214b978.491618",
         "type": "inject",
         "z": "db6aac1c.cd43b",
-        "name": "",
+        "name": "every 30s",
         "props": [
             {
                 "p": "payload"
@@ -23420,7 +23420,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2650,
+        "x": 2610,
         "y": 400,
         "wires": [
             []
@@ -23547,7 +23547,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2670,
+        "x": 2610,
         "y": 620,
         "wires": [
             []
@@ -23562,5 +23562,202 @@
         "x": 280,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "59f115de.45c8ec",
+        "type": "falling-edge",
+        "z": "28a65c2.2e2eba4",
+        "name": "false edge",
+        "threshold": "1",
+        "x": 810,
+        "y": 580,
+        "wires": [
+            [
+                "b976e2d2.9d1aa"
+            ]
+        ]
+    },
+    {
+        "id": "fef56271.a278a",
+        "type": "change",
+        "z": "28a65c2.2e2eba4",
+        "name": "boolean to numeric",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 580,
+        "wires": [
+            [
+                "59f115de.45c8ec"
+            ]
+        ]
+    },
+    {
+        "id": "b976e2d2.9d1aa",
+        "type": "change",
+        "z": "28a65c2.2e2eba4",
+        "name": "numeric to boolean",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 580,
+        "wires": [
+            [
+                "aab1ccae.0973e"
+            ]
+        ]
+    },
+    {
+        "id": "afdb0d1c.5bad8",
+        "type": "comment",
+        "z": "28a65c2.2e2eba4",
+        "name": "Schalter Rollladenautomatik",
+        "info": "",
+        "x": 280,
+        "y": 521,
+        "wires": []
+    },
+    {
+        "id": "3ba1d2a3.65c22e",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "numeric to boolean",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2570,
+        "y": 680,
+        "wires": [
+            [
+                "2bd18a72.737d46"
+            ]
+        ]
+    },
+    {
+        "id": "2bd18a72.737d46",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "resetGoogleSwitchVoiceBlindControl",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2900,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20ed845f.c4e4fc",
+        "type": "change",
+        "z": "28a65c2.2e2eba4",
+        "name": "VoiceControl",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "flagVoiceBlindControl",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 580,
+        "wires": [
+            [
+                "fef56271.a278a"
+            ]
+        ]
+    },
+    {
+        "id": "c045fb78.9ac298",
+        "type": "inject",
+        "z": "28a65c2.2e2eba4",
+        "name": "every 30s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 580,
+        "wires": [
+            [
+                "20ed845f.c4e4fc"
+            ]
+        ]
     }
 ]
