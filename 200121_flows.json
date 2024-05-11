@@ -8682,7 +8682,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 840,
-        "y": 180,
+        "y": 120,
         "wires": [
             []
         ]
@@ -8789,7 +8789,7 @@
         "initialize": "",
         "finalize": "",
         "x": 640,
-        "y": 560,
+        "y": 820,
         "wires": [
             [
                 "125dc694.3a7ee9"
@@ -8825,7 +8825,7 @@
         "datapointRx": "str",
         "force": false,
         "x": 830,
-        "y": 560,
+        "y": 820,
         "wires": []
     },
     {
@@ -8835,7 +8835,7 @@
         "name": "Licht im Hausflur",
         "info": "",
         "x": 240,
-        "y": 120,
+        "y": 60,
         "wires": []
     },
     {
@@ -8859,7 +8859,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 830,
-        "y": 260,
+        "y": 200,
         "wires": [
             []
         ]
@@ -8885,7 +8885,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 830,
-        "y": 340,
+        "y": 280,
         "wires": [
             []
         ]
@@ -11383,8 +11383,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 655,
-        "y": 680,
+        "x": 715,
+        "y": 900,
         "wires": []
     },
     {
@@ -11393,8 +11393,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Soundtouch einschalten",
         "info": "",
-        "x": 234,
-        "y": 680,
+        "x": 294,
+        "y": 900,
         "wires": []
     },
     {
@@ -11405,8 +11405,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 655,
-        "y": 740,
+        "x": 715,
+        "y": 960,
         "wires": []
     },
     {
@@ -11415,8 +11415,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio Bob einschalten",
         "info": "",
-        "x": 234,
-        "y": 740,
+        "x": 294,
+        "y": 960,
         "wires": []
     },
     {
@@ -11427,8 +11427,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 685,
-        "y": 800,
+        "x": 745,
+        "y": 1020,
         "wires": []
     },
     {
@@ -11437,8 +11437,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio Sachsen Anhalt einschalten",
         "info": "",
-        "x": 274,
-        "y": 800,
+        "x": 334,
+        "y": 1020,
         "wires": []
     },
     {
@@ -11449,8 +11449,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 655,
-        "y": 860,
+        "x": 715,
+        "y": 1080,
         "wires": []
     },
     {
@@ -11459,8 +11459,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio NDR2 einschalten",
         "info": "",
-        "x": 244,
-        "y": 860,
+        "x": 304,
+        "y": 1080,
         "wires": []
     },
     {
@@ -11539,7 +11539,7 @@
         "initialize": "",
         "finalize": "",
         "x": 640,
-        "y": 500,
+        "y": 760,
         "wires": [
             [
                 "8e1e4cd0.75843"
@@ -11575,7 +11575,7 @@
         "datapointRx": "str",
         "force": false,
         "x": 830,
-        "y": 500,
+        "y": 760,
         "wires": []
     },
     {
@@ -21308,7 +21308,7 @@
         "twofactorpin": "",
         "filter": false,
         "x": 230,
-        "y": 180,
+        "y": 120,
         "wires": [
             [
                 "65095362.fa4e6c"
@@ -21343,7 +21343,7 @@
         "twofactorpin": "",
         "filter": false,
         "x": 260,
-        "y": 260,
+        "y": 200,
         "wires": [
             [
                 "37b1605d.22061"
@@ -21370,7 +21370,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 180,
+        "y": 120,
         "wires": [
             [
                 "70d4ff52.e5cf68"
@@ -21397,7 +21397,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 260,
+        "y": 200,
         "wires": [
             [
                 "2cfeaa6f.ae474e"
@@ -23212,7 +23212,7 @@
         "asyncCmd": false,
         "outputs": 1,
         "x": 270,
-        "y": 360,
+        "y": 440,
         "wires": [
             [
                 "63156f7b.638fc",
@@ -23240,7 +23240,7 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 360,
+        "y": 440,
         "wires": [
             []
         ]
@@ -23293,7 +23293,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 500,
-        "y": 460,
+        "y": 540,
         "wires": []
     },
     {
@@ -23460,7 +23460,7 @@
                 "p": "payload",
                 "pt": "msg",
                 "to": "flagVoiceBlindControl",
-                "tot": "flow"
+                "tot": "global"
             }
         ],
         "action": "",
@@ -23552,5 +23552,15 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "579be207.f5374c",
+        "type": "comment",
+        "z": "28a65c2.2e2eba4",
+        "name": "Schalter Rollladenautomatik",
+        "info": "",
+        "x": 280,
+        "y": 380,
+        "wires": []
     }
 ]
