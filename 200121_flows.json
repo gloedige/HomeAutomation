@@ -817,27 +817,6 @@
         "wires": []
     },
     {
-        "id": "e086ebe0.bcd118",
-        "type": "ui_template",
-        "z": "d2aa9e3f.51894",
-        "group": "937d90ca.8d8b",
-        "name": "Liste unerreichbarer Geräte",
-        "order": 2,
-        "width": "6",
-        "height": "3",
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 640,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "9441636.6ae2ea",
         "type": "ui_text",
         "z": "d2aa9e3f.51894",
@@ -923,9 +902,7 @@
         "x": 400,
         "y": 240,
         "wires": [
-            [
-                "e086ebe0.bcd118"
-            ]
+            []
         ]
     },
     {
