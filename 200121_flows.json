@@ -14,13 +14,6 @@
         "info": ""
     },
     {
-        "id": "d2aa9e3f.51894",
-        "type": "tab",
-        "label": "UNREACH Meldungen",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "c1790f94.1fa788",
         "type": "tab",
         "label": "Alarm",
@@ -683,128 +676,6 @@
         "x": 260,
         "y": 80,
         "wires": []
-    },
-    {
-        "id": "a1b2374.11f4ec8",
-        "type": "comment",
-        "z": "d2aa9e3f.51894",
-        "name": "Anzahl und Liste von nicht erreichbaren Geräten im Dashboard anzeigen",
-        "info": "",
-        "x": 350,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "e086ebe0.bcd118",
-        "type": "ui_template",
-        "z": "d2aa9e3f.51894",
-        "group": "937d90ca.8d8b",
-        "name": "Liste unerreichbarer Geräte",
-        "order": 2,
-        "width": "6",
-        "height": "3",
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 640,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9441636.6ae2ea",
-        "type": "ui_text",
-        "z": "d2aa9e3f.51894",
-        "group": "937d90ca.8d8b",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Anzahl unerreichbarer Geräte:",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "x": 630,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "6218a729.10c688",
-        "type": "ccu-rpc-event",
-        "z": "d2aa9e3f.51894",
-        "name": "UNREACH",
-        "iface": "",
-        "ccuConfig": "38263145.35ea0e",
-        "rooms": "",
-        "roomsRx": "str",
-        "functions": "",
-        "functionsRx": "str",
-        "device": "",
-        "deviceRx": "str",
-        "deviceName": "",
-        "deviceNameRx": "str",
-        "deviceType": "",
-        "deviceTypeRx": "str",
-        "channel": "",
-        "channelRx": "str",
-        "channelName": "",
-        "channelNameRx": "str",
-        "channelType": "",
-        "channelTypeRx": "str",
-        "channelIndex": "",
-        "channelIndexRx": "str",
-        "datapoint": "UNREACH",
-        "datapointRx": "str",
-        "change": true,
-        "working": false,
-        "cache": true,
-        "topic": "${deviceName}",
-        "x": 80,
-        "y": 180,
-        "wires": [
-            [
-                "c1478bb4.c4d668"
-            ]
-        ]
-    },
-    {
-        "id": "c1478bb4.c4d668",
-        "type": "combine-statistic",
-        "z": "d2aa9e3f.51894",
-        "name": "",
-        "topic": "",
-        "operator": "len",
-        "falsy": "exclude",
-        "defer": 250,
-        "timeout": 0,
-        "distinction": "topic",
-        "x": 220,
-        "y": 180,
-        "wires": [
-            [
-                "9441636.6ae2ea",
-                "30d685f8.b2a4aa"
-            ]
-        ]
-    },
-    {
-        "id": "30d685f8.b2a4aa",
-        "type": "function",
-        "z": "d2aa9e3f.51894",
-        "name": "Liste erzeugen",
-        "func": "msg.payload = msg.topics.join(', ');\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 400,
-        "y": 240,
-        "wires": [
-            [
-                "e086ebe0.bcd118"
-            ]
-        ]
     },
     {
         "id": "fa73edab.54473",
@@ -4368,20 +4239,6 @@
         "x": 560,
         "y": 1840,
         "wires": []
-    },
-    {
-        "id": "91c8764c.199b28",
-        "type": "remote-access",
-        "z": "d2aa9e3f.51894",
-        "confignode": "5cef20a2.d8cbc",
-        "name": "",
-        "verbose": 0,
-        "x": 180,
-        "y": 420,
-        "wires": [
-            [],
-            []
-        ]
     },
     {
         "id": "fc4c01b6.5239e",
