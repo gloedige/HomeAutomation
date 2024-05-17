@@ -22218,8 +22218,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1810,
-        "y": 1340,
+        "x": 1770,
+        "y": 1300,
         "wires": []
     },
     {
@@ -22272,9 +22272,6 @@
         "y": 1580,
         "wires": [
             [
-                "502ac38d.d1b16c",
-                "4f36aec6.9fc0c",
-                "dc37e24a.b4279",
                 "4af77fb8.21885"
             ]
         ]
@@ -22319,9 +22316,6 @@
         "y": 1280,
         "wires": [
             [
-                "2200cde5.3c9c02",
-                "c0c61bbf.f42cb8",
-                "3698994d.b179d6",
                 "39b91ade.add9f6"
             ]
         ]
@@ -22396,29 +22390,6 @@
         ]
     },
     {
-        "id": "dc37e24a.b4279",
-        "type": "switch",
-        "z": "c1790f94.1fa788",
-        "name": "Status Fenster WZ Süd",
-        "property": "STATUS_FENSTER_WZ_SUED",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 490,
-        "y": 1720,
-        "wires": [
-            [
-                "3698994d.b179d6"
-            ]
-        ]
-    },
-    {
         "id": "c1809d4.20ef56",
         "type": "BooleanLogicUltimate",
         "z": "c1790f94.1fa788",
@@ -22426,11 +22397,11 @@
         "filtertrue": "onlytrue",
         "persist": true,
         "sInitializeWith": "WaitForPayload",
-        "triggertopic": "condition_WZ",
+        "triggertopic": "condition_WZ_Sued",
         "outputtriggeredby": "onlyonetopic",
         "inputCount": "3",
         "topic": "Alarm_3",
-        "x": 1010,
+        "x": 990,
         "y": 1720,
         "wires": [
             [
@@ -22442,40 +22413,6 @@
         ]
     },
     {
-        "id": "2200cde5.3c9c02",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "condition_Schiebe",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STATUS_FENSTER_WZ_SCHIEBE",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 1460,
-        "wires": [
-            [
-                "f44d0bb4.b763f8"
-            ]
-        ]
-    },
-    {
         "id": "f44d0bb4.b763f8",
         "type": "BooleanLogicUltimate",
         "z": "c1790f94.1fa788",
@@ -22483,11 +22420,11 @@
         "filtertrue": "onlytrue",
         "persist": true,
         "sInitializeWith": "WaitForPayload",
-        "triggertopic": "condition_Schiebe",
+        "triggertopic": "condition_WZ_Schiebe",
         "outputtriggeredby": "onlyonetopic",
         "inputCount": "3",
         "topic": "Alarm_1",
-        "x": 1020,
+        "x": 1000,
         "y": 1460,
         "wires": [
             [
@@ -22506,11 +22443,11 @@
         "filtertrue": "onlytrue",
         "persist": true,
         "sInitializeWith": "WaitForPayload",
-        "triggertopic": "condition_Küche",
+        "triggertopic": "condition_Kueche_Sued",
         "outputtriggeredby": "onlyonetopic",
         "inputCount": "3",
         "topic": "Alarm_2",
-        "x": 1020,
+        "x": 1000,
         "y": 1600,
         "wires": [
             [
@@ -22519,120 +22456,6 @@
             ],
             [],
             []
-        ]
-    },
-    {
-        "id": "4f36aec6.9fc0c",
-        "type": "switch",
-        "z": "c1790f94.1fa788",
-        "name": "Status Fenster Küche Süd",
-        "property": "STATUS_FENSTER_KUECHE_SUED",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 490,
-        "y": 1600,
-        "wires": [
-            [
-                "c0c61bbf.f42cb8"
-            ]
-        ]
-    },
-    {
-        "id": "502ac38d.d1b16c",
-        "type": "switch",
-        "z": "c1790f94.1fa788",
-        "name": "Status Fenster WZ Schiebe",
-        "property": "STATUS_FENSTER_WZ_SCHIEBE",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 500,
-        "y": 1460,
-        "wires": [
-            [
-                "2200cde5.3c9c02"
-            ]
-        ]
-    },
-    {
-        "id": "c0c61bbf.f42cb8",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "condition_Küche",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STATUS_FENSTER_KUECHE_SUED",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 1600,
-        "wires": [
-            [
-                "d98cc81f.a93dd8"
-            ]
-        ]
-    },
-    {
-        "id": "3698994d.b179d6",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "condition_WZ",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STATUS_FENSTER_WZ_SUED",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 1720,
-        "wires": [
-            [
-                "c1809d4.20ef56"
-            ]
         ]
     },
     {
@@ -22689,11 +22512,7 @@
         "x": 510,
         "y": 1520,
         "wires": [
-            [
-                "2200cde5.3c9c02",
-                "c0c61bbf.f42cb8",
-                "3698994d.b179d6"
-            ]
+            []
         ]
     },
     {
@@ -23071,7 +22890,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "ALARM ausgelöst",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -23125,7 +22944,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "ALARM abgeschaltet",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -23264,6 +23083,57 @@
         "wires": [
             [
                 "92639c0e.39737"
+            ]
+        ]
+    },
+    {
+        "id": "368f3564.39de9a",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "Fensterkontakt_WZ_Schiebe",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "condition_WZ_Schiebe",
+        "change": true,
+        "cache": true,
+        "x": 500,
+        "y": 1460,
+        "wires": [
+            [
+                "f44d0bb4.b763f8"
+            ]
+        ]
+    },
+    {
+        "id": "983eb256.522f3",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "Fensterkontakt_Küche_Süd",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "condition_Kueche_Sued",
+        "change": true,
+        "cache": true,
+        "x": 500,
+        "y": 1600,
+        "wires": [
+            [
+                "d98cc81f.a93dd8"
+            ]
+        ]
+    },
+    {
+        "id": "c64e71c1.b3d37",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "Fensterkontakt_WZ_Schmal_Süd",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "condition_WZ_Sued",
+        "change": true,
+        "cache": true,
+        "x": 520,
+        "y": 1720,
+        "wires": [
+            [
+                "c1809d4.20ef56"
             ]
         ]
     }
