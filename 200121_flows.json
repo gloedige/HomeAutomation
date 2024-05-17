@@ -262,26 +262,20 @@
         "collapse": false
     },
     {
-        "id": "ef72ce25.023af",
-        "type": "ui_tab",
-        "name": "Programme",
-        "icon": "dashboard",
-        "order": 3
-    },
-    {
         "id": "65a72644.483318",
         "type": "ui_group",
-        "name": "Rollos auf",
+        "name": "Rollos Info",
         "tab": "d9a62b87.022f78",
         "order": 1,
         "disp": true,
-        "width": "4",
-        "collapse": false
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "d9a62b87.022f78",
         "type": "ui_tab",
-        "name": "Home",
+        "name": "Rollos",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
@@ -289,12 +283,13 @@
     {
         "id": "510978ab.7cc15",
         "type": "ui_group",
-        "name": "Rollladensteuerung",
+        "name": "Rollos Einstellungen",
         "tab": "d9a62b87.022f78",
         "order": 2,
         "disp": true,
-        "width": "5",
-        "collapse": false
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "6ad7a531.04aedc",
@@ -310,18 +305,10 @@
         "stateDateFormat": "12"
     },
     {
-        "id": "c7cf5b30.c72208",
-        "type": "ui_tab",
-        "name": "Rollo Status",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "83a14265.ea301",
         "type": "ui_group",
         "name": "EG",
-        "tab": "c7cf5b30.c72208",
+        "tab": "",
         "order": 2,
         "disp": false,
         "width": "2",
@@ -349,7 +336,7 @@
         "id": "67b1424b.30270c",
         "type": "ui_group",
         "name": "Group 2",
-        "tab": "c7cf5b30.c72208",
+        "tab": "",
         "order": 1,
         "disp": false,
         "width": "2",
@@ -359,7 +346,7 @@
         "id": "ea0abcea.34a5",
         "type": "ui_group",
         "name": "Group 3",
-        "tab": "c7cf5b30.c72208",
+        "tab": "",
         "order": 3,
         "disp": false,
         "width": "2",
@@ -369,7 +356,7 @@
         "id": "9f923d5e.632c08",
         "type": "ui_group",
         "name": "Group 4",
-        "tab": "c7cf5b30.c72208",
+        "tab": "",
         "order": 4,
         "disp": false,
         "width": "2",
@@ -379,7 +366,7 @@
         "id": "ad8f4b33.ec4ff",
         "type": "ui_group",
         "name": "Group 5",
-        "tab": "c7cf5b30.c72208",
+        "tab": "",
         "order": 5,
         "disp": false,
         "width": "2",
@@ -389,7 +376,7 @@
         "id": "7f17f2fe.66e3cc",
         "type": "ui_group",
         "name": "Group 6",
-        "tab": "c7cf5b30.c72208",
+        "tab": "",
         "order": 6,
         "disp": false,
         "width": "2",
@@ -616,6 +603,115 @@
         "className": ""
     },
     {
+        "id": "8ab3e34.6361b2",
+        "type": "ui_group",
+        "name": "Wohnzimmer",
+        "tab": "d9a62b87.022f78",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7df3da38.afa344",
+        "type": "ui_group",
+        "name": "Küche",
+        "tab": "d9a62b87.022f78",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "95092dc3.0db22",
+        "type": "ui_group",
+        "name": "Büro",
+        "tab": "d9a62b87.022f78",
+        "order": 5,
+        "disp": true,
+        "width": 3,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "efd2e9cc.0da2f8",
+        "type": "ui_group",
+        "name": "Gäste WC",
+        "tab": "d9a62b87.022f78",
+        "order": 6,
+        "disp": true,
+        "width": 3,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9f01bc7c.f75fd",
+        "type": "ui_group",
+        "name": "Schlafen",
+        "tab": "d9a62b87.022f78",
+        "order": 7,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "17390334.850d6d",
+        "type": "ui_group",
+        "name": "Fredi",
+        "tab": "d9a62b87.022f78",
+        "order": 8,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d6806306.877f7",
+        "type": "ui_group",
+        "name": "Konsti",
+        "tab": "d9a62b87.022f78",
+        "order": 9,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "53343761.197b38",
+        "type": "ui_group",
+        "name": "Bad OG",
+        "tab": "d9a62b87.022f78",
+        "order": 10,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "24ad6a18.7b2506",
+        "type": "ui_group",
+        "name": "Flur",
+        "tab": "d9a62b87.022f78",
+        "order": 11,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cbd1fe92.05ed2",
+        "type": "ui_spacer",
+        "z": "db6aac1c.cd43b",
+        "name": "spacer",
+        "group": "8ab3e34.6361b2",
+        "order": 5,
+        "width": 6,
+        "height": 1
+    },
+    {
         "id": "cb73e4c8.3727f8",
         "type": "ccu-rpc",
         "z": "4f28065f.6e1fb8",
@@ -721,27 +817,6 @@
         "wires": []
     },
     {
-        "id": "e086ebe0.bcd118",
-        "type": "ui_template",
-        "z": "d2aa9e3f.51894",
-        "group": "937d90ca.8d8b",
-        "name": "Liste unerreichbarer Geräte",
-        "order": 2,
-        "width": "6",
-        "height": "3",
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 640,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "9441636.6ae2ea",
         "type": "ui_text",
         "z": "d2aa9e3f.51894",
@@ -827,9 +902,7 @@
         "x": 400,
         "y": 240,
         "wires": [
-            [
-                "e086ebe0.bcd118"
-            ]
+            []
         ]
     },
     {
@@ -1052,8 +1125,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 671,
-        "y": 200,
+        "x": 870,
+        "y": 220,
         "wires": [
             [
                 "c92ffaa6.8c4b9",
@@ -1081,8 +1154,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1213,
-        "y": 681,
+        "x": 1412,
+        "y": 701,
         "wires": [
             [
                 "17fc17ca.4d5ec8"
@@ -1110,11 +1183,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 320,
+        "x": 160,
+        "y": 400,
         "wires": [
             [
-                "d29c41d6.8c89f"
+                "88343441.77c5f8"
             ]
         ]
     },
@@ -1138,8 +1211,8 @@
         "endOffset": 0,
         "endOffsetType": "none",
         "endOffsetMultiplier": 60000,
-        "x": 381,
-        "y": 280,
+        "x": 501,
+        "y": 300,
         "wires": [
             [
                 "774276f5.5534c8",
@@ -1172,8 +1245,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 1480,
+        "x": 180,
+        "y": 1840,
         "wires": [
             [
                 "958fbe30.bf1eb"
@@ -1290,8 +1363,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 610,
-        "y": 1540,
+        "x": 690,
+        "y": 1900,
         "wires": [
             [
                 "5e7acd50.d5f96c",
@@ -1320,8 +1393,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1390,
-        "y": 1380,
+        "x": 1470,
+        "y": 1740,
         "wires": [
             []
         ]
@@ -1346,8 +1419,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1360,
-        "y": 1502,
+        "x": 1440,
+        "y": 1862,
         "wires": [
             []
         ]
@@ -1372,8 +1445,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1370,
-        "y": 1440,
+        "x": 1450,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -1389,8 +1462,8 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 330,
-        "y": 1620,
+        "x": 410,
+        "y": 1980,
         "wires": [
             [
                 "46f9c2e1.dfa20c",
@@ -1421,8 +1494,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1221,
-        "y": 842,
+        "x": 1420,
+        "y": 862,
         "wires": [
             [
                 "48697fb1.e31c3"
@@ -1700,8 +1773,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 661,
-        "y": 540,
+        "x": 860,
+        "y": 560,
         "wires": [
             [
                 "7ab8da26.cf5ecc",
@@ -1729,8 +1802,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1231,
-        "y": 63,
+        "x": 1430,
+        "y": 83,
         "wires": [
             [
                 "80f25265.985d3"
@@ -1757,8 +1830,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1241,
-        "y": 177,
+        "x": 1440,
+        "y": 197,
         "wires": [
             [
                 "aac6a9ab.490bb8"
@@ -1785,8 +1858,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1229,
-        "y": 234,
+        "x": 1428,
+        "y": 254,
         "wires": [
             [
                 "7a7c680a.780ff8"
@@ -1813,8 +1886,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1231,
-        "y": 117,
+        "x": 1430,
+        "y": 137,
         "wires": [
             [
                 "ff3893c2.bcec4"
@@ -1841,8 +1914,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1235,
-        "y": 293,
+        "x": 1434,
+        "y": 313,
         "wires": [
             [
                 "81452739.7dd328"
@@ -1869,8 +1942,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1215,
-        "y": 458,
+        "x": 1414,
+        "y": 478,
         "wires": [
             [
                 "11c00705.7367f9"
@@ -1883,8 +1956,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollos OG",
         "info": "",
-        "x": 1201,
-        "y": 20,
+        "x": 1400,
+        "y": 40,
         "wires": []
     },
     {
@@ -1893,8 +1966,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Rollos EG",
         "info": "",
-        "x": 1201,
-        "y": 645,
+        "x": 1400,
+        "y": 665,
         "wires": []
     },
     {
@@ -1917,8 +1990,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1231,
-        "y": 894,
+        "x": 1430,
+        "y": 914,
         "wires": [
             [
                 "984c0ad.ba56bf8"
@@ -1945,8 +2018,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1230,
-        "y": 1061,
+        "x": 1429,
+        "y": 1081,
         "wires": [
             [
                 "c1df97fd.0234b8"
@@ -1973,8 +2046,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1240,
-        "y": 981,
+        "x": 1439,
+        "y": 1001,
         "wires": [
             [
                 "44841334.14955c",
@@ -2002,8 +2075,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1240,
-        "y": 1141,
+        "x": 1439,
+        "y": 1161,
         "wires": [
             [
                 "98f5847.ce9a478"
@@ -2030,8 +2103,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1251,
-        "y": 733,
+        "x": 1450,
+        "y": 753,
         "wires": [
             [
                 "d1e8caad.5d21f8"
@@ -2058,8 +2131,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1251,
-        "y": 786,
+        "x": 1450,
+        "y": 806,
         "wires": [
             [
                 "f4dab476.8c8c98"
@@ -2080,8 +2153,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 380,
-        "y": 981,
+        "x": 579,
+        "y": 1001,
         "wires": [
             [
                 "3810eccf.2db454"
@@ -2246,8 +2319,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 380,
-        "y": 1061,
+        "x": 579,
+        "y": 1081,
         "wires": [
             [
                 "22960c4b.4d7734"
@@ -2268,8 +2341,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 370,
-        "y": 1141,
+        "x": 569,
+        "y": 1161,
         "wires": [
             [
                 "712cb21d.7c4eb4"
@@ -2291,8 +2364,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 660,
-        "y": 981,
+        "x": 859,
+        "y": 1001,
         "wires": [
             [
                 "bdef110.bc8d57"
@@ -2515,8 +2588,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 691,
-        "y": 760,
+        "x": 890,
+        "y": 780,
         "wires": [
             [
                 "3a0e77ba.7b53f8",
@@ -2532,8 +2605,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Fensterkontaktschalter EG Süd",
         "info": "",
-        "x": 390,
-        "y": 921,
+        "x": 589,
+        "y": 941,
         "wires": []
     },
     {
@@ -2542,18 +2615,18 @@
         "z": "db6aac1c.cd43b",
         "name": "Auswertung des Sonnenstandes Süd",
         "info": "",
-        "x": 600,
-        "y": 1480,
+        "x": 680,
+        "y": 1840,
         "wires": []
     },
     {
         "id": "c19ab294.01bda",
         "type": "comment",
         "z": "db6aac1c.cd43b",
-        "name": "Rollladensteuerung Morgens & Abends",
+        "name": "ROLLLADENSTEUERUNG",
         "info": "",
-        "x": 170,
-        "y": 40,
+        "x": 260,
+        "y": 60,
         "wires": []
     },
     {
@@ -2562,8 +2635,8 @@
         "z": "db6aac1c.cd43b",
         "name": "SONNENSCHUTZ EG",
         "info": "",
-        "x": 120,
-        "y": 1260,
+        "x": 200,
+        "y": 1620,
         "wires": []
     },
     {
@@ -2581,8 +2654,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 929,
-        "y": 1380,
+        "x": 1009,
+        "y": 1740,
         "wires": [
             [
                 "d51de3cc.0547d8"
@@ -2604,8 +2677,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1176,
-        "y": 1380,
+        "x": 1256,
+        "y": 1740,
         "wires": [
             [
                 "cca5a74b.baf9d"
@@ -2626,8 +2699,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 929,
-        "y": 1440,
+        "x": 1009,
+        "y": 1800,
         "wires": [
             [
                 "9d9be169.d3daa"
@@ -2649,8 +2722,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1176,
-        "y": 1440,
+        "x": 1256,
+        "y": 1800,
         "wires": [
             [
                 "3e5b1273.99e4c6"
@@ -2671,8 +2744,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 919,
-        "y": 1502,
+        "x": 999,
+        "y": 1862,
         "wires": [
             [
                 "ca82141f.0f393"
@@ -2694,8 +2767,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1176,
-        "y": 1502,
+        "x": 1256,
+        "y": 1862,
         "wires": [
             [
                 "a2d8b0b3.0283c"
@@ -2813,8 +2886,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 590,
-        "y": 1640,
+        "x": 670,
+        "y": 2000,
         "wires": [
             [
                 "b80d9acd.df9928"
@@ -2827,8 +2900,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Auswertung des Sonnenstandes Ost",
         "info": "",
-        "x": 600,
-        "y": 1600,
+        "x": 680,
+        "y": 1960,
         "wires": []
     },
     {
@@ -2852,8 +2925,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 910,
-        "y": 1620,
+        "x": 990,
+        "y": 1980,
         "wires": [
             []
         ]
@@ -2971,8 +3044,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 600,
-        "y": 1740,
+        "x": 680,
+        "y": 2100,
         "wires": [
             [
                 "e67b52f.20b77b",
@@ -3000,8 +3073,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 910,
-        "y": 1713,
+        "x": 990,
+        "y": 2073,
         "wires": [
             []
         ]
@@ -3012,8 +3085,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Auswertung des Sonnenstandes West",
         "info": "",
-        "x": 590,
-        "y": 1700,
+        "x": 670,
+        "y": 2060,
         "wires": []
     },
     {
@@ -3150,8 +3223,8 @@
                 "icon": ""
             }
         ],
-        "x": 120,
-        "y": 1840,
+        "x": 200,
+        "y": 2200,
         "wires": []
     },
     {
@@ -3370,8 +3443,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 671,
-        "y": 360,
+        "x": 870,
+        "y": 380,
         "wires": [
             [
                 "4a0fd1b4.c2216",
@@ -3598,8 +3671,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1840,
-        "y": 240,
+        "x": 240,
+        "y": 540,
         "wires": [
             []
         ]
@@ -3624,8 +3697,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1235,
-        "y": 349,
+        "x": 1434,
+        "y": 369,
         "wires": [
             [
                 "2d67c3a5.04b41c"
@@ -3652,8 +3725,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1215,
-        "y": 406,
+        "x": 1414,
+        "y": 426,
         "wires": [
             [
                 "8c3ef468.3c7e18"
@@ -3680,8 +3753,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1231,
-        "y": 517,
+        "x": 1430,
+        "y": 537,
         "wires": [
             [
                 "c9ed1ff5.de648"
@@ -3708,8 +3781,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1241,
-        "y": 577,
+        "x": 1440,
+        "y": 597,
         "wires": [
             [
                 "539828d9.016e58"
@@ -4344,12 +4417,11 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 100,
-        "y": 200,
+        "x": 200,
+        "y": 1460,
         "wires": [
             [
-                "5903692c.6ea958",
-                "d29c41d6.8c89f"
+                "a9c43fd4.d60d1"
             ]
         ]
     },
@@ -4371,12 +4443,11 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 100,
-        "y": 160,
+        "x": 200,
+        "y": 1420,
         "wires": [
             [
-                "5903692c.6ea958",
-                "d29c41d6.8c89f"
+                "a9c43fd4.d60d1"
             ]
         ]
     },
@@ -4392,26 +4463,9 @@
         "label": "Status Blindcontrol",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 411,
-        "y": 100,
+        "x": 1010,
+        "y": 1500,
         "wires": []
-    },
-    {
-        "id": "d29c41d6.8c89f",
-        "type": "combine-if",
-        "z": "db6aac1c.cd43b",
-        "topic": "condition",
-        "name": "",
-        "timeout": 0,
-        "x": 370,
-        "y": 220,
-        "wires": [
-            [
-                "84b87802.97fed8"
-            ],
-            []
-        ],
-        "info": "var Rollosteuerung_aktiv=condition;\n\n\nif(Rollosteuerung_aktiv==1){\nmsg.payload.schalter=1;\n}\nelse {\nmsg.payload.schalter=0;\n}\nreturn msg;"
     },
     {
         "id": "e1b2e550.2535a8",
@@ -4431,8 +4485,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 120,
-        "y": 1360,
+        "x": 200,
+        "y": 1720,
         "wires": [
             [
                 "958fbe30.bf1eb",
@@ -4452,8 +4506,8 @@
         "label": "Status Sun Protection [EG]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 360,
-        "y": 1300,
+        "x": 440,
+        "y": 1660,
         "wires": []
     },
     {
@@ -4463,8 +4517,8 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 330,
-        "y": 1420,
+        "x": 410,
+        "y": 1780,
         "wires": [
             [
                 "c02328a5.d4f348",
@@ -4492,8 +4546,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 120,
-        "y": 1420,
+        "x": 200,
+        "y": 1780,
         "wires": [
             [
                 "958fbe30.bf1eb",
@@ -4508,8 +4562,8 @@
         "name": "MaxTemperatur",
         "group": "65a72644.483318",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": 3,
+        "height": 3,
         "gtype": "donut",
         "title": "MaxTemp",
         "label": "°C",
@@ -4523,6 +4577,8 @@
         ],
         "seg1": "",
         "seg2": "",
+        "diff": false,
+        "className": "",
         "x": 900,
         "y": 220,
         "wires": []
@@ -4552,8 +4608,8 @@
         "name": "Temperatur",
         "group": "65a72644.483318",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": 3,
+        "height": 3,
         "gtype": "donut",
         "title": "Temperatur",
         "label": "°C",
@@ -4567,6 +4623,8 @@
         ],
         "seg1": "",
         "seg2": "",
+        "diff": false,
+        "className": "",
         "x": 890,
         "y": 280,
         "wires": []
@@ -4584,8 +4642,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 510,
-        "y": 2360,
+        "x": 590,
+        "y": 2820,
         "wires": []
     },
     {
@@ -4924,8 +4982,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1850,
-        "y": 360,
+        "x": 250,
+        "y": 660,
         "wires": [
             []
         ]
@@ -5147,8 +5205,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1850,
-        "y": 300,
+        "x": 250,
+        "y": 600,
         "wires": [
             []
         ]
@@ -5375,8 +5433,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 661,
-        "y": 120,
+        "x": 860,
+        "y": 140,
         "wires": [
             [
                 "176365be.c95212"
@@ -5603,8 +5661,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 661,
-        "y": 60,
+        "x": 860,
+        "y": 80,
         "wires": [
             [
                 "18578c1c.988034"
@@ -5971,8 +6029,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 2160,
+        "x": 220,
+        "y": 2620,
         "wires": [
             [
                 "616d8341.b8e68c",
@@ -6197,8 +6255,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 860,
-        "y": 2000,
+        "x": 940,
+        "y": 2460,
         "wires": [
             []
         ]
@@ -6214,8 +6272,8 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 430,
-        "y": 2300,
+        "x": 510,
+        "y": 2760,
         "wires": [
             [
                 "f1a3973e.353358",
@@ -6230,8 +6288,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Auswertung des Sonnenstandes Ost",
         "info": "",
-        "x": 900,
-        "y": 2120,
+        "x": 980,
+        "y": 2580,
         "wires": []
     },
     {
@@ -6252,8 +6310,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 100,
-        "y": 2060,
+        "x": 180,
+        "y": 2520,
         "wires": [
             [
                 "616d8341.b8e68c",
@@ -6273,8 +6331,8 @@
         "label": "Status Sun Protection [OG]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 380,
-        "y": 1980,
+        "x": 460,
+        "y": 2440,
         "wires": []
     },
     {
@@ -6284,8 +6342,8 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 310,
-        "y": 2100,
+        "x": 390,
+        "y": 2560,
         "wires": [
             [
                 "4d47327e.b94e9c",
@@ -6313,8 +6371,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 100,
-        "y": 2100,
+        "x": 180,
+        "y": 2560,
         "wires": [
             [
                 "616d8341.b8e68c",
@@ -6328,8 +6386,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Auswertung des Sonnenstandes Süd",
         "info": "",
-        "x": 880,
-        "y": 1960,
+        "x": 960,
+        "y": 2420,
         "wires": []
     },
     {
@@ -6352,8 +6410,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1280,
-        "y": 1960,
+        "x": 1360,
+        "y": 2420,
         "wires": [
             []
         ]
@@ -6378,8 +6436,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1150,
-        "y": 2040,
+        "x": 1230,
+        "y": 2500,
         "wires": [
             []
         ]
@@ -6390,8 +6448,8 @@
         "z": "db6aac1c.cd43b",
         "name": "SONNENSCHUTZ OG",
         "info": "",
-        "x": 120,
-        "y": 1920,
+        "x": 200,
+        "y": 2380,
         "wires": []
     },
     {
@@ -6611,8 +6669,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 830,
-        "y": 2260,
+        "x": 910,
+        "y": 2720,
         "wires": [
             []
         ]
@@ -6623,8 +6681,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Auswertung des Sonnenstandes West",
         "info": "",
-        "x": 770,
-        "y": 2220,
+        "x": 850,
+        "y": 2680,
         "wires": []
     },
     {
@@ -6647,8 +6705,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1220,
-        "y": 2260,
+        "x": 1300,
+        "y": 2720,
         "wires": [
             []
         ]
@@ -6816,8 +6874,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 870,
-        "y": 2160,
+        "x": 950,
+        "y": 2620,
         "wires": [
             [
                 "4862cf05.6132b",
@@ -6845,8 +6903,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1170,
-        "y": 2197,
+        "x": 1250,
+        "y": 2657,
         "wires": [
             []
         ]
@@ -6880,7 +6938,7 @@
         "datapointRx": "str",
         "force": false,
         "x": 960,
-        "y": 2640,
+        "y": 3120,
         "wires": []
     },
     {
@@ -7044,7 +7102,7 @@
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
         "x": 680,
-        "y": 2640,
+        "y": 3120,
         "wires": [
             [
                 "214b3fd0.631aa"
@@ -7072,7 +7130,7 @@
         "endOffsetType": "none",
         "endOffsetMultiplier": 60000,
         "x": 380,
-        "y": 2640,
+        "y": 3120,
         "wires": [
             [
                 "16e97745.339889"
@@ -7101,7 +7159,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 160,
-        "y": 2640,
+        "y": 3120,
         "wires": [
             [
                 "b6e19ed0.0d01b"
@@ -7115,7 +7173,7 @@
         "name": "Urlaub - Tags Sonnenschutz 90% zu / Nachts 100% zu",
         "info": "",
         "x": 270,
-        "y": 2560,
+        "y": 3040,
         "wires": []
     },
     {
@@ -7174,8 +7232,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 840,
-        "y": 2040,
+        "x": 920,
+        "y": 2500,
         "wires": [
             [
                 "977fb41b.7e2af8",
@@ -7293,8 +7351,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 740,
-        "y": 2320,
+        "x": 820,
+        "y": 2780,
         "wires": [
             [
                 "bc54c5d4.8d01e8",
@@ -7322,8 +7380,8 @@
         "endOffset": 0,
         "endOffsetType": "none",
         "endOffsetMultiplier": 60000,
-        "x": 310,
-        "y": 2360,
+        "x": 390,
+        "y": 2820,
         "wires": [
             [
                 "4fda27bd.d338d8",
@@ -7343,8 +7401,8 @@
         "label": "Postition Sonne",
         "format": "{{msg.payload.azimuth | number:0}}",
         "layout": "row-spread",
-        "x": 520,
-        "y": 2440,
+        "x": 600,
+        "y": 2900,
         "wires": []
     },
     {
@@ -7367,8 +7425,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 910,
-        "y": 1780,
+        "x": 990,
+        "y": 2140,
         "wires": [
             []
         ]
@@ -7445,10 +7503,10 @@
         "id": "98f5847.ce9a478",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ea0abcea.34a5",
-        "order": 2,
-        "width": "2",
-        "height": "4",
+        "group": "8ab3e34.6361b2",
+        "order": 6,
+        "width": 2,
+        "height": 4,
         "name": "Level WZ S schmal",
         "label": "WZ S",
         "colorHi": "#d4d4d4",
@@ -7479,18 +7537,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1470,
-        "y": 1141,
+        "x": 1669,
+        "y": 1161,
         "wires": []
     },
     {
         "id": "c1df97fd.0234b8",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "67b1424b.30270c",
+        "group": "7df3da38.afa344",
         "order": 1,
-        "width": "2",
-        "height": "4",
+        "width": 2,
+        "height": 4,
         "name": "Level Küche S",
         "label": "Küche S",
         "colorHi": "#bfbfbf",
@@ -7521,18 +7579,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1460,
-        "y": 1061,
+        "x": 1659,
+        "y": 1081,
         "wires": []
     },
     {
         "id": "44841334.14955c",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "67b1424b.30270c",
-        "order": 2,
-        "width": "2",
-        "height": "4",
+        "group": "8ab3e34.6361b2",
+        "order": 8,
+        "width": 2,
+        "height": 4,
         "name": "Level WZ groß",
         "label": "WZ groß",
         "colorHi": "#d4d4d4",
@@ -7563,18 +7621,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1480,
-        "y": 981,
+        "x": 1679,
+        "y": 1001,
         "wires": []
     },
     {
         "id": "48697fb1.e31c3",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ad8f4b33.ec4ff",
+        "group": "efd2e9cc.0da2f8",
         "order": 1,
-        "width": "2",
-        "height": "4",
+        "width": 2,
+        "height": 4,
         "name": "Level Gäste WC",
         "label": "Gäste WC",
         "colorHi": "#c0c0c0",
@@ -7605,18 +7663,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1501,
-        "y": 842,
+        "x": 1700,
+        "y": 862,
         "wires": []
     },
     {
         "id": "f4dab476.8c8c98",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ea0abcea.34a5",
+        "group": "8ab3e34.6361b2",
         "order": 3,
-        "width": "2",
-        "height": "4",
+        "width": 2,
+        "height": 4,
         "name": "Level WZ W2",
         "label": "WZ W2",
         "colorHi": "#c0c0c0",
@@ -7647,18 +7705,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1501,
-        "y": 786,
+        "x": 1700,
+        "y": 806,
         "wires": []
     },
     {
         "id": "d1e8caad.5d21f8",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "67b1424b.30270c",
-        "order": 3,
-        "width": "2",
-        "height": "4",
+        "group": "8ab3e34.6361b2",
+        "order": 1,
+        "width": 2,
+        "height": 4,
         "name": "Level WZ W1",
         "label": "WZ W1",
         "colorHi": "#c0c0c0",
@@ -7689,18 +7747,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1501,
-        "y": 733,
+        "x": 1700,
+        "y": 753,
         "wires": []
     },
     {
         "id": "984c0ad.ba56bf8",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ea0abcea.34a5",
-        "order": 1,
-        "width": "2",
-        "height": "4",
+        "group": "7df3da38.afa344",
+        "order": 3,
+        "width": 2,
+        "height": 4,
         "name": "Level Küche O",
         "label": "Küche O",
         "colorHi": "#c0c0c0",
@@ -7731,18 +7789,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1501,
-        "y": 894,
+        "x": 1700,
+        "y": 914,
         "wires": []
     },
     {
         "id": "17fc17ca.4d5ec8",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ad8f4b33.ec4ff",
-        "order": 2,
-        "width": "2",
-        "height": "4",
+        "group": "95092dc3.0db22",
+        "order": 1,
+        "width": 2,
+        "height": 4,
         "name": "Level Büro",
         "label": "Büro",
         "colorHi": "#c0c0c0",
@@ -7773,18 +7831,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1491,
-        "y": 681,
+        "x": 1690,
+        "y": 701,
         "wires": []
     },
     {
         "id": "c9ed1ff5.de648",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ad8f4b33.ec4ff",
-        "order": 4,
-        "width": "2",
-        "height": "4",
+        "group": "24ad6a18.7b2506",
+        "order": 3,
+        "width": 2,
+        "height": 4,
         "name": "Level Flur li",
         "label": "Flur li",
         "colorHi": "#c0c0c0",
@@ -7815,18 +7873,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1511,
-        "y": 517,
+        "x": 1710,
+        "y": 537,
         "wires": []
     },
     {
         "id": "539828d9.016e58",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ad8f4b33.ec4ff",
-        "order": 3,
-        "width": "2",
-        "height": "4",
+        "group": "24ad6a18.7b2506",
+        "order": 1,
+        "width": 2,
+        "height": 4,
         "name": "Level Flur re",
         "label": "Flur re",
         "colorHi": "#c4c4c4",
@@ -7857,18 +7915,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1511,
-        "y": 577,
+        "x": 1710,
+        "y": 597,
         "wires": []
     },
     {
         "id": "8c3ef468.3c7e18",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "67b1424b.30270c",
-        "order": 4,
-        "width": "2",
-        "height": "4",
+        "group": "17390334.850d6d",
+        "order": 1,
+        "width": 2,
+        "height": 4,
         "name": "Level Fredi O",
         "label": "Frederik O",
         "colorHi": "#c0c0c0",
@@ -7899,18 +7957,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1521,
-        "y": 406,
+        "x": 1720,
+        "y": 426,
         "wires": []
     },
     {
         "id": "11c00705.7367f9",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ea0abcea.34a5",
-        "order": 4,
-        "width": "2",
-        "height": "4",
+        "group": "17390334.850d6d",
+        "order": 3,
+        "width": 2,
+        "height": 4,
         "name": "Level Fredi S",
         "label": "Frederik S",
         "colorHi": "#d4d4d4",
@@ -7941,20 +7999,20 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1511,
-        "y": 457,
+        "x": 1710,
+        "y": 477,
         "wires": []
     },
     {
         "id": "2d67c3a5.04b41c",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "67b1424b.30270c",
-        "order": 5,
-        "width": "2",
-        "height": "4",
-        "name": "Level KZ W",
-        "label": "KZ W",
+        "group": "d6806306.877f7",
+        "order": 1,
+        "width": 2,
+        "height": 4,
+        "name": "Level Konsti W",
+        "label": "Konsti W",
         "colorHi": "#c0c0c0",
         "colorWarn": "#808080",
         "colorNormal": "#c4c4c4",
@@ -7983,20 +8041,20 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1511,
-        "y": 349,
+        "x": 1720,
+        "y": 369,
         "wires": []
     },
     {
         "id": "81452739.7dd328",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ea0abcea.34a5",
-        "order": 5,
-        "width": "2",
-        "height": "4",
-        "name": "Level KZ S",
-        "label": "KZ S",
+        "group": "d6806306.877f7",
+        "order": 3,
+        "width": 2,
+        "height": 4,
+        "name": "Level Konsti S",
+        "label": "Konsti S",
         "colorHi": "#d4d4d4",
         "colorWarn": "#5c5c5c",
         "colorNormal": "#c4c4c4",
@@ -8025,18 +8083,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1511,
-        "y": 293,
+        "x": 1720,
+        "y": 313,
         "wires": []
     },
     {
         "id": "7a7c680a.780ff8",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "67b1424b.30270c",
-        "order": 6,
-        "width": "2",
-        "height": "4",
+        "group": "9f01bc7c.f75fd",
+        "order": 3,
+        "width": 2,
+        "height": 4,
         "name": "Level Schlafen O",
         "label": "Schlafen O",
         "colorHi": "#c0c0c0",
@@ -8067,18 +8125,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1529,
-        "y": 234,
+        "x": 1728,
+        "y": 254,
         "wires": []
     },
     {
         "id": "aac6a9ab.490bb8",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ea0abcea.34a5",
-        "order": 6,
-        "width": "2",
-        "height": "4",
+        "group": "9f01bc7c.f75fd",
+        "order": 1,
+        "width": 2,
+        "height": 4,
         "name": "Level Schlafen N",
         "label": "Schlafen N",
         "colorHi": "#c0c0c0",
@@ -8109,18 +8167,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1531,
-        "y": 177,
+        "x": 1730,
+        "y": 197,
         "wires": []
     },
     {
         "id": "ff3893c2.bcec4",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ad8f4b33.ec4ff",
-        "order": 6,
-        "width": "2",
-        "height": "4",
+        "group": "53343761.197b38",
+        "order": 3,
+        "width": 2,
+        "height": 4,
         "name": "Level Bad W",
         "label": "Bad W",
         "colorHi": "#c0c0c0",
@@ -8151,18 +8209,18 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1511,
-        "y": 117,
+        "x": 1710,
+        "y": 137,
         "wires": []
     },
     {
         "id": "80f25265.985d3",
         "type": "ui_level",
         "z": "db6aac1c.cd43b",
-        "group": "ad8f4b33.ec4ff",
-        "order": 5,
-        "width": "2",
-        "height": "4",
+        "group": "53343761.197b38",
+        "order": 1,
+        "width": 2,
+        "height": 4,
         "name": "Level Bad N",
         "label": "Bad N",
         "colorHi": "#c0c0c0",
@@ -8193,8 +8251,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1511,
-        "y": 63,
+        "x": 1710,
+        "y": 83,
         "wires": []
     },
     {
@@ -8210,8 +8268,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1430,
-        "y": 1201,
+        "x": 1629,
+        "y": 1221,
         "wires": []
     },
     {
@@ -8221,18 +8279,18 @@
         "name": "Slider WZ groß",
         "label": "WZ groß",
         "tooltip": "",
-        "group": "83a14265.ea301",
-        "order": 2,
-        "width": "2",
-        "height": "4",
+        "group": "8ab3e34.6361b2",
+        "order": 9,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1050,
-        "y": 1021,
+        "x": 1249,
+        "y": 1041,
         "wires": [
             [
                 "f61e5d4c.7f8798"
@@ -8246,18 +8304,18 @@
         "name": "Slider Küche S",
         "label": "Kücke S",
         "tooltip": "",
-        "group": "83a14265.ea301",
-        "order": 1,
-        "width": "2",
-        "height": "4",
+        "group": "7df3da38.afa344",
+        "order": 2,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1040,
-        "y": 1101,
+        "x": 1239,
+        "y": 1121,
         "wires": [
             [
                 "2007708a.75a3c"
@@ -8271,18 +8329,18 @@
         "name": "Slider WZ S schmal",
         "label": "WZ S schmal",
         "tooltip": "",
-        "group": "9f923d5e.632c08",
-        "order": 2,
-        "width": "2",
-        "height": "4",
+        "group": "8ab3e34.6361b2",
+        "order": 7,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1050,
-        "y": 1181,
+        "x": 1249,
+        "y": 1201,
         "wires": [
             [
                 "2bb83640.8872aa"
@@ -8296,18 +8354,18 @@
         "name": "Slider Gäste WC",
         "label": "Gäste WC",
         "tooltip": "",
-        "group": "7f17f2fe.66e3cc",
-        "order": 1,
-        "width": "2",
-        "height": "4",
+        "group": "efd2e9cc.0da2f8",
+        "order": 2,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1011,
-        "y": 826,
+        "x": 1210,
+        "y": 846,
         "wires": [
             [
                 "dd7ce24d.ab706"
@@ -8321,18 +8379,18 @@
         "name": "Slider WZ W2",
         "label": "WZ W2",
         "tooltip": "",
-        "group": "9f923d5e.632c08",
-        "order": 3,
-        "width": "2",
-        "height": "4",
+        "group": "8ab3e34.6361b2",
+        "order": 4,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1007,
-        "y": 771,
+        "x": 1206,
+        "y": 791,
         "wires": [
             [
                 "a895192a.6defd"
@@ -8346,18 +8404,18 @@
         "name": "Slider WZ W1",
         "label": "WZ W1",
         "tooltip": "",
-        "group": "83a14265.ea301",
-        "order": 3,
-        "width": "2",
-        "height": "4",
+        "group": "8ab3e34.6361b2",
+        "order": 2,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1008,
-        "y": 719,
+        "x": 1207,
+        "y": 739,
         "wires": [
             [
                 "5be3d0b2.aec738"
@@ -8371,18 +8429,18 @@
         "name": "Slider Küche O",
         "label": "Küche O",
         "tooltip": "",
-        "group": "9f923d5e.632c08",
-        "order": 1,
-        "width": "2",
-        "height": "4",
+        "group": "7df3da38.afa344",
+        "order": 4,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1009,
-        "y": 873,
+        "x": 1208,
+        "y": 893,
         "wires": [
             [
                 "fe2c0d6.cf09ff"
@@ -8396,18 +8454,18 @@
         "name": "Slider Büro",
         "label": "Büro",
         "tooltip": "",
-        "group": "7f17f2fe.66e3cc",
+        "group": "95092dc3.0db22",
         "order": 2,
-        "width": "2",
-        "height": "4",
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1006,
-        "y": 667,
+        "x": 1205,
+        "y": 687,
         "wires": [
             [
                 "3a0e77ba.7b53f8"
@@ -8421,18 +8479,18 @@
         "name": "Slider Flur li",
         "label": "Flur li",
         "tooltip": "",
-        "group": "7f17f2fe.66e3cc",
+        "group": "24ad6a18.7b2506",
         "order": 4,
-        "width": "2",
-        "height": "4",
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 991,
-        "y": 497,
+        "x": 1190,
+        "y": 517,
         "wires": [
             [
                 "7ab8da26.cf5ecc"
@@ -8446,18 +8504,18 @@
         "name": "Slider Flur re",
         "label": "Flur re",
         "tooltip": "",
-        "group": "7f17f2fe.66e3cc",
-        "order": 3,
-        "width": "2",
-        "height": "4",
+        "group": "24ad6a18.7b2506",
+        "order": 2,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 991,
-        "y": 557,
+        "x": 1190,
+        "y": 577,
         "wires": [
             [
                 "482ef135.fcb6f8"
@@ -8471,18 +8529,18 @@
         "name": "Slider Fredi S",
         "label": "Schlaf S",
         "tooltip": "",
-        "group": "9f923d5e.632c08",
+        "group": "17390334.850d6d",
         "order": 4,
-        "width": "2",
-        "height": "4",
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 995,
-        "y": 446,
+        "x": 1194,
+        "y": 466,
         "wires": [
             [
                 "5d933345.3be34c"
@@ -8496,18 +8554,18 @@
         "name": "Slider Fredi O",
         "label": "Schlaf O",
         "tooltip": "",
-        "group": "83a14265.ea301",
-        "order": 4,
-        "width": "2",
-        "height": "4",
+        "group": "17390334.850d6d",
+        "order": 2,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 995,
-        "y": 386,
+        "x": 1194,
+        "y": 406,
         "wires": [
             [
                 "fdd55930.888678"
@@ -8518,21 +8576,23 @@
         "id": "7610bce9.feb334",
         "type": "ui_slider",
         "z": "db6aac1c.cd43b",
-        "name": "Slider KZ S",
-        "label": "KZ S",
+        "name": "Slider Konsti S",
+        "label": "Konsti S",
         "tooltip": "",
-        "group": "9f923d5e.632c08",
-        "order": 5,
-        "width": "2",
-        "height": "4",
+        "group": "d6806306.877f7",
+        "order": 4,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 985,
-        "y": 273,
+        "className": "",
+        "x": 1194,
+        "y": 293,
         "wires": [
             [
                 "4a0fd1b4.c2216"
@@ -8543,21 +8603,23 @@
         "id": "5692ef34.30bbd",
         "type": "ui_slider",
         "z": "db6aac1c.cd43b",
-        "name": "Slider KZ W",
-        "label": "KZ W",
+        "name": "Slider Konsti W",
+        "label": "Konsti W",
         "tooltip": "",
-        "group": "83a14265.ea301",
-        "order": 5,
-        "width": "2",
-        "height": "4",
+        "group": "d6806306.877f7",
+        "order": 2,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 985,
-        "y": 329,
+        "className": "",
+        "x": 1194,
+        "y": 349,
         "wires": [
             [
                 "492cfc48.773d2c"
@@ -8571,18 +8633,18 @@
         "name": "Slider Schlafen N",
         "label": "Ankleide N",
         "tooltip": "",
-        "group": "9f923d5e.632c08",
-        "order": 6,
-        "width": "2",
-        "height": "4",
+        "group": "9f01bc7c.f75fd",
+        "order": 2,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1011,
-        "y": 157,
+        "x": 1210,
+        "y": 177,
         "wires": [
             [
                 "c92ffaa6.8c4b9"
@@ -8596,18 +8658,18 @@
         "name": "Slider Schlafen O",
         "label": "Ankleide O",
         "tooltip": "",
-        "group": "83a14265.ea301",
-        "order": 6,
-        "width": "2",
-        "height": "4",
+        "group": "9f01bc7c.f75fd",
+        "order": 4,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1009,
-        "y": 214,
+        "x": 1208,
+        "y": 234,
         "wires": [
             [
                 "43781b39.fb6b54"
@@ -8621,18 +8683,18 @@
         "name": "Slider Bad N",
         "label": "Bad N",
         "tooltip": "",
-        "group": "7f17f2fe.66e3cc",
-        "order": 5,
-        "width": "2",
-        "height": "4",
+        "group": "53343761.197b38",
+        "order": 2,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 991,
-        "y": 37,
+        "x": 1190,
+        "y": 57,
         "wires": [
             [
                 "18578c1c.988034"
@@ -8646,18 +8708,18 @@
         "name": "Slider Bad W",
         "label": "Bad W",
         "tooltip": "",
-        "group": "7f17f2fe.66e3cc",
-        "order": 6,
-        "width": "2",
-        "height": "4",
+        "group": "53343761.197b38",
+        "order": 4,
+        "width": 1,
+        "height": 4,
         "passthru": true,
         "outs": "end",
         "topic": "",
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 991,
-        "y": 97,
+        "x": 1190,
+        "y": 117,
         "wires": [
             [
                 "176365be.c95212"
@@ -8685,7 +8747,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 840,
-        "y": 180,
+        "y": 120,
         "wires": [
             []
         ]
@@ -8792,7 +8854,7 @@
         "initialize": "",
         "finalize": "",
         "x": 640,
-        "y": 560,
+        "y": 820,
         "wires": [
             [
                 "125dc694.3a7ee9"
@@ -8828,7 +8890,7 @@
         "datapointRx": "str",
         "force": false,
         "x": 830,
-        "y": 560,
+        "y": 820,
         "wires": []
     },
     {
@@ -8838,7 +8900,7 @@
         "name": "Licht im Hausflur",
         "info": "",
         "x": 240,
-        "y": 120,
+        "y": 60,
         "wires": []
     },
     {
@@ -8862,7 +8924,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 830,
-        "y": 260,
+        "y": 200,
         "wires": [
             []
         ]
@@ -8888,7 +8950,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 830,
-        "y": 340,
+        "y": 280,
         "wires": [
             []
         ]
@@ -11386,8 +11448,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 655,
-        "y": 680,
+        "x": 715,
+        "y": 900,
         "wires": []
     },
     {
@@ -11396,8 +11458,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Soundtouch einschalten",
         "info": "",
-        "x": 234,
-        "y": 680,
+        "x": 294,
+        "y": 900,
         "wires": []
     },
     {
@@ -11408,8 +11470,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 655,
-        "y": 740,
+        "x": 715,
+        "y": 960,
         "wires": []
     },
     {
@@ -11418,8 +11480,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio Bob einschalten",
         "info": "",
-        "x": 234,
-        "y": 740,
+        "x": 294,
+        "y": 960,
         "wires": []
     },
     {
@@ -11430,8 +11492,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 685,
-        "y": 800,
+        "x": 745,
+        "y": 1020,
         "wires": []
     },
     {
@@ -11440,8 +11502,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio Sachsen Anhalt einschalten",
         "info": "",
-        "x": 274,
-        "y": 800,
+        "x": 334,
+        "y": 1020,
         "wires": []
     },
     {
@@ -11452,8 +11514,8 @@
         "links": [
             "f4cb94b5.ee5c38"
         ],
-        "x": 655,
-        "y": 860,
+        "x": 715,
+        "y": 1080,
         "wires": []
     },
     {
@@ -11462,8 +11524,8 @@
         "z": "28a65c2.2e2eba4",
         "name": "Radio NDR2 einschalten",
         "info": "",
-        "x": 244,
-        "y": 860,
+        "x": 304,
+        "y": 1080,
         "wires": []
     },
     {
@@ -11542,7 +11604,7 @@
         "initialize": "",
         "finalize": "",
         "x": 640,
-        "y": 500,
+        "y": 760,
         "wires": [
             [
                 "8e1e4cd0.75843"
@@ -11578,7 +11640,7 @@
         "datapointRx": "str",
         "force": false,
         "x": 830,
-        "y": 500,
+        "y": 760,
         "wires": []
     },
     {
@@ -11918,7 +11980,7 @@
         "name": "SONNENSCHUTZ EG Rasen",
         "info": "",
         "x": 200,
-        "y": 2860,
+        "y": 3340,
         "wires": []
     },
     {
@@ -11942,7 +12004,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1300,
-        "y": 3000,
+        "y": 3480,
         "wires": [
             []
         ]
@@ -11963,7 +12025,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1116,
-        "y": 3000,
+        "y": 3480,
         "wires": [
             [
                 "bb3f753e.e5326"
@@ -11985,7 +12047,7 @@
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
         "x": 859,
-        "y": 3000,
+        "y": 3480,
         "wires": [
             [
                 "612b5385.8700ac"
@@ -12049,7 +12111,7 @@
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
         "x": 760,
-        "y": 3120,
+        "y": 3600,
         "wires": [
             [
                 "4a5ee202.f17e64"
@@ -12064,7 +12126,7 @@
         "name": "",
         "timeout": 0,
         "x": 450,
-        "y": 2998,
+        "y": 3478,
         "wires": [
             [
                 "8b3f26c8.948648"
@@ -12086,7 +12148,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 760,
-        "y": 2940,
+        "y": 3420,
         "wires": []
     },
     {
@@ -12108,7 +12170,7 @@
         "payloadType": "bool",
         "topic": "condition",
         "x": 210,
-        "y": 2960,
+        "y": 3440,
         "wires": [
             [
                 "4fa9bf67.03a438",
@@ -12135,7 +12197,7 @@
         "payloadType": "bool",
         "topic": "condition",
         "x": 210,
-        "y": 3000,
+        "y": 3480,
         "wires": [
             [
                 "4fa9bf67.03a438",
@@ -12165,7 +12227,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 280,
-        "y": 3058,
+        "y": 3538,
         "wires": [
             [
                 "4fa9bf67.03a438"
@@ -12192,8 +12254,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1170,
-        "y": 2137,
+        "x": 1250,
+        "y": 2597,
         "wires": [
             []
         ]
@@ -12218,8 +12280,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1210,
-        "y": 2320,
+        "x": 1290,
+        "y": 2780,
         "wires": [
             []
         ]
@@ -12232,7 +12294,7 @@
         "name": "",
         "timeout": 0,
         "x": 450,
-        "y": 2740,
+        "y": 3220,
         "wires": [
             [
                 "fd531995.e54278"
@@ -12254,7 +12316,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 460,
-        "y": 2700,
+        "y": 3180,
         "wires": []
     },
     {
@@ -12276,7 +12338,7 @@
         "payloadType": "bool",
         "topic": "condition",
         "x": 170,
-        "y": 2702,
+        "y": 3182,
         "wires": [
             [
                 "b6e19ed0.0d01b",
@@ -12303,7 +12365,7 @@
         "payloadType": "bool",
         "topic": "condition",
         "x": 170,
-        "y": 2742,
+        "y": 3222,
         "wires": [
             [
                 "b6e19ed0.0d01b",
@@ -12483,8 +12545,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 660,
-        "y": 1061,
+        "x": 859,
+        "y": 1081,
         "wires": [
             [
                 "8e36e051.5ac33"
@@ -12506,8 +12568,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 660,
-        "y": 1141,
+        "x": 859,
+        "y": 1161,
         "wires": [
             [
                 "7bbfbfd.19fd2c"
@@ -12840,8 +12902,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 940,
-        "y": 981,
+        "x": 1139,
+        "y": 1001,
         "wires": [
             [
                 "f61e5d4c.7f8798"
@@ -13068,8 +13130,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 940,
-        "y": 1061,
+        "x": 1139,
+        "y": 1081,
         "wires": [
             [
                 "2007708a.75a3c"
@@ -13296,8 +13358,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 940,
-        "y": 1141,
+        "x": 1139,
+        "y": 1161,
         "wires": [
             [
                 "2bb83640.8872aa"
@@ -13521,8 +13583,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1840,
-        "y": 420,
+        "x": 240,
+        "y": 720,
         "wires": [
             []
         ]
@@ -13954,8 +14016,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 330,
-        "y": 1500,
+        "x": 410,
+        "y": 1860,
         "wires": [
             [
                 "a9641605.d53e9"
@@ -14362,8 +14424,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 350,
-        "y": 1720,
+        "x": 430,
+        "y": 2080,
         "wires": []
     },
     {
@@ -14379,8 +14441,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 1420,
+        "x": 680,
+        "y": 1780,
         "wires": []
     },
     {
@@ -14394,7 +14456,7 @@
         "initialize": "",
         "finalize": "",
         "x": 480,
-        "y": 3120,
+        "y": 3600,
         "wires": [
             [
                 "ab12c0d2.a819d8"
@@ -14445,7 +14507,7 @@
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
         "x": 490,
-        "y": 3060,
+        "y": 3540,
         "wires": [
             [
                 "355cfdb9.eaae32",
@@ -14466,7 +14528,7 @@
         "country": "",
         "language": "de",
         "x": 510,
-        "y": 3180,
+        "y": 3660,
         "wires": [
             [
                 "ab12c0d2.a819d8"
@@ -14939,8 +15001,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 600,
-        "y": 1340,
+        "x": 680,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -15151,8 +15213,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 330,
-        "y": 1560,
+        "x": 410,
+        "y": 1920,
         "wires": [
             [
                 "a9641605.d53e9"
@@ -15203,8 +15265,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 410,
-        "y": 2160,
+        "x": 490,
+        "y": 2620,
         "wires": [
             [
                 "d098dbd4.80ba48"
@@ -15255,8 +15317,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 410,
-        "y": 2220,
+        "x": 490,
+        "y": 2680,
         "wires": [
             [
                 "d098dbd4.80ba48"
@@ -15714,8 +15776,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 671,
-        "y": 860,
+        "x": 870,
+        "y": 880,
         "wires": [
             [
                 "fe2c0d6.cf09ff"
@@ -15733,8 +15795,8 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 471,
-        "y": 860,
+        "x": 670,
+        "y": 880,
         "wires": [
             [
                 "cfb96521.b7a758"
@@ -18767,8 +18829,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 160,
+        "x": 800,
+        "y": 1500,
         "wires": [
             [
                 "37aecff6.b4f34"
@@ -18805,8 +18867,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
-        "y": 1360,
+        "x": 420,
+        "y": 1720,
         "wires": [
             [
                 "6c174a98.4ffc14"
@@ -18843,8 +18905,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
-        "y": 2040,
+        "x": 420,
+        "y": 2500,
         "wires": [
             [
                 "d8c08a8.0d8b278"
@@ -18882,7 +18944,7 @@
         "to": "",
         "reg": false,
         "x": 460,
-        "y": 2940,
+        "y": 3420,
         "wires": [
             [
                 "379160f1.186028"
@@ -21311,7 +21373,7 @@
         "twofactorpin": "",
         "filter": false,
         "x": 230,
-        "y": 180,
+        "y": 120,
         "wires": [
             [
                 "65095362.fa4e6c"
@@ -21346,7 +21408,7 @@
         "twofactorpin": "",
         "filter": false,
         "x": 260,
-        "y": 260,
+        "y": 200,
         "wires": [
             [
                 "37b1605d.22061"
@@ -21373,7 +21435,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 180,
+        "y": 120,
         "wires": [
             [
                 "70d4ff52.e5cf68"
@@ -21400,7 +21462,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 260,
+        "y": 200,
         "wires": [
             [
                 "2cfeaa6f.ae474e"
@@ -23031,9 +23093,9 @@
         "dot": false,
         "ymin": "0",
         "ymax": "1",
-        "removeOlder": "10",
+        "removeOlder": "1",
         "removeOlderPoints": "",
-        "removeOlderUnit": "60",
+        "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
         "useUTC": false,
@@ -23075,26 +23137,6 @@
         "wires": []
     },
     {
-        "id": "90eac71f.3470d8",
-        "type": "BooleanLogicUltimate",
-        "z": "db6aac1c.cd43b",
-        "name": "",
-        "filtertrue": "both",
-        "persist": true,
-        "sInitializeWith": "WaitForPayload",
-        "triggertopic": "trigger",
-        "outputtriggeredby": "all",
-        "inputCount": 2,
-        "topic": "result",
-        "x": 120,
-        "y": 580,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
         "id": "9f57a3ae.6c243",
         "type": "change",
         "z": "e20ea6d6.476028",
@@ -23131,5 +23173,110 @@
                 "4c3cc222.ac29fc"
             ]
         ]
+    },
+    {
+        "id": "88343441.77c5f8",
+        "type": "switch",
+        "z": "db6aac1c.cd43b",
+        "name": "checkFlagVoiceBlindControl",
+        "property": "flagVoiceBlindControl",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "84b87802.97fed8"
+            ]
+        ]
+    },
+    {
+        "id": "a9c43fd4.d60d1",
+        "type": "noraf-switch",
+        "z": "db6aac1c.cd43b",
+        "devicename": "Rollladenautomatik",
+        "roomhint": "",
+        "name": "SwitchToSetBlindControl",
+        "passthru": true,
+        "errorifstateunchaged": false,
+        "nora": "e7b91b38.1d5708",
+        "topic": "condition",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "asyncCmd": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 1440,
+        "wires": [
+            [
+                "788896da.784a98",
+                "45cc7f29.bbb0b",
+                "5903692c.6ea958"
+            ]
+        ]
+    },
+    {
+        "id": "788896da.784a98",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flagVoiceBlindControl",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45cc7f29.bbb0b",
+        "type": "debug",
+        "z": "db6aac1c.cd43b",
+        "name": "google switch",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "9394ff5e.0c7b3",
+        "type": "comment",
+        "z": "db6aac1c.cd43b",
+        "name": "SCHALTER ROLLLADENAUTOMATIK manuell oder Sprache",
+        "info": "",
+        "x": 320,
+        "y": 1300,
+        "wires": []
     }
 ]
