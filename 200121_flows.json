@@ -22174,8 +22174,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1780,
-        "y": 1620,
+        "x": 1760,
+        "y": 1540,
         "wires": [
             []
         ]
@@ -22197,8 +22197,8 @@
         "topic": "",
         "payload": "ON",
         "payloadType": "str",
-        "x": 1480,
-        "y": 1300,
+        "x": 300,
+        "y": 2120,
         "wires": [
             [
                 "77bb149e.d8110c"
@@ -22218,8 +22218,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1770,
-        "y": 1300,
+        "x": 590,
+        "y": 2120,
         "wires": []
     },
     {
@@ -22240,7 +22240,7 @@
         "payload": "OFF",
         "payloadType": "str",
         "x": 1200,
-        "y": 1380,
+        "y": 1260,
         "wires": [
             [
                 "39b91ade.add9f6"
@@ -22312,8 +22312,8 @@
         "payloadType": "bool",
         "topic": "condition",
         "topicType": "str",
-        "x": 740,
-        "y": 1280,
+        "x": 1200,
+        "y": 1320,
         "wires": [
             [
                 "39b91ade.add9f6"
@@ -22381,7 +22381,7 @@
         "to": "",
         "reg": false,
         "x": 1500,
-        "y": 1660,
+        "y": 1500,
         "wires": [
             [
                 "6a090af6.5c5084",
@@ -22394,7 +22394,7 @@
         "type": "BooleanLogicUltimate",
         "z": "c1790f94.1fa788",
         "name": "",
-        "filtertrue": "onlytrue",
+        "filtertrue": "both",
         "persist": true,
         "sInitializeWith": "WaitForPayload",
         "triggertopic": "condition_WZ_Sued",
@@ -22417,7 +22417,7 @@
         "type": "BooleanLogicUltimate",
         "z": "c1790f94.1fa788",
         "name": "",
-        "filtertrue": "onlytrue",
+        "filtertrue": "both",
         "persist": true,
         "sInitializeWith": "WaitForPayload",
         "triggertopic": "condition_WZ_Schiebe",
@@ -22440,7 +22440,7 @@
         "type": "BooleanLogicUltimate",
         "z": "c1790f94.1fa788",
         "name": "",
-        "filtertrue": "onlytrue",
+        "filtertrue": "both",
         "persist": true,
         "sInitializeWith": "WaitForPayload",
         "triggertopic": "condition_Kueche_Sued",
@@ -22658,7 +22658,6 @@
         "id": "5e7666b6.7f3668",
         "type": "InvertUltimate",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "Invert",
         "x": 750,
         "y": 1840,
@@ -22694,8 +22693,7 @@
         "wires": [
             [
                 "5e7666b6.7f3668",
-                "748e3b12.fdf234",
-                "c1809d4.20ef56"
+                "748e3b12.fdf234"
             ]
         ]
     },
@@ -22712,8 +22710,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 1940,
+        "x": 820,
+        "y": 1920,
         "wires": []
     },
     {
@@ -22898,8 +22896,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1820,
-        "y": 1480,
+        "x": 1790,
+        "y": 1640,
         "wires": []
     },
     {
@@ -22952,8 +22950,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1820,
-        "y": 1720,
+        "x": 1800,
+        "y": 1440,
         "wires": []
     },
     {
@@ -23027,10 +23025,10 @@
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
-        "topic": "condition_WZ",
+        "topic": "condition_WZ_Sued",
         "payload": "true",
         "payloadType": "bool",
-        "x": 550,
+        "x": 570,
         "y": 1780,
         "wires": [
             [
@@ -23078,6 +23076,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
+        "payloadType": "str",
         "x": 950,
         "y": 2060,
         "wires": [
