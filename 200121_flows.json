@@ -22405,7 +22405,6 @@
         "y": 1720,
         "wires": [
             [
-                "4e6fcd35.94f284",
                 "d4c57f39.532f5"
             ],
             [],
@@ -22428,7 +22427,6 @@
         "y": 1460,
         "wires": [
             [
-                "4e6fcd35.94f284",
                 "1d21411d.e18c8f"
             ],
             [],
@@ -22451,7 +22449,6 @@
         "y": 1600,
         "wires": [
             [
-                "4e6fcd35.94f284",
                 "aadab48f.8bd508"
             ],
             [],
@@ -22622,7 +22619,7 @@
             [],
             [
                 "cd75c872.1c99f8",
-                "92639c0e.39737"
+                "20d02648.6e26ba"
             ],
             []
         ]
@@ -22888,7 +22885,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "ALARM ausgelöst",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22899,25 +22896,6 @@
         "x": 1790,
         "y": 1640,
         "wires": []
-    },
-    {
-        "id": "92639c0e.39737",
-        "type": "rbe",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 1490,
-        "y": 1860,
-        "wires": [
-            [
-                "20d02648.6e26ba",
-                "3f095d12.a6dd92"
-            ]
-        ]
     },
     {
         "id": "d4c57f39.532f5",
@@ -22933,7 +22911,8 @@
         "y": 1707,
         "wires": [
             [
-                "c0c6ab9f.4b2cb8"
+                "c0c6ab9f.4b2cb8",
+                "4e6fcd35.94f284"
             ]
         ]
     },
@@ -22942,7 +22921,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "ALARM abgeschaltet",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22968,7 +22947,8 @@
         "y": 1587,
         "wires": [
             [
-                "c0c6ab9f.4b2cb8"
+                "c0c6ab9f.4b2cb8",
+                "4e6fcd35.94f284"
             ]
         ]
     },
@@ -22986,26 +22966,10 @@
         "y": 1447,
         "wires": [
             [
-                "c0c6ab9f.4b2cb8"
+                "c0c6ab9f.4b2cb8",
+                "4e6fcd35.94f284"
             ]
         ]
-    },
-    {
-        "id": "3f095d12.a6dd92",
-        "type": "debug",
-        "z": "c1790f94.1fa788",
-        "name": "rbe",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 1780,
-        "wires": []
     },
     {
         "id": "6bea8694.192c78",
@@ -23029,59 +22993,10 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 570,
-        "y": 1780,
+        "y": 1760,
         "wires": [
             [
                 "c1809d4.20ef56"
-            ]
-        ]
-    },
-    {
-        "id": "9bca639e.b75a8",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 960,
-        "y": 2000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "953c5acc.ddc048",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "props": [
-            {
-                "p": "reset",
-                "v": "true",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "str",
-        "x": 950,
-        "y": 2060,
-        "wires": [
-            [
-                "92639c0e.39737"
             ]
         ]
     },
@@ -23130,6 +23045,35 @@
         "cache": true,
         "x": 520,
         "y": 1720,
+        "wires": [
+            [
+                "c1809d4.20ef56"
+            ]
+        ]
+    },
+    {
+        "id": "a9795efd.962a8",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "condition_WZ_Sued",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 570,
+        "y": 1800,
         "wires": [
             [
                 "c1809d4.20ef56"
