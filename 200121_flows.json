@@ -581,7 +581,7 @@
         "id": "c66039fc.9f9668",
         "type": "hydrawise-controller",
         "name": "Hunter Rain Controller",
-        "key": "3852-E8BB-705E-0BDC"
+        "key": "BD8E-4F69-1B89-68A5"
     },
     {
         "id": "658c4062.c5cba",
@@ -710,6 +710,18 @@
         "order": 5,
         "width": 6,
         "height": 1
+    },
+    {
+        "id": "e0cf4dc7.970a7",
+        "type": "google-notify-config",
+        "ipaddress": "192.168.10.21",
+        "name": "nest mini wohnzimmer",
+        "language": "de",
+        "playVolumeLevel": "30",
+        "speakSlow": false,
+        "mediaServerUrl": "",
+        "mediaServerPort": "8098",
+        "cacheFolder": "/tmp"
     },
     {
         "id": "cb73e4c8.3727f8",
@@ -22218,8 +22230,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 590,
-        "y": 2120,
+        "x": 530,
+        "y": 2080,
         "wires": []
     },
     {
@@ -22237,13 +22249,14 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "OFF",
-        "payloadType": "str",
+        "payload": "false",
+        "payloadType": "bool",
         "x": 1200,
         "y": 1260,
         "wires": [
             [
-                "39b91ade.add9f6"
+                "39b91ade.add9f6",
+                "1b1fbe42.0e65a2"
             ]
         ]
     },
@@ -22316,7 +22329,8 @@
         "y": 1320,
         "wires": [
             [
-                "39b91ade.add9f6"
+                "39b91ade.add9f6",
+                "1b1fbe42.0e65a2"
             ]
         ]
     },
@@ -22487,29 +22501,6 @@
                 "d98cc81f.a93dd8",
                 "c1809d4.20ef56"
             ]
-        ]
-    },
-    {
-        "id": "65b45b86.cb4a84",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 510,
-        "y": 1520,
-        "wires": [
-            []
         ]
     },
     {
@@ -22912,7 +22903,8 @@
         "wires": [
             [
                 "c0c6ab9f.4b2cb8",
-                "4e6fcd35.94f284"
+                "4e6fcd35.94f284",
+                "1b1fbe42.0e65a2"
             ]
         ]
     },
@@ -22948,7 +22940,8 @@
         "wires": [
             [
                 "c0c6ab9f.4b2cb8",
-                "4e6fcd35.94f284"
+                "4e6fcd35.94f284",
+                "1b1fbe42.0e65a2"
             ]
         ]
     },
@@ -22967,7 +22960,8 @@
         "wires": [
             [
                 "c0c6ab9f.4b2cb8",
-                "4e6fcd35.94f284"
+                "4e6fcd35.94f284",
+                "1b1fbe42.0e65a2"
             ]
         ]
     },
@@ -22987,7 +22981,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "condition_WZ_Sued",
         "payload": "true",
@@ -23067,7 +23061,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "condition_WZ_Sued",
         "payload": "false",
@@ -23078,6 +23072,79 @@
             [
                 "c1809d4.20ef56"
             ]
+        ]
+    },
+    {
+        "id": "d6cbfc6a.23",
+        "type": "ccu-value",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2309458:1 Licht Flur EG",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 1770,
+        "y": 1700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b1fbe42.0e65a2",
+        "type": "BlinkerUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "Blinker",
+        "stopbehaviorPIN1": "1",
+        "stopbehaviorPIN2": false,
+        "blinkfrequency": "2000",
+        "x": 1490,
+        "y": 1660,
+        "wires": [
+            [
+                "d6cbfc6a.23",
+                "d2ad996e.2df348"
+            ],
+            [
+                "d6cbfc6a.23",
+                "d2ad996e.2df348"
+            ]
+        ]
+    },
+    {
+        "id": "d2ad996e.2df348",
+        "type": "ccu-value",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "iface": "BidCos-RF",
+        "channel": "OEQ1263524:1 Licht Flur OG",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 1770,
+        "y": 1760,
+        "wires": [
+            []
         ]
     }
 ]
