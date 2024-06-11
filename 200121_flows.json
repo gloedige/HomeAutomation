@@ -22230,7 +22230,8 @@
         "wires": [
             [
                 "39b91ade.add9f6",
-                "1b1fbe42.0e65a2"
+                "1b1fbe42.0e65a2",
+                "3f4914b.6d192ec"
             ]
         ]
     },
@@ -23067,8 +23068,8 @@
         "z": "c1790f94.1fa788",
         "name": "",
         "threshold": "0.5",
-        "x": 1230,
-        "y": 2020,
+        "x": 970,
+        "y": 2080,
         "wires": [
             [
                 "6ed6440b.ff3a6c"
@@ -23105,8 +23106,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 2020,
+        "x": 780,
+        "y": 2080,
         "wires": [
             [
                 "cb0bdb4e.a70bd8"
@@ -23143,8 +23144,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1430,
-        "y": 2020,
+        "x": 1170,
+        "y": 2080,
         "wires": [
             [
                 "a884d2f6.22676"
@@ -23173,8 +23174,8 @@
             "62a01c97.489944",
             "f4b58ebf.a70d7"
         ],
-        "x": 855,
-        "y": 2020,
+        "x": 595,
+        "y": 2080,
         "wires": [
             [
                 "9cf19b6c.1bfa08"
@@ -23189,8 +23190,8 @@
         "links": [
             "84d5d10c.d82c5"
         ],
-        "x": 1585,
-        "y": 2020,
+        "x": 1325,
+        "y": 2080,
         "wires": []
     },
     {
@@ -23207,7 +23208,8 @@
             [
                 "1b1fbe42.0e65a2",
                 "c0c6ab9f.4b2cb8",
-                "4e6fcd35.94f284"
+                "4e6fcd35.94f284",
+                "3f4914b.6d192ec"
             ]
         ]
     },
@@ -23234,5 +23236,157 @@
         "x": 1175,
         "y": 1580,
         "wires": []
+    },
+    {
+        "id": "8d9663a.05e27a",
+        "type": "cast-to-client",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "url": "",
+        "contentType": "",
+        "message": "",
+        "language": "en",
+        "ip": "",
+        "port": "",
+        "volume": "",
+        "x": 1930,
+        "y": 2000,
+        "wires": [
+            [
+                "b885e401.447548"
+            ]
+        ]
+    },
+    {
+        "id": "23bdf480.46b85c",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip",
+                "pt": "msg",
+                "to": "192.168.10.21",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "Alarm, Einbruch registriert!",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "language",
+                "pt": "msg",
+                "to": "En-gb",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1720,
+        "y": 2000,
+        "wires": [
+            [
+                "8d9663a.05e27a"
+            ]
+        ]
+    },
+    {
+        "id": "b885e401.447548",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 2130,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "3f4914b.6d192ec",
+        "type": "BlinkerUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "Blinker",
+        "stopbehaviorPIN1": "1",
+        "stopbehaviorPIN2": false,
+        "blinkfrequency": "4000",
+        "x": 1490,
+        "y": 2006,
+        "wires": [
+            [
+                "23bdf480.46b85c",
+                "68621748.830258"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "68621748.830258",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip",
+                "pt": "msg",
+                "to": "192.168.10.23",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "Alarm, Einbruch registriert!",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "language",
+                "pt": "msg",
+                "to": "En-gb",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1720,
+        "y": 2080,
+        "wires": [
+            [
+                "b41aa235.b8052"
+            ]
+        ]
+    },
+    {
+        "id": "b41aa235.b8052",
+        "type": "cast-to-client",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "url": "",
+        "contentType": "",
+        "message": "",
+        "language": "en",
+        "ip": "",
+        "port": "",
+        "volume": "",
+        "x": 1930,
+        "y": 2080,
+        "wires": [
+            []
+        ]
     }
 ]
