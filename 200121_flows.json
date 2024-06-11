@@ -22393,7 +22393,7 @@
         "y": 1720,
         "wires": [
             [
-                "d4c57f39.532f5"
+                "f4b58ebf.a70d7"
             ],
             [],
             []
@@ -22415,7 +22415,7 @@
         "y": 1460,
         "wires": [
             [
-                "1d21411d.e18c8f"
+                "62a01c97.489944"
             ],
             [],
             []
@@ -22437,7 +22437,7 @@
         "y": 1600,
         "wires": [
             [
-                "aadab48f.8bd508"
+                "5be1a572.44aa4c"
             ],
             [],
             []
@@ -22508,7 +22508,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1540,
+        "x": 1720,
         "y": 1920,
         "wires": [
             [
@@ -22526,7 +22526,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1800,
+        "x": 1980,
         "y": 1920,
         "wires": [
             [
@@ -22544,7 +22544,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2030,
+        "x": 2210,
         "y": 1920,
         "wires": [
             [
@@ -22562,7 +22562,7 @@
         "tls": true,
         "name": "gerd.loedige@posteo.de",
         "dname": "Gerds Mail",
-        "x": 2250,
+        "x": 2430,
         "y": 1920,
         "wires": []
     },
@@ -22578,8 +22578,8 @@
         "outputtriggeredby": "all",
         "inputCount": "3",
         "topic": "Alarm_push_notification",
-        "x": 1250,
-        "y": 1860,
+        "x": 1450,
+        "y": 1840,
         "wires": [
             [],
             [
@@ -22620,6 +22620,7 @@
         "id": "5e7666b6.7f3668",
         "type": "InvertUltimate",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "Invert",
         "x": 750,
         "y": 1840,
@@ -22655,7 +22656,8 @@
         "wires": [
             [
                 "5e7666b6.7f3668",
-                "748e3b12.fdf234"
+                "748e3b12.fdf234",
+                "c1809d4.20ef56"
             ]
         ]
     },
@@ -22795,7 +22797,7 @@
         "to": "",
         "reg": false,
         "x": 1700,
-        "y": 1860,
+        "y": 1840,
         "wires": [
             [
                 "3d82f21e.71fdce"
@@ -22818,7 +22820,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1890,
-        "y": 1860,
+        "y": 1840,
         "wires": [
             [
                 "4eb300a8.7501b"
@@ -22840,7 +22842,7 @@
         "notificationSoundComputedType": "msg",
         "output": 1,
         "x": 2110,
-        "y": 1860,
+        "y": 1840,
         "wires": [
             []
         ]
@@ -22863,26 +22865,6 @@
         "wires": []
     },
     {
-        "id": "d4c57f39.532f5",
-        "type": "rbe",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 1230,
-        "y": 1707,
-        "wires": [
-            [
-                "c0c6ab9f.4b2cb8",
-                "4e6fcd35.94f284",
-                "1b1fbe42.0e65a2"
-            ]
-        ]
-    },
-    {
         "id": "3984eaff.0ad066",
         "type": "debug",
         "z": "c1790f94.1fa788",
@@ -22898,46 +22880,6 @@
         "x": 1800,
         "y": 1440,
         "wires": []
-    },
-    {
-        "id": "aadab48f.8bd508",
-        "type": "rbe",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 1230,
-        "y": 1587,
-        "wires": [
-            [
-                "c0c6ab9f.4b2cb8",
-                "4e6fcd35.94f284",
-                "1b1fbe42.0e65a2"
-            ]
-        ]
-    },
-    {
-        "id": "1d21411d.e18c8f",
-        "type": "rbe",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 1231,
-        "y": 1447,
-        "wires": [
-            [
-                "c0c6ab9f.4b2cb8",
-                "4e6fcd35.94f284",
-                "1b1fbe42.0e65a2"
-            ]
-        ]
     },
     {
         "id": "6bea8694.192c78",
@@ -23091,11 +23033,7 @@
                 "d2ad996e.2df348",
                 "77bb149e.d8110c"
             ],
-            [
-                "d6cbfc6a.23",
-                "d2ad996e.2df348",
-                "77bb149e.d8110c"
-            ]
+            []
         ]
     },
     {
@@ -23131,10 +23069,172 @@
         "z": "c1790f94.1fa788",
         "name": "",
         "threshold": "0.5",
-        "x": 1260,
-        "y": 2020,
+        "x": 870,
+        "y": 2080,
         "wires": [
-            []
+            [
+                "6ed6440b.ff3a6c"
+            ]
         ]
+    },
+    {
+        "id": "9cf19b6c.1bfa08",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Change bool to int",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 2080,
+        "wires": [
+            [
+                "cb0bdb4e.a70bd8"
+            ]
+        ]
+    },
+    {
+        "id": "6ed6440b.ff3a6c",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Change int to bool",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1070,
+        "y": 2080,
+        "wires": [
+            [
+                "a884d2f6.22676"
+            ]
+        ]
+    },
+    {
+        "id": "f4b58ebf.a70d7",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "condition_WZ_Sued",
+        "links": [
+            "809bcae8.556298"
+        ],
+        "x": 1166,
+        "y": 1707,
+        "wires": []
+    },
+    {
+        "id": "809bcae8.556298",
+        "type": "link in",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "links": [
+            "5be1a572.44aa4c",
+            "62a01c97.489944",
+            "f4b58ebf.a70d7"
+        ],
+        "x": 495,
+        "y": 2080,
+        "wires": [
+            [
+                "9cf19b6c.1bfa08"
+            ]
+        ]
+    },
+    {
+        "id": "a884d2f6.22676",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "RisingEdgeWZSuidOut",
+        "links": [
+            "84d5d10c.d82c5"
+        ],
+        "x": 1225,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "84d5d10c.d82c5",
+        "type": "link in",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "links": [
+            "a884d2f6.22676"
+        ],
+        "x": 1275,
+        "y": 1660,
+        "wires": [
+            [
+                "1b1fbe42.0e65a2",
+                "c0c6ab9f.4b2cb8",
+                "4e6fcd35.94f284"
+            ]
+        ]
+    },
+    {
+        "id": "62a01c97.489944",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "condition_WZ_Schiebe",
+        "links": [
+            "809bcae8.556298"
+        ],
+        "x": 1165,
+        "y": 1447,
+        "wires": []
+    },
+    {
+        "id": "5be1a572.44aa4c",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "condition_Kueche_Sued",
+        "links": [
+            "809bcae8.556298"
+        ],
+        "x": 1175,
+        "y": 1580,
+        "wires": []
     }
 ]
