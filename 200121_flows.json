@@ -443,8 +443,8 @@
     {
         "id": "c9474d61.3895d",
         "type": "hue-bridge",
-        "name": "Philips hue",
-        "bridge": "192.168.178.75",
+        "name": "Hue Bridge",
+        "bridge": "192.168.10.38",
         "key": "fxRojU6dJqZ7h0aAxTAXfAQMO5JiCGMaENscaLtg",
         "interval": "3000",
         "disableupdates": false
@@ -17726,7 +17726,6 @@
         "id": "8ccc23f5.2f2a1",
         "type": "clock-timer",
         "z": "33898250.03adbe",
-        "d": true,
         "name": "Zeit Außenlicht",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
@@ -17866,7 +17865,7 @@
         "id": "3c81a7f4.287d78",
         "type": "inject",
         "z": "33898250.03adbe",
-        "name": "all 1min",
+        "name": "all 5min",
         "props": [
             {
                 "p": "payload"
@@ -17876,7 +17875,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "60",
+        "repeat": "300",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -17911,7 +17910,7 @@
         "id": "3bd3e0b8.15cd8",
         "type": "change",
         "z": "33898250.03adbe",
-        "name": "Helligkeit = 50%",
+        "name": "Helligkeit = 20%",
         "rules": [
             {
                 "t": "move",
@@ -17924,7 +17923,7 @@
                 "t": "set",
                 "p": "payload.brightness",
                 "pt": "msg",
-                "to": "50",
+                "to": "20",
                 "tot": "num"
             }
         ],
@@ -22193,36 +22192,11 @@
         ]
     },
     {
-        "id": "5295e428.13929c",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "Alarm ein",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "ON",
-        "payloadType": "str",
-        "x": 300,
-        "y": 2120,
-        "wires": [
-            [
-                "77bb149e.d8110c"
-            ]
-        ]
-    },
-    {
         "id": "77bb149e.d8110c",
         "type": "debug",
         "z": "c1790f94.1fa788",
-        "name": "Status RM",
-        "active": false,
+        "name": "Status Blinker",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22230,8 +22204,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 530,
-        "y": 2080,
+        "x": 1780,
+        "y": 1640,
         "wires": []
     },
     {
@@ -22876,7 +22850,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "ALARM ausgelöst",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22885,7 +22859,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1790,
-        "y": 1640,
+        "y": 1600,
         "wires": []
     },
     {
@@ -23078,6 +23052,7 @@
         "id": "d6cbfc6a.23",
         "type": "ccu-value",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "",
         "iface": "BidCos-RF",
         "channel": "OEQ2309458:1 Licht Flur EG",
@@ -23113,11 +23088,13 @@
         "wires": [
             [
                 "d6cbfc6a.23",
-                "d2ad996e.2df348"
+                "d2ad996e.2df348",
+                "77bb149e.d8110c"
             ],
             [
                 "d6cbfc6a.23",
-                "d2ad996e.2df348"
+                "d2ad996e.2df348",
+                "77bb149e.d8110c"
             ]
         ]
     },
@@ -23125,6 +23102,7 @@
         "id": "d2ad996e.2df348",
         "type": "ccu-value",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "",
         "iface": "BidCos-RF",
         "channel": "OEQ1263524:1 Licht Flur OG",
@@ -23143,6 +23121,18 @@
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1770,
         "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb0bdb4e.a70bd8",
+        "type": "rising-edge",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "threshold": "0.5",
+        "x": 1260,
+        "y": 2020,
         "wires": [
             []
         ]
