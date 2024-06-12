@@ -22231,7 +22231,8 @@
             [
                 "39b91ade.add9f6",
                 "1b1fbe42.0e65a2",
-                "3f4914b.6d192ec"
+                "3f4914b.6d192ec",
+                "49afcb30.37c704"
             ]
         ]
     },
@@ -22241,8 +22242,8 @@
         "z": "c1790f94.1fa788",
         "name": "Alarm über Fensterkontaktschalter EG Süd",
         "info": "",
-        "x": 520,
-        "y": 1340,
+        "x": 360,
+        "y": 1240,
         "wires": []
     },
     {
@@ -22276,8 +22277,8 @@
         "label": "Status Alarm",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 970,
-        "y": 1360,
+        "x": 950,
+        "y": 1540,
         "wires": []
     },
     {
@@ -22306,7 +22307,8 @@
             [
                 "39b91ade.add9f6",
                 "1b1fbe42.0e65a2",
-                "3f4914b.6d192ec"
+                "3f4914b.6d192ec",
+                "49afcb30.37c704"
             ]
         ]
     },
@@ -22468,14 +22470,15 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 750,
+        "x": 710,
         "y": 1540,
         "wires": [
             [
                 "f44d0bb4.b763f8",
                 "98cf06f7.f142d8",
                 "d98cc81f.a93dd8",
-                "c1809d4.20ef56"
+                "c1809d4.20ef56",
+                "b67b0143.03dc1"
             ]
         ]
     },
@@ -22610,8 +22613,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
-        "y": 1840,
+        "x": 300,
+        "y": 1360,
         "wires": [
             [
                 "a3c1636e.dd1f1"
@@ -22622,14 +22625,16 @@
         "id": "5e7666b6.7f3668",
         "type": "InvertUltimate",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "Invert",
-        "x": 750,
-        "y": 1840,
+        "x": 730,
+        "y": 1360,
         "wires": [
             [
                 "f44d0bb4.b763f8",
                 "d98cc81f.a93dd8",
-                "c1809d4.20ef56"
+                "c1809d4.20ef56",
+                "b67b0143.03dc1"
             ]
         ]
     },
@@ -22652,12 +22657,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
-        "y": 1840,
+        "x": 530,
+        "y": 1360,
         "wires": [
             [
                 "5e7666b6.7f3668",
-                "748e3b12.fdf234"
+                "748e3b12.fdf234",
+                "b67b0143.03dc1"
             ]
         ]
     },
@@ -22674,8 +22680,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 1920,
+        "x": 760,
+        "y": 1300,
         "wires": []
     },
     {
@@ -23069,8 +23075,8 @@
         "z": "c1790f94.1fa788",
         "name": "",
         "threshold": "0.5",
-        "x": 970,
-        "y": 2080,
+        "x": 1530,
+        "y": 1240,
         "wires": [
             [
                 "6ed6440b.ff3a6c"
@@ -23107,8 +23113,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
-        "y": 2080,
+        "x": 1340,
+        "y": 1240,
         "wires": [
             [
                 "cb0bdb4e.a70bd8"
@@ -23145,8 +23151,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
-        "y": 2080,
+        "x": 1730,
+        "y": 1240,
         "wires": [
             [
                 "a884d2f6.22676"
@@ -23173,10 +23179,11 @@
         "links": [
             "5be1a572.44aa4c",
             "62a01c97.489944",
+            "a5d2754b.1f9a58",
             "f4b58ebf.a70d7"
         ],
-        "x": 595,
-        "y": 2080,
+        "x": 1155,
+        "y": 1240,
         "wires": [
             [
                 "9cf19b6c.1bfa08"
@@ -23191,8 +23198,8 @@
         "links": [
             "84d5d10c.d82c5"
         ],
-        "x": 1325,
-        "y": 2080,
+        "x": 1885,
+        "y": 1240,
         "wires": []
     },
     {
@@ -23210,7 +23217,8 @@
                 "1b1fbe42.0e65a2",
                 "c0c6ab9f.4b2cb8",
                 "4e6fcd35.94f284",
-                "3f4914b.6d192ec"
+                "3f4914b.6d192ec",
+                "49afcb30.37c704"
             ]
         ]
     },
@@ -23234,14 +23242,15 @@
         "links": [
             "809bcae8.556298"
         ],
-        "x": 1175,
-        "y": 1580,
+        "x": 1163,
+        "y": 1587,
         "wires": []
     },
     {
         "id": "8d9663a.05e27a",
         "type": "cast-to-client",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "",
         "url": "",
         "contentType": "",
@@ -23376,6 +23385,7 @@
         "id": "b41aa235.b8052",
         "type": "cast-to-client",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "",
         "url": "",
         "contentType": "",
@@ -23389,5 +23399,156 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "134cd688.7d73b9",
+        "type": "ccu-value",
+        "z": "c1790f94.1fa788",
+        "name": "Motion Motiondetector Terrasse",
+        "iface": "HmIP-RF",
+        "channel": "00321F29971B60:1 Bewegungsmelder Terrasse",
+        "datapoint": "MOTION",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "motion_terrace_detected",
+        "x": 510,
+        "y": 1840,
+        "wires": [
+            [
+                "b67b0143.03dc1"
+            ]
+        ]
+    },
+    {
+        "id": "b67b0143.03dc1",
+        "type": "BooleanLogicUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "motion_terrace_detected",
+        "outputtriggeredby": "onlyonetopic",
+        "inputCount": "3",
+        "topic": "Alarm_4",
+        "x": 1000,
+        "y": 1840,
+        "wires": [
+            [
+                "a5d2754b.1f9a58"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ebcfe220.8dd9e",
+        "type": "ccu-set-value",
+        "z": "c1790f94.1fa788",
+        "d": true,
+        "name": "",
+        "iface": "",
+        "ccuConfig": "38263145.35ea0e",
+        "rooms": "Wohnzimmer",
+        "roomsRx": "str",
+        "functions": "",
+        "functionsRx": "str",
+        "device": "",
+        "deviceRx": "str",
+        "deviceName": "Alle Rolllaeden Wohnzimmer",
+        "deviceNameRx": "str",
+        "deviceType": "",
+        "deviceTypeRx": "str",
+        "channel": "",
+        "channelRx": "str",
+        "channelName": "",
+        "channelNameRx": "str",
+        "channelType": "BLIND",
+        "channelTypeRx": "str",
+        "channelIndex": "",
+        "channelIndexRx": "str",
+        "datapoint": "LEVEL",
+        "datapointRx": "str",
+        "force": false,
+        "x": 1980,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "49afcb30.37c704",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1720,
+        "y": 2080,
+        "wires": [
+            [
+                "ebcfe220.8dd9e",
+                "f46e3c29.9c5b1"
+            ]
+        ]
+    },
+    {
+        "id": "a5d2754b.1f9a58",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "motion_terrace_detected",
+        "links": [
+            "809bcae8.556298"
+        ],
+        "x": 1164,
+        "y": 1827,
+        "wires": []
+    },
+    {
+        "id": "f46e3c29.9c5b1",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "BlindLevelWZ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2000,
+        "y": 2160,
+        "wires": []
     }
 ]
