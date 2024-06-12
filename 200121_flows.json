@@ -22277,7 +22277,7 @@
         "label": "Status Alarm",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 950,
+        "x": 1090,
         "y": 1540,
         "wires": []
     },
@@ -22475,10 +22475,10 @@
         "wires": [
             [
                 "f44d0bb4.b763f8",
-                "98cf06f7.f142d8",
                 "d98cc81f.a93dd8",
                 "c1809d4.20ef56",
-                "b67b0143.03dc1"
+                "b67b0143.03dc1",
+                "781a1b2d.385b14"
             ]
         ]
     },
@@ -22625,7 +22625,6 @@
         "id": "5e7666b6.7f3668",
         "type": "InvertUltimate",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "Invert",
         "x": 730,
         "y": 1360,
@@ -22662,8 +22661,7 @@
         "wires": [
             [
                 "5e7666b6.7f3668",
-                "748e3b12.fdf234",
-                "b67b0143.03dc1"
+                "748e3b12.fdf234"
             ]
         ]
     },
@@ -23550,5 +23548,43 @@
         "x": 2000,
         "y": 2160,
         "wires": []
+    },
+    {
+        "id": "781a1b2d.385b14",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Inaktiv",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Aktiv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 1540,
+        "wires": [
+            [
+                "98cf06f7.f142d8"
+            ]
+        ]
     }
 ]
