@@ -23282,7 +23282,7 @@
                 "t": "set",
                 "p": "language",
                 "pt": "msg",
-                "to": "En-gb",
+                "to": "De",
                 "tot": "str"
             }
         ],
@@ -23355,7 +23355,7 @@
                 "t": "set",
                 "p": "language",
                 "pt": "msg",
-                "to": "En-gb",
+                "to": "De",
                 "tot": "str"
             }
         ],
