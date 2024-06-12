@@ -22185,8 +22185,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1760,
-        "y": 1540,
+        "x": 2000,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -22196,7 +22196,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "Status Blinker",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22204,8 +22204,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1780,
-        "y": 1640,
+        "x": 2020,
+        "y": 1540,
         "wires": []
     },
     {
@@ -22225,8 +22225,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1200,
-        "y": 1260,
+        "x": 1360,
+        "y": 1540,
         "wires": [
             [
                 "39b91ade.add9f6",
@@ -22300,12 +22300,13 @@
         "payloadType": "bool",
         "topic": "condition",
         "topicType": "str",
-        "x": 1200,
-        "y": 1320,
+        "x": 1360,
+        "y": 1620,
         "wires": [
             [
                 "39b91ade.add9f6",
-                "1b1fbe42.0e65a2"
+                "1b1fbe42.0e65a2",
+                "3f4914b.6d192ec"
             ]
         ]
     },
@@ -22330,8 +22331,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1490,
-        "y": 1586,
+        "x": 1730,
+        "y": 1486,
         "wires": [
             [
                 "6a090af6.5c5084",
@@ -22369,8 +22370,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1500,
-        "y": 1500,
+        "x": 1740,
+        "y": 1400,
         "wires": [
             [
                 "6a090af6.5c5084",
@@ -22509,8 +22510,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1720,
-        "y": 1920,
+        "x": 1960,
+        "y": 1820,
         "wires": [
             [
                 "3a6caf26.20645"
@@ -22527,8 +22528,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1980,
-        "y": 1920,
+        "x": 2220,
+        "y": 1820,
         "wires": [
             [
                 "b30d3f9.486d7c"
@@ -22545,8 +22546,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2210,
-        "y": 1920,
+        "x": 2450,
+        "y": 1820,
         "wires": [
             [
                 "df2ec5dd.061488"
@@ -22563,8 +22564,8 @@
         "tls": true,
         "name": "gerd.loedige@posteo.de",
         "dname": "Gerds Mail",
-        "x": 2430,
-        "y": 1920,
+        "x": 2670,
+        "y": 1820,
         "wires": []
     },
     {
@@ -22579,8 +22580,8 @@
         "outputtriggeredby": "all",
         "inputCount": "3",
         "topic": "Alarm_push_notification",
-        "x": 1450,
-        "y": 1840,
+        "x": 1690,
+        "y": 1740,
         "wires": [
             [],
             [
@@ -22795,8 +22796,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1700,
-        "y": 1840,
+        "x": 1940,
+        "y": 1740,
         "wires": [
             [
                 "3d82f21e.71fdce"
@@ -22818,8 +22819,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1890,
-        "y": 1840,
+        "x": 2130,
+        "y": 1740,
         "wires": [
             [
                 "4eb300a8.7501b"
@@ -22840,8 +22841,8 @@
         "notificationSoundComputed": "payload.sound",
         "notificationSoundComputedType": "msg",
         "output": 1,
-        "x": 2110,
-        "y": 1840,
+        "x": 2350,
+        "y": 1740,
         "wires": [
             []
         ]
@@ -22851,7 +22852,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "ALARM ausgelöst",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22859,8 +22860,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1790,
-        "y": 1600,
+        "x": 2030,
+        "y": 1500,
         "wires": []
     },
     {
@@ -22876,8 +22877,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1800,
-        "y": 1440,
+        "x": 2040,
+        "y": 1340,
         "wires": []
     },
     {
@@ -23010,8 +23011,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1770,
-        "y": 1700,
+        "x": 2010,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -23024,8 +23025,8 @@
         "stopbehaviorPIN1": "1",
         "stopbehaviorPIN2": false,
         "blinkfrequency": "2000",
-        "x": 1490,
-        "y": 1660,
+        "x": 1730,
+        "y": 1560,
         "wires": [
             [
                 "d6cbfc6a.23",
@@ -23056,8 +23057,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1770,
-        "y": 1760,
+        "x": 2010,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -23202,8 +23203,8 @@
         "links": [
             "a884d2f6.22676"
         ],
-        "x": 1275,
-        "y": 1660,
+        "x": 1395,
+        "y": 1700,
         "wires": [
             [
                 "1b1fbe42.0e65a2",
@@ -23249,8 +23250,8 @@
         "ip": "",
         "port": "",
         "volume": "",
-        "x": 1930,
-        "y": 2000,
+        "x": 2170,
+        "y": 1900,
         "wires": [
             [
                 "b885e401.447548"
@@ -23290,8 +23291,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1720,
-        "y": 2000,
+        "x": 1960,
+        "y": 1900,
         "wires": [
             [
                 "8d9663a.05e27a"
@@ -23303,13 +23304,13 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 2130,
-        "y": 2000,
+        "x": 2370,
+        "y": 1900,
         "wires": []
     },
     {
@@ -23320,8 +23321,8 @@
         "stopbehaviorPIN1": "1",
         "stopbehaviorPIN2": false,
         "blinkfrequency": "4000",
-        "x": 1490,
-        "y": 2006,
+        "x": 1730,
+        "y": 1906,
         "wires": [
             [
                 "23bdf480.46b85c",
@@ -23363,8 +23364,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1720,
-        "y": 2080,
+        "x": 1960,
+        "y": 1980,
         "wires": [
             [
                 "b41aa235.b8052"
@@ -23383,8 +23384,8 @@
         "ip": "",
         "port": "",
         "volume": "",
-        "x": 1930,
-        "y": 2080,
+        "x": 2170,
+        "y": 1980,
         "wires": [
             []
         ]
