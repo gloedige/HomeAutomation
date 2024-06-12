@@ -23256,7 +23256,7 @@
         "language": "en",
         "ip": "",
         "port": "",
-        "volume": "",
+        "volume": "100",
         "x": 2170,
         "y": 1900,
         "wires": [
@@ -23391,7 +23391,7 @@
         "language": "en",
         "ip": "",
         "port": "",
-        "volume": "",
+        "volume": "100",
         "x": 2170,
         "y": 1980,
         "wires": [
