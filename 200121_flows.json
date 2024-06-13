@@ -335,12 +335,13 @@
     {
         "id": "67b1424b.30270c",
         "type": "ui_group",
-        "name": "Group 2",
-        "tab": "",
+        "name": "Motion detection",
+        "tab": "28756316.ab083c",
         "order": 1,
-        "disp": false,
-        "width": "2",
-        "collapse": false
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "ea0abcea.34a5",
@@ -23422,7 +23423,8 @@
         "y": 1840,
         "wires": [
             [
-                "b67b0143.03dc1"
+                "b67b0143.03dc1",
+                "33d9ebac.3b1dd4"
             ]
         ]
     },
@@ -23584,6 +23586,88 @@
         "wires": [
             [
                 "98cf06f7.f142d8"
+            ]
+        ]
+    },
+    {
+        "id": "69ae7397.fe843c",
+        "type": "ui_chart",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "group": "67b1424b.30270c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1070,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33d9ebac.3b1dd4",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 1920,
+        "wires": [
+            [
+                "69ae7397.fe843c"
             ]
         ]
     }
