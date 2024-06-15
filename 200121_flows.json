@@ -22262,7 +22262,8 @@
         "y": 1580,
         "wires": [
             [
-                "4af77fb8.21885"
+                "4af77fb8.21885",
+                "ccc0c6b2.92f418"
             ]
         ]
     },
@@ -22278,8 +22279,8 @@
         "label": "Status Alarm",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1090,
-        "y": 1540,
+        "x": 1150,
+        "y": 2220,
         "wires": []
     },
     {
@@ -22395,7 +22396,7 @@
         "inputCount": "3",
         "topic": "Alarm_3",
         "x": 990,
-        "y": 1720,
+        "y": 1900,
         "wires": [
             [
                 "f4b58ebf.a70d7"
@@ -22417,7 +22418,7 @@
         "inputCount": "3",
         "topic": "Alarm_1",
         "x": 1000,
-        "y": 1460,
+        "y": 1700,
         "wires": [
             [
                 "62a01c97.489944"
@@ -22439,7 +22440,7 @@
         "inputCount": "3",
         "topic": "Alarm_2",
         "x": 1000,
-        "y": 1600,
+        "y": 1800,
         "wires": [
             [
                 "5be1a572.44aa4c"
@@ -22461,7 +22462,8 @@
         "height": 0,
         "passthru": true,
         "decouple": "false",
-        "topic": "Alarm_aktiv",
+        "topic": "condition",
+        "topicType": "str",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
@@ -22471,15 +22473,13 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 710,
-        "y": 1540,
+        "animate": true,
+        "className": "",
+        "x": 370,
+        "y": 2140,
         "wires": [
             [
-                "f44d0bb4.b763f8",
-                "d98cc81f.a93dd8",
-                "c1809d4.20ef56",
-                "b67b0143.03dc1",
-                "781a1b2d.385b14"
+                "e0a6521e.59dc1"
             ]
         ]
     },
@@ -22908,7 +22908,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 570,
-        "y": 1760,
+        "y": 1940,
         "wires": [
             [
                 "c1809d4.20ef56"
@@ -22925,7 +22925,7 @@
         "change": true,
         "cache": true,
         "x": 500,
-        "y": 1460,
+        "y": 1700,
         "wires": [
             [
                 "f44d0bb4.b763f8"
@@ -22942,7 +22942,7 @@
         "change": true,
         "cache": true,
         "x": 500,
-        "y": 1600,
+        "y": 1800,
         "wires": [
             [
                 "d98cc81f.a93dd8"
@@ -22959,7 +22959,7 @@
         "change": true,
         "cache": true,
         "x": 520,
-        "y": 1720,
+        "y": 1900,
         "wires": [
             [
                 "c1809d4.20ef56"
@@ -22988,7 +22988,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 570,
-        "y": 1800,
+        "y": 1980,
         "wires": [
             [
                 "c1809d4.20ef56"
@@ -23167,7 +23167,7 @@
             "809bcae8.556298"
         ],
         "x": 1166,
-        "y": 1707,
+        "y": 1887,
         "wires": []
     },
     {
@@ -23230,7 +23230,7 @@
             "809bcae8.556298"
         ],
         "x": 1165,
-        "y": 1447,
+        "y": 1687,
         "wires": []
     },
     {
@@ -23242,7 +23242,7 @@
             "809bcae8.556298"
         ],
         "x": 1163,
-        "y": 1587,
+        "y": 1787,
         "wires": []
     },
     {
@@ -23412,7 +23412,7 @@
         "inputCount": "3",
         "topic": "Alarm_4",
         "x": 1000,
-        "y": 1844,
+        "y": 1600,
         "wires": [
             [
                 "a5d2754b.1f9a58"
@@ -23502,7 +23502,7 @@
             "809bcae8.556298"
         ],
         "x": 1164,
-        "y": 1831,
+        "y": 1587,
         "wires": []
     },
     {
@@ -23552,8 +23552,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
-        "y": 1540,
+        "x": 960,
+        "y": 2220,
         "wires": [
             [
                 "98cf06f7.f142d8"
@@ -23598,8 +23598,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1070,
-        "y": 1924,
+        "x": 1130,
+        "y": 1540,
         "wires": [
             []
         ]
@@ -23634,8 +23634,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 840,
-        "y": 1924,
+        "x": 960,
+        "y": 1540,
         "wires": [
             [
                 "69ae7397.fe843c"
@@ -23652,11 +23652,107 @@
         "change": true,
         "cache": true,
         "x": 520,
-        "y": 1844,
+        "y": 1600,
         "wires": [
             [
                 "b67b0143.03dc1",
                 "33d9ebac.3b1dd4"
+            ]
+        ]
+    },
+    {
+        "id": "10959cce.d9cdf3",
+        "type": "noraf-switch",
+        "z": "c1790f94.1fa788",
+        "devicename": "Alarm",
+        "roomhint": "",
+        "name": "SwitchToSetAlarm",
+        "passthru": true,
+        "errorifstateunchaged": false,
+        "nora": "e7b91b38.1d5708",
+        "topic": "condition",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "asyncCmd": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 2140,
+        "wires": [
+            [
+                "f3524d80.b46ea",
+                "781a1b2d.385b14",
+                "9034eecd.43f94"
+            ]
+        ]
+    },
+    {
+        "id": "f3524d80.b46ea",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flagAlarm",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ccc0c6b2.92f418",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "checkFlagAlarm",
+        "property": "flagAlarm",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 460,
+        "y": 1500,
+        "wires": [
+            [
+                "c1809d4.20ef56"
+            ]
+        ]
+    },
+    {
+        "id": "e0a6521e.59dc1",
+        "type": "rbe",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 510,
+        "y": 2140,
+        "wires": [
+            [
+                "10959cce.d9cdf3"
             ]
         ]
     }
