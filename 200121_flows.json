@@ -22197,7 +22197,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "Status Blinker",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22357,15 +22357,6 @@
                 "pt": "msg",
                 "from": "false",
                 "fromt": "bool",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "OFF",
-                "fromt": "str",
                 "to": "1",
                 "tot": "num"
             }
@@ -22572,29 +22563,6 @@
         "x": 2670,
         "y": 1820,
         "wires": []
-    },
-    {
-        "id": "4e6fcd35.94f284",
-        "type": "BooleanLogicUltimate",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "filtertrue": "onlytrue",
-        "persist": true,
-        "sInitializeWith": "false",
-        "triggertopic": "condition",
-        "outputtriggeredby": "all",
-        "inputCount": "3",
-        "topic": "Alarm_push_notification",
-        "x": 1690,
-        "y": 1740,
-        "wires": [
-            [],
-            [
-                "cd75c872.1c99f8",
-                "20d02648.6e26ba"
-            ],
-            []
-        ]
     },
     {
         "id": "4af77fb8.21885",
@@ -23076,7 +23044,7 @@
         "name": "",
         "threshold": "0.5",
         "x": 1530,
-        "y": 1240,
+        "y": 1200,
         "wires": [
             [
                 "6ed6440b.ff3a6c",
@@ -23114,7 +23082,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1340,
+        "x": 1330,
         "y": 1240,
         "wires": [
             [
@@ -23154,7 +23122,7 @@
         "to": "",
         "reg": false,
         "x": 1730,
-        "y": 1240,
+        "y": 1160,
         "wires": [
             [
                 "a884d2f6.22676"
@@ -23218,9 +23186,10 @@
             [
                 "1b1fbe42.0e65a2",
                 "c0c6ab9f.4b2cb8",
-                "4e6fcd35.94f284",
                 "3f4914b.6d192ec",
-                "3656b746.63efa8"
+                "3656b746.63efa8",
+                "20d02648.6e26ba",
+                "cd75c872.1c99f8"
             ]
         ]
     },
@@ -23746,7 +23715,7 @@
         "timeout": "20",
         "timeoutType": "num",
         "x": 1700,
-        "y": 1300,
+        "y": 1240,
         "wires": [
             [
                 "5381afcc.9b71a"
@@ -23759,7 +23728,7 @@
         "z": "c1790f94.1fa788",
         "name": "Invert",
         "x": 1850,
-        "y": 1300,
+        "y": 1240,
         "wires": [
             [
                 "a884d2f6.22676"
