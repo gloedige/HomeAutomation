@@ -23447,7 +23447,7 @@
                 "pt": "msg",
                 "from": "false",
                 "fromt": "bool",
-                "to": "1",
+                "to": "0.1",
                 "tot": "num"
             }
         ],
@@ -23482,7 +23482,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "BlindLevelWZ",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
