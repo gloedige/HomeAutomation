@@ -22397,7 +22397,7 @@
         "inputCount": "3",
         "topic": "Alarm_3",
         "x": 990,
-        "y": 1900,
+        "y": 1960,
         "wires": [
             [
                 "f4b58ebf.a70d7"
@@ -22419,7 +22419,7 @@
         "inputCount": "3",
         "topic": "Alarm_1",
         "x": 1000,
-        "y": 1700,
+        "y": 1800,
         "wires": [
             [
                 "62a01c97.489944"
@@ -22441,7 +22441,7 @@
         "inputCount": "3",
         "topic": "Alarm_2",
         "x": 1000,
-        "y": 1800,
+        "y": 1878,
         "wires": [
             [
                 "5be1a572.44aa4c"
@@ -22909,7 +22909,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 570,
-        "y": 1940,
+        "y": 2000,
         "wires": [
             [
                 "c1809d4.20ef56"
@@ -22926,7 +22926,7 @@
         "change": true,
         "cache": true,
         "x": 500,
-        "y": 1780,
+        "y": 1800,
         "wires": [
             [
                 "f44d0bb4.b763f8"
@@ -22943,7 +22943,7 @@
         "change": true,
         "cache": true,
         "x": 500,
-        "y": 1840,
+        "y": 1880,
         "wires": [
             [
                 "d98cc81f.a93dd8"
@@ -22960,7 +22960,7 @@
         "change": true,
         "cache": true,
         "x": 520,
-        "y": 1900,
+        "y": 1960,
         "wires": [
             [
                 "c1809d4.20ef56"
@@ -22989,7 +22989,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 570,
-        "y": 1980,
+        "y": 2040,
         "wires": [
             [
                 "c1809d4.20ef56"
@@ -23169,8 +23169,8 @@
         "links": [
             "809bcae8.556298"
         ],
-        "x": 1166,
-        "y": 1887,
+        "x": 1164,
+        "y": 1947,
         "wires": []
     },
     {
@@ -23220,7 +23220,7 @@
                 "c0c6ab9f.4b2cb8",
                 "4e6fcd35.94f284",
                 "3f4914b.6d192ec",
-                "49afcb30.37c704"
+                "3656b746.63efa8"
             ]
         ]
     },
@@ -23232,8 +23232,8 @@
         "links": [
             "809bcae8.556298"
         ],
-        "x": 1165,
-        "y": 1687,
+        "x": 1164,
+        "y": 1787,
         "wires": []
     },
     {
@@ -23245,7 +23245,7 @@
             "809bcae8.556298"
         ],
         "x": 1163,
-        "y": 1787,
+        "y": 1865,
         "wires": []
     },
     {
@@ -23415,7 +23415,7 @@
         "inputCount": "3",
         "topic": "Alarm_4",
         "x": 1000,
-        "y": 1600,
+        "y": 1720,
         "wires": [
             [
                 "a5d2754b.1f9a58"
@@ -23504,8 +23504,8 @@
         "links": [
             "809bcae8.556298"
         ],
-        "x": 1164,
-        "y": 1587,
+        "x": 1163,
+        "y": 1707,
         "wires": []
     },
     {
@@ -23513,7 +23513,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "BlindLevelWZ",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -23602,7 +23602,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1130,
-        "y": 1540,
+        "y": 1573,
         "wires": [
             []
         ]
@@ -23638,7 +23638,7 @@
         "to": "",
         "reg": false,
         "x": 960,
-        "y": 1540,
+        "y": 1573,
         "wires": [
             [
                 "69ae7397.fe843c"
@@ -23743,7 +23743,7 @@
         "topic": "invert",
         "name": "",
         "invert": false,
-        "timeout": "5",
+        "timeout": "20",
         "timeoutType": "num",
         "x": 1700,
         "y": 1300,
@@ -23834,7 +23834,35 @@
         "wires": [
             [
                 "708e046b.76a2ec",
-                "c1809d4.20ef56"
+                "c1809d4.20ef56",
+                "b67b0143.03dc1",
+                "f44d0bb4.b763f8",
+                "d98cc81f.a93dd8"
+            ]
+        ]
+    },
+    {
+        "id": "3656b746.63efa8",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Alarm_4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1550,
+        "y": 2080,
+        "wires": [
+            [
+                "49afcb30.37c704"
             ]
         ]
     }
