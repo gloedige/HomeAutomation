@@ -23712,9 +23712,9 @@
         "topic": "invert",
         "name": "",
         "invert": false,
-        "timeout": "20",
+        "timeout": "3600",
         "timeoutType": "num",
-        "x": 1700,
+        "x": 1710,
         "y": 1240,
         "wires": [
             [
