@@ -22630,8 +22630,9 @@
         "y": 1500,
         "wires": [
             [
-                "5e7666b6.7f3668",
-                "748e3b12.fdf234"
+                "748e3b12.fdf234",
+                "c1809d4.20ef56",
+                "b67b0143.03dc1"
             ]
         ]
     },
@@ -22843,7 +22844,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "ALARM abgeschaltet",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -23085,8 +23086,7 @@
         "y": 2280,
         "wires": [
             [
-                "cb0bdb4e.a70bd8",
-                "3656b746.63efa8"
+                "cb0bdb4e.a70bd8"
             ]
         ]
     },
@@ -23704,23 +23704,6 @@
         ]
     },
     {
-        "id": "b793f5a0.b86f08",
-        "type": "combine-defer",
-        "z": "c1790f94.1fa788",
-        "topic": "invert",
-        "name": "DisableDelay15min",
-        "invert": false,
-        "timeout": "900",
-        "timeoutType": "num",
-        "x": 1170,
-        "y": 2200,
-        "wires": [
-            [
-                "5381afcc.9b71a"
-            ]
-        ]
-    },
-    {
         "id": "5381afcc.9b71a",
         "type": "InvertUltimate",
         "z": "c1790f94.1fa788",
@@ -23844,37 +23827,20 @@
         "y": 2280,
         "wires": [
             [
-                "b793f5a0.b86f08",
-                "a884d2f6.22676"
+                "a884d2f6.22676",
+                "ba324d9d.1831b"
             ],
             [
-                "b793f5a0.b86f08",
-                "a884d2f6.22676"
+                "a884d2f6.22676",
+                "ba324d9d.1831b"
             ],
             [
-                "b793f5a0.b86f08",
-                "a884d2f6.22676"
+                "a884d2f6.22676",
+                "ba324d9d.1831b"
             ],
             [
-                "20c3dbb7.e88f94",
-                "5809aad2.7c6654"
-            ]
-        ]
-    },
-    {
-        "id": "20c3dbb7.e88f94",
-        "type": "combine-defer",
-        "z": "c1790f94.1fa788",
-        "topic": "invert",
-        "name": "DisableDelay60min",
-        "invert": false,
-        "timeout": "3600",
-        "timeoutType": "num",
-        "x": 1170,
-        "y": 2340,
-        "wires": [
-            [
-                "b91c5b1c.078418"
+                "5809aad2.7c6654",
+                "70fb0744.898348"
             ]
         ]
     },
@@ -23916,6 +23882,52 @@
         "wires": [
             [
                 "49afcb30.37c704"
+            ]
+        ]
+    },
+    {
+        "id": "ba324d9d.1831b",
+        "type": "delay",
+        "z": "c1790f94.1fa788",
+        "name": "DisableDelay15min",
+        "pauseType": "delay",
+        "timeout": "900",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1170,
+        "y": 2200,
+        "wires": [
+            [
+                "5381afcc.9b71a"
+            ]
+        ]
+    },
+    {
+        "id": "70fb0744.898348",
+        "type": "delay",
+        "z": "c1790f94.1fa788",
+        "name": "DisableDelay60min",
+        "pauseType": "delay",
+        "timeout": "3600",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1170,
+        "y": 2340,
+        "wires": [
+            [
+                "b91c5b1c.078418"
             ]
         ]
     }
