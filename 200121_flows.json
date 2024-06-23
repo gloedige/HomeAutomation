@@ -581,7 +581,7 @@
     {
         "id": "c66039fc.9f9668",
         "type": "hydrawise-controller",
-        "name": "Hunter Rain Controller",
+        "name": "Hunter Node Red Controller",
         "key": "BD8E-4F69-1B89-68A5"
     },
     {
@@ -20509,12 +20509,12 @@
         "id": "32e254fd.4e37ac",
         "type": "hydrawise-command",
         "z": "e20ea6d6.476028",
-        "name": "Hunter Rain Controller",
+        "name": "Hunter Node Red Controller",
         "controller": "c66039fc.9f9668",
         "zone": "Rasen Terrasse",
         "command": "info",
         "duration": "10",
-        "x": 500,
+        "x": 520,
         "y": 240,
         "wires": [
             [
