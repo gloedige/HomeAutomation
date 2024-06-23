@@ -22280,8 +22280,8 @@
         "label": "Status Alarm",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1150,
-        "y": 2220,
+        "x": 1190,
+        "y": 2520,
         "wires": []
     },
     {
@@ -22467,8 +22467,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 370,
-        "y": 2140,
+        "x": 410,
+        "y": 2440,
         "wires": [
             [
                 "e0a6521e.59dc1"
@@ -23043,12 +23043,11 @@
         "z": "c1790f94.1fa788",
         "name": "",
         "threshold": "0.5",
-        "x": 1530,
-        "y": 1200,
+        "x": 510,
+        "y": 2180,
         "wires": [
             [
-                "6ed6440b.ff3a6c",
-                "b793f5a0.b86f08"
+                "6ed6440b.ff3a6c"
             ]
         ]
     },
@@ -23082,12 +23081,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1330,
-        "y": 1240,
+        "x": 290,
+        "y": 2280,
         "wires": [
             [
                 "cb0bdb4e.a70bd8",
-                "b793f5a0.b86f08"
+                "3656b746.63efa8"
             ]
         ]
     },
@@ -23121,11 +23120,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1730,
-        "y": 1160,
+        "x": 690,
+        "y": 2180,
         "wires": [
             [
-                "a884d2f6.22676"
+                "3656b746.63efa8"
             ]
         ]
     },
@@ -23152,8 +23151,8 @@
             "a5d2754b.1f9a58",
             "f4b58ebf.a70d7"
         ],
-        "x": 1155,
-        "y": 1240,
+        "x": 135,
+        "y": 2280,
         "wires": [
             [
                 "9cf19b6c.1bfa08"
@@ -23168,8 +23167,8 @@
         "links": [
             "84d5d10c.d82c5"
         ],
-        "x": 1975,
-        "y": 1240,
+        "x": 1454,
+        "y": 2260,
         "wires": []
     },
     {
@@ -23187,7 +23186,6 @@
                 "1b1fbe42.0e65a2",
                 "c0c6ab9f.4b2cb8",
                 "3f4914b.6d192ec",
-                "3656b746.63efa8",
                 "20d02648.6e26ba",
                 "cd75c872.1c99f8"
             ]
@@ -23524,8 +23522,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 2220,
+        "x": 1000,
+        "y": 2520,
         "wires": [
             [
                 "98cf06f7.f142d8"
@@ -23652,8 +23650,8 @@
         "filter": false,
         "asyncCmd": false,
         "outputs": 1,
-        "x": 710,
-        "y": 2140,
+        "x": 750,
+        "y": 2440,
         "wires": [
             [
                 "f3524d80.b46ea",
@@ -23681,8 +23679,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 2140,
+        "x": 1000,
+        "y": 2440,
         "wires": [
             []
         ]
@@ -23697,8 +23695,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 510,
-        "y": 2140,
+        "x": 550,
+        "y": 2440,
         "wires": [
             [
                 "10959cce.d9cdf3"
@@ -23710,12 +23708,12 @@
         "type": "combine-defer",
         "z": "c1790f94.1fa788",
         "topic": "invert",
-        "name": "",
+        "name": "DisableDelay15min",
         "invert": false,
-        "timeout": "3600",
+        "timeout": "900",
         "timeoutType": "num",
-        "x": 1710,
-        "y": 1240,
+        "x": 1170,
+        "y": 2200,
         "wires": [
             [
                 "5381afcc.9b71a"
@@ -23727,8 +23725,8 @@
         "type": "InvertUltimate",
         "z": "c1790f94.1fa788",
         "name": "Invert",
-        "x": 1850,
-        "y": 1240,
+        "x": 1349,
+        "y": 2200,
         "wires": [
             [
                 "a884d2f6.22676"
@@ -23814,20 +23812,106 @@
         "id": "3656b746.63efa8",
         "type": "switch",
         "z": "c1790f94.1fa788",
-        "name": "",
+        "name": "switch topic Alarm",
         "property": "topic",
         "propertyType": "msg",
         "rules": [
+            {
+                "t": "eq",
+                "v": "Alarm_1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Alarm_2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Alarm_3",
+                "vt": "str"
+            },
             {
                 "t": "eq",
                 "v": "Alarm_4",
                 "vt": "str"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
-        "outputs": 1,
-        "x": 1550,
+        "outputs": 4,
+        "x": 930,
+        "y": 2280,
+        "wires": [
+            [
+                "b793f5a0.b86f08",
+                "a884d2f6.22676"
+            ],
+            [
+                "b793f5a0.b86f08",
+                "a884d2f6.22676"
+            ],
+            [
+                "b793f5a0.b86f08",
+                "a884d2f6.22676"
+            ],
+            [
+                "20c3dbb7.e88f94",
+                "5809aad2.7c6654"
+            ]
+        ]
+    },
+    {
+        "id": "20c3dbb7.e88f94",
+        "type": "combine-defer",
+        "z": "c1790f94.1fa788",
+        "topic": "invert",
+        "name": "DisableDelay60min",
+        "invert": false,
+        "timeout": "3600",
+        "timeoutType": "num",
+        "x": 1170,
+        "y": 2340,
+        "wires": [
+            [
+                "b91c5b1c.078418"
+            ]
+        ]
+    },
+    {
+        "id": "b91c5b1c.078418",
+        "type": "InvertUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "Invert",
+        "x": 1349,
+        "y": 2340,
+        "wires": [
+            [
+                "5809aad2.7c6654"
+            ]
+        ]
+    },
+    {
+        "id": "5809aad2.7c6654",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "RisingEdgeBlindProtectSuidOut",
+        "links": [
+            "83f1336f.0f79f"
+        ],
+        "x": 1454,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "83f1336f.0f79f",
+        "type": "link in",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "links": [
+            "5809aad2.7c6654"
+        ],
+        "x": 1395,
         "y": 2080,
         "wires": [
             [
