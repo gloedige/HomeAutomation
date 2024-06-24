@@ -22628,8 +22628,7 @@
         "wires": [
             [
                 "748e3b12.fdf234",
-                "c1809d4.20ef56",
-                "b67b0143.03dc1"
+                "5e7666b6.7f3668"
             ]
         ]
     },
@@ -23216,7 +23215,6 @@
         "id": "8d9663a.05e27a",
         "type": "cast-to-client",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "",
         "url": "",
         "contentType": "",
@@ -23351,7 +23349,6 @@
         "id": "b41aa235.b8052",
         "type": "cast-to-client",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "",
         "url": "",
         "contentType": "",
@@ -23392,7 +23389,6 @@
         "id": "ebcfe220.8dd9e",
         "type": "ccu-set-value",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "",
         "iface": "",
         "ccuConfig": "38263145.35ea0e",
@@ -23402,7 +23398,7 @@
         "functionsRx": "str",
         "device": "",
         "deviceRx": "str",
-        "deviceName": "Alle Rolllaeden Wohnzimmer",
+        "deviceName": "",
         "deviceNameRx": "str",
         "deviceType": "",
         "deviceTypeRx": "str",
