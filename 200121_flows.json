@@ -22166,7 +22166,6 @@
         "id": "6a090af6.5c5084",
         "type": "ccu-value",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "RM_WZ",
         "iface": "HmIP-RF",
         "channel": "000A5D899B72E3:1 Rauchmelder_WZ",
@@ -22965,7 +22964,6 @@
         "id": "d6cbfc6a.23",
         "type": "ccu-value",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "",
         "iface": "BidCos-RF",
         "channel": "OEQ2309458:1 Licht Flur EG",
@@ -23011,7 +23009,6 @@
         "id": "d2ad996e.2df348",
         "type": "ccu-value",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "",
         "iface": "BidCos-RF",
         "channel": "OEQ1263524:1 Licht Flur OG",
@@ -23821,7 +23818,8 @@
         "wires": [
             [
                 "a884d2f6.22676",
-                "ba324d9d.1831b"
+                "ba324d9d.1831b",
+                "f41d4b77.3297d8"
             ],
             [
                 "a884d2f6.22676",
@@ -23923,5 +23921,22 @@
                 "b91c5b1c.078418"
             ]
         ]
+    },
+    {
+        "id": "f41d4b77.3297d8",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "Alarm_1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 2120,
+        "wires": []
     }
 ]
