@@ -22166,6 +22166,7 @@
         "id": "6a090af6.5c5084",
         "type": "ccu-value",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "RM_WZ",
         "iface": "HmIP-RF",
         "channel": "000A5D899B72E3:1 Rauchmelder_WZ",
@@ -22228,8 +22229,8 @@
             [
                 "39b91ade.add9f6",
                 "1b1fbe42.0e65a2",
-                "3f4914b.6d192ec",
-                "eeba6232.bb5ae"
+                "eeba6232.bb5ae",
+                "e4fd3678.004ad8"
             ]
         ]
     },
@@ -22247,14 +22248,13 @@
         "id": "a123f997.9245f8",
         "type": "inject",
         "z": "c1790f94.1fa788",
-        "name": "every 10s",
+        "name": "every 1min",
         "props": [],
-        "repeat": "10",
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": "3",
         "topic": "",
-        "payloadType": "str",
         "x": 150,
         "y": 1500,
         "wires": [
@@ -22306,8 +22306,8 @@
             [
                 "39b91ade.add9f6",
                 "1b1fbe42.0e65a2",
-                "3f4914b.6d192ec",
-                "eeba6232.bb5ae"
+                "eeba6232.bb5ae",
+                "e4fd3678.004ad8"
             ]
         ]
     },
@@ -22822,7 +22822,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "ALARM ausgelöst",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -22991,7 +22991,7 @@
         "type": "BlinkerUltimate",
         "z": "c1790f94.1fa788",
         "name": "Blinker",
-        "stopbehaviorPIN1": "1",
+        "stopbehaviorPIN1": "0",
         "stopbehaviorPIN2": false,
         "blinkfrequency": "2000",
         "x": 1730,
@@ -23178,9 +23178,9 @@
             [
                 "1b1fbe42.0e65a2",
                 "c0c6ab9f.4b2cb8",
-                "3f4914b.6d192ec",
                 "20d02648.6e26ba",
-                "cd75c872.1c99f8"
+                "cd75c872.1c99f8",
+                "767225bf.d982ec"
             ]
         ]
     },
@@ -23220,7 +23220,7 @@
         "ip": "",
         "port": "",
         "volume": "100",
-        "x": 2170,
+        "x": 2390,
         "y": 1900,
         "wires": [
             [
@@ -23261,7 +23261,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1960,
+        "x": 2180,
         "y": 1900,
         "wires": [
             [
@@ -23279,27 +23279,9 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 2370,
+        "x": 2590,
         "y": 1900,
         "wires": []
-    },
-    {
-        "id": "3f4914b.6d192ec",
-        "type": "BlinkerUltimate",
-        "z": "c1790f94.1fa788",
-        "name": "Blinker",
-        "stopbehaviorPIN1": "1",
-        "stopbehaviorPIN2": false,
-        "blinkfrequency": "4000",
-        "x": 1730,
-        "y": 1906,
-        "wires": [
-            [
-                "23bdf480.46b85c",
-                "68621748.830258"
-            ],
-            []
-        ]
     },
     {
         "id": "68621748.830258",
@@ -23334,7 +23316,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1960,
+        "x": 2180,
         "y": 1980,
         "wires": [
             [
@@ -23354,7 +23336,7 @@
         "ip": "",
         "port": "",
         "volume": "100",
-        "x": 2170,
+        "x": 2390,
         "y": 1980,
         "wires": [
             []
@@ -23966,6 +23948,113 @@
         "wires": [
             [
                 "f46e3c29.9c5b1"
+            ]
+        ]
+    },
+    {
+        "id": "767225bf.d982ec",
+        "type": "looptimer",
+        "z": "c1790f94.1fa788",
+        "duration": "4",
+        "units": "Second",
+        "maxloops": "250",
+        "maxtimeout": "15",
+        "maxtimeoutunits": "Minute",
+        "name": "",
+        "x": 1940,
+        "y": 1906,
+        "wires": [
+            [
+                "23bdf480.46b85c",
+                "68621748.830258"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e4fd3678.004ad8",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "reset Blind",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "STOP",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1710,
+        "y": 1906,
+        "wires": [
+            [
+                "767225bf.d982ec"
+            ]
+        ]
+    },
+    {
+        "id": "5408561d.36a038",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "motion_terrace_detected",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 1780,
+        "wires": [
+            [
+                "b67b0143.03dc1"
+            ]
+        ]
+    },
+    {
+        "id": "59c97055.f7104",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "motion_terrace_detected",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 1820,
+        "wires": [
+            [
+                "b67b0143.03dc1"
             ]
         ]
     }
