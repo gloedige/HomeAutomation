@@ -22222,14 +22222,14 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1360,
-        "y": 1540,
+        "x": 1380,
+        "y": 1800,
         "wires": [
             [
                 "39b91ade.add9f6",
                 "1b1fbe42.0e65a2",
                 "3f4914b.6d192ec",
-                "49afcb30.37c704"
+                "eeba6232.bb5ae"
             ]
         ]
     },
@@ -22298,16 +22298,16 @@
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
-        "topic": "condition",
+        "topic": "quitAlarm",
         "topicType": "str",
-        "x": 1360,
-        "y": 1620,
+        "x": 1380,
+        "y": 1880,
         "wires": [
             [
                 "39b91ade.add9f6",
                 "1b1fbe42.0e65a2",
                 "3f4914b.6d192ec",
-                "49afcb30.37c704"
+                "eeba6232.bb5ae"
             ]
         ]
     },
@@ -23386,6 +23386,7 @@
         "id": "ebcfe220.8dd9e",
         "type": "ccu-set-value",
         "z": "c1790f94.1fa788",
+        "d": true,
         "name": "",
         "iface": "",
         "ccuConfig": "38263145.35ea0e",
@@ -23470,7 +23471,7 @@
         "type": "debug",
         "z": "c1790f94.1fa788",
         "name": "BlindLevelWZ",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -23938,5 +23939,34 @@
         "x": 1170,
         "y": 2120,
         "wires": []
+    },
+    {
+        "id": "eeba6232.bb5ae",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "reset Blind",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1710,
+        "y": 2160,
+        "wires": [
+            [
+                "f46e3c29.9c5b1"
+            ]
+        ]
     }
 ]
