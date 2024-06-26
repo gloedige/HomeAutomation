@@ -22166,7 +22166,6 @@
         "id": "6a090af6.5c5084",
         "type": "ccu-value",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "RM_WZ",
         "iface": "HmIP-RF",
         "channel": "000A5D899B72E3:1 Rauchmelder_WZ",
@@ -22778,7 +22777,7 @@
         "id": "3d82f21e.71fdce",
         "type": "switch",
         "z": "c1790f94.1fa788",
-        "name": "",
+        "name": "ifPayloadIsTrue",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -22789,7 +22788,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2130,
+        "x": 2140,
         "y": 1740,
         "wires": [
             [
@@ -23180,7 +23179,9 @@
                 "c0c6ab9f.4b2cb8",
                 "20d02648.6e26ba",
                 "cd75c872.1c99f8",
-                "767225bf.d982ec"
+                "aab508f4.5b28e8",
+                "e4fd3678.004ad8",
+                "39b91ade.add9f6"
             ]
         ]
     },
@@ -23368,7 +23369,6 @@
         "id": "ebcfe220.8dd9e",
         "type": "ccu-set-value",
         "z": "c1790f94.1fa788",
-        "d": true,
         "name": "",
         "iface": "",
         "ccuConfig": "38263145.35ea0e",
@@ -23966,7 +23966,8 @@
         "wires": [
             [
                 "23bdf480.46b85c",
-                "68621748.830258"
+                "68621748.830258",
+                "a3d6e3d2.0a2f8"
             ],
             []
         ]
@@ -23993,7 +23994,7 @@
         "to": "",
         "reg": false,
         "x": 1710,
-        "y": 1906,
+        "y": 1940,
         "wires": [
             [
                 "767225bf.d982ec"
@@ -24057,5 +24058,45 @@
                 "b67b0143.03dc1"
             ]
         ]
+    },
+    {
+        "id": "aab508f4.5b28e8",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1720,
+        "y": 1880,
+        "wires": [
+            [
+                "767225bf.d982ec"
+            ]
+        ]
+    },
+    {
+        "id": "a3d6e3d2.0a2f8",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "blinkerVoiceAlarm",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2190,
+        "y": 2040,
+        "wires": []
     }
 ]
