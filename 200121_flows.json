@@ -241,7 +241,7 @@
         "bcwiEnabled": true,
         "cuxdEnabled": true,
         "regaPoll": true,
-        "regaInterval": "30",
+        "regaInterval": "5",
         "rpcPingTimeout": "60",
         "rpcInitAddress": "127.0.0.1",
         "rpcServerHost": "127.0.0.1",
@@ -20562,7 +20562,7 @@
         "name": "passWhenIrrigationORManualWaterUseIsTrue",
         "filtertrue": "both",
         "persist": true,
-        "sInitializeWith": "WaitForPayload",
+        "sInitializeWith": "false",
         "triggertopic": "trigger",
         "outputtriggeredby": "all",
         "inputCount": "8",
@@ -21134,83 +21134,6 @@
         "wires": []
     },
     {
-        "id": "5a202427.0198dc",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "SwitchONGardenPumpPowerSupply",
-        "rules": [
-            {
-                "t": "set",
-                "p": "SwitchONGardenPumpPowerSupply",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 630,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4cede9f.9ce5518",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "defTopicGardenPumpPowerSupply",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "GardenPumpPowerSupply",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 1060,
-        "wires": [
-            [
-                "f40d58b1.049698"
-            ]
-        ]
-    },
-    {
-        "id": "f40d58b1.049698",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "SetPayloadToSwitchONOfGardenPumpPowerSupply",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "SwitchONGardenPumpPowerSupply",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 1060,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "603c914f.53625",
         "type": "ui_text",
         "z": "e20ea6d6.476028",
@@ -21275,8 +21198,8 @@
         "z": "e20ea6d6.476028",
         "name": "SysVar_Switch_Garden_Pump",
         "ccuConfig": "38263145.35ea0e",
-        "topic": "GardenPumpPowerSupply",
-        "change": true,
+        "topic": "SysVarSwitch",
+        "change": false,
         "cache": true,
         "x": 270,
         "y": 840,
