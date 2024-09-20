@@ -20343,12 +20343,12 @@
         "id": "32e254fd.4e37ac",
         "type": "hydrawise-command",
         "z": "e20ea6d6.476028",
-        "name": "Hunter Node Red Controller",
+        "name": "Hunter_Node_Red_Controller",
         "controller": "c66039fc.9f9668",
         "zone": "Rasen Terrasse",
         "command": "info",
         "duration": "10",
-        "x": 520,
+        "x": 530,
         "y": 240,
         "wires": [
             [
