@@ -241,7 +241,7 @@
         "bcwiEnabled": true,
         "cuxdEnabled": true,
         "regaPoll": true,
-        "regaInterval": "30",
+        "regaInterval": "5",
         "rpcPingTimeout": "60",
         "rpcInitAddress": "127.0.0.1",
         "rpcServerHost": "127.0.0.1",
@@ -285,7 +285,7 @@
         "type": "ui_group",
         "name": "Rollos Einstellungen",
         "tab": "d9a62b87.022f78",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false,
@@ -335,12 +335,13 @@
     {
         "id": "67b1424b.30270c",
         "type": "ui_group",
-        "name": "Group 2",
-        "tab": "",
+        "name": "Motion detection",
+        "tab": "28756316.ab083c",
         "order": 1,
-        "disp": false,
-        "width": "2",
-        "collapse": false
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "ea0abcea.34a5",
@@ -443,8 +444,8 @@
     {
         "id": "c9474d61.3895d",
         "type": "hue-bridge",
-        "name": "Philips hue",
-        "bridge": "192.168.178.75",
+        "name": "Hue Bridge",
+        "bridge": "192.168.10.38",
         "key": "fxRojU6dJqZ7h0aAxTAXfAQMO5JiCGMaENscaLtg",
         "interval": "3000",
         "disableupdates": false
@@ -580,8 +581,8 @@
     {
         "id": "c66039fc.9f9668",
         "type": "hydrawise-controller",
-        "name": "Hunter Rain Controller",
-        "key": "3852-E8BB-705E-0BDC"
+        "name": "Loedige",
+        "key": "BD8E-4F69-1B89-68A5"
     },
     {
         "id": "658c4062.c5cba",
@@ -607,7 +608,7 @@
         "type": "ui_group",
         "name": "Wohnzimmer",
         "tab": "d9a62b87.022f78",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -618,7 +619,7 @@
         "type": "ui_group",
         "name": "Küche",
         "tab": "d9a62b87.022f78",
-        "order": 4,
+        "order": 5,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -629,7 +630,7 @@
         "type": "ui_group",
         "name": "Büro",
         "tab": "d9a62b87.022f78",
-        "order": 5,
+        "order": 6,
         "disp": true,
         "width": 3,
         "collapse": false,
@@ -640,7 +641,7 @@
         "type": "ui_group",
         "name": "Gäste WC",
         "tab": "d9a62b87.022f78",
-        "order": 6,
+        "order": 7,
         "disp": true,
         "width": 3,
         "collapse": false,
@@ -651,7 +652,7 @@
         "type": "ui_group",
         "name": "Schlafen",
         "tab": "d9a62b87.022f78",
-        "order": 7,
+        "order": 8,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -662,7 +663,7 @@
         "type": "ui_group",
         "name": "Fredi",
         "tab": "d9a62b87.022f78",
-        "order": 8,
+        "order": 9,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -673,7 +674,7 @@
         "type": "ui_group",
         "name": "Konsti",
         "tab": "d9a62b87.022f78",
-        "order": 9,
+        "order": 10,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -684,7 +685,7 @@
         "type": "ui_group",
         "name": "Bad OG",
         "tab": "d9a62b87.022f78",
-        "order": 10,
+        "order": 11,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -695,7 +696,7 @@
         "type": "ui_group",
         "name": "Flur",
         "tab": "d9a62b87.022f78",
-        "order": 11,
+        "order": 12,
         "disp": true,
         "width": 6,
         "collapse": false,
@@ -710,6 +711,29 @@
         "order": 5,
         "width": 6,
         "height": 1
+    },
+    {
+        "id": "e0cf4dc7.970a7",
+        "type": "google-notify-config",
+        "ipaddress": "192.168.10.21",
+        "name": "nest mini wohnzimmer",
+        "language": "de",
+        "playVolumeLevel": "30",
+        "speakSlow": false,
+        "mediaServerUrl": "",
+        "mediaServerPort": "8098",
+        "cacheFolder": "/tmp"
+    },
+    {
+        "id": "1227369e.67a609",
+        "type": "ui_group",
+        "name": "Lichtwert",
+        "tab": "d9a62b87.022f78",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "cb73e4c8.3727f8",
@@ -821,7 +845,7 @@
         "type": "ui_text",
         "z": "d2aa9e3f.51894",
         "group": "937d90ca.8d8b",
-        "order": 8,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -2954,13 +2978,8 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "",
                 "timeType": "none",
                 "timeOp": 1,
@@ -3005,7 +3024,9 @@
                 "valid2OperatorText": "ist true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.maxLightValue</var> < global.thresholdMinLightBlindControl</div><div>↕  Absolut <var>offen (max)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.maxLightValue</var> < global.thresholdMinLightBlindControl</div><div>↕  Absolut <var>offen (max)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             }
         ],
         "sunControlMode": "2",
@@ -5670,349 +5691,6 @@
         ]
     },
     {
-        "id": "912f2f7b.8659d8",
-        "type": "function",
-        "z": "c1790f94.1fa788",
-        "name": "Trigger_Alarm",
-        "func": "var payload=msg.payload;\nvar alarm_flag=context.get(\"alarm_flag\");\nif(typeof alarm_flag==\"undefined\")\nalarm_flag=false;\n\nif (payload>0 && !alarm_flag)\n{\n    alarm_flag=true;\n    msg.alarm=1;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;\n}\nif (payload<=1 && alarm_flag)\n{\n    alarm_flag=false;\n    msg.alarm=0;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;    \n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 820,
-        "y": 380,
-        "wires": [
-            [
-                "419c42cd.09684c",
-                "37c63be4.9cc4f4",
-                "bbd2d2d8.7c38c"
-            ]
-        ]
-    },
-    {
-        "id": "da4a265b.d8f7a8",
-        "type": "e-mail",
-        "z": "c1790f94.1fa788",
-        "d": true,
-        "server": "posteo.de",
-        "port": "465",
-        "secure": true,
-        "tls": true,
-        "name": "gerd.loedige@posteo.de",
-        "dname": "Gerds Mail",
-        "x": 1330,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "419c42cd.09684c",
-        "type": "function",
-        "z": "c1790f94.1fa788",
-        "d": true,
-        "name": "message_to_mail",
-        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Wasser im Waschraum\";\n    message=\" Wassersensor hat Wasser im Keller detektiert!\";\n}\nelse\n{\n    msg.topic=\"Info Wassersensor Keller\";\n    message=\" Wassersensor meldet i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1110,
-        "y": 200,
-        "wires": [
-            [
-                "da4a265b.d8f7a8",
-                "69a2326c.1ec8b4"
-            ]
-        ]
-    },
-    {
-        "id": "69a2326c.1ec8b4",
-        "type": "debug",
-        "z": "c1790f94.1fa788",
-        "name": "Alarm_Trigger",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "c3d6f711.0736e",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "Wasser im Keller 1",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 590,
-        "y": 220,
-        "wires": [
-            [
-                "912f2f7b.8659d8"
-            ]
-        ]
-    },
-    {
-        "id": "cd8877b9.b9a4c",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "kein Wasser im Keller 0",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 600,
-        "y": 300,
-        "wires": [
-            [
-                "912f2f7b.8659d8"
-            ]
-        ]
-    },
-    {
-        "id": "d52e4659.e01e1",
-        "type": "comment",
-        "z": "c1790f94.1fa788",
-        "name": "Mailbenachrichtigung bei Wasser im Keller",
-        "info": "",
-        "x": 220,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "d38220be.60fa9",
-        "type": "ccu-value",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "iface": "BidCos-RF",
-        "channel": "OEQ2019168:1 Rauchmelder Schlafzimmer",
-        "datapoint": "LOWBAT",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": true,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 270,
-        "y": 820,
-        "wires": [
-            [
-                "298bbd3f.e74a12",
-                "2d2b3bd5.ab9f2c"
-            ]
-        ]
-    },
-    {
-        "id": "561d43af.c84e2c",
-        "type": "function",
-        "z": "c1790f94.1fa788",
-        "name": "message_to_mail",
-        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"Batteriestatus Rachmelder Zimmer Konstantin\";\n    message=\"Die Batterie des Rauchmelders muss gewechselt werden!\";\n}\nelse\n{\n    msg.topic=\"Batteriestatus Rachmelder Zimmer Konstantin\";\n    message=\" Batterie Rauchmelder ist i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1070,
-        "y": 820,
-        "wires": [
-            [
-                "e2bd4262.0790f8"
-            ]
-        ]
-    },
-    {
-        "id": "e2bd4262.0790f8",
-        "type": "e-mail",
-        "z": "c1790f94.1fa788",
-        "server": "posteo.de",
-        "port": "465",
-        "secure": true,
-        "tls": true,
-        "name": "gerd.loedige@posteo.de",
-        "dname": "Gerds Mail",
-        "x": 1310,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "298bbd3f.e74a12",
-        "type": "debug",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "e681b13b.5742b8",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 740,
-        "wires": [
-            [
-                "d38220be.60fa9"
-            ]
-        ]
-    },
-    {
-        "id": "3799839b.ea84bc",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Status Wasser",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 560,
-        "y": 380,
-        "wires": [
-            [
-                "912f2f7b.8659d8"
-            ]
-        ]
-    },
-    {
-        "id": "685662d.402a69c",
-        "type": "comment",
-        "z": "c1790f94.1fa788",
-        "name": "Mailbenachrichtigung Batteriestatus Rauchmelder",
-        "info": "",
-        "x": 240,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "be2c0e2.6f4b2f",
-        "type": "function",
-        "z": "c1790f94.1fa788",
-        "name": "Trigger_Alarm",
-        "func": "var payload=msg.payload;\nvar alarm_flag=context.get(\"alarm_flag\");\nif(typeof alarm_flag==\"undefined\")\nalarm_flag=false;\n\nif (payload>0 && !alarm_flag)\n{\n    alarm_flag=true;\n    msg.alarm=1;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;\n}\nif (payload<=1 && alarm_flag)\n{\n    alarm_flag=false;\n    msg.alarm=0;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;    \n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 860,
-        "y": 820,
-        "wires": [
-            [
-                "561d43af.c84e2c"
-            ]
-        ]
-    },
-    {
-        "id": "2d2b3bd5.ab9f2c",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 660,
-        "y": 820,
-        "wires": [
-            [
-                "be2c0e2.6f4b2f",
-                "298bbd3f.e74a12"
-            ]
-        ]
-    },
-    {
         "id": "82f4bacb.8c9788",
         "type": "inject",
         "z": "db6aac1c.cd43b",
@@ -6730,114 +6408,7 @@
         "blindPosDefault": "open (max)",
         "blindPosDefaultType": "levelFixed",
         "overwriteExpire": "",
-        "rules": [
-            {
-                "index": 0,
-                "name": "Sonnenaufgang",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "6:30",
-                "timeType": "entered",
-                "timeOp": 0,
-                "timeOpText": "↥ bis",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "10%",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>6:30</var></div><div>↕  Absolut <var>10%</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 1,
-                "name": "Sonnenaufgang - Wochenende",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "08:00",
-                "timeType": "entered",
-                "timeOp": 0,
-                "timeOpText": "↥ bis",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "10%",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>08:00</var></div><div>↕  Absolut <var>10%</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            }
-        ],
+        "rules": [],
         "sunControlMode": "2",
         "sunFloorLength": "0",
         "sunMinAltitude": "0",
@@ -6874,7 +6445,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 950,
+        "x": 940,
         "y": 2620,
         "wires": [
             [
@@ -7260,61 +6831,7 @@
         "blindPosDefault": "open (max)",
         "blindPosDefaultType": "levelFixed",
         "overwriteExpire": "",
-        "rules": [
-            {
-                "index": 0,
-                "name": "Sonnenuntergang",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "blueHourDuskStart",
-                "timeType": "pdsTime",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "21:00",
-                "timeMaxType": "entered",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var><div class=\"indent-time-text\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i> <span>spätestens (max)</span> <var>21:00</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            }
-        ],
+        "rules": [],
         "sunControlMode": "2",
         "sunFloorLength": "0",
         "sunMinAltitude": "20",
@@ -7351,7 +6868,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 820,
+        "x": 800,
         "y": 2780,
         "wires": [
             [
@@ -7430,74 +6947,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "377a238e.1736ec",
-        "type": "ccu-sysvar",
-        "z": "c1790f94.1fa788",
-        "name": "SysVar_Wasserstand_Waschraum",
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "ReGaHSS/${Name}",
-        "change": true,
-        "cache": true,
-        "x": 220,
-        "y": 300,
-        "wires": [
-            [
-                "3799839b.ea84bc"
-            ]
-        ]
-    },
-    {
-        "id": "76d0e208.6f500c",
-        "type": "ccu-sysvar",
-        "z": "c1790f94.1fa788",
-        "name": "SysVar_Wasserstand_HWR",
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "ReGaHSS/${Name}",
-        "change": true,
-        "cache": true,
-        "x": 200,
-        "y": 440,
-        "wires": [
-            [
-                "3799839b.ea84bc"
-            ]
-        ]
-    },
-    {
-        "id": "e6b70e27.56ec3",
-        "type": "function",
-        "z": "c1790f94.1fa788",
-        "d": true,
-        "name": "message_to_mail",
-        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Wasser im HWR\";\n    message=\" Wassersensor hat Wasser im Keller detektiert!\";\n}\nelse\n{\n    msg.topic=\"Info Wassersensor Keller\";\n    message=\" Wassersensor meldet i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1070,
-        "y": 500,
-        "wires": [
-            [
-                "4846a878.9852b8"
-            ]
-        ]
-    },
-    {
-        "id": "4846a878.9852b8",
-        "type": "e-mail",
-        "z": "c1790f94.1fa788",
-        "d": true,
-        "server": "posteo.de",
-        "port": "465",
-        "secure": true,
-        "tls": true,
-        "name": "gerd.loedige@posteo.de",
-        "dname": "Gerds Mail",
-        "x": 1290,
-        "y": 500,
-        "wires": []
     },
     {
         "id": "98f5847.ce9a478",
@@ -11644,336 +11093,6 @@
         "wires": []
     },
     {
-        "id": "ff485576.b60ac8",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "Alarm aus",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 140,
-        "y": 1060,
-        "wires": [
-            [
-                "b1a49199.5416"
-            ]
-        ]
-    },
-    {
-        "id": "a949fcd7.1f2a6",
-        "type": "ccu-value",
-        "z": "c1790f94.1fa788",
-        "name": "RM_Keller_Gäste",
-        "iface": "HmIP-RF",
-        "channel": "000A5D899B72EA:1 Rauchmelder_Gästezimmer",
-        "datapoint": "SMOKE_DETECTOR_COMMAND",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1790,
-        "y": 1440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b1a49199.5416",
-        "type": "ccu-value",
-        "z": "c1790f94.1fa788",
-        "name": "RM_Flur_OG",
-        "iface": "HmIP-RF",
-        "channel": "000A5D899B6E2E:1 Rauchmelder Flur OG",
-        "datapoint": "SMOKE_DETECTOR_COMMAND",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 370,
-        "y": 1060,
-        "wires": [
-            [
-                "a9a4b458.546ce8"
-            ]
-        ]
-    },
-    {
-        "id": "4164e95c.d7c8e8",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "Alarm ein",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "2",
-        "payloadType": "num",
-        "x": 140,
-        "y": 1020,
-        "wires": [
-            [
-                "b1a49199.5416"
-            ]
-        ]
-    },
-    {
-        "id": "a9a4b458.546ce8",
-        "type": "debug",
-        "z": "c1790f94.1fa788",
-        "name": "Status IP RM",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "9fc69ae0.23ffa8",
-        "type": "ccu-value",
-        "z": "c1790f94.1fa788",
-        "name": "Rauchmelder Gruppe OG",
-        "iface": "BidCos-RF",
-        "channel": "*OEQ2019065:1 Rauchmelder Gruppe OG",
-        "datapoint": "STATE",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1170,
-        "y": 1680,
-        "wires": [
-            [
-                "a00f8abd.3f0f88"
-            ]
-        ]
-    },
-    {
-        "id": "779f207e.a2fa88",
-        "type": "ccu-value",
-        "z": "c1790f94.1fa788",
-        "name": "RM_WZ",
-        "iface": "HmIP-RF",
-        "channel": "000A5D899B72E3:1 Rauchmelder_WZ",
-        "datapoint": "SMOKE_DETECTOR_COMMAND",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1760,
-        "y": 1500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1bc6f6bf.9072e1",
-        "type": "ccu-value",
-        "z": "c1790f94.1fa788",
-        "name": "RM_Flur_OG",
-        "iface": "HmIP-RF",
-        "channel": "000A5D899B6E2E:1 Rauchmelder Flur OG",
-        "datapoint": "SMOKE_DETECTOR_COMMAND",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1770,
-        "y": 1560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b45a76de.b7ba38",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "Alarm ein",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "ON",
-        "payloadType": "str",
-        "x": 1420,
-        "y": 1200,
-        "wires": [
-            [
-                "a00f8abd.3f0f88",
-                "c9ec9bb3.6f07"
-            ]
-        ]
-    },
-    {
-        "id": "c9ec9bb3.6f07",
-        "type": "debug",
-        "z": "c1790f94.1fa788",
-        "name": "Status RM",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1750,
-        "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "b3dd679.c26a198",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "Alarm aus",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "OFF",
-        "payloadType": "str",
-        "x": 1140,
-        "y": 1280,
-        "wires": [
-            [
-                "a00f8abd.3f0f88",
-                "8b7ae2e.60aafa",
-                "62bcb9b7.dcfe1"
-            ]
-        ]
-    },
-    {
-        "id": "a00f8abd.3f0f88",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Deaktivierung_IP-RM",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "2",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "ON",
-                "fromt": "str",
-                "to": "2",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "OFF",
-                "fromt": "str",
-                "to": "1",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1460,
-        "y": 1680,
-        "wires": [
-            [
-                "a949fcd7.1f2a6",
-                "779f207e.a2fa88",
-                "1bc6f6bf.9072e1",
-                "c9ec9bb3.6f07"
-            ]
-        ]
-    },
-    {
         "id": "b241eeff.da4b2",
         "type": "comment",
         "z": "db6aac1c.cd43b",
@@ -12410,7 +11529,7 @@
         "d": true,
         "name": "Lichtwert West",
         "group": "937d90ca.8d8b",
-        "order": 15,
+        "order": 6,
         "width": 0,
         "height": 0,
         "label": "",
@@ -12451,7 +11570,7 @@
         "type": "ui_text",
         "z": "4f28065f.6e1fb8",
         "group": "937d90ca.8d8b",
-        "order": 14,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "Lichtwert West",
@@ -12486,26 +11605,9 @@
         "y": 880,
         "wires": [
             [
-                "76921c3e.807e4c",
                 "c94b0070.0ca"
             ]
         ]
-    },
-    {
-        "id": "76921c3e.807e4c",
-        "type": "ui_text",
-        "z": "4f28065f.6e1fb8",
-        "group": "937d90ca.8d8b",
-        "order": 18,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Postition Sonne",
-        "format": "{{msg.payload.azimuth | number:0}}",
-        "layout": "row-spread",
-        "x": 640,
-        "y": 860,
-        "wires": []
     },
     {
         "id": "c94b0070.0ca",
@@ -13625,7 +12727,7 @@
         "type": "ui_text",
         "z": "4f28065f.6e1fb8",
         "group": "937d90ca.8d8b",
-        "order": 12,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "Lichtwert Ost",
@@ -13643,7 +12745,7 @@
         "d": true,
         "name": "Lichtwert Ost",
         "group": "937d90ca.8d8b",
-        "order": 13,
+        "order": 4,
         "width": 0,
         "height": 0,
         "label": "",
@@ -13677,300 +12779,6 @@
         "y": 400,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "9cf8b85f.dbcc58",
-        "type": "comment",
-        "z": "c1790f94.1fa788",
-        "name": "Alarm über Fensterkontaktschalter EG Süd",
-        "info": "",
-        "x": 460,
-        "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "5409bd24.d0c614",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "1 min",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "3",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 1480,
-        "wires": [
-            [
-                "a2d95db0.39c7e",
-                "c0feeb7f.5c8bc8",
-                "903cb37f.b7b21",
-                "1bcaf42a.fae22c"
-            ]
-        ]
-    },
-    {
-        "id": "6b92b31b.f5793c",
-        "type": "ui_text",
-        "z": "c1790f94.1fa788",
-        "group": "3de74921.630726",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Status Alarm",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 910,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "c31044ad.d5baa",
-        "type": "ui_button",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "group": "3de74921.630726",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "quit Alarm",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "topic": "condition",
-        "x": 680,
-        "y": 1180,
-        "wires": [
-            [
-                "a00f8abd.3f0f88",
-                "8b7ae2e.60aafa",
-                "62bcb9b7.dcfe1",
-                "cf33e5df.001ee8",
-                "77857df6.707784",
-                "2e77b0dc.2d5d7"
-            ]
-        ]
-    },
-    {
-        "id": "b829f21b.044f3",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Aktivierung_IP-RM",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "2",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 1340,
-        "wires": [
-            [
-                "a949fcd7.1f2a6",
-                "779f207e.a2fa88",
-                "1bc6f6bf.9072e1"
-            ]
-        ]
-    },
-    {
-        "id": "83edb01b.037a8",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Aktivierung_IP-RM",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "2",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 1500,
-        "wires": [
-            [
-                "a949fcd7.1f2a6",
-                "779f207e.a2fa88",
-                "1bc6f6bf.9072e1"
-            ]
-        ]
-    },
-    {
-        "id": "45762d37.995e3c",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Aktivierung_IP-RM",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "2",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 1640,
-        "wires": [
-            [
-                "a949fcd7.1f2a6",
-                "779f207e.a2fa88",
-                "1bc6f6bf.9072e1"
-            ]
-        ]
-    },
-    {
-        "id": "8b7ae2e.60aafa",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Deaktivierung_IP-RM",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "2",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "ON",
-                "fromt": "str",
-                "to": "2",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "OFF",
-                "fromt": "str",
-                "to": "1",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1460,
-        "y": 1560,
-        "wires": [
-            [
-                "a949fcd7.1f2a6",
-                "779f207e.a2fa88",
-                "1bc6f6bf.9072e1"
-            ]
-        ]
-    },
-    {
-        "id": "62bcb9b7.dcfe1",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Deaktivierung_IP-RM",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "2",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "ON",
-                "fromt": "str",
-                "to": "2",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "OFF",
-                "fromt": "str",
-                "to": "1",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1460,
-        "y": 1400,
-        "wires": [
-            [
-                "a949fcd7.1f2a6",
-                "779f207e.a2fa88",
-                "1bc6f6bf.9072e1"
-            ]
         ]
     },
     {
@@ -14225,8 +13033,8 @@
         "id": "82ce7af1.cc6618",
         "type": "ui_text",
         "z": "4f28065f.6e1fb8",
-        "group": "937d90ca.8d8b",
-        "order": 9,
+        "group": "1227369e.67a609",
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "average lux value",
@@ -14242,8 +13050,8 @@
         "type": "ui_chart",
         "z": "4f28065f.6e1fb8",
         "name": "average lux value",
-        "group": "937d90ca.8d8b",
-        "order": 10,
+        "group": "1227369e.67a609",
+        "order": 2,
         "width": 0,
         "height": 0,
         "label": "",
@@ -14273,6 +13081,8 @@
             "#c5b0d5"
         ],
         "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
         "x": 1210,
         "y": 600,
         "wires": [
@@ -14316,7 +13126,7 @@
         "d": true,
         "name": "Lichtwert Süd",
         "group": "937d90ca.8d8b",
-        "order": 17,
+        "order": 8,
         "width": 0,
         "height": 0,
         "label": "",
@@ -14357,7 +13167,7 @@
         "type": "ui_text",
         "z": "4f28065f.6e1fb8",
         "group": "937d90ca.8d8b",
-        "order": 16,
+        "order": 7,
         "width": 0,
         "height": 0,
         "name": "Lichtwert Süd",
@@ -15133,8 +13943,8 @@
         "z": "4f28065f.6e1fb8",
         "d": true,
         "name": "low pass lux value",
-        "group": "937d90ca.8d8b",
-        "order": 11,
+        "group": "1227369e.67a609",
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "",
@@ -15164,6 +13974,8 @@
             "#c5b0d5"
         ],
         "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
         "x": 1370,
         "y": 660,
         "wires": [
@@ -17710,178 +16522,6 @@
         ]
     },
     {
-        "id": "903cb37f.b7b21",
-        "type": "switch",
-        "z": "c1790f94.1fa788",
-        "name": "Status Fenster WZ Süd",
-        "property": "STATUS_FENSTER_WZ_SUED",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 430,
-        "y": 1620,
-        "wires": [
-            [
-                "2e77b0dc.2d5d7"
-            ]
-        ]
-    },
-    {
-        "id": "8e3cd0f0.ca0bd",
-        "type": "BooleanLogicUltimate",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "filtertrue": "onlytrue",
-        "persist": true,
-        "sInitializeWith": "false",
-        "triggertopic": "condition",
-        "outputtriggeredby": "all",
-        "inputCount": "3",
-        "topic": "Alarm_3",
-        "x": 910,
-        "y": 1620,
-        "wires": [
-            [
-                "45762d37.995e3c",
-                "f38ad851.ca1f48"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "cf33e5df.001ee8",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "condition_Schiebe",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STATUS_FENSTER_WZ_SCHIEBE",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 720,
-        "y": 1360,
-        "wires": [
-            [
-                "1b0e0068.edd89"
-            ]
-        ]
-    },
-    {
-        "id": "1b0e0068.edd89",
-        "type": "BooleanLogicUltimate",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "filtertrue": "onlytrue",
-        "persist": true,
-        "sInitializeWith": "false",
-        "triggertopic": "condition",
-        "outputtriggeredby": "all",
-        "inputCount": "3",
-        "topic": "Alarm_1",
-        "x": 910,
-        "y": 1360,
-        "wires": [
-            [
-                "b829f21b.044f3",
-                "f38ad851.ca1f48"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "2eeacce4.045724",
-        "type": "BooleanLogicUltimate",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "filtertrue": "onlytrue",
-        "persist": true,
-        "sInitializeWith": "false",
-        "triggertopic": "condition",
-        "outputtriggeredby": "all",
-        "inputCount": "3",
-        "topic": "Alarm_2",
-        "x": 910,
-        "y": 1500,
-        "wires": [
-            [
-                "83edb01b.037a8",
-                "f38ad851.ca1f48"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "c0feeb7f.5c8bc8",
-        "type": "switch",
-        "z": "c1790f94.1fa788",
-        "name": "Status Fenster Küche Süd",
-        "property": "STATUS_FENSTER_KUECHE_SUED",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 430,
-        "y": 1500,
-        "wires": [
-            [
-                "77857df6.707784"
-            ]
-        ]
-    },
-    {
-        "id": "a2d95db0.39c7e",
-        "type": "switch",
-        "z": "c1790f94.1fa788",
-        "name": "Status Fenster WZ Schiebe",
-        "property": "STATUS_FENSTER_WZ_SCHIEBE",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 440,
-        "y": 1360,
-        "wires": [
-            [
-                "cf33e5df.001ee8"
-            ]
-        ]
-    },
-    {
         "id": "f0f22d06.de052",
         "type": "inject",
         "z": "4f28065f.6e1fb8",
@@ -18242,135 +16882,6 @@
         ]
     },
     {
-        "id": "77857df6.707784",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "condition_Küche",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STATUS_FENSTER_KUECHE_SUED",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 720,
-        "y": 1500,
-        "wires": [
-            [
-                "2eeacce4.045724"
-            ]
-        ]
-    },
-    {
-        "id": "2e77b0dc.2d5d7",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "condition_WZ",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STATUS_FENSTER_WZ_SUED",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 720,
-        "y": 1620,
-        "wires": [
-            [
-                "8e3cd0f0.ca0bd"
-            ]
-        ]
-    },
-    {
-        "id": "e259058b.4e57d8",
-        "type": "ui_switch",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "label": "Alarm",
-        "tooltip": "",
-        "group": "3de74921.630726",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "Alarm_aktiv",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 670,
-        "y": 1420,
-        "wires": [
-            [
-                "1b0e0068.edd89",
-                "6b92b31b.f5793c",
-                "2eeacce4.045724",
-                "8e3cd0f0.ca0bd"
-            ]
-        ]
-    },
-    {
-        "id": "af47937d.a6d06",
-        "type": "inject",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 450,
-        "y": 1420,
-        "wires": [
-            [
-                "cf33e5df.001ee8",
-                "77857df6.707784",
-                "2e77b0dc.2d5d7"
-            ]
-        ]
-    },
-    {
         "id": "97a2036b.0979b",
         "type": "combine-defer",
         "z": "4e67676c.de2018",
@@ -18427,158 +16938,6 @@
         "wires": [
             [
                 "4014341f.2a271c"
-            ]
-        ]
-    },
-    {
-        "id": "8e807ecc.f943f",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Status Alarm detected",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1460,
-        "y": 1860,
-        "wires": [
-            [
-                "2599be95.ce1232"
-            ]
-        ]
-    },
-    {
-        "id": "2599be95.ce1232",
-        "type": "function",
-        "z": "c1790f94.1fa788",
-        "name": "Trigger_Alarm",
-        "func": "var payload=msg.payload;\nvar alarm_flag=context.get(\"alarm_flag\");\nif(typeof alarm_flag==\"undefined\")\nalarm_flag=false;\n\nif (payload>0 && !alarm_flag)\n{\n    alarm_flag=true;\n    msg.alarm=1;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;\n}\nif (payload<=1 && alarm_flag)\n{\n    alarm_flag=false;\n    msg.alarm=0;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;    \n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1770,
-        "y": 1860,
-        "wires": [
-            [
-                "f6eee2bb.f7ffe"
-            ]
-        ]
-    },
-    {
-        "id": "f6eee2bb.f7ffe",
-        "type": "function",
-        "z": "c1790f94.1fa788",
-        "name": "message_to_mail",
-        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Alarm wurde ausgelöst!\";\n    message=\" Eines der drei Fenster im WZ wurde geöffnet!\";\n}\nelse\n{\n    msg.topic=\"Info Alarmanlage\";\n    message=\" Alarm ist inaktiv!\";\n}\nmsg.payload=\"time:\"+d+message;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 2020,
-        "y": 1860,
-        "wires": [
-            [
-                "47e02129.e648e"
-            ]
-        ]
-    },
-    {
-        "id": "47e02129.e648e",
-        "type": "e-mail",
-        "z": "c1790f94.1fa788",
-        "server": "posteo.de",
-        "port": "465",
-        "secure": true,
-        "tls": true,
-        "name": "gerd.loedige@posteo.de",
-        "dname": "Gerds Mail",
-        "x": 2240,
-        "y": 1860,
-        "wires": []
-    },
-    {
-        "id": "f38ad851.ca1f48",
-        "type": "BooleanLogicUltimate",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "filtertrue": "both",
-        "persist": true,
-        "sInitializeWith": "false",
-        "triggertopic": "condition",
-        "outputtriggeredby": "all",
-        "inputCount": "2",
-        "topic": "Alarm_1",
-        "x": 1180,
-        "y": 1860,
-        "wires": [
-            [],
-            [
-                "8e807ecc.f943f"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "1bcaf42a.fae22c",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "set topic",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Anwesenheit",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 260,
-        "y": 1740,
-        "wires": [
-            [
-                "868775cd.f4a868"
-            ]
-        ]
-    },
-    {
-        "id": "bec48df9.b142",
-        "type": "InvertUltimate",
-        "z": "c1790f94.1fa788",
-        "name": "Invert",
-        "x": 690,
-        "y": 1740,
-        "wires": [
-            [
-                "1b0e0068.edd89",
-                "2eeacce4.045724",
-                "8e3cd0f0.ca0bd"
             ]
         ]
     },
@@ -18952,51 +17311,6 @@
         ]
     },
     {
-        "id": "868775cd.f4a868",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "BestätigungAnwesenheit",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "BestätigungAnwesenheit",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 490,
-        "y": 1740,
-        "wires": [
-            [
-                "bec48df9.b142",
-                "e1dc8e3.0d4017"
-            ]
-        ]
-    },
-    {
-        "id": "e1dc8e3.0d4017",
-        "type": "debug",
-        "z": "c1790f94.1fa788",
-        "name": "nicht anwesend",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 690,
-        "y": 1860,
-        "wires": []
-    },
-    {
         "id": "f87f2b9a.920568",
         "type": "ccu-value",
         "z": "33898250.03adbe",
@@ -19247,7 +17561,6 @@
         "id": "8ccc23f5.2f2a1",
         "type": "clock-timer",
         "z": "33898250.03adbe",
-        "d": true,
         "name": "Zeit Außenlicht",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
@@ -19387,7 +17700,7 @@
         "id": "3c81a7f4.287d78",
         "type": "inject",
         "z": "33898250.03adbe",
-        "name": "all 1min",
+        "name": "all 5min",
         "props": [
             {
                 "p": "payload"
@@ -19397,7 +17710,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "60",
+        "repeat": "300",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -19432,7 +17745,7 @@
         "id": "3bd3e0b8.15cd8",
         "type": "change",
         "z": "33898250.03adbe",
-        "name": "Helligkeit = 50%",
+        "name": "Helligkeit = 20%",
         "rules": [
             {
                 "t": "move",
@@ -19445,7 +17758,7 @@
                 "t": "set",
                 "p": "payload.brightness",
                 "pt": "msg",
-                "to": "50",
+                "to": "20",
                 "tot": "num"
             }
         ],
@@ -20623,105 +18936,6 @@
         ]
     },
     {
-        "id": "fc4c01b6.5239e",
-        "type": "remote-notification",
-        "z": "c1790f94.1fa788",
-        "confignode": "5cef20a2.d8cbc",
-        "name": "",
-        "notificationTitle": "message.title",
-        "notificationTitleType": "msg",
-        "notificationBody": "message.body",
-        "notificationBodyType": "msg",
-        "notificationSound": "default",
-        "notificationSoundComputed": "payload.sound",
-        "notificationSoundComputedType": "msg",
-        "output": 1,
-        "x": 1570,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e36c9096.a6bfe",
-        "type": "switch",
-        "z": "c1790f94.1fa788",
-        "name": "",
-        "property": "alarm",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1350,
-        "y": 380,
-        "wires": [
-            [
-                "fc4c01b6.5239e"
-            ]
-        ]
-    },
-    {
-        "id": "37c63be4.9cc4f4",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Message Fitness-Keller",
-        "rules": [
-            {
-                "t": "set",
-                "p": "message",
-                "pt": "msg",
-                "to": "{\"title\":\"ALARM\",\"body\":\"Wasser im Fitness-Keller!\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1110,
-        "y": 340,
-        "wires": [
-            [
-                "e36c9096.a6bfe"
-            ]
-        ]
-    },
-    {
-        "id": "bbd2d2d8.7c38c",
-        "type": "change",
-        "z": "c1790f94.1fa788",
-        "name": "Message HWR Keller",
-        "rules": [
-            {
-                "t": "set",
-                "p": "message",
-                "pt": "msg",
-                "to": "{\"title\":\"ALARM\",\"body\":\"Wasser im HWR-Keller!\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1100,
-        "y": 420,
-        "wires": [
-            [
-                "e36c9096.a6bfe"
-            ]
-        ]
-    },
-    {
         "id": "2c63c858.b3be78",
         "type": "inject",
         "z": "4e67676c.de2018",
@@ -21846,7 +20060,7 @@
         "id": "57015e6.51f80a",
         "type": "inject",
         "z": "e20ea6d6.476028",
-        "name": "all 2min",
+        "name": "all 5min",
         "props": [
             {
                 "p": "payload"
@@ -21856,7 +20070,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "120",
+        "repeat": "300",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -22129,12 +20343,12 @@
         "id": "32e254fd.4e37ac",
         "type": "hydrawise-command",
         "z": "e20ea6d6.476028",
-        "name": "Hunter Rain Controller",
+        "name": "Hunter_Node_Red_Controller",
         "controller": "c66039fc.9f9668",
         "zone": "Rasen Terrasse",
         "command": "info",
         "duration": "10",
-        "x": 500,
+        "x": 530,
         "y": 240,
         "wires": [
             [
@@ -22184,7 +20398,7 @@
         "name": "passWhenIrrigationORManualWaterUseIsTrue",
         "filtertrue": "both",
         "persist": true,
-        "sInitializeWith": "WaitForPayload",
+        "sInitializeWith": "false",
         "triggertopic": "trigger",
         "outputtriggeredby": "all",
         "inputCount": "8",
@@ -22628,8 +20842,8 @@
         "datapointProperty": "value",
         "setProp": "payload",
         "setPropType": "msg",
-        "x": 470,
-        "y": 1048,
+        "x": 450,
+        "y": 1140,
         "wires": [
             [
                 "a6d5079c.46b308"
@@ -22653,12 +20867,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 210,
-        "y": 1048,
+        "x": 190,
+        "y": 1140,
         "wires": [
             [
                 "2ffe6725.d625a8",
-                "4cede9f.9ce5518",
                 "921ff53f.01e208"
             ]
         ]
@@ -22682,8 +20895,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 860,
-        "y": 1048,
+        "x": 840,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -22694,8 +20907,8 @@
         "z": "e20ea6d6.476028",
         "name": "Get Status Power Supply",
         "info": "",
-        "x": 210,
-        "y": 988,
+        "x": 190,
+        "y": 1080,
         "wires": []
     },
     {
@@ -22752,88 +20965,9 @@
         "z": "e20ea6d6.476028",
         "name": "Get Status Switch Garden Pump",
         "info": "",
-        "x": 230,
-        "y": 1174,
+        "x": 190,
+        "y": 1260,
         "wires": []
-    },
-    {
-        "id": "5a202427.0198dc",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "SwitchONGardenPumpPowerSupply",
-        "rules": [
-            {
-                "t": "set",
-                "p": "SwitchONGardenPumpPowerSupply",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 610,
-        "y": 1294,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4cede9f.9ce5518",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "defTopicGardenPumpPowerSupply",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "GardenPumpPowerSupply",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 280,
-        "y": 840,
-        "wires": [
-            [
-                "f40d58b1.049698"
-            ]
-        ]
-    },
-    {
-        "id": "f40d58b1.049698",
-        "type": "change",
-        "z": "e20ea6d6.476028",
-        "name": "SetPayloadToSwitchONOfGardenPumpPowerSupply",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "SwitchONGardenPumpPowerSupply",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 840,
-        "wires": [
-            [
-                "5d561a04.486744"
-            ]
-        ]
     },
     {
         "id": "603c914f.53625",
@@ -22852,8 +20986,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 800,
-        "y": 1234,
+        "x": 840,
+        "y": 900,
         "wires": []
     },
     {
@@ -22900,15 +21034,15 @@
         "z": "e20ea6d6.476028",
         "name": "SysVar_Switch_Garden_Pump",
         "ccuConfig": "38263145.35ea0e",
-        "topic": "ReGaHSS/${Name}",
-        "change": true,
+        "topic": "SysVarSwitch",
+        "change": false,
         "cache": true,
-        "x": 250,
-        "y": 1234,
+        "x": 270,
+        "y": 840,
         "wires": [
             [
-                "5a202427.0198dc",
-                "f7df1de1.f437e"
+                "f7df1de1.f437e",
+                "5d561a04.486744"
             ]
         ]
     },
@@ -22959,8 +21093,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 1234,
+        "x": 580,
+        "y": 900,
         "wires": [
             [
                 "603c914f.53625"
@@ -23277,6 +21411,2449 @@
         "info": "",
         "x": 320,
         "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "63de933f.daf2fc",
+        "type": "function",
+        "z": "c1790f94.1fa788",
+        "name": "Trigger_Alarm",
+        "func": "var payload=msg.payload;\nvar alarm_flag=context.get(\"alarm_flag\");\nif(typeof alarm_flag==\"undefined\")\nalarm_flag=false;\n\nif (payload>0 && !alarm_flag)\n{\n    alarm_flag=true;\n    msg.alarm=1;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;\n}\nif (payload<=1 && alarm_flag)\n{\n    alarm_flag=false;\n    msg.alarm=0;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;    \n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 400,
+        "wires": [
+            [
+                "a3e9c916.8d8838",
+                "10925124.2a5c3f",
+                "13850d9e.d93ec2"
+            ]
+        ]
+    },
+    {
+        "id": "4b2ff740.f4a4f8",
+        "type": "e-mail",
+        "z": "c1790f94.1fa788",
+        "d": true,
+        "server": "posteo.de",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "gerd.loedige@posteo.de",
+        "dname": "Gerds Mail",
+        "x": 1370,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a3e9c916.8d8838",
+        "type": "function",
+        "z": "c1790f94.1fa788",
+        "d": true,
+        "name": "message_to_mail",
+        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Wasser im Waschraum\";\n    message=\" Wassersensor hat Wasser im Keller detektiert!\";\n}\nelse\n{\n    msg.topic=\"Info Wassersensor Keller\";\n    message=\" Wassersensor meldet i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1150,
+        "y": 220,
+        "wires": [
+            [
+                "4b2ff740.f4a4f8",
+                "7204a736.13d5a8"
+            ]
+        ]
+    },
+    {
+        "id": "7204a736.13d5a8",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "Alarm_Trigger",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e5397469.c3abc8",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "Wasser im Keller 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 630,
+        "y": 240,
+        "wires": [
+            [
+                "63de933f.daf2fc"
+            ]
+        ]
+    },
+    {
+        "id": "1db65715.f9e979",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "kein Wasser im Keller 0",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 640,
+        "y": 320,
+        "wires": [
+            [
+                "63de933f.daf2fc"
+            ]
+        ]
+    },
+    {
+        "id": "b65dc716.20fff8",
+        "type": "comment",
+        "z": "c1790f94.1fa788",
+        "name": "Mailbenachrichtigung bei Wasser im Keller",
+        "info": "",
+        "x": 260,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "152c3591.4453ca",
+        "type": "ccu-value",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2019168:1 Rauchmelder Schlafzimmer",
+        "datapoint": "LOWBAT",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": true,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "8328a5c7.399818",
+                "ebbdf41f.876f98"
+            ]
+        ]
+    },
+    {
+        "id": "1669856b.19e31b",
+        "type": "function",
+        "z": "c1790f94.1fa788",
+        "name": "message_to_mail",
+        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"Batteriestatus Rachmelder Zimmer Konstantin\";\n    message=\"Die Batterie des Rauchmelders muss gewechselt werden!\";\n}\nelse\n{\n    msg.topic=\"Batteriestatus Rachmelder Zimmer Konstantin\";\n    message=\" Batterie Rauchmelder ist i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1110,
+        "y": 840,
+        "wires": [
+            [
+                "761f70eb.3f63f"
+            ]
+        ]
+    },
+    {
+        "id": "761f70eb.3f63f",
+        "type": "e-mail",
+        "z": "c1790f94.1fa788",
+        "server": "posteo.de",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "gerd.loedige@posteo.de",
+        "dname": "Gerds Mail",
+        "x": 1350,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "8328a5c7.399818",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "6be37f3e.3dbdd",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 760,
+        "wires": [
+            [
+                "152c3591.4453ca"
+            ]
+        ]
+    },
+    {
+        "id": "bb6350a7.9698f",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Status Wasser",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "63de933f.daf2fc"
+            ]
+        ]
+    },
+    {
+        "id": "e471be69.ff817",
+        "type": "comment",
+        "z": "c1790f94.1fa788",
+        "name": "Mailbenachrichtigung Batteriestatus Rauchmelder",
+        "info": "",
+        "x": 280,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "75aebf.ce69d14",
+        "type": "function",
+        "z": "c1790f94.1fa788",
+        "name": "Trigger_Alarm",
+        "func": "var payload=msg.payload;\nvar alarm_flag=context.get(\"alarm_flag\");\nif(typeof alarm_flag==\"undefined\")\nalarm_flag=false;\n\nif (payload>0 && !alarm_flag)\n{\n    alarm_flag=true;\n    msg.alarm=1;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;\n}\nif (payload<=1 && alarm_flag)\n{\n    alarm_flag=false;\n    msg.alarm=0;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;    \n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 900,
+        "y": 840,
+        "wires": [
+            [
+                "1669856b.19e31b"
+            ]
+        ]
+    },
+    {
+        "id": "ebbdf41f.876f98",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 840,
+        "wires": [
+            [
+                "75aebf.ce69d14",
+                "8328a5c7.399818"
+            ]
+        ]
+    },
+    {
+        "id": "7802b728.1d2df8",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "SysVar_Wasserstand_Waschraum",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "ReGaHSS/${Name}",
+        "change": true,
+        "cache": true,
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "bb6350a7.9698f"
+            ]
+        ]
+    },
+    {
+        "id": "f85f2cd7.c7ed2",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "SysVar_Wasserstand_HWR",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "ReGaHSS/${Name}",
+        "change": true,
+        "cache": true,
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "bb6350a7.9698f"
+            ]
+        ]
+    },
+    {
+        "id": "93a77828.61a008",
+        "type": "function",
+        "z": "c1790f94.1fa788",
+        "d": true,
+        "name": "message_to_mail",
+        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Wasser im HWR\";\n    message=\" Wassersensor hat Wasser im Keller detektiert!\";\n}\nelse\n{\n    msg.topic=\"Info Wassersensor Keller\";\n    message=\" Wassersensor meldet i.O.!\";\n}\nmsg.payload=\"time:\"+d+message;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1110,
+        "y": 520,
+        "wires": [
+            [
+                "9485c1ff.66bbe"
+            ]
+        ]
+    },
+    {
+        "id": "9485c1ff.66bbe",
+        "type": "e-mail",
+        "z": "c1790f94.1fa788",
+        "d": true,
+        "server": "posteo.de",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "gerd.loedige@posteo.de",
+        "dname": "Gerds Mail",
+        "x": 1330,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "89a9a20.67a646",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "Alarm aus",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 180,
+        "y": 1080,
+        "wires": [
+            [
+                "1d1b3d02.eb3693"
+            ]
+        ]
+    },
+    {
+        "id": "1d1b3d02.eb3693",
+        "type": "ccu-value",
+        "z": "c1790f94.1fa788",
+        "name": "RM_Flur_OG",
+        "iface": "HmIP-RF",
+        "channel": "000A5D899B6E2E:1 Rauchmelder Flur OG",
+        "datapoint": "SMOKE_DETECTOR_COMMAND",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 410,
+        "y": 1080,
+        "wires": [
+            [
+                "2b2fda1c.b6d066"
+            ]
+        ]
+    },
+    {
+        "id": "3bc5f45d.4ced0c",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "Alarm ein",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 180,
+        "y": 1040,
+        "wires": [
+            [
+                "1d1b3d02.eb3693"
+            ]
+        ]
+    },
+    {
+        "id": "2b2fda1c.b6d066",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "Status IP RM",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "6a090af6.5c5084",
+        "type": "ccu-value",
+        "z": "c1790f94.1fa788",
+        "name": "RM_WZ",
+        "iface": "HmIP-RF",
+        "channel": "000A5D899B72E3:1 Rauchmelder_WZ",
+        "datapoint": "SMOKE_DETECTOR_COMMAND",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 2000,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77bb149e.d8110c",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "Status Blinker",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2020,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "2893fe1c.51a452",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "Alarm aus",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1380,
+        "y": 1800,
+        "wires": [
+            [
+                "39b91ade.add9f6",
+                "1b1fbe42.0e65a2",
+                "eeba6232.bb5ae",
+                "e4fd3678.004ad8"
+            ]
+        ]
+    },
+    {
+        "id": "4229863a.c05cb8",
+        "type": "comment",
+        "z": "c1790f94.1fa788",
+        "name": "Alarm über Fensterkontaktschalter EG Süd",
+        "info": "",
+        "x": 360,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "a123f997.9245f8",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "every 1min",
+        "props": [],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "3",
+        "topic": "",
+        "x": 150,
+        "y": 1500,
+        "wires": [
+            [
+                "4af77fb8.21885",
+                "b519aca9.cd0dd"
+            ]
+        ]
+    },
+    {
+        "id": "98cf06f7.f142d8",
+        "type": "ui_text",
+        "z": "c1790f94.1fa788",
+        "group": "3de74921.630726",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status Alarm",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1190,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "978c535d.29d58",
+        "type": "ui_button",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "group": "3de74921.630726",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "quit Alarm",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "quitAlarm",
+        "topicType": "str",
+        "x": 1380,
+        "y": 1880,
+        "wires": [
+            [
+                "39b91ade.add9f6",
+                "1b1fbe42.0e65a2",
+                "eeba6232.bb5ae",
+                "e4fd3678.004ad8"
+            ]
+        ]
+    },
+    {
+        "id": "c0c6ab9f.4b2cb8",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Aktivierung_IP-RM",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1730,
+        "y": 1486,
+        "wires": [
+            [
+                "6a090af6.5c5084",
+                "da353d52.2fb78"
+            ]
+        ]
+    },
+    {
+        "id": "39b91ade.add9f6",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Deaktivierung_IP-RM",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1740,
+        "y": 1400,
+        "wires": [
+            [
+                "6a090af6.5c5084",
+                "3984eaff.0ad066"
+            ]
+        ]
+    },
+    {
+        "id": "c1809d4.20ef56",
+        "type": "BooleanLogicUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "condition_WZ_Sued",
+        "outputtriggeredby": "onlyonetopic",
+        "inputCount": "3",
+        "topic": "Alarm_3",
+        "x": 990,
+        "y": 1960,
+        "wires": [
+            [
+                "f4b58ebf.a70d7"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f44d0bb4.b763f8",
+        "type": "BooleanLogicUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "condition_WZ_Schiebe",
+        "outputtriggeredby": "onlyonetopic",
+        "inputCount": "3",
+        "topic": "Alarm_1",
+        "x": 1000,
+        "y": 1800,
+        "wires": [
+            [
+                "62a01c97.489944"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d98cc81f.a93dd8",
+        "type": "BooleanLogicUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "condition_Kueche_Sued",
+        "outputtriggeredby": "onlyonetopic",
+        "inputCount": "3",
+        "topic": "Alarm_2",
+        "x": 1000,
+        "y": 1878,
+        "wires": [
+            [
+                "5be1a572.44aa4c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9034eecd.43f94",
+        "type": "ui_switch",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "label": "Alarm",
+        "tooltip": "",
+        "group": "3de74921.630726",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "condition",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 410,
+        "y": 2440,
+        "wires": [
+            [
+                "e0a6521e.59dc1"
+            ]
+        ]
+    },
+    {
+        "id": "cd75c872.1c99f8",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "d": true,
+        "name": "Status Alarm detected",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1960,
+        "y": 1820,
+        "wires": [
+            [
+                "3a6caf26.20645"
+            ]
+        ]
+    },
+    {
+        "id": "3a6caf26.20645",
+        "type": "function",
+        "z": "c1790f94.1fa788",
+        "name": "Trigger_Alarm",
+        "func": "var payload=msg.payload;\nvar alarm_flag=context.get(\"alarm_flag\");\nif(typeof alarm_flag==\"undefined\")\nalarm_flag=false;\n\nif (payload>0 && !alarm_flag)\n{\n    alarm_flag=true;\n    msg.alarm=1;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;\n}\nif (payload<=1 && alarm_flag)\n{\n    alarm_flag=false;\n    msg.alarm=0;\n    context.set(\"alarm_flag\",alarm_flag);\n    return msg;    \n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 2220,
+        "y": 1820,
+        "wires": [
+            [
+                "b30d3f9.486d7c"
+            ]
+        ]
+    },
+    {
+        "id": "b30d3f9.486d7c",
+        "type": "function",
+        "z": "c1790f94.1fa788",
+        "name": "message_to_mail",
+        "func": "var temp=msg.payload;\nmsg.to=\"gerd.loedige@posteo.de\";\nmsg.from=\"noreply@gmail.com\";\n\nvar d= new Date();\nvar message=\"\";\nif(msg.alarm)\n{\n    msg.topic=\"ACHTUNG: Alarm wurde ausgelöst!\";\n    message=\" Eines der drei Fenster im WZ wurde geöffnet!\";\n}\nelse\n{\n    msg.topic=\"Info Alarmanlage\";\n    message=\" Alarm ist inaktiv!\";\n}\nmsg.payload=\"time:\"+d+message;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 2450,
+        "y": 1820,
+        "wires": [
+            [
+                "df2ec5dd.061488"
+            ]
+        ]
+    },
+    {
+        "id": "df2ec5dd.061488",
+        "type": "e-mail",
+        "z": "c1790f94.1fa788",
+        "server": "posteo.de",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "gerd.loedige@posteo.de",
+        "dname": "Gerds Mail",
+        "x": 2670,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "4af77fb8.21885",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "set topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Anwesenheit",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1440,
+        "wires": [
+            [
+                "a3c1636e.dd1f1"
+            ]
+        ]
+    },
+    {
+        "id": "5e7666b6.7f3668",
+        "type": "InvertUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "Invert",
+        "x": 630,
+        "y": 1560,
+        "wires": [
+            [
+                "f44d0bb4.b763f8",
+                "d98cc81f.a93dd8",
+                "c1809d4.20ef56",
+                "b67b0143.03dc1"
+            ]
+        ]
+    },
+    {
+        "id": "a3c1636e.dd1f1",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "BestätigungAnwesenheit",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "BestätigungAnwesenheit",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1500,
+        "wires": [
+            [
+                "748e3b12.fdf234",
+                "5e7666b6.7f3668"
+            ]
+        ]
+    },
+    {
+        "id": "748e3b12.fdf234",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "nicht anwesend",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "4cee3537.f51fac",
+        "type": "remote-notification",
+        "z": "c1790f94.1fa788",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 1610,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cde153eb.34a28",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "property": "alarm",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1390,
+        "y": 400,
+        "wires": [
+            [
+                "4cee3537.f51fac"
+            ]
+        ]
+    },
+    {
+        "id": "10925124.2a5c3f",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Message Fitness-Keller",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"ALARM\",\"body\":\"Wasser im Fitness-Keller!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 360,
+        "wires": [
+            [
+                "cde153eb.34a28"
+            ]
+        ]
+    },
+    {
+        "id": "13850d9e.d93ec2",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Message HWR Keller",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"ALARM\",\"body\":\"Wasser im HWR-Keller!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 440,
+        "wires": [
+            [
+                "cde153eb.34a28"
+            ]
+        ]
+    },
+    {
+        "id": "20d02648.6e26ba",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Message Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "{\"title\":\"ALARM\",\"body\":\"Fenster WZ wurde geöffnet!\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1940,
+        "y": 1740,
+        "wires": [
+            [
+                "3d82f21e.71fdce"
+            ]
+        ]
+    },
+    {
+        "id": "3d82f21e.71fdce",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2140,
+        "y": 1740,
+        "wires": [
+            [
+                "4eb300a8.7501b"
+            ]
+        ]
+    },
+    {
+        "id": "4eb300a8.7501b",
+        "type": "remote-notification",
+        "z": "c1790f94.1fa788",
+        "confignode": "5cef20a2.d8cbc",
+        "name": "",
+        "notificationTitle": "message.title",
+        "notificationTitleType": "msg",
+        "notificationBody": "message.body",
+        "notificationBodyType": "msg",
+        "notificationSound": "default",
+        "notificationSoundComputed": "payload.sound",
+        "notificationSoundComputedType": "msg",
+        "output": 1,
+        "x": 2350,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da353d52.2fb78",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "ALARM ausgelöst",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2030,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "3984eaff.0ad066",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "ALARM abgeschaltet",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "6bea8694.192c78",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "condition_WZ_Sued",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 570,
+        "y": 2000,
+        "wires": [
+            [
+                "c1809d4.20ef56"
+            ]
+        ]
+    },
+    {
+        "id": "368f3564.39de9a",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "Fensterkontakt_WZ_Schiebe",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "condition_WZ_Schiebe",
+        "change": true,
+        "cache": true,
+        "x": 500,
+        "y": 1800,
+        "wires": [
+            [
+                "f44d0bb4.b763f8"
+            ]
+        ]
+    },
+    {
+        "id": "983eb256.522f3",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "Fensterkontakt_Küche_Süd",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "condition_Kueche_Sued",
+        "change": true,
+        "cache": true,
+        "x": 500,
+        "y": 1880,
+        "wires": [
+            [
+                "d98cc81f.a93dd8"
+            ]
+        ]
+    },
+    {
+        "id": "c64e71c1.b3d37",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "Fensterkontakt_WZ_Schmal_Süd",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "condition_WZ_Sued",
+        "change": true,
+        "cache": true,
+        "x": 520,
+        "y": 1960,
+        "wires": [
+            [
+                "c1809d4.20ef56"
+            ]
+        ]
+    },
+    {
+        "id": "a9795efd.962a8",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "condition_WZ_Sued",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 570,
+        "y": 2040,
+        "wires": [
+            [
+                "c1809d4.20ef56"
+            ]
+        ]
+    },
+    {
+        "id": "d6cbfc6a.23",
+        "type": "ccu-value",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "iface": "BidCos-RF",
+        "channel": "OEQ2309458:1 Licht Flur EG",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 2010,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b1fbe42.0e65a2",
+        "type": "BlinkerUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "Blinker",
+        "stopbehaviorPIN1": "0",
+        "stopbehaviorPIN2": false,
+        "blinkfrequency": "2000",
+        "x": 1730,
+        "y": 1560,
+        "wires": [
+            [
+                "d6cbfc6a.23",
+                "d2ad996e.2df348",
+                "77bb149e.d8110c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d2ad996e.2df348",
+        "type": "ccu-value",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "iface": "BidCos-RF",
+        "channel": "OEQ1263524:1 Licht Flur OG",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 2010,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb0bdb4e.a70bd8",
+        "type": "rising-edge",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "threshold": "0.5",
+        "x": 510,
+        "y": 2180,
+        "wires": [
+            [
+                "6ed6440b.ff3a6c"
+            ]
+        ]
+    },
+    {
+        "id": "9cf19b6c.1bfa08",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Change bool to int",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 2280,
+        "wires": [
+            [
+                "cb0bdb4e.a70bd8"
+            ]
+        ]
+    },
+    {
+        "id": "6ed6440b.ff3a6c",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "Change int to bool",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 2180,
+        "wires": [
+            [
+                "3656b746.63efa8"
+            ]
+        ]
+    },
+    {
+        "id": "f4b58ebf.a70d7",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "condition_WZ_Sued",
+        "links": [
+            "809bcae8.556298"
+        ],
+        "x": 1164,
+        "y": 1947,
+        "wires": []
+    },
+    {
+        "id": "809bcae8.556298",
+        "type": "link in",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "links": [
+            "5be1a572.44aa4c",
+            "62a01c97.489944",
+            "a5d2754b.1f9a58",
+            "f4b58ebf.a70d7"
+        ],
+        "x": 135,
+        "y": 2280,
+        "wires": [
+            [
+                "9cf19b6c.1bfa08"
+            ]
+        ]
+    },
+    {
+        "id": "a884d2f6.22676",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "RisingEdgeWZSuidOut",
+        "links": [
+            "84d5d10c.d82c5"
+        ],
+        "x": 1454,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "84d5d10c.d82c5",
+        "type": "link in",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "links": [
+            "a884d2f6.22676"
+        ],
+        "x": 1395,
+        "y": 1700,
+        "wires": [
+            [
+                "1b1fbe42.0e65a2",
+                "c0c6ab9f.4b2cb8",
+                "20d02648.6e26ba",
+                "cd75c872.1c99f8",
+                "aab508f4.5b28e8",
+                "e4fd3678.004ad8",
+                "39b91ade.add9f6"
+            ]
+        ]
+    },
+    {
+        "id": "62a01c97.489944",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "condition_WZ_Schiebe",
+        "links": [
+            "809bcae8.556298"
+        ],
+        "x": 1164,
+        "y": 1787,
+        "wires": []
+    },
+    {
+        "id": "5be1a572.44aa4c",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "condition_Kueche_Sued",
+        "links": [
+            "809bcae8.556298"
+        ],
+        "x": 1163,
+        "y": 1865,
+        "wires": []
+    },
+    {
+        "id": "8d9663a.05e27a",
+        "type": "cast-to-client",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "url": "",
+        "contentType": "",
+        "message": "",
+        "language": "en",
+        "ip": "",
+        "port": "",
+        "volume": "100",
+        "x": 2390,
+        "y": 1900,
+        "wires": [
+            [
+                "b885e401.447548"
+            ]
+        ]
+    },
+    {
+        "id": "23bdf480.46b85c",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip",
+                "pt": "msg",
+                "to": "192.168.10.21",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "Alarm, Einbruch registriert!",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "language",
+                "pt": "msg",
+                "to": "De",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2180,
+        "y": 1900,
+        "wires": [
+            [
+                "8d9663a.05e27a"
+            ]
+        ]
+    },
+    {
+        "id": "b885e401.447548",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 2590,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "68621748.830258",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ip",
+                "pt": "msg",
+                "to": "192.168.10.23",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "message",
+                "pt": "msg",
+                "to": "Alarm, Einbruch registriert!",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "language",
+                "pt": "msg",
+                "to": "De",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2180,
+        "y": 1980,
+        "wires": [
+            [
+                "b41aa235.b8052"
+            ]
+        ]
+    },
+    {
+        "id": "b41aa235.b8052",
+        "type": "cast-to-client",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "url": "",
+        "contentType": "",
+        "message": "",
+        "language": "en",
+        "ip": "",
+        "port": "",
+        "volume": "100",
+        "x": 2390,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b67b0143.03dc1",
+        "type": "BooleanLogicUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "motion_terrace_detected",
+        "outputtriggeredby": "onlyonetopic",
+        "inputCount": "3",
+        "topic": "Alarm_4",
+        "x": 1000,
+        "y": 1720,
+        "wires": [
+            [
+                "a5d2754b.1f9a58"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ebcfe220.8dd9e",
+        "type": "ccu-set-value",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "iface": "",
+        "ccuConfig": "38263145.35ea0e",
+        "rooms": "Wohnzimmer",
+        "roomsRx": "str",
+        "functions": "",
+        "functionsRx": "str",
+        "device": "",
+        "deviceRx": "str",
+        "deviceName": "",
+        "deviceNameRx": "str",
+        "deviceType": "",
+        "deviceTypeRx": "str",
+        "channel": "",
+        "channelRx": "str",
+        "channelName": "",
+        "channelNameRx": "str",
+        "channelType": "BLIND",
+        "channelTypeRx": "str",
+        "channelIndex": "",
+        "channelIndexRx": "str",
+        "datapoint": "LEVEL",
+        "datapointRx": "str",
+        "force": false,
+        "x": 1980,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "49afcb30.37c704",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0.1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1720,
+        "y": 2080,
+        "wires": [
+            [
+                "ebcfe220.8dd9e",
+                "f46e3c29.9c5b1"
+            ]
+        ]
+    },
+    {
+        "id": "a5d2754b.1f9a58",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "motion_terrace_detected",
+        "links": [
+            "809bcae8.556298"
+        ],
+        "x": 1163,
+        "y": 1707,
+        "wires": []
+    },
+    {
+        "id": "f46e3c29.9c5b1",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "BlindLevelWZ",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2000,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "781a1b2d.385b14",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "Inaktiv",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "Aktiv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 2520,
+        "wires": [
+            [
+                "98cf06f7.f142d8"
+            ]
+        ]
+    },
+    {
+        "id": "69ae7397.fe843c",
+        "type": "ui_chart",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "group": "67b1424b.30270c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 1573,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33d9ebac.3b1dd4",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "true",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 1573,
+        "wires": [
+            [
+                "69ae7397.fe843c"
+            ]
+        ]
+    },
+    {
+        "id": "ed5c917.628747",
+        "type": "ccu-sysvar",
+        "z": "c1790f94.1fa788",
+        "name": "SysVar_Motion_Detector_Garden",
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "motion_terrace_detected",
+        "change": true,
+        "cache": true,
+        "x": 520,
+        "y": 1720,
+        "wires": [
+            [
+                "b67b0143.03dc1",
+                "33d9ebac.3b1dd4"
+            ]
+        ]
+    },
+    {
+        "id": "10959cce.d9cdf3",
+        "type": "noraf-switch",
+        "z": "c1790f94.1fa788",
+        "devicename": "Alarm",
+        "roomhint": "",
+        "name": "SwitchToSetAlarm",
+        "passthru": true,
+        "errorifstateunchaged": false,
+        "nora": "e7b91b38.1d5708",
+        "topic": "condition",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "asyncCmd": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 2440,
+        "wires": [
+            [
+                "f3524d80.b46ea",
+                "781a1b2d.385b14",
+                "9034eecd.43f94"
+            ]
+        ]
+    },
+    {
+        "id": "f3524d80.b46ea",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flagAlarm",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 2440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0a6521e.59dc1",
+        "type": "rbe",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 550,
+        "y": 2440,
+        "wires": [
+            [
+                "10959cce.d9cdf3"
+            ]
+        ]
+    },
+    {
+        "id": "5381afcc.9b71a",
+        "type": "InvertUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "Invert",
+        "x": 1349,
+        "y": 2200,
+        "wires": [
+            [
+                "a884d2f6.22676"
+            ]
+        ]
+    },
+    {
+        "id": "b519aca9.cd0dd",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "set topic Alarm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "setAlarm",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 1580,
+        "wires": [
+            [
+                "525aeff.9d1c21"
+            ]
+        ]
+    },
+    {
+        "id": "708e046b.76a2ec",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "alarm",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "525aeff.9d1c21",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "flagAlarm",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 1660,
+        "wires": [
+            [
+                "708e046b.76a2ec",
+                "c1809d4.20ef56",
+                "b67b0143.03dc1",
+                "f44d0bb4.b763f8",
+                "d98cc81f.a93dd8"
+            ]
+        ]
+    },
+    {
+        "id": "3656b746.63efa8",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "switch topic Alarm",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Alarm_1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Alarm_2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Alarm_3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Alarm_4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 930,
+        "y": 2280,
+        "wires": [
+            [
+                "a884d2f6.22676",
+                "ba324d9d.1831b",
+                "f41d4b77.3297d8"
+            ],
+            [
+                "a884d2f6.22676",
+                "ba324d9d.1831b"
+            ],
+            [
+                "a884d2f6.22676",
+                "ba324d9d.1831b"
+            ],
+            [
+                "5809aad2.7c6654",
+                "70fb0744.898348"
+            ]
+        ]
+    },
+    {
+        "id": "b91c5b1c.078418",
+        "type": "InvertUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "Invert",
+        "x": 1349,
+        "y": 2340,
+        "wires": [
+            [
+                "5809aad2.7c6654"
+            ]
+        ]
+    },
+    {
+        "id": "5809aad2.7c6654",
+        "type": "link out",
+        "z": "c1790f94.1fa788",
+        "name": "RisingEdgeBlindProtectSuidOut",
+        "links": [
+            "83f1336f.0f79f"
+        ],
+        "x": 1454,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "83f1336f.0f79f",
+        "type": "link in",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "links": [
+            "5809aad2.7c6654"
+        ],
+        "x": 1395,
+        "y": 2080,
+        "wires": [
+            [
+                "49afcb30.37c704"
+            ]
+        ]
+    },
+    {
+        "id": "ba324d9d.1831b",
+        "type": "delay",
+        "z": "c1790f94.1fa788",
+        "name": "DisableDelay15min",
+        "pauseType": "delay",
+        "timeout": "900",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1170,
+        "y": 2200,
+        "wires": [
+            [
+                "5381afcc.9b71a"
+            ]
+        ]
+    },
+    {
+        "id": "70fb0744.898348",
+        "type": "delay",
+        "z": "c1790f94.1fa788",
+        "name": "DisableDelay60min",
+        "pauseType": "delay",
+        "timeout": "3600",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1170,
+        "y": 2340,
+        "wires": [
+            [
+                "b91c5b1c.078418"
+            ]
+        ]
+    },
+    {
+        "id": "f41d4b77.3297d8",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "Alarm_1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "eeba6232.bb5ae",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "reset Blind",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1710,
+        "y": 2160,
+        "wires": [
+            [
+                "f46e3c29.9c5b1"
+            ]
+        ]
+    },
+    {
+        "id": "767225bf.d982ec",
+        "type": "looptimer",
+        "z": "c1790f94.1fa788",
+        "duration": "4",
+        "units": "Second",
+        "maxloops": "250",
+        "maxtimeout": "15",
+        "maxtimeoutunits": "Minute",
+        "name": "",
+        "x": 1940,
+        "y": 1906,
+        "wires": [
+            [
+                "23bdf480.46b85c",
+                "68621748.830258",
+                "a3d6e3d2.0a2f8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e4fd3678.004ad8",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "reset Blind",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "false",
+                "fromt": "bool",
+                "to": "STOP",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1710,
+        "y": 1940,
+        "wires": [
+            [
+                "767225bf.d982ec"
+            ]
+        ]
+    },
+    {
+        "id": "5408561d.36a038",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "motion_terrace_detected",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 1780,
+        "wires": [
+            [
+                "b67b0143.03dc1"
+            ]
+        ]
+    },
+    {
+        "id": "59c97055.f7104",
+        "type": "inject",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "motion_terrace_detected",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 180,
+        "y": 1820,
+        "wires": [
+            [
+                "b67b0143.03dc1"
+            ]
+        ]
+    },
+    {
+        "id": "aab508f4.5b28e8",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "ifPayloadIsTrue",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1720,
+        "y": 1880,
+        "wires": [
+            [
+                "767225bf.d982ec"
+            ]
+        ]
+    },
+    {
+        "id": "a3d6e3d2.0a2f8",
+        "type": "debug",
+        "z": "c1790f94.1fa788",
+        "name": "blinkerVoiceAlarm",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2190,
+        "y": 2040,
         "wires": []
     }
 ]
