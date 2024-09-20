@@ -1387,8 +1387,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 690,
-        "y": 1900,
+        "x": 1190,
+        "y": 1760,
         "wires": [
             [
                 "5e7acd50.d5f96c",
@@ -1417,8 +1417,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1470,
-        "y": 1740,
+        "x": 2030,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -1443,8 +1443,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1440,
-        "y": 1862,
+        "x": 2000,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -1469,8 +1469,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1450,
-        "y": 1800,
+        "x": 2010,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -1486,15 +1486,14 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 410,
-        "y": 1980,
+        "x": 910,
+        "y": 1760,
         "wires": [
             [
                 "46f9c2e1.dfa20c",
                 "ef23857d.41543",
                 "9c307437.fce21",
-                "15f21c42.3d6674",
-                "fb31b96b.0d3138"
+                "15f21c42.3d6674"
             ]
         ]
     },
@@ -2634,16 +2633,6 @@
         "wires": []
     },
     {
-        "id": "766ed3a6.f8fbbc",
-        "type": "comment",
-        "z": "db6aac1c.cd43b",
-        "name": "Auswertung des Sonnenstandes Süd",
-        "info": "",
-        "x": 680,
-        "y": 1840,
-        "wires": []
-    },
-    {
         "id": "c19ab294.01bda",
         "type": "comment",
         "z": "db6aac1c.cd43b",
@@ -2678,8 +2667,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 1009,
-        "y": 1740,
+        "x": 1520,
+        "y": 1700,
         "wires": [
             [
                 "d51de3cc.0547d8"
@@ -2701,8 +2690,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1256,
-        "y": 1740,
+        "x": 1800,
+        "y": 1700,
         "wires": [
             [
                 "cca5a74b.baf9d"
@@ -2723,8 +2712,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 1009,
-        "y": 1800,
+        "x": 1520,
+        "y": 1760,
         "wires": [
             [
                 "9d9be169.d3daa"
@@ -2746,8 +2735,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1256,
-        "y": 1800,
+        "x": 1800,
+        "y": 1760,
         "wires": [
             [
                 "3e5b1273.99e4c6"
@@ -2768,8 +2757,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 999,
-        "y": 1862,
+        "x": 1530,
+        "y": 1820,
         "wires": [
             [
                 "ca82141f.0f393"
@@ -2791,8 +2780,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1256,
-        "y": 1862,
+        "x": 1800,
+        "y": 1820,
         "wires": [
             [
                 "a2d8b0b3.0283c"
@@ -2910,23 +2899,13 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 670,
-        "y": 2000,
+        "x": 1190,
+        "y": 2060,
         "wires": [
             [
                 "b80d9acd.df9928"
             ]
         ]
-    },
-    {
-        "id": "56ff9096.65bb6",
-        "type": "comment",
-        "z": "db6aac1c.cd43b",
-        "name": "Auswertung des Sonnenstandes Ost",
-        "info": "",
-        "x": 680,
-        "y": 1960,
-        "wires": []
     },
     {
         "id": "b80d9acd.df9928",
@@ -2949,8 +2928,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 990,
-        "y": 1980,
+        "x": 1490,
+        "y": 2060,
         "wires": [
             []
         ]
@@ -3031,7 +3010,7 @@
         ],
         "sunControlMode": "2",
         "sunFloorLength": "0",
-        "sunMinAltitude": "20",
+        "sunMinAltitude": "10",
         "sunMinDelta": "0.05",
         "blindPosMin": "10%",
         "blindPosMinType": "levelFixed",
@@ -3065,8 +3044,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 680,
-        "y": 2100,
+        "x": 1190,
+        "y": 1940,
         "wires": [
             [
                 "e67b52f.20b77b",
@@ -3094,21 +3073,11 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 990,
-        "y": 2073,
+        "x": 1500,
+        "y": 1913,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "b4e5e93b.6737d8",
-        "type": "comment",
-        "z": "db6aac1c.cd43b",
-        "name": "Auswertung des Sonnenstandes West",
-        "info": "",
-        "x": 670,
-        "y": 2060,
-        "wires": []
     },
     {
         "id": "46f10ef3.cdc498",
@@ -3244,8 +3213,8 @@
                 "icon": ""
             }
         ],
-        "x": 200,
-        "y": 2200,
+        "x": 180,
+        "y": 1920,
         "wires": []
     },
     {
@@ -4527,7 +4496,7 @@
         "label": "Status Sun Protection [EG]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 440,
+        "x": 700,
         "y": 1660,
         "wires": []
     },
@@ -4538,7 +4507,7 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 410,
+        "x": 430,
         "y": 1780,
         "wires": [
             [
@@ -4663,8 +4632,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 590,
-        "y": 2820,
+        "x": 610,
+        "y": 2720,
         "wires": []
     },
     {
@@ -5717,229 +5686,6 @@
         ]
     },
     {
-        "id": "b844d600.470698",
-        "type": "blind-control",
-        "z": "db6aac1c.cd43b",
-        "d": true,
-        "name": "Sonnenschutz Süd Konstantin mit Mittagschlaf",
-        "topic": "",
-        "positionConfig": "6ad7a531.04aedc",
-        "outputs": "1",
-        "autoTrigger": false,
-        "autoTriggerTime": 3600000,
-        "startDelayTime": "0",
-        "storeName": "",
-        "blindIncrement": 0.01,
-        "blindOpenPos": 1,
-        "blindClosedPos": 0,
-        "blindPosReverse": false,
-        "blindPosDefault": "open (max)",
-        "blindPosDefaultType": "levelFixed",
-        "overwriteExpire": "",
-        "rules": [
-            {
-                "index": 0,
-                "name": "Mittagschlag Beginn",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "12:00",
-                "timeType": "entered",
-                "timeOp": 0,
-                "timeOpText": "↥ bis",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "6,0",
-                "timeMonths": "0",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "open (max)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>12:00</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Monaten</span> <var>Jan</var></div></div><div>↕  Absolut <var>offen (max)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 1,
-                "name": "Mittagschlag Ende",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "12:45",
-                "timeType": "entered",
-                "timeOp": 0,
-                "timeOpText": "↥ bis",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "6,0",
-                "timeMonths": "0",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>12:45</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Monaten</span> <var>Jan</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 2,
-                "name": "Nachtruhe Beginn",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "20:00",
-                "timeType": "entered",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "6,0",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>20:00</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            }
-        ],
-        "sunControlMode": "2",
-        "sunFloorLength": "0",
-        "sunMinAltitude": "20",
-        "sunMinDelta": "0.05",
-        "blindPosMin": "25%",
-        "blindPosMinType": "levelFixed",
-        "blindPosMax": "75%",
-        "blindPosMaxType": "levelFixed",
-        "smoothTime": "60000",
-        "sunTopic": "",
-        "windowTop": "220",
-        "windowBottom": "0",
-        "windowAzimuthStart": "120",
-        "windowAzimuthEnd": "240",
-        "oversteerValue": "payload.tempc",
-        "oversteerValueType": "msg",
-        "oversteerCompare": "lt",
-        "oversteerThreshold": "20",
-        "oversteerThresholdType": "num",
-        "oversteerBlindPos": "open (max)",
-        "oversteerBlindPosType": "levelFixed",
-        "oversteer2Value": "payload.clouds",
-        "oversteer2ValueType": "msg",
-        "oversteer2Compare": "gte",
-        "oversteer2Threshold": "80",
-        "oversteer2ThresholdType": "num",
-        "oversteer2BlindPos": "open (max)",
-        "oversteer2BlindPosType": "levelFixed",
-        "oversteer3Value": "",
-        "oversteer3ValueType": "none",
-        "oversteer3Compare": "gte",
-        "oversteer3Threshold": "",
-        "oversteer3ThresholdType": "num",
-        "oversteer3BlindPos": "open (max)",
-        "oversteer3BlindPosType": "levelFixed",
-        "oversteerTopic": "",
-        "x": 940,
-        "y": 2460,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "d098dbd4.80ba48",
         "type": "openweathermap",
         "z": "db6aac1c.cd43b",
@@ -5950,8 +5696,8 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 510,
-        "y": 2760,
+        "x": 910,
+        "y": 2560,
         "wires": [
             [
                 "f1a3973e.353358",
@@ -5959,16 +5705,6 @@
                 "e31b1c60.3110e"
             ]
         ]
-    },
-    {
-        "id": "c8f8f140.809d7",
-        "type": "comment",
-        "z": "db6aac1c.cd43b",
-        "name": "Auswertung des Sonnenstandes Ost",
-        "info": "",
-        "x": 980,
-        "y": 2580,
-        "wires": []
     },
     {
         "id": "cc6cc118.f9fab",
@@ -6009,7 +5745,7 @@
         "label": "Status Sun Protection [OG]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 460,
+        "x": 680,
         "y": 2440,
         "wires": []
     },
@@ -6020,7 +5756,7 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 390,
+        "x": 410,
         "y": 2560,
         "wires": [
             [
@@ -6059,16 +5795,6 @@
         ]
     },
     {
-        "id": "e8560a1c.4b1508",
-        "type": "comment",
-        "z": "db6aac1c.cd43b",
-        "name": "Auswertung des Sonnenstandes Süd",
-        "info": "",
-        "x": 960,
-        "y": 2420,
-        "wires": []
-    },
-    {
         "id": "72a3263c.3c05b8",
         "type": "ccu-value",
         "z": "db6aac1c.cd43b",
@@ -6088,8 +5814,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1360,
-        "y": 2420,
+        "x": 1520,
+        "y": 2400,
         "wires": [
             []
         ]
@@ -6114,8 +5840,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1230,
-        "y": 2500,
+        "x": 1510,
+        "y": 2460,
         "wires": [
             []
         ]
@@ -6128,239 +5854,6 @@
         "info": "",
         "x": 200,
         "y": 2380,
-        "wires": []
-    },
-    {
-        "id": "d09a71c7.1bc18",
-        "type": "blind-control",
-        "z": "db6aac1c.cd43b",
-        "d": true,
-        "name": "Sonnenschutz West Konstantin mit Mittagschlaf",
-        "topic": "",
-        "positionConfig": "6ad7a531.04aedc",
-        "outputs": "1",
-        "autoTrigger": false,
-        "autoTriggerTime": 3600000,
-        "startDelayTime": "0",
-        "storeName": "",
-        "blindIncrement": 0.01,
-        "blindOpenPos": 1,
-        "blindClosedPos": 0,
-        "blindPosReverse": false,
-        "blindPosDefault": "open (max)",
-        "blindPosDefaultType": "levelFixed",
-        "overwriteExpire": "",
-        "rules": [
-            {
-                "index": 0,
-                "name": "Mittagschlaf Beginn",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "12:00",
-                "timeType": "entered",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "6,0",
-                "timeMonths": "0",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>12:00</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Monaten</span> <var>Jan</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 1,
-                "name": "Mittagschlaf Ende",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "14:15",
-                "timeType": "entered",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "6,0",
-                "timeMonths": "0",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "open (max)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>14:15</var><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Monaten</span> <var>Jan</var></div></div><div>↕  Absolut <var>offen (max)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 2,
-                "name": "Sonnenuntergang",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "blueHourDuskStart",
-                "timeType": "pdsTime",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "21:00",
-                "timeMaxType": "entered",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "33%",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var><div class=\"indent-time-text\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i> <span>spätestens (max)</span> <var>21:00</var></div></div><div>↕  Absolut <var>33%</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            }
-        ],
-        "sunControlMode": "2",
-        "sunFloorLength": "0",
-        "sunMinAltitude": "20",
-        "sunMinDelta": "0.05",
-        "blindPosMin": "25%",
-        "blindPosMinType": "levelFixed",
-        "blindPosMax": "75%",
-        "blindPosMaxType": "levelFixed",
-        "smoothTime": "900000",
-        "sunTopic": "",
-        "windowTop": "220",
-        "windowBottom": "0",
-        "windowAzimuthStart": "220",
-        "windowAzimuthEnd": "280",
-        "oversteerValue": "payload.tempc",
-        "oversteerValueType": "msg",
-        "oversteerCompare": "lt",
-        "oversteerThreshold": "20",
-        "oversteerThresholdType": "num",
-        "oversteerBlindPos": "open (max)",
-        "oversteerBlindPosType": "levelFixed",
-        "oversteer2Value": "payload.clouds",
-        "oversteer2ValueType": "msg",
-        "oversteer2Compare": "gte",
-        "oversteer2Threshold": "50",
-        "oversteer2ThresholdType": "num",
-        "oversteer2BlindPos": "open (max)",
-        "oversteer2BlindPosType": "levelFixed",
-        "oversteer3Value": "",
-        "oversteer3ValueType": "none",
-        "oversteer3Compare": "gte",
-        "oversteer3Threshold": "",
-        "oversteer3ThresholdType": "num",
-        "oversteer3BlindPos": "open (max)",
-        "oversteer3BlindPosType": "levelFixed",
-        "oversteerTopic": "",
-        "x": 910,
-        "y": 2720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "55253ccc.eaa704",
-        "type": "comment",
-        "z": "db6aac1c.cd43b",
-        "name": "Auswertung des Sonnenstandes West",
-        "info": "",
-        "x": 850,
-        "y": 2680,
         "wires": []
     },
     {
@@ -6383,8 +5876,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1300,
-        "y": 2720,
+        "x": 1520,
+        "y": 2680,
         "wires": [
             []
         ]
@@ -6445,8 +5938,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 940,
-        "y": 2620,
+        "x": 1160,
+        "y": 2560,
         "wires": [
             [
                 "4862cf05.6132b",
@@ -6474,8 +5967,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1250,
-        "y": 2657,
+        "x": 1510,
+        "y": 2600,
         "wires": [
             []
         ]
@@ -6803,8 +6296,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 920,
-        "y": 2500,
+        "x": 1160,
+        "y": 2420,
         "wires": [
             [
                 "977fb41b.7e2af8",
@@ -6834,7 +6327,7 @@
         "rules": [],
         "sunControlMode": "2",
         "sunFloorLength": "0",
-        "sunMinAltitude": "20",
+        "sunMinAltitude": "10",
         "sunMinDelta": "0.05",
         "blindPosMin": "10%",
         "blindPosMinType": "levelFixed",
@@ -6868,8 +6361,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 800,
-        "y": 2780,
+        "x": 1160,
+        "y": 2700,
         "wires": [
             [
                 "bc54c5d4.8d01e8",
@@ -6897,8 +6390,8 @@
         "endOffset": 0,
         "endOffsetType": "none",
         "endOffsetMultiplier": 60000,
-        "x": 390,
-        "y": 2820,
+        "x": 410,
+        "y": 2720,
         "wires": [
             [
                 "4fda27bd.d338d8",
@@ -6918,8 +6411,8 @@
         "label": "Postition Sonne",
         "format": "{{msg.payload.azimuth | number:0}}",
         "layout": "row-spread",
-        "x": 600,
-        "y": 2900,
+        "x": 620,
+        "y": 2800,
         "wires": []
     },
     {
@@ -6942,8 +6435,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 990,
-        "y": 2140,
+        "x": 1500,
+        "y": 1980,
         "wires": [
             []
         ]
@@ -11373,8 +10866,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1250,
-        "y": 2597,
+        "x": 1510,
+        "y": 2540,
         "wires": [
             []
         ]
@@ -11399,8 +10892,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1290,
-        "y": 2780,
+        "x": 1510,
+        "y": 2740,
         "wires": [
             []
         ]
@@ -12824,8 +12317,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 410,
-        "y": 1860,
+        "x": 670,
+        "y": 1740,
         "wires": [
             [
                 "a9641605.d53e9"
@@ -13222,23 +12715,6 @@
         ]
     },
     {
-        "id": "3d4e0898.c4dd38",
-        "type": "debug",
-        "z": "db6aac1c.cd43b",
-        "name": "lightCheck",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 430,
-        "y": 2080,
-        "wires": []
-    },
-    {
         "id": "15f21c42.3d6674",
         "type": "debug",
         "z": "db6aac1c.cd43b",
@@ -13251,8 +12727,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 1780,
+        "x": 1160,
+        "y": 1620,
         "wires": []
     },
     {
@@ -13756,68 +13232,6 @@
         "wires": []
     },
     {
-        "id": "fb31b96b.0d3138",
-        "type": "blind-control",
-        "z": "db6aac1c.cd43b",
-        "name": "Sonnenschutz Ost",
-        "topic": "",
-        "positionConfig": "6ad7a531.04aedc",
-        "outputs": "1",
-        "autoTrigger": false,
-        "autoTriggerTime": 3600000,
-        "startDelayTime": "0",
-        "storeName": "",
-        "blindIncrement": 0.01,
-        "blindOpenPos": 1,
-        "blindClosedPos": 0,
-        "blindPosReverse": false,
-        "blindPosDefault": "open (max)",
-        "blindPosDefaultType": "levelFixed",
-        "overwriteExpire": "",
-        "rules": [],
-        "sunControlMode": "2",
-        "sunFloorLength": "0",
-        "sunMinAltitude": "0",
-        "sunMinDelta": "0.05",
-        "blindPosMin": "50%",
-        "blindPosMinType": "levelFixed",
-        "blindPosMax": "75%",
-        "blindPosMaxType": "levelFixed",
-        "smoothTime": "60000",
-        "sunTopic": "",
-        "windowTop": "220",
-        "windowBottom": "0",
-        "windowAzimuthStart": "60",
-        "windowAzimuthEnd": "140",
-        "oversteerValue": "payload.tempc",
-        "oversteerValueType": "msg",
-        "oversteerCompare": "lt",
-        "oversteerThreshold": "thresholdMaxTempEnvValue",
-        "oversteerThresholdType": "global",
-        "oversteerBlindPos": "open (max)",
-        "oversteerBlindPosType": "levelFixed",
-        "oversteer2Value": "maxLightValue",
-        "oversteer2ValueType": "global",
-        "oversteer2Compare": "lt",
-        "oversteer2Threshold": "thresholdMaxLightValue",
-        "oversteer2ThresholdType": "global",
-        "oversteer2BlindPos": "open (max)",
-        "oversteer2BlindPosType": "levelFixed",
-        "oversteer3Value": "",
-        "oversteer3ValueType": "none",
-        "oversteer3Compare": "gte",
-        "oversteer3Threshold": "",
-        "oversteer3ThresholdType": "num",
-        "oversteer3BlindPos": "open (max)",
-        "oversteer3BlindPosType": "levelFixed",
-        "oversteerTopic": "",
-        "x": 680,
-        "y": 1700,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "e16e4469.017528",
         "type": "function",
         "z": "427fc89b.e34038",
@@ -14025,8 +13439,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 410,
-        "y": 1920,
+        "x": 670,
+        "y": 1800,
         "wires": [
             [
                 "a9641605.d53e9"
@@ -14077,8 +13491,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 490,
-        "y": 2620,
+        "x": 650,
+        "y": 2540,
         "wires": [
             [
                 "d098dbd4.80ba48"
@@ -14129,8 +13543,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 490,
-        "y": 2680,
+        "x": 650,
+        "y": 2600,
         "wires": [
             [
                 "d098dbd4.80ba48"
@@ -17226,8 +16640,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 1720,
+        "x": 440,
+        "y": 1660,
         "wires": [
             [
                 "6c174a98.4ffc14"
@@ -17265,7 +16679,7 @@
         "to": "",
         "reg": false,
         "x": 420,
-        "y": 2500,
+        "y": 2440,
         "wires": [
             [
                 "d8c08a8.0d8b278"
