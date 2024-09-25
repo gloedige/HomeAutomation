@@ -952,27 +952,23 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
                 "timeDateStart": "",
                 "timeDateEnd": "",
-                "timeMinValue": "06:30",
-                "timeMinType": "entered",
+                "timeMinValue": "openBlindBusinessDay_String",
+                "timeMinType": "flow",
                 "offsetMinValue": "",
                 "offsetMinType": "none",
                 "multiplierMin": 60000,
@@ -984,14 +980,14 @@
                 "levelValue": "50%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -999,10 +995,12 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>06:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>50%</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>50%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
@@ -1011,23 +1009,24 @@
                 "valid": {
                     "validTimeReg": 60000,
                     "validLevel": true,
-                    "validOperand1A": true
+                    "validOperand1A": true,
+                    "validOperand1B": true
                 },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
                 "timeDateStart": "",
                 "timeDateEnd": "",
-                "timeMinValue": "08:00",
-                "timeMinType": "entered",
+                "timeMinValue": "openBlindWeekendOrHoliday_String",
+                "timeMinType": "flow",
                 "offsetMinValue": "",
                 "offsetMinType": "none",
                 "multiplierMin": 60000,
@@ -1039,14 +1038,14 @@
                 "levelValue": "50%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -1054,10 +1053,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>50%</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>50%</var></div>"
             },
             {
                 "index": 2,
@@ -1178,8 +1177,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1412,
-        "y": 701,
+        "x": 1410,
+        "y": 820,
         "wires": [
             [
                 "17fc17ca.4d5ec8"
@@ -1269,8 +1268,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 1840,
+        "x": 200,
+        "y": 2320,
         "wires": [
             [
                 "958fbe30.bf1eb"
@@ -1387,8 +1386,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1190,
-        "y": 1760,
+        "x": 1210,
+        "y": 2240,
         "wires": [
             [
                 "5e7acd50.d5f96c",
@@ -1417,8 +1416,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2030,
-        "y": 1700,
+        "x": 2050,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -1443,8 +1442,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2000,
-        "y": 1820,
+        "x": 2020,
+        "y": 2300,
         "wires": [
             []
         ]
@@ -1469,8 +1468,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2010,
-        "y": 1760,
+        "x": 2030,
+        "y": 2240,
         "wires": [
             []
         ]
@@ -1486,8 +1485,8 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 910,
-        "y": 1760,
+        "x": 930,
+        "y": 2240,
         "wires": [
             [
                 "46f9c2e1.dfa20c",
@@ -1518,7 +1517,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1420,
-        "y": 862,
+        "y": 1180,
         "wires": [
             [
                 "48697fb1.e31c3"
@@ -1553,11 +1552,11 @@
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -1576,14 +1575,14 @@
                 "levelValue": "10%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -1591,10 +1590,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>10%</var></div>",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>6:30</var></div></div><div>↕ absolute <var>10%</var></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -1606,11 +1605,11 @@
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -1629,14 +1628,14 @@
                 "levelValue": "10%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -1644,10 +1643,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>10%</var></div>",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>08:00</var></div></div><div>↕ absolute <var>10%</var></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -1707,12 +1706,8 @@
             {
                 "index": 3,
                 "name": "Nachstellung Rollo Weihnachtssterne",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -1757,7 +1752,9 @@
                 "valid2OperatorText": "ist true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Monaten</span> <var>Dez</var></div></div><div>↕  Absolut <var>10%</var></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Monaten</span> <var>Dez</var></div></div><div>↕  Absolut <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             }
         ],
         "sunControlMode": "0",
@@ -1990,7 +1987,7 @@
         "name": "Rollos EG",
         "info": "",
         "x": 1400,
-        "y": 665,
+        "y": 760,
         "wires": []
     },
     {
@@ -2014,7 +2011,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1430,
-        "y": 914,
+        "y": 1340,
         "wires": [
             [
                 "984c0ad.ba56bf8"
@@ -2041,8 +2038,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1429,
-        "y": 1081,
+        "x": 1750,
+        "y": 1560,
         "wires": [
             [
                 "c1df97fd.0234b8"
@@ -2069,8 +2066,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1439,
-        "y": 1001,
+        "x": 1760,
+        "y": 1480,
         "wires": [
             [
                 "44841334.14955c",
@@ -2098,8 +2095,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1439,
-        "y": 1161,
+        "x": 1760,
+        "y": 1640,
         "wires": [
             [
                 "98f5847.ce9a478"
@@ -2127,7 +2124,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1450,
-        "y": 753,
+        "y": 940,
         "wires": [
             [
                 "d1e8caad.5d21f8"
@@ -2155,7 +2152,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 1450,
-        "y": 806,
+        "y": 1060,
         "wires": [
             [
                 "f4dab476.8c8c98"
@@ -2176,8 +2173,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 579,
-        "y": 1001,
+        "x": 880,
+        "y": 1480,
         "wires": [
             [
                 "3810eccf.2db454"
@@ -2342,8 +2339,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 579,
-        "y": 1081,
+        "x": 880,
+        "y": 1560,
         "wires": [
             [
                 "22960c4b.4d7734"
@@ -2364,8 +2361,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 569,
-        "y": 1161,
+        "x": 890,
+        "y": 1640,
         "wires": [
             [
                 "712cb21d.7c4eb4"
@@ -2387,8 +2384,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 859,
-        "y": 1001,
+        "x": 1180,
+        "y": 1480,
         "wires": [
             [
                 "bdef110.bc8d57"
@@ -2423,11 +2420,11 @@
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -2446,14 +2443,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -2461,10 +2458,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>6:30</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -2476,11 +2473,11 @@
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -2499,14 +2496,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -2514,10 +2511,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>08:00</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -2611,8 +2608,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 890,
-        "y": 780,
+        "x": 1070,
+        "y": 1000,
         "wires": [
             [
                 "3a0e77ba.7b53f8",
@@ -2628,8 +2625,8 @@
         "z": "db6aac1c.cd43b",
         "name": "Fensterkontaktschalter EG Süd",
         "info": "",
-        "x": 589,
-        "y": 941,
+        "x": 910,
+        "y": 1420,
         "wires": []
     },
     {
@@ -2648,8 +2645,8 @@
         "z": "db6aac1c.cd43b",
         "name": "SONNENSCHUTZ EG",
         "info": "",
-        "x": 200,
-        "y": 1620,
+        "x": 220,
+        "y": 2100,
         "wires": []
     },
     {
@@ -2667,8 +2664,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 1520,
-        "y": 1700,
+        "x": 1540,
+        "y": 2180,
         "wires": [
             [
                 "d51de3cc.0547d8"
@@ -2690,8 +2687,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1800,
-        "y": 1700,
+        "x": 1820,
+        "y": 2180,
         "wires": [
             [
                 "cca5a74b.baf9d"
@@ -2712,8 +2709,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 1520,
-        "y": 1760,
+        "x": 1540,
+        "y": 2240,
         "wires": [
             [
                 "9d9be169.d3daa"
@@ -2735,8 +2732,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1800,
-        "y": 1760,
+        "x": 1820,
+        "y": 2240,
         "wires": [
             [
                 "3e5b1273.99e4c6"
@@ -2757,8 +2754,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 1530,
-        "y": 1820,
+        "x": 1550,
+        "y": 2300,
         "wires": [
             [
                 "ca82141f.0f393"
@@ -2780,8 +2777,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1800,
-        "y": 1820,
+        "x": 1820,
+        "y": 2300,
         "wires": [
             [
                 "a2d8b0b3.0283c"
@@ -2899,8 +2896,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1190,
-        "y": 2060,
+        "x": 1210,
+        "y": 2540,
         "wires": [
             [
                 "b80d9acd.df9928"
@@ -2928,8 +2925,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1490,
-        "y": 2060,
+        "x": 1510,
+        "y": 2540,
         "wires": [
             []
         ]
@@ -3044,8 +3041,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1190,
-        "y": 1940,
+        "x": 1210,
+        "y": 2420,
         "wires": [
             [
                 "e67b52f.20b77b",
@@ -3073,8 +3070,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1500,
-        "y": 1913,
+        "x": 1520,
+        "y": 2393,
         "wires": [
             []
         ]
@@ -3213,8 +3210,8 @@
                 "icon": ""
             }
         ],
-        "x": 180,
-        "y": 1920,
+        "x": 200,
+        "y": 2400,
         "wires": []
     },
     {
@@ -3245,11 +3242,11 @@
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -3268,14 +3265,14 @@
                 "levelValue": "10%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -3283,10 +3280,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>10%</var></div>",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>6:30</var></div></div><div>↕ absolute <var>10%</var></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -3298,11 +3295,11 @@
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -3321,14 +3318,14 @@
                 "levelValue": "10%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -3336,10 +3333,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>10%</var></div>",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>08:00</var></div></div><div>↕ absolute <var>10%</var></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -3817,7 +3814,7 @@
         "z": "427fc89b.e34038",
         "name": "Alle Rollos 90% zu",
         "group": "510978ab.7cc15",
-        "order": 1,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -3843,7 +3840,7 @@
         "z": "427fc89b.e34038",
         "name": "Alle Rollos auf",
         "group": "510978ab.7cc15",
-        "order": 2,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4395,7 +4392,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 5,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4407,8 +4404,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 200,
-        "y": 1460,
+        "x": 220,
+        "y": 1900,
         "wires": [
             [
                 "a9c43fd4.d60d1"
@@ -4421,7 +4418,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 4,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4433,8 +4430,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 200,
-        "y": 1420,
+        "x": 220,
+        "y": 1860,
         "wires": [
             [
                 "a9c43fd4.d60d1"
@@ -4446,15 +4443,15 @@
         "type": "ui_text",
         "z": "db6aac1c.cd43b",
         "group": "510978ab.7cc15",
-        "order": 3,
+        "order": 6,
         "width": 0,
         "height": 0,
         "name": "",
         "label": "Status Blindcontrol",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 1010,
-        "y": 1500,
+        "x": 1030,
+        "y": 1940,
         "wires": []
     },
     {
@@ -4463,7 +4460,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 7,
+        "order": 10,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4475,8 +4472,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 200,
-        "y": 1720,
+        "x": 220,
+        "y": 2200,
         "wires": [
             [
                 "958fbe30.bf1eb",
@@ -4489,15 +4486,15 @@
         "type": "ui_text",
         "z": "db6aac1c.cd43b",
         "group": "510978ab.7cc15",
-        "order": 6,
+        "order": 9,
         "width": 0,
         "height": 0,
         "name": "",
         "label": "Status Sun Protection [EG]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 700,
-        "y": 1660,
+        "x": 720,
+        "y": 2140,
         "wires": []
     },
     {
@@ -4507,8 +4504,8 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 430,
-        "y": 1780,
+        "x": 450,
+        "y": 2260,
         "wires": [
             [
                 "c02328a5.d4f348",
@@ -4524,7 +4521,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 8,
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4536,8 +4533,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 200,
-        "y": 1780,
+        "x": 220,
+        "y": 2260,
         "wires": [
             [
                 "958fbe30.bf1eb",
@@ -4632,8 +4629,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 2720,
+        "x": 630,
+        "y": 3020,
         "wires": []
     },
     {
@@ -5224,27 +5221,23 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "3",
                 "offsetType": "num",
                 "multiplier": 1000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
                 "timeDateStart": "",
                 "timeDateEnd": "",
-                "timeMinValue": "6:30",
-                "timeMinType": "entered",
+                "timeMinValue": "openBlindBusinessDay_String",
+                "timeMinType": "flow",
                 "offsetMinValue": "",
                 "offsetMinType": "none",
                 "multiplierMin": 60000,
@@ -5256,14 +5249,14 @@
                 "levelValue": "10%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -5271,10 +5264,12 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var> + 00:00:03<div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>10%</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var> + 00:00:03<div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
@@ -5283,23 +5278,24 @@
                 "valid": {
                     "validTimeReg": 60000,
                     "validLevel": true,
-                    "validOperand1A": true
+                    "validOperand1A": true,
+                    "validOperand1B": true
                 },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "3",
                 "offsetType": "num",
                 "multiplier": 1000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
                 "timeDateStart": "",
                 "timeDateEnd": "",
-                "timeMinValue": "08:00",
-                "timeMinType": "entered",
+                "timeMinValue": "openBlindWeekendOrHoliday_String",
+                "timeMinType": "flow",
                 "offsetMinValue": "",
                 "offsetMinType": "none",
                 "multiplierMin": 60000,
@@ -5311,14 +5307,14 @@
                 "levelValue": "10%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -5326,20 +5322,16 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var> + 00:00:03<div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>10%</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var> + 00:00:03<div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>10%</var></div>"
             },
             {
                 "index": 2,
                 "name": "Sonnenuntergang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validLevel": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -5384,7 +5376,9 @@
                 "valid2OperatorText": "ist true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var> + 00:00:03</div><div>↕  Absolut <var>10%</var></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var> + 00:00:03</div><div>↕  Absolut <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             }
         ],
         "sunControlMode": "0",
@@ -5454,27 +5448,23 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
                 "timeDateStart": "",
                 "timeDateEnd": "",
-                "timeMinValue": "6:30",
-                "timeMinType": "entered",
+                "timeMinValue": "openBlindBusinessDay_String",
+                "timeMinType": "flow",
                 "offsetMinValue": "",
                 "offsetMinType": "none",
                 "multiplierMin": 60000,
@@ -5486,14 +5476,14 @@
                 "levelValue": "50%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -5501,10 +5491,12 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>50%</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>50%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
@@ -5513,23 +5505,24 @@
                 "valid": {
                     "validTimeReg": 60000,
                     "validLevel": true,
-                    "validOperand1A": true
+                    "validOperand1A": true,
+                    "validOperand1B": true
                 },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
                 "timeDateStart": "",
                 "timeDateEnd": "",
-                "timeMinValue": "08:00",
-                "timeMinType": "entered",
+                "timeMinValue": "openBlindWeekendOrHoliday_String",
+                "timeMinType": "flow",
                 "offsetMinValue": "",
                 "offsetMinType": "none",
                 "multiplierMin": 60000,
@@ -5541,14 +5534,14 @@
                 "levelValue": "50%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -5556,10 +5549,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>50%</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>50%</var></div>"
             },
             {
                 "index": 2,
@@ -5676,8 +5669,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
-        "y": 2620,
+        "x": 240,
+        "y": 2920,
         "wires": [
             [
                 "616d8341.b8e68c",
@@ -5696,8 +5689,8 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 910,
-        "y": 2560,
+        "x": 930,
+        "y": 2860,
         "wires": [
             [
                 "f1a3973e.353358",
@@ -5712,7 +5705,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 10,
+        "order": 13,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -5724,8 +5717,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 180,
-        "y": 2520,
+        "x": 200,
+        "y": 2820,
         "wires": [
             [
                 "616d8341.b8e68c",
@@ -5738,15 +5731,15 @@
         "type": "ui_text",
         "z": "db6aac1c.cd43b",
         "group": "510978ab.7cc15",
-        "order": 9,
+        "order": 12,
         "width": 0,
         "height": 0,
         "name": "",
         "label": "Status Sun Protection [OG]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 680,
-        "y": 2440,
+        "x": 700,
+        "y": 2740,
         "wires": []
     },
     {
@@ -5756,8 +5749,8 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 410,
-        "y": 2560,
+        "x": 430,
+        "y": 2860,
         "wires": [
             [
                 "4d47327e.b94e9c",
@@ -5773,7 +5766,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 11,
+        "order": 14,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -5785,8 +5778,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 180,
-        "y": 2560,
+        "x": 200,
+        "y": 2860,
         "wires": [
             [
                 "616d8341.b8e68c",
@@ -5814,8 +5807,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1520,
-        "y": 2400,
+        "x": 1540,
+        "y": 2700,
         "wires": [
             []
         ]
@@ -5840,8 +5833,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1510,
-        "y": 2460,
+        "x": 1530,
+        "y": 2760,
         "wires": [
             []
         ]
@@ -5852,8 +5845,8 @@
         "z": "db6aac1c.cd43b",
         "name": "SONNENSCHUTZ OG",
         "info": "",
-        "x": 200,
-        "y": 2380,
+        "x": 220,
+        "y": 2680,
         "wires": []
     },
     {
@@ -5876,8 +5869,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1520,
-        "y": 2680,
+        "x": 1540,
+        "y": 2980,
         "wires": [
             []
         ]
@@ -5938,8 +5931,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1160,
-        "y": 2560,
+        "x": 1180,
+        "y": 2860,
         "wires": [
             [
                 "4862cf05.6132b",
@@ -5967,278 +5960,11 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1510,
-        "y": 2600,
+        "x": 1530,
+        "y": 2900,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "214b3fd0.631aa",
-        "type": "ccu-set-value",
-        "z": "db6aac1c.cd43b",
-        "name": "Alle Rollos Haus",
-        "iface": "BidCos-RF",
-        "ccuConfig": "38263145.35ea0e",
-        "rooms": "",
-        "roomsRx": "str",
-        "functions": "",
-        "functionsRx": "str",
-        "device": "",
-        "deviceRx": "str",
-        "deviceName": "",
-        "deviceNameRx": "str",
-        "deviceType": "",
-        "deviceTypeRx": "str",
-        "channel": "",
-        "channelRx": "str",
-        "channelName": "",
-        "channelNameRx": "str",
-        "channelType": "BLIND",
-        "channelTypeRx": "str",
-        "channelIndex": "",
-        "channelIndexRx": "str",
-        "datapoint": "LEVEL",
-        "datapointRx": "str",
-        "force": false,
-        "x": 960,
-        "y": 3120,
-        "wires": []
-    },
-    {
-        "id": "16e97745.339889",
-        "type": "blind-control",
-        "z": "db6aac1c.cd43b",
-        "name": "Tag/Nach-Steuerung 100% zu",
-        "topic": "",
-        "positionConfig": "6ad7a531.04aedc",
-        "outputs": 1,
-        "autoTrigger": false,
-        "autoTriggerTime": 3600000,
-        "startDelayTime": "0",
-        "storeName": "",
-        "blindIncrement": "0.1",
-        "blindOpenPos": "1",
-        "blindClosedPos": 0,
-        "blindPosReverse": false,
-        "blindPosDefault": "10%",
-        "blindPosDefaultType": "levelFixed",
-        "overwriteExpire": "",
-        "rules": [
-            {
-                "index": 0,
-                "name": "Sonnenaufgang",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "sunrise",
-                "timeType": "pdsTime",
-                "timeOp": 0,
-                "timeOpText": "↥ bis",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeMinValue": "7:00",
-                "timeMinType": "entered",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Sonnenaufgang Begin</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>7:00</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "importance": 0
-            },
-            {
-                "index": 1,
-                "name": "Sonnenuntergang",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "blueHourDuskStart",
-                "timeType": "pdsTime",
-                "timeOp": 1,
-                "timeOpText": "↧ von",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 3600000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "",
-                "timeDateEnd": "",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "22:00",
-                "timeMaxType": "entered",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "levelValue": "closed (min)",
-                "levelType": "levelFixed",
-                "levelOp": 0,
-                "levelOpText": "↕  Absolut",
-                "topic": "",
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ von <var>Blaue Abendstunde Begin</var><div class=\"indent-time-text\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i> <span>spätestens (max)</span> <var>22:00</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0,
-                "importance": 0
-            }
-        ],
-        "sunControlMode": "0",
-        "sunFloorLength": "",
-        "sunMinAltitude": "",
-        "sunMinDelta": "",
-        "blindPosMin": "closed (min)",
-        "blindPosMinType": "levelFixed",
-        "blindPosMax": "open (max)",
-        "blindPosMaxType": "levelFixed",
-        "smoothTime": "",
-        "sunTopic": "",
-        "windowTop": "",
-        "windowBottom": "",
-        "windowAzimuthStart": "0",
-        "windowAzimuthEnd": "",
-        "oversteerValue": "",
-        "oversteerValueType": "none",
-        "oversteerCompare": "gte",
-        "oversteerThreshold": "",
-        "oversteerThresholdType": "num",
-        "oversteerBlindPos": "open (max)",
-        "oversteerBlindPosType": "levelFixed",
-        "oversteer2Value": "",
-        "oversteer2ValueType": "none",
-        "oversteer2Compare": "gte",
-        "oversteer2Threshold": "",
-        "oversteer2ThresholdType": "num",
-        "oversteer2BlindPos": "open (max)",
-        "oversteer2BlindPosType": "levelFixed",
-        "oversteer3Value": "",
-        "oversteer3ValueType": "none",
-        "oversteer3Compare": "gte",
-        "oversteer3Threshold": "",
-        "oversteer3ThresholdType": "num",
-        "oversteer3BlindPos": "open (max)",
-        "oversteer3BlindPosType": "levelFixed",
-        "oversteerTopic": "",
-        "x": 680,
-        "y": 3120,
-        "wires": [
-            [
-                "214b3fd0.631aa"
-            ]
-        ]
-    },
-    {
-        "id": "fd531995.e54278",
-        "type": "sun-position",
-        "z": "db6aac1c.cd43b",
-        "name": "dusk till dawn",
-        "positionConfig": "6ad7a531.04aedc",
-        "rules": [],
-        "onlyOnChange": "true",
-        "topic": "blind",
-        "outputs": 1,
-        "start": "sunrise",
-        "startType": "pdsTime",
-        "startOffset": "",
-        "startOffsetType": "none",
-        "startOffsetMultiplier": 60000,
-        "end": "blueHourDuskStart",
-        "endType": "pdsTime",
-        "endOffset": 0,
-        "endOffsetType": "none",
-        "endOffsetMultiplier": 60000,
-        "x": 380,
-        "y": 3120,
-        "wires": [
-            [
-                "16e97745.339889"
-            ]
-        ]
-    },
-    {
-        "id": "71dc3f35.5a6bc",
-        "type": "inject",
-        "z": "db6aac1c.cd43b",
-        "name": "all 1 min",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "blind",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 3120,
-        "wires": [
-            [
-                "b6e19ed0.0d01b"
-            ]
-        ]
-    },
-    {
-        "id": "3943f76c.5feb28",
-        "type": "comment",
-        "z": "db6aac1c.cd43b",
-        "name": "Urlaub - Tags Sonnenschutz 90% zu / Nachts 100% zu",
-        "info": "",
-        "x": 270,
-        "y": 3040,
-        "wires": []
     },
     {
         "id": "cf80edc6.c778a8",
@@ -6296,8 +6022,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1160,
-        "y": 2420,
+        "x": 1180,
+        "y": 2720,
         "wires": [
             [
                 "977fb41b.7e2af8",
@@ -6361,8 +6087,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1160,
-        "y": 2700,
+        "x": 1180,
+        "y": 3000,
         "wires": [
             [
                 "bc54c5d4.8d01e8",
@@ -6390,8 +6116,8 @@
         "endOffset": 0,
         "endOffsetType": "none",
         "endOffsetMultiplier": 60000,
-        "x": 410,
-        "y": 2720,
+        "x": 430,
+        "y": 3020,
         "wires": [
             [
                 "4fda27bd.d338d8",
@@ -6411,8 +6137,8 @@
         "label": "Postition Sonne",
         "format": "{{msg.payload.azimuth | number:0}}",
         "layout": "row-spread",
-        "x": 620,
-        "y": 2800,
+        "x": 640,
+        "y": 3100,
         "wires": []
     },
     {
@@ -6435,8 +6161,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1500,
-        "y": 1980,
+        "x": 1520,
+        "y": 2460,
         "wires": [
             []
         ]
@@ -6479,8 +6205,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1669,
-        "y": 1161,
+        "x": 1990,
+        "y": 1640,
         "wires": []
     },
     {
@@ -6521,8 +6247,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1659,
-        "y": 1081,
+        "x": 1980,
+        "y": 1560,
         "wires": []
     },
     {
@@ -6563,8 +6289,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1679,
-        "y": 1001,
+        "x": 2000,
+        "y": 1480,
         "wires": []
     },
     {
@@ -6605,8 +6331,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1700,
-        "y": 862,
+        "x": 1720,
+        "y": 1200,
         "wires": []
     },
     {
@@ -6647,8 +6373,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1700,
-        "y": 806,
+        "x": 1720,
+        "y": 1080,
         "wires": []
     },
     {
@@ -6689,8 +6415,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1700,
-        "y": 753,
+        "x": 1720,
+        "y": 960,
         "wires": []
     },
     {
@@ -6731,8 +6457,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1700,
-        "y": 914,
+        "x": 1720,
+        "y": 1360,
         "wires": []
     },
     {
@@ -6773,8 +6499,8 @@
         "peakmode": false,
         "property": "payload",
         "peaktime": 3000,
-        "x": 1690,
-        "y": 701,
+        "x": 1710,
+        "y": 840,
         "wires": []
     },
     {
@@ -7210,8 +6936,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1629,
-        "y": 1221,
+        "x": 1950,
+        "y": 1700,
         "wires": []
     },
     {
@@ -7231,8 +6957,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1249,
-        "y": 1041,
+        "x": 1570,
+        "y": 1520,
         "wires": [
             [
                 "f61e5d4c.7f8798"
@@ -7256,8 +6982,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1239,
-        "y": 1121,
+        "x": 1560,
+        "y": 1600,
         "wires": [
             [
                 "2007708a.75a3c"
@@ -7281,8 +7007,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1249,
-        "y": 1201,
+        "x": 1570,
+        "y": 1680,
         "wires": [
             [
                 "2bb83640.8872aa"
@@ -7306,8 +7032,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1210,
-        "y": 846,
+        "x": 1730,
+        "y": 1140,
         "wires": [
             [
                 "dd7ce24d.ab706"
@@ -7331,8 +7057,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1206,
-        "y": 791,
+        "x": 1720,
+        "y": 1020,
         "wires": [
             [
                 "a895192a.6defd"
@@ -7356,8 +7082,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1207,
-        "y": 739,
+        "x": 1720,
+        "y": 900,
         "wires": [
             [
                 "5be3d0b2.aec738"
@@ -7381,8 +7107,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1208,
-        "y": 893,
+        "x": 1720,
+        "y": 1300,
         "wires": [
             [
                 "fe2c0d6.cf09ff"
@@ -7406,8 +7132,8 @@
         "min": 0,
         "max": "1",
         "step": "0.1",
-        "x": 1205,
-        "y": 687,
+        "x": 1710,
+        "y": 780,
         "wires": [
             [
                 "3a0e77ba.7b53f8"
@@ -7636,7 +7362,7 @@
         "max": "1",
         "step": "0.1",
         "x": 1190,
-        "y": 57,
+        "y": 60,
         "wires": [
             [
                 "18578c1c.988034"
@@ -10591,8 +10317,8 @@
         "z": "db6aac1c.cd43b",
         "name": "SONNENSCHUTZ EG Rasen",
         "info": "",
-        "x": 200,
-        "y": 3340,
+        "x": 220,
+        "y": 3580,
         "wires": []
     },
     {
@@ -10615,8 +10341,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1300,
-        "y": 3480,
+        "x": 1320,
+        "y": 3720,
         "wires": [
             []
         ]
@@ -10636,8 +10362,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1116,
-        "y": 3480,
+        "x": 1136,
+        "y": 3720,
         "wires": [
             [
                 "bb3f753e.e5326"
@@ -10658,8 +10384,8 @@
         "datapointProperty": "value",
         "setProp": "Fensterkontakt",
         "setPropType": "msg",
-        "x": 859,
-        "y": 3480,
+        "x": 879,
+        "y": 3720,
         "wires": [
             [
                 "612b5385.8700ac"
@@ -10722,8 +10448,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 760,
-        "y": 3600,
+        "x": 780,
+        "y": 3840,
         "wires": [
             [
                 "4a5ee202.f17e64"
@@ -10737,8 +10463,8 @@
         "topic": "condition",
         "name": "",
         "timeout": 0,
-        "x": 450,
-        "y": 3478,
+        "x": 470,
+        "y": 3718,
         "wires": [
             [
                 "8b3f26c8.948648"
@@ -10752,15 +10478,15 @@
         "type": "ui_text",
         "z": "db6aac1c.cd43b",
         "group": "510978ab.7cc15",
-        "order": 12,
+        "order": 15,
         "width": 0,
         "height": 0,
         "name": "",
         "label": "Status Sun Protection lawn",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 760,
-        "y": 3420,
+        "x": 780,
+        "y": 3660,
         "wires": []
     },
     {
@@ -10769,7 +10495,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 13,
+        "order": 16,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -10781,8 +10507,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 210,
-        "y": 3440,
+        "x": 230,
+        "y": 3680,
         "wires": [
             [
                 "4fa9bf67.03a438",
@@ -10796,7 +10522,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 14,
+        "order": 17,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -10808,8 +10534,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "condition",
-        "x": 210,
-        "y": 3480,
+        "x": 230,
+        "y": 3720,
         "wires": [
             [
                 "4fa9bf67.03a438",
@@ -10838,8 +10564,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 280,
-        "y": 3538,
+        "x": 300,
+        "y": 3778,
         "wires": [
             [
                 "4fa9bf67.03a438"
@@ -10866,8 +10592,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1510,
-        "y": 2540,
+        "x": 1530,
+        "y": 2840,
         "wires": [
             []
         ]
@@ -10892,97 +10618,10 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1510,
-        "y": 2740,
+        "x": 1530,
+        "y": 3040,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "b6e19ed0.0d01b",
-        "type": "combine-if",
-        "z": "db6aac1c.cd43b",
-        "topic": "condition",
-        "name": "",
-        "timeout": 0,
-        "x": 450,
-        "y": 3220,
-        "wires": [
-            [
-                "fd531995.e54278"
-            ],
-            []
-        ],
-        "info": "var Rollosteuerung_aktiv=condition;\n\n\nif(Rollosteuerung_aktiv==1){\nmsg.payload.schalter=1;\n}\nelse {\nmsg.payload.schalter=0;\n}\nreturn msg;"
-    },
-    {
-        "id": "c52bf4f3.deefe8",
-        "type": "ui_text",
-        "z": "db6aac1c.cd43b",
-        "group": "510978ab.7cc15",
-        "order": 15,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Status Urlaub",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 460,
-        "y": 3180,
-        "wires": []
-    },
-    {
-        "id": "e717eb29.d45998",
-        "type": "ui_button",
-        "z": "db6aac1c.cd43b",
-        "name": "",
-        "group": "510978ab.7cc15",
-        "order": 16,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "[ON] Urlaub",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "condition",
-        "x": 170,
-        "y": 3182,
-        "wires": [
-            [
-                "b6e19ed0.0d01b",
-                "c52bf4f3.deefe8"
-            ]
-        ]
-    },
-    {
-        "id": "cda479df.6349c8",
-        "type": "ui_button",
-        "z": "db6aac1c.cd43b",
-        "name": "",
-        "group": "510978ab.7cc15",
-        "order": 17,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "[OFF] Urlaub",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "topic": "condition",
-        "x": 170,
-        "y": 3222,
-        "wires": [
-            [
-                "b6e19ed0.0d01b",
-                "c52bf4f3.deefe8"
-            ]
         ]
     },
     {
@@ -11140,8 +10779,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 859,
-        "y": 1081,
+        "x": 1180,
+        "y": 1560,
         "wires": [
             [
                 "8e36e051.5ac33"
@@ -11163,8 +10802,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 859,
-        "y": 1161,
+        "x": 1180,
+        "y": 1640,
         "wires": [
             [
                 "7bbfbfd.19fd2c"
@@ -11194,16 +10833,21 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": false,
-                "valid": {},
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": 60000,
+                    "validLevel": true,
+                    "validOperand1A": true,
+                    "validOperand1B": true
+                },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -11222,14 +10866,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -11237,26 +10881,29 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>6:30</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
             },
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": false,
-                "valid": {},
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": 60000,
+                    "validLevel": true,
+                    "validOperand1A": true,
+                    "validOperand1B": true
+                },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -11275,14 +10922,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -11290,12 +10937,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>08:00</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
             },
             {
                 "index": 2,
@@ -11353,12 +10998,8 @@
             {
                 "index": 3,
                 "name": "Sonnenuntergang Dez 1",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -11403,17 +11044,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-22</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 4,
                 "name": "Sonnenuntergang Dez 2",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validLevel": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -11458,7 +11097,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-23</var> <span> to</span> <var>12-31</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-23</var> <span> to</span> <var>12-31</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             }
         ],
         "sunControlMode": "0",
@@ -11497,8 +11138,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1139,
-        "y": 1001,
+        "x": 1460,
+        "y": 1480,
         "wires": [
             [
                 "f61e5d4c.7f8798"
@@ -11532,16 +11173,17 @@
                 "valid": {
                     "validTimeReg": 60000,
                     "validLevel": true,
-                    "validOperand1A": true
+                    "validOperand1A": true,
+                    "validOperand1B": true
                 },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -11560,14 +11202,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -11575,10 +11217,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>6:30</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
             },
             {
                 "index": 1,
@@ -11587,16 +11229,17 @@
                 "valid": {
                     "validTimeReg": 60000,
                     "validLevel": true,
-                    "validOperand1A": true
+                    "validOperand1A": true,
+                    "validOperand1B": true
                 },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -11615,14 +11258,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -11630,10 +11273,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>08:00</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
             },
             {
                 "index": 2,
@@ -11725,8 +11368,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1139,
-        "y": 1081,
+        "x": 1460,
+        "y": 1560,
         "wires": [
             [
                 "2007708a.75a3c"
@@ -11760,16 +11403,17 @@
                 "valid": {
                     "validTimeReg": 60000,
                     "validLevel": true,
-                    "validOperand1A": true
+                    "validOperand1A": true,
+                    "validOperand1B": true
                 },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -11788,14 +11432,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -11803,10 +11447,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>6:30</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
             },
             {
                 "index": 1,
@@ -11815,16 +11459,17 @@
                 "valid": {
                     "validTimeReg": 60000,
                     "validLevel": true,
-                    "validOperand1A": true
+                    "validOperand1A": true,
+                    "validOperand1B": true
                 },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -11843,14 +11488,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -11858,10 +11503,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>08:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>08:00</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
             },
             {
                 "index": 2,
@@ -11953,8 +11598,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 1139,
-        "y": 1161,
+        "x": 1460,
+        "y": 1640,
         "wires": [
             [
                 "2bb83640.8872aa"
@@ -12317,8 +11962,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 670,
-        "y": 1740,
+        "x": 690,
+        "y": 2220,
         "wires": [
             [
                 "a9641605.d53e9"
@@ -12727,8 +12372,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 1620,
+        "x": 1180,
+        "y": 2100,
         "wires": []
     },
     {
@@ -12741,8 +12386,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 480,
-        "y": 3600,
+        "x": 500,
+        "y": 3840,
         "wires": [
             [
                 "ab12c0d2.a819d8"
@@ -12792,8 +12437,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 490,
-        "y": 3540,
+        "x": 510,
+        "y": 3780,
         "wires": [
             [
                 "355cfdb9.eaae32",
@@ -12813,8 +12458,8 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 510,
-        "y": 3660,
+        "x": 530,
+        "y": 3900,
         "wires": [
             [
                 "ab12c0d2.a819d8"
@@ -13439,8 +13084,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 670,
-        "y": 1800,
+        "x": 690,
+        "y": 2280,
         "wires": [
             [
                 "a9641605.d53e9"
@@ -13491,8 +13136,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 650,
-        "y": 2540,
+        "x": 670,
+        "y": 2840,
         "wires": [
             [
                 "d098dbd4.80ba48"
@@ -13543,8 +13188,8 @@
         "endOffsetAltType": "none",
         "endOffsetAltMultiplier": 60000,
         "tsCompare": "0",
-        "x": 650,
-        "y": 2600,
+        "x": 670,
+        "y": 2900,
         "wires": [
             [
                 "d098dbd4.80ba48"
@@ -13814,11 +13459,11 @@
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "1,2,3,4,5",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -13837,14 +13482,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -13852,10 +13497,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>6:30</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Mo-Fr</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>6:30</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -13867,11 +13512,11 @@
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
-                "timeOpText": "↥ bis",
+                "timeOpText": "↥ until",
                 "offsetValue": "",
                 "offsetType": "none",
                 "multiplier": 60000,
-                "timeDays": "6,0",
+                "timeDays": "*",
                 "timeMonths": "*",
                 "timeOnlyEvenDays": false,
                 "timeOnlyOddDays": false,
@@ -13890,14 +13535,14 @@
                 "levelValue": "closed (min)",
                 "levelType": "levelFixed",
                 "levelOp": 0,
-                "levelOpText": "↕  Absolut",
+                "levelOpText": "↕ absolute",
                 "topic": "",
                 "importance": 0,
                 "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
                 "validOperator": "true",
-                "validOperatorText": "ist true",
+                "validOperatorText": "is true",
                 "validOperandBValue": "",
                 "validOperandBType": "num",
                 "valid2LogOperator": 0,
@@ -13905,10 +13550,10 @@
                 "valid2OperandAValue": "",
                 "valid2OperandAType": "msg",
                 "valid2Operator": "true",
-                "valid2OperatorText": "ist true",
+                "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ bis <var>Blaue Morgenstunde Ende</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>frühestens (min)</span> <var>8:00</var></div><div class=\"indent-time-days\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>nur an bestimmten Wochentagen</span> <var>Sa,So</var></div></div><div>↕  Absolut <var>geschlossen (min)</var></div>",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>8:00</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
                 "timeMinOp": 0,
                 "timeMaxOp": 0
             },
@@ -14002,8 +13647,8 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 870,
-        "y": 880,
+        "x": 1060,
+        "y": 1340,
         "wires": [
             [
                 "fe2c0d6.cf09ff"
@@ -14021,8 +13666,8 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 670,
-        "y": 880,
+        "x": 860,
+        "y": 1340,
         "wires": [
             [
                 "cfb96521.b7a758"
@@ -16602,8 +16247,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
-        "y": 1500,
+        "x": 820,
+        "y": 1940,
         "wires": [
             [
                 "37aecff6.b4f34"
@@ -16640,8 +16285,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 1660,
+        "x": 460,
+        "y": 2140,
         "wires": [
             [
                 "6c174a98.4ffc14"
@@ -16678,8 +16323,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 2440,
+        "x": 440,
+        "y": 2740,
         "wires": [
             [
                 "d8c08a8.0d8b278"
@@ -16716,8 +16361,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
-        "y": 3420,
+        "x": 480,
+        "y": 3660,
         "wires": [
             [
                 "379160f1.186028"
@@ -20765,8 +20410,8 @@
         "filter": false,
         "asyncCmd": false,
         "outputs": 1,
-        "x": 490,
-        "y": 1440,
+        "x": 510,
+        "y": 1880,
         "wires": [
             [
                 "788896da.784a98",
@@ -20794,8 +20439,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
-        "y": 1440,
+        "x": 870,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -20813,8 +20458,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 1380,
+        "x": 820,
+        "y": 1820,
         "wires": []
     },
     {
@@ -20823,8 +20468,8 @@
         "z": "db6aac1c.cd43b",
         "name": "SCHALTER ROLLLADENAUTOMATIK manuell oder Sprache",
         "info": "",
-        "x": 320,
-        "y": 1300,
+        "x": 340,
+        "y": 1740,
         "wires": []
     },
     {
@@ -23268,6 +22913,658 @@
         "statusType": "auto",
         "x": 2190,
         "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "7fe378c7.b4fce8",
+        "type": "german-holidays",
+        "z": "db6aac1c.cd43b",
+        "name": "Feiertage und Urlaub",
+        "topic": "holiday",
+        "region": "",
+        "holidays": [
+            {
+                "id": "NEUJAHRSTAG",
+                "name": "Neujahrstag",
+                "nameAlt": "",
+                "character": 2,
+                "month": 1,
+                "day": 1,
+                "nth": 0,
+                "dow": 1,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "KARFREITAG",
+                "name": "Karfreitag",
+                "nameAlt": "",
+                "character": 2,
+                "month": -1,
+                "day": -2,
+                "nth": 0,
+                "dow": -2,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "OSTERMONTAG",
+                "name": "Ostermontag",
+                "nameAlt": "",
+                "character": 2,
+                "month": -1,
+                "day": 1,
+                "nth": 0,
+                "dow": 1,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "TAG_DER_ARBEIT",
+                "name": "Maifeiertag",
+                "nameAlt": "Tag der Arbeit",
+                "character": 256,
+                "month": 5,
+                "day": 1,
+                "nth": 0,
+                "dow": 1,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "CHRISTIHIMMELFAHRT",
+                "name": "Christi Himmelfahrt",
+                "nameAlt": "Vatertag",
+                "character": 2,
+                "month": -1,
+                "day": 39,
+                "nth": 5,
+                "dow": 4,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "PFINGSTMONTAG",
+                "name": "Pfingstmontag",
+                "nameAlt": "",
+                "character": 2,
+                "month": -1,
+                "day": 50,
+                "nth": 7,
+                "dow": 1,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "DEUTSCHEEINHEIT",
+                "name": "Tag der Deutschen Einheit",
+                "nameAlt": "",
+                "character": 4,
+                "month": 10,
+                "day": 3,
+                "nth": 0,
+                "dow": 3,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Brückentag Tag d. dt. Einheit",
+                "nameAlt": "",
+                "character": 0,
+                "month": 10,
+                "day": 4,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Urlaub Malle",
+                "nameAlt": "",
+                "character": 0,
+                "month": 10,
+                "day": 7,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Urlaub Malle",
+                "nameAlt": "",
+                "character": 0,
+                "month": 10,
+                "day": 8,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Urlaub Malle",
+                "nameAlt": "",
+                "character": 0,
+                "month": 10,
+                "day": 9,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Urlaub Malle",
+                "nameAlt": "",
+                "character": 0,
+                "month": 10,
+                "day": 10,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Urlaub Malle",
+                "nameAlt": "",
+                "character": 0,
+                "month": 10,
+                "day": 11,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Reformationstag",
+                "nameAlt": "",
+                "character": 0,
+                "month": 10,
+                "day": 31,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Brückentag",
+                "nameAlt": "",
+                "character": 0,
+                "month": 11,
+                "day": 1,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Heilig Abend",
+                "nameAlt": "",
+                "character": 0,
+                "month": 12,
+                "day": 24,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "ERSTERWEIHNACHTSFEIERTAG",
+                "name": "1. Weihnachtstag",
+                "nameAlt": "Christtag",
+                "character": 2,
+                "month": 12,
+                "day": 25,
+                "nth": 3,
+                "dow": 4,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "ZWEITERWEIHNACHTSFEIERTAG",
+                "name": "2. Weihnachtstag",
+                "nameAlt": "Stefanitag",
+                "character": 2,
+                "month": 12,
+                "day": 26,
+                "nth": 3,
+                "dow": 5,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "ZA",
+                "nameAlt": "",
+                "character": 0,
+                "month": 12,
+                "day": 27,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "ZA",
+                "nameAlt": "",
+                "character": 0,
+                "month": 12,
+                "day": 30,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            },
+            {
+                "id": "",
+                "name": "Silvester",
+                "nameAlt": "",
+                "character": 0,
+                "month": 12,
+                "day": 31,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            }
+        ],
+        "specialdays": [
+            {
+                "id": "",
+                "name": "",
+                "nameAlt": "",
+                "character": 2,
+                "month": 12,
+                "day": 31,
+                "nth": 0,
+                "dow": 0,
+                "plType": "none",
+                "plValue": ""
+            }
+        ],
+        "x": 560,
+        "y": 4080,
+        "wires": [
+            [
+                "dcaacec7.e1eb",
+                "15259bce.575154"
+            ]
+        ]
+    },
+    {
+        "id": "dcaacec7.e1eb",
+        "type": "debug",
+        "z": "db6aac1c.cd43b",
+        "name": "Holidays",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 780,
+        "y": 4040,
+        "wires": []
+    },
+    {
+        "id": "d2ed4078.52011",
+        "type": "inject",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "05 00 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 4040,
+        "wires": [
+            [
+                "7fe378c7.b4fce8"
+            ]
+        ]
+    },
+    {
+        "id": "e4912846.3a1ca8",
+        "type": "inject",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 4120,
+        "wires": [
+            [
+                "7fe378c7.b4fce8"
+            ]
+        ]
+    },
+    {
+        "id": "1ab3e37c.4d15fd",
+        "type": "comment",
+        "z": "db6aac1c.cd43b",
+        "name": "every day at midnight",
+        "info": "",
+        "x": 320,
+        "y": 4000,
+        "wires": []
+    },
+    {
+        "id": "869da82f.484e48",
+        "type": "comment",
+        "z": "db6aac1c.cd43b",
+        "name": "once on Node-Red start",
+        "info": "",
+        "x": 320,
+        "y": 4080,
+        "wires": []
+    },
+    {
+        "id": "15259bce.575154",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "day-info",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 4120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2fe809f.3c90d",
+        "type": "switch",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "property": "day-info.today.isWeekendOrHoliday",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 4240,
+        "wires": [
+            [
+                "c73a89b5.6630f8"
+            ],
+            [
+                "e245c8da.585928"
+            ]
+        ]
+    },
+    {
+        "id": "26326493.2e010c",
+        "type": "inject",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "true",
+                "vt": "bool"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 290,
+        "y": 4240,
+        "wires": [
+            [
+                "d2fe809f.3c90d"
+            ]
+        ]
+    },
+    {
+        "id": "c73a89b5.6630f8",
+        "type": "debug",
+        "z": "db6aac1c.cd43b",
+        "name": "is Weekend or Holiday",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 820,
+        "y": 4240,
+        "wires": []
+    },
+    {
+        "id": "e245c8da.585928",
+        "type": "debug",
+        "z": "db6aac1c.cd43b",
+        "name": "is not a Weekend and not a Holiday",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 860,
+        "y": 4300,
+        "wires": []
+    },
+    {
+        "id": "e427d079.51212",
+        "type": "comment",
+        "z": "db6aac1c.cd43b",
+        "name": "Example for usage in switch node",
+        "info": "",
+        "x": 350,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "1f3e0e8e.71e271",
+        "type": "comment",
+        "z": "db6aac1c.cd43b",
+        "name": "Set Wacke Up Time",
+        "info": "",
+        "x": 290,
+        "y": 4460,
+        "wires": []
+    },
+    {
+        "id": "37db989c.58af88",
+        "type": "ui_text_input",
+        "z": "db6aac1c.cd43b",
+        "name": "openBlindBusinessDay",
+        "label": "open blind business day not before",
+        "tooltip": "HH:MM",
+        "group": "510978ab.7cc15",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 310,
+        "y": 4520,
+        "wires": [
+            [
+                "c2161d58.fb02"
+            ]
+        ]
+    },
+    {
+        "id": "59933ee3.93e5d",
+        "type": "ui_text_input",
+        "z": "db6aac1c.cd43b",
+        "name": "openBlindWeekendOrHoliday",
+        "label": "open blind weekend or holiday not before",
+        "tooltip": "HH:MM",
+        "group": "510978ab.7cc15",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 320,
+        "y": 4560,
+        "wires": [
+            [
+                "2a7c4f64.c7c6"
+            ]
+        ]
+    },
+    {
+        "id": "c2161d58.fb02",
+        "type": "function",
+        "z": "db6aac1c.cd43b",
+        "name": "openBlindBusinessDay_String",
+        "func": "var payload = msg.payload;\n    flow.set(\"openBlindBusinessDay_String\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 810,
+        "y": 4520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2a7c4f64.c7c6",
+        "type": "function",
+        "z": "db6aac1c.cd43b",
+        "name": "openBlindWeekendOrHoliday_String",
+        "func": "var payload = msg.payload;\n    flow.set(\"openBlindWeekendOrHoliday_String\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 830,
+        "y": 4560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82ca19b9.7a87f8",
+        "type": "ui_text_input",
+        "z": "db6aac1c.cd43b",
+        "name": "closeBlindKids",
+        "label": "close blind kids",
+        "tooltip": "HH:MM",
+        "group": "510978ab.7cc15",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 280,
+        "y": 4680,
+        "wires": [
+            [
+                "c769b630.0c2158"
+            ]
+        ]
+    },
+    {
+        "id": "c769b630.0c2158",
+        "type": "function",
+        "z": "db6aac1c.cd43b",
+        "name": "closeBlindKids_String",
+        "func": "var payload = msg.payload;\n    flow.set(\"closeBlindKids_String\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 780,
+        "y": 4680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f22fdb65.edb7a8",
+        "type": "comment",
+        "z": "db6aac1c.cd43b",
+        "name": "Set Closure Time",
+        "info": "",
+        "x": 280,
+        "y": 4620,
         "wires": []
     }
 ]
