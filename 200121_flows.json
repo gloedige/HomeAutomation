@@ -1243,7 +1243,6 @@
                 "7e9b5c04.176d9c",
                 "aa3e304b.7cd238",
                 "99680790.f362b",
-                "b28eb63.21d6f48",
                 "c66f90e1.abd6f",
                 "94213980.5a2548"
             ]
@@ -3243,13 +3242,8 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -3294,18 +3288,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>10%</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -3350,17 +3341,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>10%</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 2,
                 "name": "Sonnenuntergang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -3405,7 +3394,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i> <span>no later than (max)</span> <var>flow.closeBlindKids_String</var></div></div><div>↕ absolute <var>10%</var></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i> <span>no later than (max)</span> <var>flow.closeBlindKids_String</var></div></div><div>↕ absolute <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             }
         ],
         "sunControlMode": "0",
@@ -3445,11 +3436,10 @@
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
         "x": 870,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "4a0fd1b4.c2216",
-                "492cfc48.773d2c",
                 "5d933345.3be34c",
                 "fdd55930.888678"
             ]
@@ -4474,7 +4464,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 10,
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4500,7 +4490,7 @@
         "type": "ui_text",
         "z": "db6aac1c.cd43b",
         "group": "510978ab.7cc15",
-        "order": 9,
+        "order": 10,
         "width": 0,
         "height": 0,
         "name": "",
@@ -4535,7 +4525,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 11,
+        "order": 12,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -5392,32 +5382,32 @@
                 "timeMaxOp": 0
             }
         ],
-        "sunControlMode": "0",
-        "sunFloorLength": "",
-        "sunMinAltitude": "",
-        "sunMinDelta": "",
-        "blindPosMin": "closed (min)",
+        "sunControlMode": "2",
+        "sunFloorLength": "0",
+        "sunMinAltitude": "10",
+        "sunMinDelta": "0.1",
+        "blindPosMin": "10%",
         "blindPosMinType": "levelFixed",
-        "blindPosMax": "open (max)",
+        "blindPosMax": "75%",
         "blindPosMaxType": "levelFixed",
-        "smoothTime": "",
+        "smoothTime": "1800000",
         "sunTopic": "",
-        "windowTop": "",
-        "windowBottom": "",
-        "windowAzimuthStart": "0",
-        "windowAzimuthEnd": "",
-        "oversteerValue": "",
-        "oversteerValueType": "none",
-        "oversteerCompare": "gte",
-        "oversteerThreshold": "",
-        "oversteerThresholdType": "num",
+        "windowTop": "220",
+        "windowBottom": "0",
+        "windowAzimuthStart": "200",
+        "windowAzimuthEnd": "280",
+        "oversteerValue": "payload.temp_maxc",
+        "oversteerValueType": "msg",
+        "oversteerCompare": "lt",
+        "oversteerThreshold": "thresholdMaxTempEnvValue",
+        "oversteerThresholdType": "global",
         "oversteerBlindPos": "open (max)",
         "oversteerBlindPosType": "levelFixed",
-        "oversteer2Value": "",
-        "oversteer2ValueType": "none",
-        "oversteer2Compare": "gte",
-        "oversteer2Threshold": "",
-        "oversteer2ThresholdType": "num",
+        "oversteer2Value": "maxLightValue",
+        "oversteer2ValueType": "global",
+        "oversteer2Compare": "lt",
+        "oversteer2Threshold": "thresholdMaxLightValueFF",
+        "oversteer2ThresholdType": "global",
         "oversteer2BlindPos": "open (max)",
         "oversteer2BlindPosType": "levelFixed",
         "oversteer3Value": "",
@@ -5428,7 +5418,7 @@
         "oversteer3BlindPos": "open (max)",
         "oversteer3BlindPosType": "levelFixed",
         "oversteerTopic": "",
-        "x": 860,
+        "x": 870,
         "y": 140,
         "wires": [
             [
@@ -5713,7 +5703,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 13,
+        "order": 14,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -5739,7 +5729,7 @@
         "type": "ui_text",
         "z": "db6aac1c.cd43b",
         "group": "510978ab.7cc15",
-        "order": 12,
+        "order": 13,
         "width": 0,
         "height": 0,
         "name": "",
@@ -5774,7 +5764,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 14,
+        "order": 15,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -6043,6 +6033,7 @@
         "id": "e31b1c60.3110e",
         "type": "blind-control",
         "z": "db6aac1c.cd43b",
+        "d": true,
         "name": "Sonnenschutz West ",
         "topic": "",
         "positionConfig": "6ad7a531.04aedc",
@@ -10488,7 +10479,7 @@
         "type": "ui_text",
         "z": "db6aac1c.cd43b",
         "group": "510978ab.7cc15",
-        "order": 15,
+        "order": 16,
         "width": 0,
         "height": 0,
         "name": "",
@@ -10505,7 +10496,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 16,
+        "order": 17,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -10532,7 +10523,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "group": "510978ab.7cc15",
-        "order": 17,
+        "order": 18,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -10843,13 +10834,8 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -10894,18 +10880,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -10950,7 +10933,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 2,
@@ -11179,13 +11164,8 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -11230,18 +11210,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -11286,7 +11263,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 2,
@@ -11409,13 +11388,8 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -11460,18 +11434,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -11516,7 +11487,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 2,
@@ -12480,13 +12453,13 @@
         "id": "9fd27d1a.68469",
         "type": "function",
         "z": "427fc89b.e34038",
-        "name": "globalThresholdLuxEnv",
-        "func": "var payload = msg.payload;\nif(payload>0)\n    global.set(\"thresholdMaxLightValue\",payload)\nreturn msg;",
+        "name": "flowThresholdLuxEnv",
+        "func": "var payload = msg.payload;\nif(payload>0)\n    flow.set(\"thresholdLuxSunprotection\",payload)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 650,
+        "x": 640,
         "y": 620,
         "wires": [
             [
@@ -12576,8 +12549,8 @@
         "topic": "1",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
-        "y": 1480,
+        "x": 170,
+        "y": 1700,
         "wires": [
             [
                 "69388522.79c8ac",
@@ -12604,8 +12577,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 1460,
+        "x": 360,
+        "y": 1680,
         "wires": [
             [
                 "b181f0b.41a7f1"
@@ -12631,8 +12604,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 1500,
+        "x": 360,
+        "y": 1720,
         "wires": [
             [
                 "b181f0b.41a7f1"
@@ -12660,8 +12633,8 @@
         "topic": "",
         "payload": "user1.ID",
         "payloadType": "global",
-        "x": 200,
-        "y": 1580,
+        "x": 180,
+        "y": 1800,
         "wires": [
             [
                 "268baab6.d433b6"
@@ -12689,8 +12662,8 @@
         "topic": "",
         "payload": "900",
         "payloadType": "num",
-        "x": 210,
-        "y": 1680,
+        "x": 190,
+        "y": 1900,
         "wires": [
             [
                 "9f2fb01f.afdf6"
@@ -12710,8 +12683,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 1580,
+        "x": 380,
+        "y": 1800,
         "wires": []
     },
     {
@@ -12727,8 +12700,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 1480,
+        "x": 600,
+        "y": 1700,
         "wires": []
     },
     {
@@ -12750,8 +12723,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
-        "y": 1680,
+        "x": 450,
+        "y": 1900,
         "wires": [
             [
                 "aec58c30.77783"
@@ -12771,8 +12744,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 1680,
+        "x": 640,
+        "y": 1900,
         "wires": []
     },
     {
@@ -12781,8 +12754,8 @@
         "z": "427fc89b.e34038",
         "name": "Set global Variable",
         "info": "![](https://i.imgur.com/28Dx6wl.png)",
-        "x": 190,
-        "y": 1420,
+        "x": 170,
+        "y": 1640,
         "wires": []
     },
     {
@@ -12791,8 +12764,8 @@
         "z": "427fc89b.e34038",
         "name": "Get a Variable",
         "info": "",
-        "x": 170,
-        "y": 1540,
+        "x": 150,
+        "y": 1760,
         "wires": []
     },
     {
@@ -12801,8 +12774,8 @@
         "z": "427fc89b.e34038",
         "name": "Modify a Variable",
         "info": "",
-        "x": 180,
-        "y": 1640,
+        "x": 160,
+        "y": 1860,
         "wires": []
     },
     {
@@ -12811,8 +12784,8 @@
         "z": "427fc89b.e34038",
         "name": "Delete",
         "info": "",
-        "x": 150,
-        "y": 1760,
+        "x": 130,
+        "y": 1980,
         "wires": []
     },
     {
@@ -12836,8 +12809,8 @@
         "topic": "1",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
-        "y": 1800,
+        "x": 170,
+        "y": 2020,
         "wires": [
             [
                 "7c71029a.5cd34c"
@@ -12861,8 +12834,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 410,
-        "y": 1800,
+        "x": 390,
+        "y": 2020,
         "wires": [
             [
                 "35106973.321316"
@@ -12882,8 +12855,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 570,
-        "y": 1800,
+        "x": 550,
+        "y": 2020,
         "wires": []
     },
     {
@@ -13385,16 +13358,17 @@
         "id": "a662edc1.417ca",
         "type": "ui_switch",
         "z": "427fc89b.e34038",
-        "name": "",
-        "label": "switch sunprotection",
+        "name": "switch sunprotection GF",
+        "label": "switch sunprotection ground floor (update)",
         "tooltip": "",
-        "group": "46fbe67a.90cd18",
+        "group": "510978ab.7cc15",
         "order": 9,
         "width": 0,
         "height": 0,
         "passthru": true,
         "decouple": "false",
-        "topic": "",
+        "topic": "condition",
+        "topicType": "str",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
@@ -13404,11 +13378,13 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 160,
-        "y": 520,
+        "animate": true,
+        "className": "",
+        "x": 170,
+        "y": 1180,
         "wires": [
             [
-                "642aad1a.93fa74"
+                "1d88bea8.e86851"
             ]
         ]
     },
@@ -13416,16 +13392,14 @@
         "id": "642aad1a.93fa74",
         "type": "change",
         "z": "427fc89b.e34038",
-        "name": "",
+        "name": "set threshold Light Value Ground Floor",
         "rules": [
             {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "100000",
-                "tot": "num"
+                "t": "set",
+                "p": "thresholdMaxLightValueGF",
+                "pt": "global",
+                "to": "thresholdLuxSunprotection",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -13433,12 +13407,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 420,
-        "y": 520,
+        "x": 750,
+        "y": 1180,
         "wires": [
-            [
-                "1b1f822a.fd37de"
-            ]
+            []
         ]
     },
     {
@@ -13464,13 +13436,8 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -13515,18 +13482,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
                 "name": "Sonnenaufgang WE",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -13571,7 +13535,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 2,
@@ -13682,11 +13648,13 @@
         "city": "",
         "country": "",
         "language": "de",
-        "x": 860,
-        "y": 1340,
+        "x": 490,
+        "y": 460,
         "wires": [
             [
-                "cfb96521.b7a758"
+                "cfb96521.b7a758",
+                "43ea72a5.8ffe2c",
+                "b28eb63.21d6f48"
             ]
         ]
     },
@@ -23607,6 +23575,450 @@
         "y": 720,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "43ea72a5.8ffe2c",
+        "type": "blind-control",
+        "z": "db6aac1c.cd43b",
+        "name": "Konsti West",
+        "topic": "",
+        "positionConfig": "6ad7a531.04aedc",
+        "outputs": 1,
+        "autoTrigger": false,
+        "autoTriggerTime": 3600000,
+        "startDelayTime": "0",
+        "storeName": "",
+        "blindIncrement": "0.1",
+        "blindOpenPos": "1",
+        "blindClosedPos": 0,
+        "blindPosReverse": false,
+        "blindPosDefault": "open (max)",
+        "blindPosDefaultType": "levelFixed",
+        "overwriteExpire": "",
+        "rules": [
+            {
+                "index": 0,
+                "name": "Sonnenaufgang",
+                "isValid": false,
+                "valid": {},
+                "timeValue": "blueHourDawnEnd",
+                "timeType": "pdsTime",
+                "timeOp": 0,
+                "timeOpText": "↥ until",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 60000,
+                "timeDays": "*",
+                "timeMonths": "*",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "",
+                "timeDateEnd": "",
+                "timeMinValue": "openBlindBusinessDay_String",
+                "timeMinType": "flow",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "",
+                "timeMaxType": "none",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "levelValue": "10%",
+                "levelType": "levelFixed",
+                "levelOp": 0,
+                "levelOpText": "↕ absolute",
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "false",
+                "validOperatorText": "is false",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "is true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
+            },
+            {
+                "index": 1,
+                "name": "Sonnenaufgang_WE",
+                "isValid": false,
+                "valid": {},
+                "timeValue": "blueHourDawnEnd",
+                "timeType": "pdsTime",
+                "timeOp": 0,
+                "timeOpText": "↥ until",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 60000,
+                "timeDays": "*",
+                "timeMonths": "*",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "",
+                "timeDateEnd": "",
+                "timeMinValue": "openBlindWeekendOrHoliday_String",
+                "timeMinType": "flow",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "",
+                "timeMaxType": "none",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "levelValue": "10%",
+                "levelType": "levelFixed",
+                "levelOp": 0,
+                "levelOpText": "↕ absolute",
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
+                "validOperandAType": "global",
+                "validOperator": "true",
+                "validOperatorText": "is true",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "is true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
+            },
+            {
+                "index": 2,
+                "name": "Sonnenuntergang",
+                "isValid": false,
+                "valid": {},
+                "timeValue": "blueHourDuskStart",
+                "timeType": "pdsTime",
+                "timeOp": 1,
+                "timeOpText": "↧ from",
+                "offsetValue": "",
+                "offsetType": "none",
+                "multiplier": 3600000,
+                "timeDays": "*",
+                "timeMonths": "*",
+                "timeOnlyEvenDays": false,
+                "timeOnlyOddDays": false,
+                "timeDateStart": "",
+                "timeDateEnd": "",
+                "timeMinValue": "",
+                "timeMinType": "none",
+                "offsetMinValue": "",
+                "offsetMinType": "none",
+                "multiplierMin": 60000,
+                "timeMaxValue": "closeBlindKids_String",
+                "timeMaxType": "flow",
+                "offsetMaxValue": "",
+                "offsetMaxType": "none",
+                "multiplierMax": 60000,
+                "levelValue": "10%",
+                "levelType": "levelFixed",
+                "levelOp": 0,
+                "levelOpText": "↕ absolute",
+                "topic": "",
+                "importance": 0,
+                "resetOverwrite": false,
+                "validOperandAValue": "",
+                "validOperandAType": "none",
+                "validOperator": "true",
+                "validOperatorText": "is true",
+                "validOperandBValue": "",
+                "validOperandBType": "num",
+                "valid2LogOperator": 0,
+                "valid2LogOperatorText": "N/A",
+                "valid2OperandAValue": "",
+                "valid2OperandAType": "msg",
+                "valid2Operator": "true",
+                "valid2OperatorText": "is true",
+                "valid2OperandBValue": "",
+                "valid2OperandBType": "num",
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i> <span>no later than (max)</span> <var>flow.closeBlindKids_String</var></div></div><div>↕ absolute <var>10%</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
+            }
+        ],
+        "sunControlMode": "2",
+        "sunFloorLength": "0",
+        "sunMinAltitude": "10",
+        "sunMinDelta": "0.1",
+        "blindPosMin": "10%",
+        "blindPosMinType": "levelFixed",
+        "blindPosMax": "75%",
+        "blindPosMaxType": "levelFixed",
+        "smoothTime": "1800000",
+        "sunTopic": "",
+        "windowTop": "220",
+        "windowBottom": "0",
+        "windowAzimuthStart": "200",
+        "windowAzimuthEnd": "280",
+        "oversteerValue": "payload.temp_maxc",
+        "oversteerValueType": "msg",
+        "oversteerCompare": "lt",
+        "oversteerThreshold": "thresholdMaxTempEnvValue",
+        "oversteerThresholdType": "global",
+        "oversteerBlindPos": "open (max)",
+        "oversteerBlindPosType": "levelFixed",
+        "oversteer2Value": "maxLightValue",
+        "oversteer2ValueType": "global",
+        "oversteer2Compare": "lt",
+        "oversteer2Threshold": "thresholdMaxLightValueFF",
+        "oversteer2ThresholdType": "global",
+        "oversteer2BlindPos": "open (max)",
+        "oversteer2BlindPosType": "levelFixed",
+        "oversteer3Value": "",
+        "oversteer3ValueType": "none",
+        "oversteer3Compare": "gte",
+        "oversteer3Threshold": "",
+        "oversteer3ThresholdType": "num",
+        "oversteer3BlindPos": "open (max)",
+        "oversteer3BlindPosType": "levelFixed",
+        "oversteerTopic": "",
+        "x": 870,
+        "y": 420,
+        "wires": [
+            [
+                "492cfc48.773d2c"
+            ]
+        ]
+    },
+    {
+        "id": "1d88bea8.e86851",
+        "type": "combine-if",
+        "z": "427fc89b.e34038",
+        "topic": "condition",
+        "name": "",
+        "timeout": 0,
+        "x": 450,
+        "y": 1220,
+        "wires": [
+            [
+                "642aad1a.93fa74"
+            ],
+            [
+                "bb21f70a.8f8268"
+            ]
+        ]
+    },
+    {
+        "id": "b543f0be.da35a",
+        "type": "function",
+        "z": "427fc89b.e34038",
+        "d": true,
+        "name": "globalThresholdLuxEnv",
+        "func": "var payload = msg.payload;\nif(payload>0)\n    global.set(\"thresholdMaxLightValue\",payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1070,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bb21f70a.8f8268",
+        "type": "change",
+        "z": "427fc89b.e34038",
+        "name": "set threshold Light Value Ground Floor to max",
+        "rules": [
+            {
+                "t": "set",
+                "p": "thresholdMaxLightValueGF",
+                "pt": "global",
+                "to": "100000",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ff70dbf.8aeb92",
+        "type": "inject",
+        "z": "427fc89b.e34038",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1260,
+        "wires": [
+            [
+                "1d88bea8.e86851"
+            ]
+        ]
+    },
+    {
+        "id": "49a49a2a.87a914",
+        "type": "ui_switch",
+        "z": "427fc89b.e34038",
+        "name": "switch sunprotection 1st F",
+        "label": "switch sunprotection 1st floor (update)",
+        "tooltip": "",
+        "group": "510978ab.7cc15",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "condition",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 170,
+        "y": 1360,
+        "wires": [
+            [
+                "f3cbf3e.05d371"
+            ]
+        ]
+    },
+    {
+        "id": "d812e5e2.38e4a8",
+        "type": "change",
+        "z": "427fc89b.e34038",
+        "name": "set threshold Light Value 1st Floor",
+        "rules": [
+            {
+                "t": "set",
+                "p": "thresholdMaxLightValueFF",
+                "pt": "global",
+                "to": "thresholdLuxSunprotection",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3cbf3e.05d371",
+        "type": "combine-if",
+        "z": "427fc89b.e34038",
+        "topic": "condition",
+        "name": "",
+        "timeout": 0,
+        "x": 450,
+        "y": 1400,
+        "wires": [
+            [
+                "d812e5e2.38e4a8"
+            ],
+            [
+                "1107078d.416678"
+            ]
+        ]
+    },
+    {
+        "id": "1107078d.416678",
+        "type": "change",
+        "z": "427fc89b.e34038",
+        "name": "set threshold Light Value 1st Floor to max",
+        "rules": [
+            {
+                "t": "set",
+                "p": "thresholdMaxLightValueFF",
+                "pt": "global",
+                "to": "100000",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c718c3b2.7fcf7",
+        "type": "inject",
+        "z": "427fc89b.e34038",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1440,
+        "wires": [
+            [
+                "f3cbf3e.05d371"
+            ]
         ]
     }
 ]
