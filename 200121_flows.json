@@ -581,7 +581,7 @@
     {
         "id": "c66039fc.9f9668",
         "type": "hydrawise-controller",
-        "name": "Loedige",
+        "name": "Loedige1",
         "key": "BD8E-4F69-1B89-68A5"
     },
     {
@@ -1178,7 +1178,8 @@
         "y": 820,
         "wires": [
             [
-                "17fc17ca.4d5ec8"
+                "17fc17ca.4d5ec8",
+                "b0758bf9.692848"
             ]
         ]
     },
@@ -2420,13 +2421,8 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -2471,18 +2467,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -2527,7 +2520,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 2,
@@ -7139,12 +7134,14 @@
         "order": 2,
         "width": 1,
         "height": 4,
-        "passthru": true,
+        "passthru": false,
         "outs": "end",
         "topic": "",
+        "topicType": "str",
         "min": 0,
         "max": "1",
         "step": "0.1",
+        "className": "",
         "x": 1710,
         "y": 780,
         "wires": [
@@ -19421,12 +19418,12 @@
         "id": "32e254fd.4e37ac",
         "type": "hydrawise-command",
         "z": "e20ea6d6.476028",
-        "name": "Hunter_Node_Red_Controller",
+        "name": "Loedige_Hunter_Controller",
         "controller": "c66039fc.9f9668",
         "zone": "Rasen Terrasse",
         "command": "info",
         "duration": "10",
-        "x": 530,
+        "x": 520,
         "y": 240,
         "wires": [
             [
@@ -23572,5 +23569,44 @@
         "x": 280,
         "y": 4620,
         "wires": []
+    },
+    {
+        "id": "aa808e6e.7753d",
+        "type": "delay",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "hour",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1690,
+        "y": 720,
+        "wires": [
+            [
+                "a40f79b6.e0ea78"
+            ]
+        ]
+    },
+    {
+        "id": "a40f79b6.e0ea78",
+        "type": "rbe",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1850,
+        "y": 720,
+        "wires": [
+            []
+        ]
     }
 ]
