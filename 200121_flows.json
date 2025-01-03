@@ -588,7 +588,7 @@
     {
         "id": "c66039fc.9f9668",
         "type": "hydrawise-controller",
-        "name": "Loedige",
+        "name": "Loedige1",
         "key": "BD8E-4F69-1B89-68A5"
     },
     {
@@ -1228,7 +1228,7 @@
         "onlyOnChange": "true",
         "topic": "blind",
         "outputs": 1,
-        "start": "sunrise",
+        "start": "blueHourDawnEnd",
         "startType": "pdsTime",
         "startOffset": "",
         "startOffsetType": "none",
@@ -1245,7 +1245,8 @@
                 "437a6603.5d12d8",
                 "aa3e304b.7cd238",
                 "c66f90e1.abd6f",
-                "94213980.5a2548"
+                "94213980.5a2548",
+                "c406ad8.e58825"
             ]
         ]
     },
@@ -2079,7 +2080,8 @@
         "wires": [
             [
                 "44841334.14955c",
-                "880d6986.15d298"
+                "880d6986.15d298",
+                "319bac10.e18884"
             ]
         ]
     },
@@ -20355,7 +20357,7 @@
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
         "x": 310,
-        "y": 840,
+        "y": 780,
         "wires": [
             [
                 "8328a5c7.399818",
@@ -20374,7 +20376,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1110,
-        "y": 840,
+        "y": 780,
         "wires": [
             [
                 "761f70eb.3f63f"
@@ -20392,7 +20394,7 @@
         "name": "gerd.loedige@posteo.de",
         "dname": "Gerds Mail",
         "x": 1350,
-        "y": 840,
+        "y": 780,
         "wires": []
     },
     {
@@ -20408,7 +20410,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 780,
+        "y": 720,
         "wires": []
     },
     {
@@ -20433,7 +20435,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 170,
-        "y": 760,
+        "y": 700,
         "wires": [
             [
                 "152c3591.4453ca"
@@ -20485,7 +20487,7 @@
         "name": "Mailbenachrichtigung Batteriestatus Rauchmelder",
         "info": "",
         "x": 280,
-        "y": 680,
+        "y": 620,
         "wires": []
     },
     {
@@ -20499,7 +20501,7 @@
         "initialize": "",
         "finalize": "",
         "x": 900,
-        "y": 840,
+        "y": 780,
         "wires": [
             [
                 "1669856b.19e31b"
@@ -20537,7 +20539,7 @@
         "to": "",
         "reg": false,
         "x": 700,
-        "y": 840,
+        "y": 780,
         "wires": [
             [
                 "75aebf.ce69d14",
@@ -20630,8 +20632,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 180,
-        "y": 1080,
+        "x": 160,
+        "y": 980,
         "wires": [
             [
                 "1d1b3d02.eb3693"
@@ -20658,8 +20660,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 410,
-        "y": 1080,
+        "x": 390,
+        "y": 980,
         "wires": [
             [
                 "2b2fda1c.b6d066"
@@ -20683,8 +20685,8 @@
         "topic": "",
         "payload": "2",
         "payloadType": "num",
-        "x": 180,
-        "y": 1040,
+        "x": 160,
+        "y": 940,
         "wires": [
             [
                 "1d1b3d02.eb3693"
@@ -20704,8 +20706,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 1080,
+        "x": 680,
+        "y": 980,
         "wires": []
     },
     {
@@ -20728,7 +20730,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2000,
+        "x": 2360,
         "y": 1440,
         "wires": [
             []
@@ -20747,7 +20749,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2020,
+        "x": 2380,
         "y": 1540,
         "wires": []
     },
@@ -20768,7 +20770,7 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1380,
+        "x": 1740,
         "y": 1800,
         "wires": [
             [
@@ -20800,12 +20802,14 @@
         "once": false,
         "onceDelay": "3",
         "topic": "",
-        "x": 150,
-        "y": 1500,
+        "payloadType": "str",
+        "x": 130,
+        "y": 1620,
         "wires": [
             [
                 "4af77fb8.21885",
-                "b519aca9.cd0dd"
+                "b519aca9.cd0dd",
+                "133f77b0.e2a988"
             ]
         ]
     },
@@ -20845,7 +20849,7 @@
         "payloadType": "bool",
         "topic": "quitAlarm",
         "topicType": "str",
-        "x": 1380,
+        "x": 1740,
         "y": 1880,
         "wires": [
             [
@@ -20877,7 +20881,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1730,
+        "x": 2090,
         "y": 1486,
         "wires": [
             [
@@ -20907,7 +20911,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1740,
+        "x": 2100,
         "y": 1400,
         "wires": [
             [
@@ -20928,7 +20932,7 @@
         "outputtriggeredby": "onlyonetopic",
         "inputCount": "3",
         "topic": "Alarm_3",
-        "x": 990,
+        "x": 1190,
         "y": 1960,
         "wires": [
             [
@@ -20950,7 +20954,7 @@
         "outputtriggeredby": "onlyonetopic",
         "inputCount": "3",
         "topic": "Alarm_1",
-        "x": 1000,
+        "x": 1200,
         "y": 1800,
         "wires": [
             [
@@ -20972,7 +20976,7 @@
         "outputtriggeredby": "onlyonetopic",
         "inputCount": "3",
         "topic": "Alarm_2",
-        "x": 1000,
+        "x": 1200,
         "y": 1878,
         "wires": [
             [
@@ -21047,7 +21051,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1960,
+        "x": 2320,
         "y": 1820,
         "wires": [
             [
@@ -21065,7 +21069,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2220,
+        "x": 2580,
         "y": 1820,
         "wires": [
             [
@@ -21083,7 +21087,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2450,
+        "x": 2810,
         "y": 1820,
         "wires": [
             [
@@ -21101,7 +21105,7 @@
         "tls": true,
         "name": "gerd.loedige@posteo.de",
         "dname": "Gerds Mail",
-        "x": 2670,
+        "x": 3030,
         "y": 1820,
         "wires": []
     },
@@ -21109,7 +21113,7 @@
         "id": "4af77fb8.21885",
         "type": "change",
         "z": "c1790f94.1fa788",
-        "name": "set topic",
+        "name": "set topic presence",
         "rules": [
             {
                 "t": "set",
@@ -21124,8 +21128,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 1440,
+        "x": 370,
+        "y": 1520,
         "wires": [
             [
                 "a3c1636e.dd1f1"
@@ -21137,8 +21141,8 @@
         "type": "InvertUltimate",
         "z": "c1790f94.1fa788",
         "name": "Invert",
-        "x": 630,
-        "y": 1560,
+        "x": 790,
+        "y": 1520,
         "wires": [
             [
                 "f44d0bb4.b763f8",
@@ -21152,7 +21156,7 @@
         "id": "a3c1636e.dd1f1",
         "type": "change",
         "z": "c1790f94.1fa788",
-        "name": "BestätigungAnwesenheit",
+        "name": "ConfirmPresence",
         "rules": [
             {
                 "t": "set",
@@ -21167,8 +21171,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
-        "y": 1500,
+        "x": 590,
+        "y": 1520,
         "wires": [
             [
                 "748e3b12.fdf234",
@@ -21189,8 +21193,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
-        "y": 1300,
+        "x": 600,
+        "y": 1580,
         "wires": []
     },
     {
@@ -21311,7 +21315,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1940,
+        "x": 2300,
         "y": 1740,
         "wires": [
             [
@@ -21334,7 +21338,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2140,
+        "x": 2500,
         "y": 1740,
         "wires": [
             [
@@ -21356,7 +21360,7 @@
         "notificationSoundComputed": "payload.sound",
         "notificationSoundComputedType": "msg",
         "output": 1,
-        "x": 2350,
+        "x": 2710,
         "y": 1740,
         "wires": [
             []
@@ -21375,7 +21379,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2030,
+        "x": 2390,
         "y": 1500,
         "wires": []
     },
@@ -21392,7 +21396,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2040,
+        "x": 2400,
         "y": 1340,
         "wires": []
     },
@@ -21417,8 +21421,8 @@
         "topic": "condition_WZ_Sued",
         "payload": "true",
         "payloadType": "bool",
-        "x": 570,
-        "y": 2000,
+        "x": 690,
+        "y": 2020,
         "wires": [
             [
                 "c1809d4.20ef56"
@@ -21434,7 +21438,7 @@
         "topic": "condition_WZ_Schiebe",
         "change": true,
         "cache": true,
-        "x": 500,
+        "x": 640,
         "y": 1800,
         "wires": [
             [
@@ -21451,7 +21455,7 @@
         "topic": "condition_Kueche_Sued",
         "change": true,
         "cache": true,
-        "x": 500,
+        "x": 640,
         "y": 1880,
         "wires": [
             [
@@ -21468,7 +21472,7 @@
         "topic": "condition_WZ_Sued",
         "change": true,
         "cache": true,
-        "x": 520,
+        "x": 660,
         "y": 1960,
         "wires": [
             [
@@ -21497,8 +21501,8 @@
         "topic": "condition_WZ_Sued",
         "payload": "false",
         "payloadType": "bool",
-        "x": 570,
-        "y": 2040,
+        "x": 690,
+        "y": 2060,
         "wires": [
             [
                 "c1809d4.20ef56"
@@ -21525,7 +21529,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2010,
+        "x": 2370,
         "y": 1600,
         "wires": [
             []
@@ -21539,7 +21543,7 @@
         "stopbehaviorPIN1": "0",
         "stopbehaviorPIN2": false,
         "blinkfrequency": "2000",
-        "x": 1730,
+        "x": 2090,
         "y": 1560,
         "wires": [
             [
@@ -21570,7 +21574,7 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2010,
+        "x": 2370,
         "y": 1660,
         "wires": [
             []
@@ -21674,7 +21678,7 @@
         "links": [
             "809bcae8.556298"
         ],
-        "x": 1164,
+        "x": 1364,
         "y": 1947,
         "wires": []
     },
@@ -21717,7 +21721,7 @@
         "links": [
             "a884d2f6.22676"
         ],
-        "x": 1395,
+        "x": 1755,
         "y": 1700,
         "wires": [
             [
@@ -21739,7 +21743,7 @@
         "links": [
             "809bcae8.556298"
         ],
-        "x": 1164,
+        "x": 1364,
         "y": 1787,
         "wires": []
     },
@@ -21751,7 +21755,7 @@
         "links": [
             "809bcae8.556298"
         ],
-        "x": 1163,
+        "x": 1363,
         "y": 1865,
         "wires": []
     },
@@ -21767,7 +21771,7 @@
         "ip": "",
         "port": "",
         "volume": "100",
-        "x": 2390,
+        "x": 2750,
         "y": 1900,
         "wires": [
             [
@@ -21808,7 +21812,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2180,
+        "x": 2540,
         "y": 1900,
         "wires": [
             [
@@ -21826,7 +21830,7 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 2590,
+        "x": 2950,
         "y": 1900,
         "wires": []
     },
@@ -21863,7 +21867,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2180,
+        "x": 2540,
         "y": 1980,
         "wires": [
             [
@@ -21883,7 +21887,7 @@
         "ip": "",
         "port": "",
         "volume": "100",
-        "x": 2390,
+        "x": 2750,
         "y": 1980,
         "wires": [
             []
@@ -21899,9 +21903,9 @@
         "sInitializeWith": "WaitForPayload",
         "triggertopic": "motion_terrace_detected",
         "outputtriggeredby": "onlyonetopic",
-        "inputCount": "3",
+        "inputCount": "4",
         "topic": "Alarm_4",
-        "x": 1000,
+        "x": 1200,
         "y": 1720,
         "wires": [
             [
@@ -21939,7 +21943,7 @@
         "datapoint": "LEVEL",
         "datapointRx": "str",
         "force": false,
-        "x": 1980,
+        "x": 2340,
         "y": 2080,
         "wires": []
     },
@@ -21964,7 +21968,7 @@
                 "pt": "msg",
                 "from": "false",
                 "fromt": "bool",
-                "to": "0.1",
+                "to": "0.9",
                 "tot": "num"
             }
         ],
@@ -21973,7 +21977,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1720,
+        "x": 2080,
         "y": 2080,
         "wires": [
             [
@@ -21990,7 +21994,7 @@
         "links": [
             "809bcae8.556298"
         ],
-        "x": 1163,
+        "x": 1363,
         "y": 1707,
         "wires": []
     },
@@ -22007,7 +22011,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2000,
+        "x": 2360,
         "y": 2160,
         "wires": []
     },
@@ -22087,8 +22091,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1130,
-        "y": 1573,
+        "x": 1330,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -22123,8 +22127,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 1573,
+        "x": 1160,
+        "y": 1660,
         "wires": [
             [
                 "69ae7397.fe843c"
@@ -22140,7 +22144,7 @@
         "topic": "motion_terrace_detected",
         "change": true,
         "cache": true,
-        "x": 520,
+        "x": 660,
         "y": 1720,
         "wires": [
             [
@@ -22254,8 +22258,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 1580,
+        "x": 360,
+        "y": 1620,
         "wires": [
             [
                 "525aeff.9d1c21"
@@ -22275,15 +22279,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 1480,
+        "x": 750,
+        "y": 1680,
         "wires": []
     },
     {
         "id": "525aeff.9d1c21",
         "type": "change",
         "z": "c1790f94.1fa788",
-        "name": "",
+        "name": "setFlagAlarm",
         "rules": [
             {
                 "t": "set",
@@ -22298,8 +22302,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 1660,
+        "x": 770,
+        "y": 1620,
         "wires": [
             [
                 "708e046b.76a2ec",
@@ -22373,7 +22377,7 @@
         "y": 2340,
         "wires": [
             [
-                "5809aad2.7c6654"
+                "45c19e40.2fbd"
             ]
         ]
     },
@@ -22385,7 +22389,7 @@
         "links": [
             "83f1336f.0f79f"
         ],
-        "x": 1454,
+        "x": 1795,
         "y": 2300,
         "wires": []
     },
@@ -22397,7 +22401,7 @@
         "links": [
             "5809aad2.7c6654"
         ],
-        "x": 1395,
+        "x": 1755,
         "y": 2080,
         "wires": [
             [
@@ -22489,7 +22493,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1710,
+        "x": 2070,
         "y": 2160,
         "wires": [
             [
@@ -22507,7 +22511,7 @@
         "maxtimeout": "15",
         "maxtimeoutunits": "Minute",
         "name": "",
-        "x": 1940,
+        "x": 2300,
         "y": 1906,
         "wires": [
             [
@@ -22539,7 +22543,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1710,
+        "x": 2070,
         "y": 1940,
         "wires": [
             [
@@ -22568,8 +22572,8 @@
         "topic": "motion_terrace_detected",
         "payload": "true",
         "payloadType": "bool",
-        "x": 180,
-        "y": 1780,
+        "x": 300,
+        "y": 1800,
         "wires": [
             [
                 "b67b0143.03dc1"
@@ -22597,8 +22601,8 @@
         "topic": "motion_terrace_detected",
         "payload": "false",
         "payloadType": "bool",
-        "x": 180,
-        "y": 1820,
+        "x": 300,
+        "y": 1840,
         "wires": [
             [
                 "b67b0143.03dc1"
@@ -22620,7 +22624,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1720,
+        "x": 2080,
         "y": 1880,
         "wires": [
             [
@@ -22641,7 +22645,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2190,
+        "x": 2550,
         "y": 2040,
         "wires": []
     },
@@ -26917,7 +26921,7 @@
         "z": "db6aac1c.cd43b",
         "name": "",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "10",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -26931,6 +26935,135 @@
         "wires": [
             [
                 "176365be.c95212"
+            ]
+        ]
+    },
+    {
+        "id": "45c19e40.2fbd",
+        "type": "switch",
+        "z": "c1790f94.1fa788",
+        "name": "switchWhenBlindLivingRoomIsZero",
+        "property": "stateBlindesLivingRoom",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1580,
+        "y": 2340,
+        "wires": [
+            [
+                "5809aad2.7c6654"
+            ]
+        ]
+    },
+    {
+        "id": "319bac10.e18884",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "read level blindes WZ for alarm reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "stateBlindesLivingRoom",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2370,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c406ad8.e58825",
+        "type": "change",
+        "z": "db6aac1c.cd43b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "stateBlindsAllOpen",
+                "pt": "global",
+                "to": "payload.sunInSky",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "133f77b0.e2a988",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "set topic blindes",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Blindes",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1420,
+        "wires": [
+            [
+                "40956fff.f80f5"
+            ]
+        ]
+    },
+    {
+        "id": "40956fff.f80f5",
+        "type": "change",
+        "z": "c1790f94.1fa788",
+        "name": "StateBlindesAllOpen",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stateBlindsAllOpen",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 1420,
+        "wires": [
+            [
+                "b67b0143.03dc1"
             ]
         ]
     }
