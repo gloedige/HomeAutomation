@@ -10914,13 +10914,8 @@
             {
                 "index": 3,
                 "name": "Sonnenuntergang Dez 1.2",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -10965,18 +10960,15 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 4,
                 "name": "Sonnenuntergang Dez 1.1",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -11021,7 +11013,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global.BestätigungAnwesenheit</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>21:30</var></div><div class=\"indent-time-months\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only on month</span> <var>Dec</var></div><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>12-01</var> <span> to</span> <var>12-23</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 5,
@@ -13390,7 +13384,8 @@
         "y": 1589,
         "wires": [
             [
-                "fe2c0d6.cf09ff"
+                "fe2c0d6.cf09ff",
+                "fefa2b8c.973268"
             ]
         ]
     },
@@ -13438,8 +13433,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 570,
-        "y": 880,
+        "x": 590,
+        "y": 1300,
         "wires": []
     },
     {
@@ -13459,8 +13454,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 1100,
+        "x": 120,
+        "y": 1520,
         "wires": [
             [
                 "104efa78.291536"
@@ -13487,8 +13482,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2470,
-        "y": 1020,
+        "x": 2490,
+        "y": 1440,
         "wires": [
             [
                 "9a95f22d.3c083"
@@ -13512,8 +13507,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1350,
-        "y": 1240,
+        "x": 1370,
+        "y": 1660,
         "wires": [
             [
                 "97a2036b.0979b",
@@ -13529,8 +13524,8 @@
         "right": "usr",
         "use_tls": true,
         "device_selection": "sb_tripower",
-        "x": 2020,
-        "y": 500,
+        "x": 440,
+        "y": 900,
         "wires": [
             [
                 "66707f75.a8804"
@@ -13547,8 +13542,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2410,
-        "y": 500,
+        "x": 830,
+        "y": 900,
         "wires": [
             [
                 "f88934c3.febfb8",
@@ -13578,8 +13573,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1360,
-        "y": 700,
+        "x": 1380,
+        "y": 1120,
         "wires": [
             [
                 "a16b506a.769ca"
@@ -13938,8 +13933,8 @@
         "payloadDefaultOffset": 0,
         "payloadDefaultOffsetType": "none",
         "payloadDefaultOffsetMultiplier": 60000,
-        "x": 1580,
-        "y": 700,
+        "x": 1600,
+        "y": 1120,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -13966,8 +13961,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 2510,
-        "y": 1100,
+        "x": 2530,
+        "y": 1520,
         "wires": [
             [
                 "931f3937.d5fa18"
@@ -13980,8 +13975,8 @@
         "z": "4e67676c.de2018",
         "name": "Zeitschaltung Handtuchheizkörper",
         "info": "",
-        "x": 1580,
-        "y": 660,
+        "x": 1600,
+        "y": 1080,
         "wires": []
     },
     {
@@ -13996,8 +13991,8 @@
         "label": "Status Heizung Bad",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 3020,
-        "y": 1100,
+        "x": 3040,
+        "y": 1520,
         "wires": []
     },
     {
@@ -14023,8 +14018,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1790,
-        "y": 1060,
+        "x": 1810,
+        "y": 1480,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -14048,8 +14043,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 2610,
-        "y": 500,
+        "x": 1030,
+        "y": 900,
         "wires": []
     },
     {
@@ -14082,8 +14077,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2760,
-        "y": 1020,
+        "x": 2780,
+        "y": 1440,
         "wires": [
             [
                 "30f3da8a.cf2766"
@@ -14116,8 +14111,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 350,
-        "y": 1000,
+        "x": 370,
+        "y": 1420,
         "wires": [
             [
                 "a7e8b14.06f8b5",
@@ -14156,8 +14151,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 880,
+        "x": 380,
+        "y": 1300,
         "wires": [
             [
                 "7177992a.27faf8"
@@ -14176,8 +14171,8 @@
         "label": "Status Heizung EG",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 3010,
-        "y": 1020,
+        "x": 3030,
+        "y": 1440,
         "wires": []
     },
     {
@@ -14199,8 +14194,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1070,
-        "y": 1280,
+        "x": 1090,
+        "y": 1700,
         "wires": [
             [
                 "3b3dcd5b.b93e82",
@@ -14225,8 +14220,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1360,
-        "y": 840,
+        "x": 1380,
+        "y": 1260,
         "wires": [
             [
                 "b57bddc8.2876a",
@@ -14254,78 +14249,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1070,
-        "y": 880,
+        "x": 1090,
+        "y": 1300,
         "wires": [
             [
                 "407a1e9e.862e5",
                 "14512ca2.4d5323"
-            ]
-        ]
-    },
-    {
-        "id": "5b5481bd.8e405",
-        "type": "ui_numeric",
-        "z": "4e67676c.de2018",
-        "d": true,
-        "name": "",
-        "label": "testPower [W]",
-        "tooltip": "set value test power",
-        "group": "f96632f0.e2eae",
-        "order": 3,
-        "width": "0",
-        "height": "0",
-        "wrap": false,
-        "passthru": true,
-        "topic": "",
-        "topicType": "str",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "8000",
-        "step": "500",
-        "className": "",
-        "x": 120,
-        "y": 140,
-        "wires": [
-            [
-                "4014341f.2a271c"
-            ]
-        ]
-    },
-    {
-        "id": "dff09af7.a04b18",
-        "type": "debug",
-        "z": "4e67676c.de2018",
-        "d": true,
-        "name": "test power value",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "4014341f.2a271c",
-        "type": "function",
-        "z": "4e67676c.de2018",
-        "d": true,
-        "name": "Test_PVPOWER",
-        "func": "var payload = msg.payload;\nif(payload>0)\n    global.set(\"PVPOWER\",payload)\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 570,
-        "y": 140,
-        "wires": [
-            [
-                "dff09af7.a04b18"
             ]
         ]
     },
@@ -14339,8 +14268,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 542,
-        "y": 300,
+        "x": 580,
+        "y": 140,
         "wires": [
             []
         ]
@@ -14356,8 +14285,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1362,
-        "y": 300,
+        "x": 1400,
+        "y": 140,
         "wires": [
             []
         ]
@@ -14383,8 +14312,8 @@
         "max": "2000",
         "step": "100",
         "className": "",
-        "x": 1046,
-        "y": 300,
+        "x": 1084,
+        "y": 140,
         "wires": [
             [
                 "bc52b66f.0e5818"
@@ -14403,8 +14332,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "str",
-        "x": 190,
-        "y": 400,
+        "x": 230,
+        "y": 200,
         "wires": [
             [
                 "65965811.9a8258",
@@ -14423,8 +14352,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 542,
-        "y": 355,
+        "x": 580,
+        "y": 195,
         "wires": [
             []
         ]
@@ -14439,8 +14368,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1402,
-        "y": 360,
+        "x": 1440,
+        "y": 200,
         "wires": [
             []
         ]
@@ -14463,8 +14392,8 @@
         "min": 0,
         "max": "2000",
         "step": "250",
-        "x": 1076,
-        "y": 360,
+        "x": 1114,
+        "y": 200,
         "wires": [
             [
                 "2909b7eb.3c8c28"
@@ -14481,8 +14410,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1402,
-        "y": 430,
+        "x": 1440,
+        "y": 270,
         "wires": [
             []
         ]
@@ -14505,8 +14434,8 @@
         "min": 0,
         "max": "1000",
         "step": "100",
-        "x": 1076,
-        "y": 430,
+        "x": 1114,
+        "y": 270,
         "wires": [
             [
                 "438a69df.3b4648"
@@ -14530,8 +14459,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1350,
-        "y": 1360,
+        "x": 1370,
+        "y": 1780,
         "wires": [
             [
                 "6417ec08.3003c4",
@@ -14569,8 +14498,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2760,
-        "y": 1100,
+        "x": 2780,
+        "y": 1520,
         "wires": [
             [
                 "6dbf46bf.f833b8"
@@ -14594,8 +14523,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1360,
-        "y": 920,
+        "x": 1380,
+        "y": 1340,
         "wires": [
             [
                 "c8effe1c.66349",
@@ -14626,8 +14555,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1770,
-        "y": 1000,
+        "x": 1790,
+        "y": 1420,
         "wires": [
             [
                 "c2158bf7.4ce6b8",
@@ -14650,8 +14579,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2000,
-        "y": 1240,
+        "x": 2020,
+        "y": 1660,
         "wires": [
             [
                 "d49e3fea.44d87"
@@ -14673,7 +14602,7 @@
         "setProp": "payload",
         "setPropType": "msg",
         "x": 690,
-        "y": 2140,
+        "y": 2500,
         "wires": [
             [
                 "4506f047.22e95"
@@ -14698,7 +14627,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 240,
-        "y": 2160,
+        "y": 2520,
         "wires": [
             [
                 "b1955526.818b68",
@@ -14719,7 +14648,7 @@
         "inputCount": "2",
         "topic": "result",
         "x": 960,
-        "y": 2167,
+        "y": 2527,
         "wires": [
             [],
             [
@@ -14743,7 +14672,7 @@
         "setProp": "payload",
         "setPropType": "msg",
         "x": 690,
-        "y": 2200,
+        "y": 2560,
         "wires": [
             [
                 "4506f047.22e95"
@@ -14770,7 +14699,7 @@
         "to": "",
         "reg": false,
         "x": 460,
-        "y": 2140,
+        "y": 2500,
         "wires": [
             [
                 "f37f96c.c0cef68"
@@ -14797,7 +14726,7 @@
         "to": "",
         "reg": false,
         "x": 460,
-        "y": 2200,
+        "y": 2560,
         "wires": [
             [
                 "bfa8863e.921868"
@@ -14824,7 +14753,7 @@
         "to": "",
         "reg": false,
         "x": 1270,
-        "y": 2167,
+        "y": 2527,
         "wires": [
             [
                 "fb7fc487.52eca8"
@@ -14843,8 +14772,8 @@
         "outputtriggeredby": "all",
         "inputCount": "3",
         "topic": "condition",
-        "x": 790,
-        "y": 1000,
+        "x": 810,
+        "y": 1420,
         "wires": [
             [
                 "4a25e9cf.8bb438",
@@ -14873,8 +14802,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 1100,
+        "x": 320,
+        "y": 1520,
         "wires": [
             [
                 "7e2231a8.fdb74"
@@ -14900,8 +14829,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
-        "y": 1100,
+        "x": 530,
+        "y": 1520,
         "wires": [
             [
                 "42ee4c8f.552404",
@@ -14916,7 +14845,7 @@
         "name": "Get Anwesenheit from WIFI Status",
         "info": "",
         "x": 520,
-        "y": 2060,
+        "y": 2420,
         "wires": []
     },
     {
@@ -14937,7 +14866,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 1770,
-        "y": 2167,
+        "y": 2527,
         "wires": []
     },
     {
@@ -14971,7 +14900,7 @@
         "to": "",
         "reg": false,
         "x": 1540,
-        "y": 2167,
+        "y": 2527,
         "wires": [
             [
                 "1ee94e9d.293fc1"
@@ -14993,7 +14922,7 @@
         "setProp": "payload",
         "setPropType": "msg",
         "x": 530,
-        "y": 1880,
+        "y": 2240,
         "wires": [
             [
                 "3c339596.ca663a",
@@ -15019,7 +14948,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 250,
-        "y": 1880,
+        "y": 2240,
         "wires": [
             [
                 "53275aa9.d68424",
@@ -15047,7 +14976,7 @@
         "to": "",
         "reg": false,
         "x": 850,
-        "y": 1880,
+        "y": 2240,
         "wires": [
             []
         ]
@@ -15067,7 +14996,7 @@
         "setProp": "payload",
         "setPropType": "msg",
         "x": 530,
-        "y": 1940,
+        "y": 2300,
         "wires": [
             [
                 "4b9c267e.bfbaa8"
@@ -15094,7 +15023,7 @@
         "to": "",
         "reg": false,
         "x": 860,
-        "y": 1940,
+        "y": 2300,
         "wires": [
             []
         ]
@@ -15114,8 +15043,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2006,
-        "y": 1360,
+        "x": 2026,
+        "y": 1780,
         "wires": [
             [
                 "9494af6f.c5c6e"
@@ -15137,8 +15066,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1790,
-        "y": 840,
+        "x": 1810,
+        "y": 1260,
         "wires": [
             [
                 "d49e3fea.44d87",
@@ -15161,8 +15090,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1790,
-        "y": 920,
+        "x": 1810,
+        "y": 1340,
         "wires": [
             [
                 "246d4878.eeff28"
@@ -15176,7 +15105,7 @@
         "name": "Get Status Schalter Steckdose",
         "info": "",
         "x": 510,
-        "y": 1800,
+        "y": 2160,
         "wires": []
     },
     {
@@ -15676,8 +15605,8 @@
         "invert": false,
         "timeout": "DelayEnableHeater",
         "timeoutType": "flow",
-        "x": 1680,
-        "y": 1200,
+        "x": 1700,
+        "y": 1620,
         "wires": [
             [
                 "71594325.134dec"
@@ -15693,37 +15622,11 @@
         "invert": false,
         "timeout": "DelayEnableHeater",
         "timeoutType": "flow",
-        "x": 1680,
-        "y": 1320,
+        "x": 1700,
+        "y": 1740,
         "wires": [
             [
                 "3e1d0e64.ea6d52"
-            ]
-        ]
-    },
-    {
-        "id": "bec17c1c.1adea",
-        "type": "inject",
-        "z": "4e67676c.de2018",
-        "d": true,
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "100",
-        "payloadType": "num",
-        "x": 340,
-        "y": 200,
-        "wires": [
-            [
-                "4014341f.2a271c"
             ]
         ]
     },
@@ -15744,8 +15647,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1290,
-        "y": 1200,
+        "x": 1310,
+        "y": 1620,
         "wires": [
             [
                 "97a2036b.0979b"
@@ -15769,8 +15672,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 1290,
-        "y": 1320,
+        "x": 1310,
+        "y": 1740,
         "wires": [
             [
                 "6417ec08.3003c4"
@@ -15794,8 +15697,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1290,
-        "y": 1160,
+        "x": 1310,
+        "y": 1580,
         "wires": [
             [
                 "97a2036b.0979b"
@@ -15819,8 +15722,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1290,
-        "y": 1280,
+        "x": 1310,
+        "y": 1700,
         "wires": [
             [
                 "6417ec08.3003c4"
@@ -15846,8 +15749,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2480,
-        "y": 900,
+        "x": 2500,
+        "y": 1320,
         "wires": [
             [
                 "dbc34a34.4328e8"
@@ -15873,8 +15776,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2490,
-        "y": 960,
+        "x": 2510,
+        "y": 1380,
         "wires": [
             [
                 "dbc34a34.4328e8"
@@ -15886,8 +15789,8 @@
         "type": "InvertUltimate",
         "z": "4e67676c.de2018",
         "name": "Invert",
-        "x": 2930,
-        "y": 920,
+        "x": 2950,
+        "y": 1340,
         "wires": [
             [
                 "43d0116c.ddaa3"
@@ -15906,8 +15809,8 @@
         "outputtriggeredby": "all",
         "inputCount": "2",
         "topic": "ManuelMode",
-        "x": 2720,
-        "y": 920,
+        "x": 2740,
+        "y": 1340,
         "wires": [
             [],
             [
@@ -15924,8 +15827,8 @@
         "links": [
             "b23d643c.a6b948"
         ],
-        "x": 3035,
-        "y": 920,
+        "x": 3055,
+        "y": 1340,
         "wires": []
     },
     {
@@ -15936,8 +15839,8 @@
         "links": [
             "43d0116c.ddaa3"
         ],
-        "x": 675,
-        "y": 940,
+        "x": 695,
+        "y": 1360,
         "wires": [
             [
                 "42ee4c8f.552404"
@@ -17459,8 +17362,8 @@
         "max": "600",
         "step": "10",
         "className": "",
-        "x": 230,
-        "y": 1500,
+        "x": 250,
+        "y": 1920,
         "wires": [
             [
                 "623cc655.63c758",
@@ -17487,8 +17390,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 717,
-        "y": 1500,
+        "x": 737,
+        "y": 1920,
         "wires": [
             []
         ]
@@ -17588,8 +17491,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 270,
-        "y": 1200,
+        "x": 290,
+        "y": 1620,
         "wires": [
             [
                 "91bbed8b.15d41"
@@ -17613,8 +17516,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 270,
-        "y": 1160,
+        "x": 290,
+        "y": 1580,
         "wires": [
             [
                 "91bbed8b.15d41"
@@ -17640,8 +17543,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
-        "y": 1160,
+        "x": 480,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -17658,8 +17561,8 @@
         "outputtriggeredby": "all",
         "inputCount": "2",
         "topic": "condition",
-        "x": 960,
-        "y": 1160,
+        "x": 980,
+        "y": 1580,
         "wires": [
             [],
             [
@@ -17673,8 +17576,8 @@
         "type": "InvertUltimate",
         "z": "4e67676c.de2018",
         "name": "Invert",
-        "x": 690,
-        "y": 1060,
+        "x": 710,
+        "y": 1480,
         "wires": [
             [
                 "6e38303d.bf4fb"
@@ -17686,8 +17589,8 @@
         "type": "InvertUltimate",
         "z": "4e67676c.de2018",
         "name": "Invert",
-        "x": 690,
-        "y": 1160,
+        "x": 710,
+        "y": 1580,
         "wires": [
             [
                 "6e38303d.bf4fb"
@@ -17699,8 +17602,8 @@
         "type": "InvertUltimate",
         "z": "4e67676c.de2018",
         "name": "Invert",
-        "x": 1270,
-        "y": 1060,
+        "x": 1290,
+        "y": 1480,
         "wires": [
             [
                 "b57bddc8.2876a",
@@ -17746,8 +17649,8 @@
         "topic": "condition",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1860,
-        "y": 660,
+        "x": 1880,
+        "y": 1080,
         "wires": [
             [
                 "a35bf6df.e74278"
@@ -17763,8 +17666,8 @@
             "fe4ed8f8.2788b8",
             "33e4b66a.1cd69a"
         ],
-        "x": 1955,
-        "y": 840,
+        "x": 1975,
+        "y": 1260,
         "wires": []
     },
     {
@@ -17786,8 +17689,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 727,
-        "y": 1560,
+        "x": 747,
+        "y": 1980,
         "wires": [
             []
         ]
@@ -17805,8 +17708,8 @@
         "truncate": false,
         "decimals": 0,
         "decimals2": 0,
-        "x": 467,
-        "y": 1560,
+        "x": 487,
+        "y": 1980,
         "wires": [
             [
                 "a640c0f0.65376"
@@ -17833,7 +17736,7 @@
         "to": "",
         "reg": false,
         "x": 1030,
-        "y": 1820,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -17854,7 +17757,7 @@
         "repair": false,
         "outputs": 1,
         "x": 810,
-        "y": 1820,
+        "y": 2180,
         "wires": [
             [
                 "17dfd6f3.389899"
@@ -17879,7 +17782,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 710,
-        "y": 1740,
+        "y": 2100,
         "wires": [
             [
                 "bab48843.7408a8"
@@ -17894,7 +17797,7 @@
         "persistId": "",
         "humanizeLocale": "de",
         "x": 960,
-        "y": 2540,
+        "y": 2900,
         "wires": [
             [
                 "1955fb8c.8e34f4",
@@ -17916,7 +17819,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1190,
-        "y": 2600,
+        "y": 2960,
         "wires": []
     },
     {
@@ -17939,7 +17842,7 @@
         "to": "",
         "reg": false,
         "x": 720,
-        "y": 2560,
+        "y": 2920,
         "wires": [
             [
                 "e1e99a92.0587e8"
@@ -17966,7 +17869,7 @@
         "to": "",
         "reg": false,
         "x": 700,
-        "y": 2680,
+        "y": 3040,
         "wires": [
             [
                 "e1e99a92.0587e8"
@@ -17993,7 +17896,7 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 2500,
+        "y": 2860,
         "wires": [
             [
                 "e1e99a92.0587e8"
@@ -18020,7 +17923,7 @@
         "to": "",
         "reg": false,
         "x": 690,
-        "y": 2780,
+        "y": 3140,
         "wires": [
             [
                 "e1e99a92.0587e8"
@@ -18045,7 +17948,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 470,
-        "y": 2680,
+        "y": 3040,
         "wires": [
             [
                 "2fb7a296.8f91ce"
@@ -18074,7 +17977,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 320,
-        "y": 2620,
+        "y": 2980,
         "wires": [
             [
                 "ff20a5e4.6e93c8"
@@ -18108,7 +18011,7 @@
         "to": "",
         "reg": false,
         "x": 1400,
-        "y": 2540,
+        "y": 2900,
         "wires": [
             []
         ]
@@ -18122,7 +18025,7 @@
             "a35bf6df.e74278"
         ],
         "x": 395,
-        "y": 2500,
+        "y": 2860,
         "wires": [
             [
                 "660a526b.9a221c",
@@ -18141,7 +18044,7 @@
         "timeout": "3",
         "timeoutType": "num",
         "x": 560,
-        "y": 2560,
+        "y": 2920,
         "wires": [
             [
                 "7c3dcf09.8766c"
@@ -18166,7 +18069,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1190,
-        "y": 2540,
+        "y": 2900,
         "wires": [
             [
                 "3ef2cf36.5cdc6"
@@ -18191,7 +18094,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 430,
-        "y": 2780,
+        "y": 3140,
         "wires": [
             [
                 "ba9a285.1d43cd8"
@@ -18208,7 +18111,7 @@
         "timeout": 1,
         "timeoutType": "num",
         "x": 460,
-        "y": 2720,
+        "y": 3080,
         "wires": [
             [
                 "2fb7a296.8f91ce"
@@ -18233,7 +18136,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 570,
-        "y": 2620,
+        "y": 2980,
         "wires": [
             [
                 "7c3dcf09.8766c"
@@ -18260,7 +18163,7 @@
         "to": "",
         "reg": false,
         "x": 630,
-        "y": 2440,
+        "y": 2800,
         "wires": [
             []
         ]
@@ -18272,7 +18175,7 @@
         "name": "Timer to last heater activation",
         "info": "",
         "x": 500,
-        "y": 2360,
+        "y": 2720,
         "wires": []
     },
     {
@@ -18283,8 +18186,8 @@
         "links": [
             "9eda0c45.68db5"
         ],
-        "x": 1515,
-        "y": 1060,
+        "x": 1535,
+        "y": 1480,
         "wires": []
     },
     {
@@ -18296,7 +18199,7 @@
             "5d2d17a.d29fbe8"
         ],
         "x": 355,
-        "y": 2560,
+        "y": 2920,
         "wires": [
             [
                 "ff20a5e4.6e93c8"
@@ -18318,8 +18221,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1690,
-        "y": 1380,
+        "x": 1710,
+        "y": 1800,
         "wires": [
             [
                 "3e1d0e64.ea6d52"
@@ -18341,8 +18244,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1690,
-        "y": 1260,
+        "x": 1710,
+        "y": 1680,
         "wires": [
             [
                 "71594325.134dec"
@@ -21148,7 +21051,8 @@
                 "f44d0bb4.b763f8",
                 "d98cc81f.a93dd8",
                 "c1809d4.20ef56",
-                "b67b0143.03dc1"
+                "b67b0143.03dc1",
+                "8fd9936f.2b00e"
             ]
         ]
     },
@@ -21586,8 +21490,8 @@
         "z": "c1790f94.1fa788",
         "name": "",
         "threshold": "0.5",
-        "x": 510,
-        "y": 2180,
+        "x": 350,
+        "y": 2260,
         "wires": [
             [
                 "6ed6440b.ff3a6c"
@@ -21624,8 +21528,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 290,
-        "y": 2280,
+        "x": 230,
+        "y": 2320,
         "wires": [
             [
                 "cb0bdb4e.a70bd8"
@@ -21662,8 +21566,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 690,
-        "y": 2180,
+        "x": 470,
+        "y": 2200,
         "wires": [
             [
                 "3656b746.63efa8"
@@ -21693,8 +21597,8 @@
             "a5d2754b.1f9a58",
             "f4b58ebf.a70d7"
         ],
-        "x": 135,
-        "y": 2280,
+        "x": 75,
+        "y": 2360,
         "wires": [
             [
                 "9cf19b6c.1bfa08"
@@ -21709,7 +21613,7 @@
         "links": [
             "84d5d10c.d82c5"
         ],
-        "x": 1454,
+        "x": 1375,
         "y": 2260,
         "wires": []
     },
@@ -22231,7 +22135,7 @@
         "type": "InvertUltimate",
         "z": "c1790f94.1fa788",
         "name": "Invert",
-        "x": 1349,
+        "x": 1150,
         "y": 2200,
         "wires": [
             [
@@ -22346,7 +22250,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 930,
+        "x": 731,
         "y": 2280,
         "wires": [
             [
@@ -22365,19 +22269,6 @@
             [
                 "5809aad2.7c6654",
                 "70fb0744.898348"
-            ]
-        ]
-    },
-    {
-        "id": "b91c5b1c.078418",
-        "type": "InvertUltimate",
-        "z": "c1790f94.1fa788",
-        "name": "Invert",
-        "x": 1349,
-        "y": 2340,
-        "wires": [
-            [
-                "45c19e40.2fbd"
             ]
         ]
     },
@@ -22424,7 +22315,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1170,
+        "x": 971,
         "y": 2200,
         "wires": [
             [
@@ -22447,11 +22338,11 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1170,
+        "x": 971,
         "y": 2340,
         "wires": [
             [
-                "b91c5b1c.078418"
+                "45c19e40.2fbd"
             ]
         ]
     },
@@ -22468,8 +22359,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 2120,
+        "x": 720,
+        "y": 2220,
         "wires": []
     },
     {
@@ -24284,8 +24175,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "Leistung_Zähler",
-        "x": 1800,
-        "y": 380,
+        "x": 220,
+        "y": 780,
         "wires": [
             [
                 "a13bc096.811ba"
@@ -24330,8 +24221,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2730,
-        "y": 380,
+        "x": 1050,
+        "y": 780,
         "wires": [
             []
         ]
@@ -24353,8 +24244,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2270,
-        "y": 440,
+        "x": 690,
+        "y": 740,
         "wires": []
     },
     {
@@ -24367,8 +24258,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2260,
-        "y": 320,
+        "x": 680,
+        "y": 680,
         "wires": [
             []
         ]
@@ -24383,8 +24274,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 482,
-        "y": 420,
+        "x": 520,
+        "y": 260,
         "wires": [
             [
                 "7d0ed1ae.82473",
@@ -24409,8 +24300,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 670,
-        "y": 420,
+        "x": 708,
+        "y": 260,
         "wires": []
     },
     {
@@ -24426,8 +24317,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 682,
-        "y": 480,
+        "x": 720,
+        "y": 320,
         "wires": []
     },
     {
@@ -24568,8 +24459,8 @@
         "truncate": false,
         "decimals": "0",
         "decimals2": 0,
-        "x": 2230,
-        "y": 500,
+        "x": 650,
+        "y": 900,
         "wires": [
             [
                 "3d88091c.fcdae6",
@@ -24590,13 +24481,14 @@
         "truncate": false,
         "decimals": "0",
         "decimals2": 0,
-        "x": 1990,
-        "y": 380,
+        "x": 410,
+        "y": 780,
         "wires": [
             [
                 "54d96d17.bd1214",
                 "8b1a7f0c.5a068",
-                "eac503ff.dda2f"
+                "eac503ff.dda2f",
+                "1411fb9.2fcbf04"
             ]
         ]
     },
@@ -24613,8 +24505,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2320,
-        "y": 600,
+        "x": 740,
+        "y": 1000,
         "wires": []
     },
     {
@@ -24638,8 +24530,8 @@
         "topic": "Leistung_PV",
         "payload": "",
         "payloadType": "date",
-        "x": 1800,
-        "y": 500,
+        "x": 220,
+        "y": 900,
         "wires": [
             [
                 "79699524.56251c"
@@ -24659,8 +24551,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1590,
-        "y": 780,
+        "x": 1610,
+        "y": 1200,
         "wires": []
     },
     {
@@ -24787,8 +24679,8 @@
         "outputtriggeredby": "all",
         "inputCount": 2,
         "topic": "result",
-        "x": 2230,
-        "y": 1360,
+        "x": 2250,
+        "y": 1780,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -24805,8 +24697,8 @@
         "links": [
             "c2e3f299.40414"
         ],
-        "x": 2015,
-        "y": 1120,
+        "x": 2035,
+        "y": 1540,
         "wires": [
             [
                 "9494af6f.c5c6e",
@@ -24839,8 +24731,8 @@
         "outputtriggeredby": "all",
         "inputCount": 2,
         "topic": "result",
-        "x": 2010,
-        "y": 920,
+        "x": 2030,
+        "y": 1340,
         "wires": [
             [],
             [],
@@ -24854,8 +24746,8 @@
         "type": "InvertUltimate",
         "z": "4e67676c.de2018",
         "name": "Invert",
-        "x": 2150,
-        "y": 980,
+        "x": 2170,
+        "y": 1400,
         "wires": [
             [
                 "5d90d03.ab8c03"
@@ -26955,11 +26847,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1580,
+        "x": 1280,
         "y": 2340,
         "wires": [
             [
-                "5809aad2.7c6654"
+                "8fd9936f.2b00e"
             ]
         ]
     },
@@ -27063,7 +26955,448 @@
         "y": 1420,
         "wires": [
             [
-                "b67b0143.03dc1"
+                "b67b0143.03dc1",
+                "8fd9936f.2b00e"
+            ]
+        ]
+    },
+    {
+        "id": "531497d1.7b05f8",
+        "type": "combine-statistic",
+        "z": "4e67676c.de2018",
+        "name": "Integral_Leistung_Zähler",
+        "topic": "Leistung_Zähler_Input",
+        "operator": "sum",
+        "falsy": "include",
+        "defer": "3600000",
+        "timeout": "3600000",
+        "distinction": "_msgid",
+        "x": 670,
+        "y": 600,
+        "wires": [
+            [
+                "52798f3c.61bca"
+            ]
+        ]
+    },
+    {
+        "id": "d302a4c5.f48b58",
+        "type": "ui_chart",
+        "z": "4e67676c.de2018",
+        "name": "Integral_Leistung_Zähler",
+        "group": "ca79f64c.8975d8",
+        "order": 6,
+        "width": "6",
+        "height": "5",
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "6",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2210,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8304f664.a938b8",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "name": "Intergral_Power",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "fefa2b8c.973268",
+        "type": "debug",
+        "z": "db6aac1c.cd43b",
+        "name": "küche ost",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "1411fb9.2fcbf04",
+        "type": "switch",
+        "z": "4e67676c.de2018",
+        "name": "filter pos. values",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 560,
+        "wires": [
+            [
+                "531497d1.7b05f8",
+                "b43dfc74.4e206"
+            ]
+        ]
+    },
+    {
+        "id": "4ef08b94.ebe5d4",
+        "type": "ui_text",
+        "z": "4e67676c.de2018",
+        "group": "ca79f64c.8975d8",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "name": "Leistung Integral",
+        "label": "Leistung [kWh]",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 2190,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "52798f3c.61bca",
+        "type": "calculator",
+        "z": "4e67676c.de2018",
+        "name": "W to kW",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "div",
+        "constant": "1000",
+        "round": true,
+        "truncate": false,
+        "decimals": "1",
+        "decimals2": 0,
+        "x": 880,
+        "y": 600,
+        "wires": [
+            [
+                "8c5fd679.657c08"
+            ]
+        ]
+    },
+    {
+        "id": "ee1c610c.f7c9e",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "name": "Counter",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b43dfc74.4e206",
+        "type": "combine-statistic",
+        "z": "4e67676c.de2018",
+        "name": "Counter Zähler",
+        "topic": "Leistung_Zähler",
+        "operator": "len",
+        "falsy": "include",
+        "defer": "3600000",
+        "timeout": "3600000",
+        "distinction": "_msgid",
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "ddb5c5da.00e2a8"
+            ]
+        ]
+    },
+    {
+        "id": "debccc5e.4cf8e",
+        "type": "function",
+        "z": "4e67676c.de2018",
+        "name": "calc power per hour",
+        "func": "var counter = flow.get(\"counter\");\nvar integral = flow.get(\"integral\");\nvar power_per_hour = integral/counter;\nmsg.payload = power_per_hour;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1770,
+        "y": 780,
+        "wires": [
+            [
+                "1e44736.f76568d",
+                "1318d08f.51bddf"
+            ]
+        ]
+    },
+    {
+        "id": "ddb5c5da.00e2a8",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "counter",
+        "rules": [
+            {
+                "t": "set",
+                "p": "counter",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 520,
+        "wires": [
+            [
+                "ee1c610c.f7c9e"
+            ]
+        ]
+    },
+    {
+        "id": "8c5fd679.657c08",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "integral",
+        "rules": [
+            {
+                "t": "set",
+                "p": "integral",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 600,
+        "wires": [
+            [
+                "8304f664.a938b8"
+            ]
+        ]
+    },
+    {
+        "id": "1e44736.f76568d",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "name": "power_per_hour",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2020,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "f8ba3402.913a28",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Leistung pro Stunde",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1530,
+        "y": 780,
+        "wires": [
+            [
+                "debccc5e.4cf8e"
+            ]
+        ]
+    },
+    {
+        "id": "1318d08f.51bddf",
+        "type": "calculator",
+        "z": "4e67676c.de2018",
+        "name": "round",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "rdec",
+        "constant": "2",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": 0,
+        "x": 1990,
+        "y": 660,
+        "wires": [
+            [
+                "4ef08b94.ebe5d4",
+                "d302a4c5.f48b58"
+            ]
+        ]
+    },
+    {
+        "id": "740eccf9.90e104",
+        "type": "calculator",
+        "z": "4e67676c.de2018",
+        "name": "random",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "randb",
+        "constant": "",
+        "round": true,
+        "truncate": false,
+        "decimals": 0,
+        "decimals2": 0,
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "b515708.c963e9"
+            ]
+        ]
+    },
+    {
+        "id": "b515708.c963e9",
+        "type": "debug",
+        "z": "4e67676c.de2018",
+        "name": "random number",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "30ba5ba8.1c8024",
+        "type": "inject",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[600,20]",
+        "payloadType": "json",
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "740eccf9.90e104"
+            ]
+        ]
+    },
+    {
+        "id": "8fd9936f.2b00e",
+        "type": "BooleanLogicUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "condition_reset",
+        "outputtriggeredby": "onlyonetopic",
+        "inputCount": "3",
+        "topic": "ResetBlinds",
+        "x": 1470,
+        "y": 2160,
+        "wires": [
+            [
+                "72043002.26d61"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "72043002.26d61",
+        "type": "InvertUltimate",
+        "z": "c1790f94.1fa788",
+        "name": "Invert",
+        "x": 1670,
+        "y": 2147,
+        "wires": [
+            [
+                "5809aad2.7c6654"
             ]
         ]
     }
