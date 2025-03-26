@@ -743,6 +743,16 @@
         "className": ""
     },
     {
+        "id": "ce558e71.cffa9",
+        "type": "ui_spacer",
+        "z": "4e67676c.de2018",
+        "name": "spacer",
+        "group": "7df3da38.afa344",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "cb73e4c8.3727f8",
         "type": "ccu-rpc",
         "z": "4f28065f.6e1fb8",
@@ -13524,8 +13534,8 @@
         "right": "usr",
         "use_tls": true,
         "device_selection": "sb_tripower",
-        "x": 440,
-        "y": 900,
+        "x": 420,
+        "y": 540,
         "wires": [
             [
                 "66707f75.a8804"
@@ -13542,8 +13552,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 830,
-        "y": 900,
+        "x": 810,
+        "y": 540,
         "wires": [
             [
                 "f88934c3.febfb8",
@@ -14043,8 +14053,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 1030,
-        "y": 900,
+        "x": 1010,
+        "y": 540,
         "wires": []
     },
     {
@@ -14268,8 +14278,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 580,
-        "y": 140,
+        "x": 2100,
+        "y": 160,
         "wires": [
             []
         ]
@@ -14285,8 +14295,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1400,
-        "y": 140,
+        "x": 2060,
+        "y": 620,
         "wires": [
             []
         ]
@@ -14312,8 +14322,8 @@
         "max": "2000",
         "step": "100",
         "className": "",
-        "x": 1084,
-        "y": 140,
+        "x": 1744,
+        "y": 620,
         "wires": [
             [
                 "bc52b66f.0e5818"
@@ -14332,8 +14342,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "str",
-        "x": 230,
-        "y": 200,
+        "x": 1750,
+        "y": 220,
         "wires": [
             [
                 "65965811.9a8258",
@@ -14352,8 +14362,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 580,
-        "y": 195,
+        "x": 2100,
+        "y": 215,
         "wires": [
             []
         ]
@@ -14368,8 +14378,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1440,
-        "y": 200,
+        "x": 2100,
+        "y": 680,
         "wires": [
             []
         ]
@@ -14392,8 +14402,8 @@
         "min": 0,
         "max": "2000",
         "step": "250",
-        "x": 1114,
-        "y": 200,
+        "x": 1774,
+        "y": 680,
         "wires": [
             [
                 "2909b7eb.3c8c28"
@@ -14410,8 +14420,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1440,
-        "y": 270,
+        "x": 2100,
+        "y": 750,
         "wires": [
             []
         ]
@@ -14430,12 +14440,14 @@
         "wrap": false,
         "passthru": true,
         "topic": "",
+        "topicType": "str",
         "format": "{{value}}",
         "min": 0,
-        "max": "1000",
+        "max": "3000",
         "step": "100",
-        "x": 1114,
-        "y": 270,
+        "className": "",
+        "x": 1774,
+        "y": 750,
         "wires": [
             [
                 "438a69df.3b4648"
@@ -21633,9 +21645,7 @@
                 "c0c6ab9f.4b2cb8",
                 "20d02648.6e26ba",
                 "cd75c872.1c99f8",
-                "aab508f4.5b28e8",
-                "e4fd3678.004ad8",
-                "39b91ade.add9f6"
+                "aab508f4.5b28e8"
             ]
         ]
     },
@@ -24175,8 +24185,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "Leistung_Zähler",
-        "x": 220,
-        "y": 780,
+        "x": 200,
+        "y": 420,
         "wires": [
             [
                 "a13bc096.811ba"
@@ -24189,7 +24199,7 @@
         "z": "4e67676c.de2018",
         "name": "Leistung Plot [W]",
         "group": "ca79f64c.8975d8",
-        "order": 4,
+        "order": 6,
         "width": "6",
         "height": "5",
         "label": "",
@@ -24201,7 +24211,7 @@
         "dot": false,
         "ymin": "",
         "ymax": "",
-        "removeOlder": "6",
+        "removeOlder": "24",
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
@@ -24210,8 +24220,8 @@
         "colors": [
             "#2ca02c",
             "#ea1f1f",
-            "#ff7f0e",
-            "#2ca02c",
+            "#0f5fff",
+            "#e3a316",
             "#98df8a",
             "#d62728",
             "#ff9896",
@@ -24221,8 +24231,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1050,
-        "y": 780,
+        "x": 1030,
+        "y": 420,
         "wires": [
             []
         ]
@@ -24232,7 +24242,7 @@
         "type": "ui_text",
         "z": "4e67676c.de2018",
         "group": "ca79f64c.8975d8",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "Leistung Zähler [W]",
@@ -24244,8 +24254,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 690,
-        "y": 740,
+        "x": 670,
+        "y": 380,
         "wires": []
     },
     {
@@ -24258,8 +24268,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 680,
-        "y": 680,
+        "x": 660,
+        "y": 320,
         "wires": [
             []
         ]
@@ -24274,8 +24284,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 520,
-        "y": 260,
+        "x": 2040,
+        "y": 280,
         "wires": [
             [
                 "7d0ed1ae.82473",
@@ -24300,8 +24310,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 708,
-        "y": 260,
+        "x": 2228,
+        "y": 280,
         "wires": []
     },
     {
@@ -24317,8 +24327,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 320,
+        "x": 2240,
+        "y": 340,
         "wires": []
     },
     {
@@ -24343,6 +24353,7 @@
         "id": "f9973c95.a4b6c",
         "type": "ccu-value",
         "z": "db6aac1c.cd43b",
+        "d": true,
         "name": "Rollo WZ Doppel West 1",
         "iface": "BidCos-RF",
         "channel": "OEQ2283163:1 Rollo Wohnzimmer Doppelfenster 1",
@@ -24371,6 +24382,7 @@
         "id": "f3f7dd49.d6fcc",
         "type": "ccu-value",
         "z": "db6aac1c.cd43b",
+        "d": true,
         "name": "Rollo WZ Doppel West 2",
         "iface": "BidCos-RF",
         "channel": "PEQ0004299:1 Rollo Wohnzimmer Doppelfenster 2",
@@ -24399,6 +24411,7 @@
         "id": "6b6f61a.a56e9a",
         "type": "change",
         "z": "db6aac1c.cd43b",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -24459,8 +24472,8 @@
         "truncate": false,
         "decimals": "0",
         "decimals2": 0,
-        "x": 650,
-        "y": 900,
+        "x": 630,
+        "y": 540,
         "wires": [
             [
                 "3d88091c.fcdae6",
@@ -24481,8 +24494,8 @@
         "truncate": false,
         "decimals": "0",
         "decimals2": 0,
-        "x": 410,
-        "y": 780,
+        "x": 390,
+        "y": 420,
         "wires": [
             [
                 "54d96d17.bd1214",
@@ -24505,15 +24518,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 1000,
+        "x": 780,
+        "y": 460,
         "wires": []
     },
     {
         "id": "db543fac.8393e",
         "type": "inject",
         "z": "4e67676c.de2018",
-        "name": "all 1 min",
+        "name": "every 1 min",
         "props": [
             {
                 "p": "payload"
@@ -24530,8 +24543,8 @@
         "topic": "Leistung_PV",
         "payload": "",
         "payloadType": "date",
-        "x": 220,
-        "y": 900,
+        "x": 210,
+        "y": 540,
         "wires": [
             [
                 "79699524.56251c"
@@ -26961,31 +26974,13 @@
         ]
     },
     {
-        "id": "531497d1.7b05f8",
-        "type": "combine-statistic",
-        "z": "4e67676c.de2018",
-        "name": "Integral_Leistung_Zähler",
-        "topic": "Leistung_Zähler_Input",
-        "operator": "sum",
-        "falsy": "include",
-        "defer": "3600000",
-        "timeout": "3600000",
-        "distinction": "_msgid",
-        "x": 670,
-        "y": 600,
-        "wires": [
-            [
-                "52798f3c.61bca"
-            ]
-        ]
-    },
-    {
         "id": "d302a4c5.f48b58",
         "type": "ui_chart",
         "z": "4e67676c.de2018",
+        "d": true,
         "name": "Integral_Leistung_Zähler",
         "group": "ca79f64c.8975d8",
-        "order": 6,
+        "order": 7,
         "width": "6",
         "height": "5",
         "label": "",
@@ -27017,8 +27012,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2210,
-        "y": 700,
+        "x": 1250,
+        "y": 680,
         "wires": [
             []
         ]
@@ -27028,7 +27023,7 @@
         "type": "debug",
         "z": "4e67676c.de2018",
         "name": "Intergral_Power",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -27036,8 +27031,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 600,
+        "x": 1140,
+        "y": 340,
         "wires": []
     },
     {
@@ -27066,20 +27061,28 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "gt",
+                "t": "gte",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
                 "v": "0",
                 "vt": "num"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 440,
-        "y": 560,
+        "outputs": 2,
+        "x": 640,
+        "y": 120,
         "wires": [
             [
-                "531497d1.7b05f8",
-                "b43dfc74.4e206"
+                "b937c1a9.112a",
+                "d859e8ce.176428"
+            ],
+            [
+                "6cb4656c.f176dc"
             ]
         ]
     },
@@ -27088,11 +27091,11 @@
         "type": "ui_text",
         "z": "4e67676c.de2018",
         "group": "ca79f64c.8975d8",
-        "order": 5,
+        "order": 3,
         "width": "0",
         "height": "0",
-        "name": "Leistung Integral",
-        "label": "Leistung [kWh]",
+        "name": "Leistung Stunde",
+        "label": "Leistung pro h [Wh]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -27100,37 +27103,16 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 2190,
-        "y": 620,
+        "x": 1020,
+        "y": 640,
         "wires": []
-    },
-    {
-        "id": "52798f3c.61bca",
-        "type": "calculator",
-        "z": "4e67676c.de2018",
-        "name": "W to kW",
-        "inputMsgField": "payload",
-        "outputMsgField": "payload",
-        "operation": "div",
-        "constant": "1000",
-        "round": true,
-        "truncate": false,
-        "decimals": "1",
-        "decimals2": 0,
-        "x": 880,
-        "y": 600,
-        "wires": [
-            [
-                "8c5fd679.657c08"
-            ]
-        ]
     },
     {
         "id": "ee1c610c.f7c9e",
         "type": "debug",
         "z": "4e67676c.de2018",
         "name": "Counter",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -27138,28 +27120,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
-        "y": 520,
+        "x": 1120,
+        "y": 20,
         "wires": []
-    },
-    {
-        "id": "b43dfc74.4e206",
-        "type": "combine-statistic",
-        "z": "4e67676c.de2018",
-        "name": "Counter Zähler",
-        "topic": "Leistung_Zähler",
-        "operator": "len",
-        "falsy": "include",
-        "defer": "3600000",
-        "timeout": "3600000",
-        "distinction": "_msgid",
-        "x": 640,
-        "y": 520,
-        "wires": [
-            [
-                "ddb5c5da.00e2a8"
-            ]
-        ]
     },
     {
         "id": "debccc5e.4cf8e",
@@ -27171,12 +27134,12 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1770,
-        "y": 780,
+        "x": 470,
+        "y": 640,
         "wires": [
             [
-                "1e44736.f76568d",
-                "1318d08f.51bddf"
+                "1318d08f.51bddf",
+                "16b88d43.78ad53"
             ]
         ]
     },
@@ -27199,12 +27162,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 860,
-        "y": 520,
+        "x": 1320,
+        "y": 80,
         "wires": [
-            [
-                "ee1c610c.f7c9e"
-            ]
+            []
         ]
     },
     {
@@ -27226,36 +27187,34 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
-        "y": 600,
+        "x": 1300,
+        "y": 280,
         "wires": [
-            [
-                "8304f664.a938b8"
-            ]
+            []
         ]
     },
     {
         "id": "1e44736.f76568d",
         "type": "debug",
         "z": "4e67676c.de2018",
-        "name": "power_per_hour",
+        "name": "power_per_day",
         "active": false,
         "tosidebar": true,
-        "console": false,
+        "console": true,
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2020,
-        "y": 780,
+        "x": 930,
+        "y": 820,
         "wires": []
     },
     {
         "id": "f8ba3402.913a28",
         "type": "inject",
         "z": "4e67676c.de2018",
-        "name": "",
+        "name": "every 60min",
         "props": [
             {
                 "p": "payload"
@@ -27272,8 +27231,8 @@
         "topic": "Leistung pro Stunde",
         "payload": "",
         "payloadType": "date",
-        "x": 1530,
-        "y": 780,
+        "x": 220,
+        "y": 640,
         "wires": [
             [
                 "debccc5e.4cf8e"
@@ -27293,12 +27252,13 @@
         "truncate": false,
         "decimals": "0",
         "decimals2": 0,
-        "x": 1990,
-        "y": 660,
+        "x": 790,
+        "y": 640,
         "wires": [
             [
                 "4ef08b94.ebe5d4",
-                "d302a4c5.f48b58"
+                "d302a4c5.f48b58",
+                "8b1a7f0c.5a068"
             ]
         ]
     },
@@ -27315,8 +27275,8 @@
         "truncate": false,
         "decimals": 0,
         "decimals2": 0,
-        "x": 420,
-        "y": 420,
+        "x": 1940,
+        "y": 440,
         "wires": [
             [
                 "b515708.c963e9"
@@ -27336,8 +27296,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 420,
+        "x": 2160,
+        "y": 440,
         "wires": []
     },
     {
@@ -27357,8 +27317,8 @@
         "topic": "",
         "payload": "[600,20]",
         "payloadType": "json",
-        "x": 220,
-        "y": 420,
+        "x": 1740,
+        "y": 440,
         "wires": [
             [
                 "740eccf9.90e104"
@@ -27398,6 +27358,228 @@
             [
                 "5809aad2.7c6654"
             ]
+        ]
+    },
+    {
+        "id": "16b88d43.78ad53",
+        "type": "combine-statistic",
+        "z": "4e67676c.de2018",
+        "name": "Leistung pro Tag",
+        "topic": "Leistung_Zähler_Tag",
+        "operator": "sum",
+        "falsy": "include",
+        "defer": "0",
+        "timeout": "86400000",
+        "distinction": "_msgid",
+        "x": 700,
+        "y": 740,
+        "wires": [
+            [
+                "e49f4551.712178",
+                "1e44736.f76568d"
+            ]
+        ]
+    },
+    {
+        "id": "e836d776.d83c78",
+        "type": "ui_text",
+        "z": "4e67676c.de2018",
+        "group": "ca79f64c.8975d8",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "Leistung Tag",
+        "label": "Leistung pro Tag [Wh]",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1050,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "e49f4551.712178",
+        "type": "calculator",
+        "z": "4e67676c.de2018",
+        "name": "round",
+        "inputMsgField": "payload",
+        "outputMsgField": "payload",
+        "operation": "rdec",
+        "constant": "2",
+        "round": false,
+        "truncate": false,
+        "decimals": "0",
+        "decimals2": 0,
+        "x": 870,
+        "y": 740,
+        "wires": [
+            [
+                "e836d776.d83c78",
+                "8b1a7f0c.5a068"
+            ]
+        ]
+    },
+    {
+        "id": "b937c1a9.112a",
+        "type": "combine-statistic",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "topic": "Leistung_Zähler",
+        "operator": "len",
+        "falsy": "include",
+        "defer": "250",
+        "timeout": "3600000",
+        "distinction": "_msgid",
+        "x": 960,
+        "y": 80,
+        "wires": [
+            [
+                "16b25fd4.9a4f3",
+                "ee1c610c.f7c9e"
+            ]
+        ]
+    },
+    {
+        "id": "d859e8ce.176428",
+        "type": "combine-statistic",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "topic": "Leistung_Zähler_Input",
+        "operator": "sum",
+        "falsy": "include",
+        "defer": "250",
+        "timeout": "3600000",
+        "distinction": "_msgid",
+        "x": 960,
+        "y": 280,
+        "wires": [
+            [
+                "5fdb5506.cb309c",
+                "8304f664.a938b8",
+                "82f9dd02.459b1"
+            ]
+        ]
+    },
+    {
+        "id": "16b25fd4.9a4f3",
+        "type": "delay",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "60",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1130,
+        "y": 80,
+        "wires": [
+            [
+                "ddb5c5da.00e2a8"
+            ]
+        ]
+    },
+    {
+        "id": "5fdb5506.cb309c",
+        "type": "delay",
+        "z": "4e67676c.de2018",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "60",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1130,
+        "y": 280,
+        "wires": [
+            [
+                "8c5fd679.657c08"
+            ]
+        ]
+    },
+    {
+        "id": "6cb4656c.f176dc",
+        "type": "change",
+        "z": "4e67676c.de2018",
+        "name": "payload when power <= 0",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 200,
+        "wires": [
+            [
+                "b937c1a9.112a",
+                "d859e8ce.176428"
+            ]
+        ]
+    },
+    {
+        "id": "82f9dd02.459b1",
+        "type": "ui_chart",
+        "z": "4e67676c.de2018",
+        "name": "Integral Power",
+        "group": "ca79f64c.8975d8",
+        "order": 8,
+        "width": "6",
+        "height": "5",
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2ca02c",
+            "#ea1f1f",
+            "#0f5fff",
+            "#e3a316",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1140,
+        "y": 220,
+        "wires": [
+            []
         ]
     }
 ]
