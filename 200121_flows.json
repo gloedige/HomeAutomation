@@ -7548,6 +7548,7 @@
         "id": "2cfeaa6f.ae474e",
         "type": "ccu-value",
         "z": "28a65c2.2e2eba4",
+        "d": true,
         "name": "",
         "iface": "BidCos-RF",
         "channel": "OEQ2309458:1 Licht Flur EG",
@@ -13957,6 +13958,7 @@
         "id": "5d90d03.ab8c03",
         "type": "ccu-value",
         "z": "4e67676c.de2018",
+        "d": true,
         "name": "Steckdosenaufsatz Bad",
         "iface": "HmIP-RF",
         "channel": "00021D89A1BE2B:3 HMIP-PS 00021D89A1BE2B:3",
@@ -13995,6 +13997,7 @@
         "id": "6dbf46bf.f833b8",
         "type": "ui_text",
         "z": "4e67676c.de2018",
+        "d": true,
         "group": "f96632f0.e2eae",
         "order": 8,
         "width": 0,
@@ -14003,6 +14006,11 @@
         "label": "Status Heizung Bad",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 3040,
         "y": 1520,
         "wires": []
@@ -14011,6 +14019,7 @@
         "id": "50a86180.ab5f",
         "type": "ui_switch",
         "z": "4e67676c.de2018",
+        "d": true,
         "name": "Heizung Bad [OG]",
         "label": "Heizung Bad [OG]",
         "tooltip": "",
@@ -14021,6 +14030,7 @@
         "passthru": true,
         "decouple": "false",
         "topic": "",
+        "topicType": "str",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
@@ -14030,6 +14040,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
+        "animate": true,
+        "className": "",
         "x": 1810,
         "y": 1480,
         "wires": [
@@ -14432,6 +14444,7 @@
         "id": "a8754ff7.44b2d",
         "type": "ui_numeric",
         "z": "4e67676c.de2018",
+        "d": true,
         "name": "",
         "label": "maxLoadHeaterTwo [W]",
         "tooltip": "Leistung E-Heizung Bad",
@@ -26769,6 +26782,7 @@
         "id": "7aca24e5.e224ac",
         "type": "noraf-light",
         "z": "28a65c2.2e2eba4",
+        "d": true,
         "devicename": "Licht Flur",
         "lightcolor": false,
         "brightnesscontrol": true,
@@ -26804,6 +26818,7 @@
         "id": "f1293280.b0d21",
         "type": "change",
         "z": "28a65c2.2e2eba4",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -27842,5 +27857,176 @@
                 "94213980.5a2548"
             ]
         ]
+    },
+    {
+        "id": "14ca38ac.9d8da7",
+        "type": "ccu-value",
+        "z": "33898250.03adbe",
+        "name": "Steckdosenaufsatz Couch",
+        "iface": "HmIP-RF",
+        "channel": "00021D89A1BE2B:3 HMIP-PS 00021D89A1BE2B:3",
+        "datapoint": "STATE",
+        "mode": "",
+        "start": true,
+        "change": true,
+        "cache": false,
+        "queue": false,
+        "on": 0,
+        "onType": "undefined",
+        "ramp": 0,
+        "rampType": "undefined",
+        "working": false,
+        "ccuConfig": "38263145.35ea0e",
+        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
+        "x": 910,
+        "y": 2240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17b17757.e06979",
+        "type": "comment",
+        "z": "33898250.03adbe",
+        "name": "Couch Wohnzimmer",
+        "info": "",
+        "x": 190,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "a65d3890.2a71e8",
+        "type": "ui_switch",
+        "z": "33898250.03adbe",
+        "name": "Couch",
+        "label": "Couch",
+        "tooltip": "",
+        "group": "d8ed037.4a1b3",
+        "order": 11,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "condition",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 170,
+        "y": 2240,
+        "wires": [
+            [
+                "b8d1ed2f.a4858"
+            ]
+        ]
+    },
+    {
+        "id": "fef76d01.914df",
+        "type": "noraf-switch",
+        "z": "33898250.03adbe",
+        "devicename": "Couch",
+        "roomhint": "",
+        "name": "SwitchToSetCouch",
+        "passthru": true,
+        "errorifstateunchaged": false,
+        "nora": "e7b91b38.1d5708",
+        "topic": "condition",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "asyncCmd": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 2240,
+        "wires": [
+            [
+                "dc33a655.7659d8",
+                "4a064ad2.3b1b54",
+                "a65d3890.2a71e8",
+                "14ca38ac.9d8da7"
+            ]
+        ]
+    },
+    {
+        "id": "dc33a655.7659d8",
+        "type": "change",
+        "z": "33898250.03adbe",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flagVoiceCouchControl",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 2300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a064ad2.3b1b54",
+        "type": "debug",
+        "z": "33898250.03adbe",
+        "name": "google switch",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "b8d1ed2f.a4858",
+        "type": "rbe",
+        "z": "33898250.03adbe",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 390,
+        "y": 2240,
+        "wires": [
+            [
+                "fef76d01.914df"
+            ]
+        ]
+    },
+    {
+        "id": "ee8e0dc1.1d404",
+        "type": "comment",
+        "z": "28a65c2.2e2eba4",
+        "name": "1 function for \"Licht\"",
+        "info": "",
+        "x": 250,
+        "y": 220,
+        "wires": []
     }
 ]
