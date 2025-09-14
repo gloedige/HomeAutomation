@@ -3313,13 +3313,8 @@
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": 60000,
-                    "validLevel": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
+                "isValid": false,
+                "valid": {},
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -3364,7 +3359,9 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>",
+                "timeMinOp": 0,
+                "timeMaxOp": 0
             },
             {
                 "index": 2,
@@ -3398,7 +3395,7 @@
                 "offsetMaxValue": "",
                 "offsetMaxType": "none",
                 "multiplierMax": 60000,
-                "levelValue": "closed (min)",
+                "levelValue": "10%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
                 "levelOpText": "↕ absolute",
@@ -3419,7 +3416,7 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i> <span>no later than (max)</span> <var>flow.closeBlindKids_String</var></div></div><div>↕ absolute <var>closed (min)</var></div>"
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var><div class=\"indent-time-text\"><i class=\"fa fa-step-forward\" aria-hidden=\"true\"></i> <span>no later than (max)</span> <var>flow.closeBlindKids_String</var></div></div><div>↕ absolute <var>10%</var></div>"
             }
         ],
         "sunControlMode": "2",
@@ -5502,8 +5499,13 @@
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": false,
-                "valid": {},
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": 60000,
+                    "validLevel": true,
+                    "validOperand1A": true,
+                    "validOperand1B": true
+                },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -5527,7 +5529,7 @@
                 "offsetMaxValue": "",
                 "offsetMaxType": "none",
                 "multiplierMax": 60000,
-                "levelValue": "10%",
+                "levelValue": "50%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
                 "levelOpText": "↕ absolute",
@@ -5548,9 +5550,7 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>10%</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>50%</var></div>"
             },
             {
                 "index": 2,
@@ -27061,7 +27061,7 @@
         "type": "debug",
         "z": "4e67676c.de2018",
         "name": "Intergral_Power",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -27150,7 +27150,7 @@
         "type": "debug",
         "z": "4e67676c.de2018",
         "name": "Counter",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -28068,8 +28068,13 @@
             {
                 "index": 0,
                 "name": "Sonnenaufgang",
-                "isValid": false,
-                "valid": {},
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": 60000,
+                    "validLevel": true,
+                    "validOperand1A": true,
+                    "validOperand1B": true
+                },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -28093,7 +28098,7 @@
                 "offsetMaxValue": "",
                 "offsetMaxType": "none",
                 "multiplierMax": 60000,
-                "levelValue": "10%",
+                "levelValue": "50%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
                 "levelOpText": "↕ absolute",
@@ -28114,15 +28119,18 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>10%</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow.openBlindBusinessDay_String</var></div></div><div>↕ absolute <var>50%</var></div>"
             },
             {
                 "index": 1,
                 "name": "Sonnenaufgang_WE",
-                "isValid": false,
-                "valid": {},
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": 60000,
+                    "validLevel": true,
+                    "validOperand1A": true,
+                    "validOperand1B": true
+                },
                 "timeValue": "blueHourDawnEnd",
                 "timeType": "pdsTime",
                 "timeOp": 0,
@@ -28146,7 +28154,7 @@
                 "offsetMaxValue": "",
                 "offsetMaxType": "none",
                 "multiplierMax": 60000,
-                "levelValue": "10%",
+                "levelValue": "50%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
                 "levelOpText": "↕ absolute",
@@ -28167,15 +28175,17 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>10%</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is true</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↥ until <var>blue hour dawn end</var><div class=\"indent-time-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>at the earliest (min)</span> <var>flow....lindWeekendOrHoliday_String</var></div></div><div>↕ absolute <var>50%</var></div>"
             },
             {
                 "index": 2,
                 "name": "Sonnenuntergang",
-                "isValid": false,
-                "valid": {},
+                "isValid": true,
+                "valid": {
+                    "validTimeReg": true,
+                    "validLevel": true,
+                    "validOperand1A": true
+                },
                 "timeValue": "blueHourDuskStart",
                 "timeType": "pdsTime",
                 "timeOp": 1,
@@ -28199,7 +28209,7 @@
                 "offsetMaxValue": "",
                 "offsetMaxType": "none",
                 "multiplierMax": 60000,
-                "levelValue": "10%",
+                "levelValue": "50%",
                 "levelType": "levelFixed",
                 "levelOp": 0,
                 "levelOpText": "↕ absolute",
@@ -28220,9 +28230,7 @@
                 "valid2OperatorText": "is true",
                 "valid2OperandBValue": "",
                 "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var></div><div>↕ absolute <var>10%</var></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
+                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>blue hour dusk start</var></div><div>↕ absolute <var>50%</var></div>"
             }
         ],
         "sunControlMode": "0",
