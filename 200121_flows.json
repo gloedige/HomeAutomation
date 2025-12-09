@@ -16560,340 +16560,6 @@
         "wires": []
     },
     {
-        "id": "737228a9.f53438",
-        "type": "inject",
-        "z": "33898250.03adbe",
-        "name": "all 1min",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 180,
-        "y": 1240,
-        "wires": [
-            [
-                "40467110.96d8e"
-            ]
-        ]
-    },
-    {
-        "id": "40467110.96d8e",
-        "type": "clock-timer",
-        "z": "33898250.03adbe",
-        "name": "Zeiten Weihnachtssterne",
-        "topic": "x-mas zeitschalt",
-        "positionConfig": "6ad7a531.04aedc",
-        "outputs": "1",
-        "autoTrigger": false,
-        "autoTriggerTime": 1200000,
-        "startDelayTime": 10000,
-        "storeName": "",
-        "overwriteExpire": "",
-        "rules": [
-            {
-                "index": 0,
-                "name": "Sterne ein morgens",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validPayload": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
-                "timeValue": "6:30",
-                "timeType": "entered",
-                "timeOp": 1,
-                "timeOpText": "↧ from",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "2024-11-24",
-                "timeDateEnd": "2025-01-06",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "payloadValue": "true",
-                "payloadType": "bool",
-                "payloadOffsetValue": "",
-                "payloadOffsetType": "none",
-                "payloadOffsetMultiplier": 60000,
-                "payloadFormat": "",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
-                "validOperandAType": "global",
-                "validOperator": "false",
-                "validOperatorText": "is false",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "is true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>6:30</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>"
-            },
-            {
-                "index": 1,
-                "name": "Sterne aus morgens",
-                "isValid": true,
-                "valid": {
-                    "validTimeReg": true,
-                    "validPayload": true,
-                    "validOperand1A": true,
-                    "validOperand1B": true
-                },
-                "timeValue": "8:00",
-                "timeType": "entered",
-                "timeOp": 1,
-                "timeOpText": "↧ from",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "2024-11-24",
-                "timeDateEnd": "2025-01-06",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "payloadValue": "false",
-                "payloadType": "bool",
-                "payloadOffsetValue": "",
-                "payloadOffsetType": "none",
-                "payloadOffsetMultiplier": 60000,
-                "payloadFormat": "",
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "day-info.today.isWeekendOrHoliday",
-                "validOperandAType": "global",
-                "validOperator": "false",
-                "validOperatorText": "is false",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "is true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-code-fork\" aria-hidden=\"true\"></i> <var>global....fo.today.isWeekendOrHoliday</var> is false</div><div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>8:00</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>"
-            },
-            {
-                "index": 2,
-                "name": "Sterne ein",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "enableChristmasLights",
-                "timeType": "flow",
-                "timeOp": 1,
-                "timeOpText": "↧ from",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "2024-11-24",
-                "timeDateEnd": "2025-01-06",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "payloadValue": "true",
-                "payloadType": "bool",
-                "payloadOffsetValue": "",
-                "payloadOffsetType": "none",
-                "payloadOffsetMultiplier": 60000,
-                "payloadFormat": 99,
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "is true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "is true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.enableChristmasLights</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>true</var></div></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            },
-            {
-                "index": 3,
-                "name": "Sterne aus",
-                "isValid": false,
-                "valid": {},
-                "timeValue": "disableChristmasLights",
-                "timeType": "flow",
-                "timeOp": 1,
-                "timeOpText": "↧ from",
-                "offsetValue": "",
-                "offsetType": "none",
-                "multiplier": 60000,
-                "timeDays": "*",
-                "timeMonths": "*",
-                "timeOnlyEvenDays": false,
-                "timeOnlyOddDays": false,
-                "timeDateStart": "2024-11-24",
-                "timeDateEnd": "2025-01-06",
-                "timeMinValue": "",
-                "timeMinType": "none",
-                "offsetMinValue": "",
-                "offsetMinType": "none",
-                "multiplierMin": 60000,
-                "timeMaxValue": "",
-                "timeMaxType": "none",
-                "offsetMaxValue": "",
-                "offsetMaxType": "none",
-                "multiplierMax": 60000,
-                "payloadValue": "false",
-                "payloadType": "bool",
-                "payloadOffsetValue": "",
-                "payloadOffsetType": "none",
-                "payloadOffsetMultiplier": 60000,
-                "payloadFormat": 99,
-                "topic": "",
-                "importance": 0,
-                "resetOverwrite": false,
-                "validOperandAValue": "",
-                "validOperandAType": "none",
-                "validOperator": "true",
-                "validOperatorText": "is true",
-                "validOperandBValue": "",
-                "validOperandBType": "num",
-                "valid2LogOperator": 0,
-                "valid2LogOperatorText": "N/A",
-                "valid2OperandAValue": "",
-                "valid2OperandAType": "msg",
-                "valid2Operator": "true",
-                "valid2OperatorText": "is true",
-                "valid2OperandBValue": "",
-                "valid2OperandBType": "num",
-                "description": "<div><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i> ↧ from <var>flow.disableChristmasLights</var><div class=\"indent-time-datelimit\"><i class=\"fa fa-calendar-o\" aria-hidden=\"true\"></i> <span>only from</span> <var>11-24</var> <span> to</span> <var>01-06</var></div></div><div><div class=\"indent-payload-text\"><i class=\"fa fa-step-backward\" aria-hidden=\"true\"></i> <span>Payload: </span> <var>false</var></div></div>",
-                "timeMinOp": 0,
-                "timeMaxOp": 0
-            }
-        ],
-        "payloadDefault": "",
-        "payloadDefaultType": "none",
-        "payloadDefaultTimeFormat": 0,
-        "payloadDefaultOffset": 0,
-        "payloadDefaultOffsetType": "none",
-        "payloadDefaultOffsetMultiplier": 60000,
-        "x": 430,
-        "y": 1240,
-        "wires": [
-            [
-                "5e3c561.cb9f2a8"
-            ]
-        ]
-    },
-    {
-        "id": "ea8ad9b3.92a858",
-        "type": "comment",
-        "z": "33898250.03adbe",
-        "name": "Zeitschaltung Weihnachtssterne",
-        "info": "",
-        "x": 210,
-        "y": 1180,
-        "wires": []
-    },
-    {
-        "id": "d57fc8ff.90ea68",
-        "type": "ui_text",
-        "z": "33898250.03adbe",
-        "group": "afd7242e.e4d3e8",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "Status Weihnachtssterne",
-        "label": "Status Weihnachtssterne",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1570,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "c9ee7bec.6cfc58",
-        "type": "ccu-value",
-        "z": "33898250.03adbe",
-        "name": "Steckdosenaufsatz Bad",
-        "iface": "HmIP-RF",
-        "channel": "00021D89A1BE2B:3 HMIP-PS 00021D89A1BE2B:3",
-        "datapoint": "STATE",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1070,
-        "y": 1260,
-        "wires": [
-            [
-                "6ef47f45.b604b"
-            ]
-        ]
-    },
-    {
         "id": "106fe81a.ec3af8",
         "type": "comment",
         "z": "33898250.03adbe",
@@ -17037,44 +16703,6 @@
         "wires": [
             [
                 "f7c020de.a2e2f"
-            ]
-        ]
-    },
-    {
-        "id": "6ef47f45.b604b",
-        "type": "change",
-        "z": "33898250.03adbe",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "ON",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "OFF",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1340,
-        "y": 1260,
-        "wires": [
-            [
-                "d57fc8ff.90ea68"
             ]
         ]
     },
@@ -18407,379 +18035,6 @@
                 "4abad14b.ca12d8"
             ]
         ]
-    },
-    {
-        "id": "74ac1640.f64b38",
-        "type": "ccu-value",
-        "z": "33898250.03adbe",
-        "name": "",
-        "iface": "BidCos-RF",
-        "channel": "OEQ2309474:1 Licht Flur Keller",
-        "datapoint": "STATE",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 500,
-        "y": 1780,
-        "wires": [
-            [
-                "abfbc502.a97108"
-            ]
-        ]
-    },
-    {
-        "id": "376422a.e17a5de",
-        "type": "ccu-value",
-        "z": "33898250.03adbe",
-        "name": "",
-        "iface": "BidCos-RF",
-        "channel": "OEQ2309458:1 Licht Flur EG",
-        "datapoint": "STATE",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 490,
-        "y": 1860,
-        "wires": [
-            [
-                "227d665c.efa68a"
-            ]
-        ]
-    },
-    {
-        "id": "e4874526.d5cdf8",
-        "type": "ccu-value",
-        "z": "33898250.03adbe",
-        "name": "",
-        "iface": "BidCos-RF",
-        "channel": "OEQ1263524:1 Licht Flur OG",
-        "datapoint": "STATE",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 490,
-        "y": 1940,
-        "wires": [
-            [
-                "59f5c9a1.8c6698"
-            ]
-        ]
-    },
-    {
-        "id": "abfbc502.a97108",
-        "type": "change",
-        "z": "33898250.03adbe",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "ON",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "OFF",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 1780,
-        "wires": [
-            [
-                "c9829f64.4a97f"
-            ]
-        ]
-    },
-    {
-        "id": "227d665c.efa68a",
-        "type": "change",
-        "z": "33898250.03adbe",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "ON",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "OFF",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 1860,
-        "wires": [
-            [
-                "1cc49d1a.4a4303"
-            ]
-        ]
-    },
-    {
-        "id": "59f5c9a1.8c6698",
-        "type": "change",
-        "z": "33898250.03adbe",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "ON",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "OFF",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 1940,
-        "wires": [
-            [
-                "9f683ba.57e03c8"
-            ]
-        ]
-    },
-    {
-        "id": "c9829f64.4a97f",
-        "type": "ui_text",
-        "z": "33898250.03adbe",
-        "group": "afd7242e.e4d3e8",
-        "order": 15,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "State Light basement",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 1000,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "1cc49d1a.4a4303",
-        "type": "ui_text",
-        "z": "33898250.03adbe",
-        "group": "afd7242e.e4d3e8",
-        "order": 15,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "State Light ground floor",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 1010,
-        "y": 1860,
-        "wires": []
-    },
-    {
-        "id": "9f683ba.57e03c8",
-        "type": "ui_text",
-        "z": "33898250.03adbe",
-        "group": "afd7242e.e4d3e8",
-        "order": 15,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "State Light hallway",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 990,
-        "y": 1940,
-        "wires": []
-    },
-    {
-        "id": "eed66d85.6839c",
-        "type": "ui_switch",
-        "z": "33898250.03adbe",
-        "name": "Light basement",
-        "label": "Light basement",
-        "tooltip": "",
-        "group": "d8ed037.4a1b3",
-        "order": 8,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "className": "",
-        "x": 200,
-        "y": 1780,
-        "wires": [
-            [
-                "74ac1640.f64b38"
-            ]
-        ]
-    },
-    {
-        "id": "c8d275a5.aeb498",
-        "type": "ui_switch",
-        "z": "33898250.03adbe",
-        "name": "Light ground floor",
-        "label": "Light ground floor",
-        "tooltip": "",
-        "group": "d8ed037.4a1b3",
-        "order": 9,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "className": "",
-        "x": 210,
-        "y": 1860,
-        "wires": [
-            [
-                "376422a.e17a5de"
-            ]
-        ]
-    },
-    {
-        "id": "3f52ca33.6e2f76",
-        "type": "ui_switch",
-        "z": "33898250.03adbe",
-        "name": "Light hallway",
-        "label": "Light hallway",
-        "tooltip": "",
-        "group": "d8ed037.4a1b3",
-        "order": 10,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "className": "",
-        "x": 190,
-        "y": 1940,
-        "wires": [
-            [
-                "e4874526.d5cdf8"
-            ]
-        ]
-    },
-    {
-        "id": "f2cd6e12.e00df",
-        "type": "comment",
-        "z": "33898250.03adbe",
-        "name": "Licht im Flur",
-        "info": "",
-        "x": 170,
-        "y": 1700,
-        "wires": []
     },
     {
         "id": "57015e6.51f80a",
@@ -22599,7 +21854,7 @@
                 "month": 1,
                 "day": 2,
                 "nth": 0,
-                "dow": 0,
+                "dow": 2,
                 "plType": "none",
                 "plValue": ""
             },
@@ -22611,7 +21866,7 @@
                 "month": 1,
                 "day": 3,
                 "nth": 0,
-                "dow": 0,
+                "dow": 3,
                 "plType": "none",
                 "plValue": ""
             },
@@ -22701,66 +21956,6 @@
             },
             {
                 "id": "",
-                "name": "Urlaub Malle",
-                "nameAlt": "",
-                "character": 0,
-                "month": 10,
-                "day": 7,
-                "nth": 1,
-                "dow": 0,
-                "plType": "none",
-                "plValue": ""
-            },
-            {
-                "id": "",
-                "name": "Urlaub Malle",
-                "nameAlt": "",
-                "character": 0,
-                "month": 10,
-                "day": 8,
-                "nth": 1,
-                "dow": 1,
-                "plType": "none",
-                "plValue": ""
-            },
-            {
-                "id": "",
-                "name": "Urlaub Malle",
-                "nameAlt": "",
-                "character": 0,
-                "month": 10,
-                "day": 9,
-                "nth": 1,
-                "dow": 2,
-                "plType": "none",
-                "plValue": ""
-            },
-            {
-                "id": "",
-                "name": "Urlaub Malle",
-                "nameAlt": "",
-                "character": 0,
-                "month": 10,
-                "day": 10,
-                "nth": 1,
-                "dow": 3,
-                "plType": "none",
-                "plValue": ""
-            },
-            {
-                "id": "",
-                "name": "Urlaub Malle",
-                "nameAlt": "",
-                "character": 0,
-                "month": 10,
-                "day": 11,
-                "nth": 1,
-                "dow": 4,
-                "plType": "none",
-                "plValue": ""
-            },
-            {
-                "id": "",
                 "name": "Reformationstag",
                 "nameAlt": "",
                 "character": 0,
@@ -22838,7 +22033,7 @@
                 "character": 0,
                 "month": 12,
                 "day": 28,
-                "nth": 0,
+                "nth": 4,
                 "dow": 0,
                 "plType": "none",
                 "plValue": ""
@@ -22850,8 +22045,8 @@
                 "character": 0,
                 "month": 12,
                 "day": 29,
-                "nth": 0,
-                "dow": 0,
+                "nth": 4,
+                "dow": 1,
                 "plType": "none",
                 "plValue": ""
             },
@@ -24605,118 +23800,6 @@
         "wires": []
     },
     {
-        "id": "1e05ddb5.b39742",
-        "type": "ui_switch",
-        "z": "33898250.03adbe",
-        "name": "",
-        "label": "set x-mas lights",
-        "tooltip": "",
-        "group": "d8ed037.4a1b3",
-        "order": 4,
-        "width": "6",
-        "height": "1",
-        "passthru": true,
-        "decouple": "false",
-        "topic": "x-mas lights",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 180,
-        "y": 1320,
-        "wires": [
-            [
-                "4c8b50e.24803b"
-            ]
-        ]
-    },
-    {
-        "id": "4c8b50e.24803b",
-        "type": "switch",
-        "z": "33898250.03adbe",
-        "name": "check topic",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 470,
-        "y": 1320,
-        "wires": [
-            [
-                "5e3c561.cb9f2a8",
-                "c155aa03.11ffc8"
-            ],
-            [
-                "4b1def1a.7c31c"
-            ]
-        ]
-    },
-    {
-        "id": "5e3c561.cb9f2a8",
-        "type": "BooleanLogicUltimate",
-        "z": "33898250.03adbe",
-        "name": "",
-        "filtertrue": "both",
-        "persist": true,
-        "sInitializeWith": "false",
-        "triggertopic": "trigger",
-        "outputtriggeredby": "all",
-        "inputCount": 2,
-        "topic": "result",
-        "x": 760,
-        "y": 1240,
-        "wires": [
-            [
-                "c9ee7bec.6cfc58",
-                "bef0d52e.719368"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "c155aa03.11ffc8",
-        "type": "InvertUltimate",
-        "z": "33898250.03adbe",
-        "name": "Invert",
-        "x": 730,
-        "y": 1300,
-        "wires": [
-            [
-                "c2e3f299.40414"
-            ]
-        ]
-    },
-    {
-        "id": "c2e3f299.40414",
-        "type": "link out",
-        "z": "33898250.03adbe",
-        "name": "x-mas lights inaktiv",
-        "links": [
-            "649c6666.7184a8"
-        ],
-        "x": 915,
-        "y": 1340,
-        "wires": []
-    },
-    {
         "id": "9494af6f.c5c6e",
         "type": "BooleanLogicUltimate",
         "z": "4e67676c.de2018",
@@ -24756,19 +23839,6 @@
         ]
     },
     {
-        "id": "4b1def1a.7c31c",
-        "type": "InvertUltimate",
-        "z": "33898250.03adbe",
-        "name": "Invert",
-        "x": 730,
-        "y": 1360,
-        "wires": [
-            [
-                "c2e3f299.40414"
-            ]
-        ]
-    },
-    {
         "id": "246d4878.eeff28",
         "type": "BooleanLogicUltimate",
         "z": "4e67676c.de2018",
@@ -24800,93 +23870,6 @@
         "wires": [
             [
                 "5d90d03.ab8c03"
-            ]
-        ]
-    },
-    {
-        "id": "bef0d52e.719368",
-        "type": "ccu-value",
-        "z": "33898250.03adbe",
-        "name": "Schaltaktor Steckdose Terrasse",
-        "iface": "HmIP-RF",
-        "channel": "00316080001120:4 Schaltaktor Steckdose Terrasse",
-        "datapoint": "STATE",
-        "mode": "",
-        "start": true,
-        "change": true,
-        "cache": false,
-        "queue": false,
-        "on": 0,
-        "onType": "undefined",
-        "ramp": 0,
-        "rampType": "undefined",
-        "working": false,
-        "ccuConfig": "38263145.35ea0e",
-        "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 1090,
-        "y": 1200,
-        "wires": [
-            [
-                "640b1459.d5612c"
-            ]
-        ]
-    },
-    {
-        "id": "357cf0fc.5aeb3",
-        "type": "ui_text",
-        "z": "33898250.03adbe",
-        "group": "afd7242e.e4d3e8",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "Status Weihnachtsbaum",
-        "label": "Status Weihnachtsbaum",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 1570,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "640b1459.d5612c",
-        "type": "change",
-        "z": "33898250.03adbe",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "true",
-                "fromt": "bool",
-                "to": "ON",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "false",
-                "fromt": "bool",
-                "to": "OFF",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1340,
-        "y": 1200,
-        "wires": [
-            [
-                "357cf0fc.5aeb3"
             ]
         ]
     },
@@ -24935,108 +23918,6 @@
         "x": 580,
         "y": 140,
         "wires": []
-    },
-    {
-        "id": "5bd5536e.9f4d2c",
-        "type": "change",
-        "z": "33898250.03adbe",
-        "name": "enableChristmasLights",
-        "rules": [
-            {
-                "t": "set",
-                "p": "enableChristmasLights",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 1500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "32072fc1.2ce83",
-        "type": "ui_text_input",
-        "z": "33898250.03adbe",
-        "name": "enableChristmasLights",
-        "label": "x-mas lights ON",
-        "tooltip": "HH:MM",
-        "group": "d8ed037.4a1b3",
-        "order": 2,
-        "width": "3",
-        "height": "1",
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 200,
-        "y": 1500,
-        "wires": [
-            [
-                "5bd5536e.9f4d2c"
-            ]
-        ]
-    },
-    {
-        "id": "a90735e9.45fd18",
-        "type": "change",
-        "z": "33898250.03adbe",
-        "name": "disableChristmasLights",
-        "rules": [
-            {
-                "t": "set",
-                "p": "disableChristmasLights",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 510,
-        "y": 1560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6002d8e2.6cebc8",
-        "type": "ui_text_input",
-        "z": "33898250.03adbe",
-        "name": "disableChristmasLights",
-        "label": "x-mas lights OFF",
-        "tooltip": "HH:MM",
-        "group": "d8ed037.4a1b3",
-        "order": 3,
-        "width": "3",
-        "height": "1",
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 210,
-        "y": 1560,
-        "wires": [
-            [
-                "a90735e9.45fd18"
-            ]
-        ]
     },
     {
         "id": "af4ef894.2f64c8",
@@ -27894,8 +26775,8 @@
         "working": false,
         "ccuConfig": "38263145.35ea0e",
         "topic": "${CCU}/${Interface}/${channel}/${datapoint}",
-        "x": 910,
-        "y": 2240,
+        "x": 890,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -27906,8 +26787,8 @@
         "z": "33898250.03adbe",
         "name": "Couch Wohnzimmer",
         "info": "",
-        "x": 190,
-        "y": 2100,
+        "x": 170,
+        "y": 1200,
         "wires": []
     },
     {
@@ -27936,8 +26817,8 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 170,
-        "y": 2240,
+        "x": 150,
+        "y": 1280,
         "wires": [
             [
                 "b8d1ed2f.a4858"
@@ -27964,8 +26845,8 @@
         "filter": false,
         "asyncCmd": false,
         "outputs": 1,
-        "x": 590,
-        "y": 2240,
+        "x": 570,
+        "y": 1280,
         "wires": [
             [
                 "dc33a655.7659d8",
@@ -27994,8 +26875,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
-        "y": 2300,
+        "x": 910,
+        "y": 1340,
         "wires": [
             []
         ]
@@ -28013,8 +26894,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 2360,
+        "x": 860,
+        "y": 1400,
         "wires": []
     },
     {
@@ -28027,8 +26908,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 390,
-        "y": 2240,
+        "x": 370,
+        "y": 1280,
         "wires": [
             [
                 "fef76d01.914df"
